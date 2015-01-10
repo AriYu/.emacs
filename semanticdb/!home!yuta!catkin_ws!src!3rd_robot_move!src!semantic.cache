@@ -1,0 +1,18 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "3rd_robot_move.cpp"
+    :major-mode 'c++-mode
+    :tags nil
+    :file "3rd_robot_move.cpp"
+    :pointmax 1
+    :fsize 0
+    :lastmodtime '(21508 4297 967343 841000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!yuta!catkin_ws!src!3rd_robot_move!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

@@ -1,0 +1,16 @@
+;; Object 3rd_robot_driver/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "3rd_robot_driver/"
+  :tables (list 
+   (semanticdb-table "imcs01.h"
+    :major-mode 'c-mode
+    :tags nil
+    :file "imcs01.h"
+    :pointmax 1
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!yuta!catkin_ws!src!3rd_robot_driver!include!3rd_robot_driver!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

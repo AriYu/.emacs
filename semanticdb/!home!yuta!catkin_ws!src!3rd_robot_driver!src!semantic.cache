@@ -1,0 +1,33 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "3rd_robot_driver.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("ros/ros.h" include (:system-flag t) nil [204 224])
+            ("tf/transform_broadcaster.h" include (:system-flag t) nil [225 262])
+            ("nav_msgs/Odometry.h" include (:system-flag t) nil [263 293])
+            ("geometry_msgs/Twist.h" include (:system-flag t) nil [304 336])
+            ("string" include (:system-flag t) nil [350 367])
+            ("port" variable (:type ("std::string" type (:type "class") nil nil)) nil [369 386])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [397 406])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [407 419]))                  
+                :type "int")
+                nil [388 722]))          
+    :file "3rd_robot_driver.cpp"
+    :pointmax 654
+    :fsize 834
+    :lastmodtime '(21508 14686 307053 967000)
+    :unmatched-syntax 'nil
+    )
+    )
+  :file "!home!yuta!catkin_ws!src!3rd_robot_driver!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

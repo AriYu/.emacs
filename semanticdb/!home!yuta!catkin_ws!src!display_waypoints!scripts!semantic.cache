@@ -1,0 +1,94 @@
+;; Object scripts/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "scripts/"
+  :tables (list 
+   (semanticdb-table "basic_controls.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("\"\"\"
+Copyright (c) 2011, Willow Garage, Inc.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above copyright
+      notice, this list of conditions and the following disclaimer in the
+      documentation and/or other materials provided with the distribution.
+    * Neither the name of the Willow Garage, Inc. nor the names of its
+      contributors may be used to endorse or promote products derived from
+      this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES LOSS OF USE, DATA, OR PROFITS OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+\"\"\"" code nil nil [24 1558])
+            ("roslib" include nil nil [1560 1573])
+            ("rospy" include nil nil [1619 1631])
+            ("copy" include nil nil [1632 1643])
+            ("interactive_markers.interactive_marker_server" include nil nil [1645 1704])
+            ("interactive_markers.menu_handler" include nil nil [1705 1751])
+            ("geometry_msgs.msg" include nil nil [1752 1787])
+            ("tf.broadcaster" include nil nil [1788 1835])
+            ("random" include nil nil [1837 1862])
+            ("math" include nil nil [1863 1883])
+            ("server" variable nil nil [1885 1898])
+            ("menu_handler" variable nil nil [1899 1927])
+            ("br" variable nil nil [1928 1937])
+            ("counter" variable nil nil [1938 1949])
+            ("frameCallback" function (:arguments 
+              ( ("msg" variable nil (reparse-symbol function_parameters) [1970 1973]))              ) nil [1951 2151])
+            ("processFeedback" function (:arguments 
+              ( ("feedback" variable nil (reparse-symbol function_parameters) [2173 2181]))              ) nil [2152 3798])
+            ("alignMarker" function (:arguments 
+              ( ("feedback" variable nil (reparse-symbol function_parameters) [3816 3824]))              ) nil [3799 4373])
+            ("rand" function (:arguments 
+              ( ("min_" variable nil (reparse-symbol function_parameters) [4384 4388])
+                ("max_" variable nil (reparse-symbol function_parameters) [4390 4394]))              ) nil [4374 4437])
+            ("makeBox" function (:arguments 
+              ( ("msg" variable nil (reparse-symbol function_parameters) [4451 4454]))              ) nil [4438 4744])
+            ("makeBoxControl" function (:arguments 
+              ( ("msg" variable nil (reparse-symbol function_parameters) [4765 4768]))              ) nil [4745 4945])
+            ("saveMarker" function (:arguments 
+              ( ("int_marker" variable nil (reparse-symbol function_parameters) [4962 4972]))              ) nil [4946 5021])
+            ("make6DofMarker" function (:arguments 
+              ( ("fixed" variable nil (reparse-symbol function_parameters) [5132 5137])
+                ("interaction_mode" variable nil (reparse-symbol function_parameters) [5139 5155])
+                ("position" variable nil (reparse-symbol function_parameters) [5157 5165])
+                ("show_6dof" variable nil (reparse-symbol function_parameters) [5167 5176]))              ) nil [5112 8875])
+            ("makeRandomDofMarker" function (:arguments 
+              ( ("position" variable nil (reparse-symbol function_parameters) [8901 8909]))              ) nil [8876 9736])
+            ("makeViewFacingMarker" function (:arguments 
+              ( ("position" variable nil (reparse-symbol function_parameters) [9762 9770]))              ) nil [9737 10865])
+            ("makeQuadrocopterMarker" function (:arguments 
+              ( ("position" variable nil (reparse-symbol function_parameters) [10893 10901]))              ) nil [10866 11605])
+            ("makeChessPieceMarker" function (:arguments 
+              ( ("position" variable nil (reparse-symbol function_parameters) [11631 11639]))              ) nil [11606 12596])
+            ("makePanTiltMarker" function (:arguments 
+              ( ("position" variable nil (reparse-symbol function_parameters) [12619 12627]))              ) nil [12597 13600])
+            ("makeMenuMarker" function (:arguments 
+              ( ("position" variable nil (reparse-symbol function_parameters) [13620 13628]))              ) nil [13601 14434])
+            ("makeMovingMarker" function (:arguments 
+              ( ("position" variable nil (reparse-symbol function_parameters) [14456 14464]))              ) nil [14435 15241])
+            ("if" code nil nil [15243 16955]))          
+    :file "basic_controls.py"
+    :pointmax 16956
+    :fsize 16955
+    :lastmodtime '(21567 22601 647106 996000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!yuta!catkin_ws!src!display_waypoints!scripts!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

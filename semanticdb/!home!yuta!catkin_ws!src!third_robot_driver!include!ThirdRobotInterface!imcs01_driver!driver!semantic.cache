@@ -1,0 +1,564 @@
+;; Object driver/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "driver/"
+  :tables (list 
+   (semanticdb-table "urbtc.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("__URBTC_H__" variable (:constant-flag t) nil [29 40])
+            ("URBTC_GET_VENDOR" variable (:constant-flag t) nil [67 83])
+            ("URBTC_GET_PRODUCT" variable (:constant-flag t) nil [94 111])
+            ("URBTC_REQUEST_READ" variable (:constant-flag t) nil [122 140])
+            ("URBTC_CONTINUOUS_READ" variable (:constant-flag t) nil [151 172])
+            ("URBTC_COUNTER_SET" variable (:constant-flag t) nil [183 200])
+            ("URBTC_DESIRE_SET" variable (:constant-flag t) nil [211 227])
+            ("URBTC_GET_READ_STATUS" variable (:constant-flag t) nil [238 259])
+            ("URBTC_GET_WRITE_STATUS" variable (:constant-flag t) nil [270 292])
+            ("URBTC_BUFREAD" variable (:constant-flag t) nil [303 316])
+            ("URBTC_WAITREAD" variable (:constant-flag t) nil [327 341])
+            ("URBTC_STATUS_READ_REQUEST" variable (:constant-flag t) nil [354 379])
+            ("URBTC_STATUS_READ_CONTINUOUS" variable (:constant-flag t) nil [390 418])
+            ("URBTC_STATUS_WRITE_COUNTER" variable (:constant-flag t) nil [429 455])
+            ("URBTC_STATUS_WRITE_DESIRE" variable (:constant-flag t) nil [466 491]))          
+    :file "urbtc.h"
+    :pointmax 502
+    :fsize 506
+    :lastmodtime '(21509 11196 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("URBTC_GET_PRODUCT" . ((number "2" 112 . 113)))
+          ("URBTC_STATUS_READ_REQUEST" . ((number "0" 380 . 381)))
+          ("__URBTC_H__")
+          ("URBTC_GET_READ_STATUS" . ((number "7" 260 . 261)))
+          ("URBTC_DESIRE_SET" . ((number "6" 228 . 229)))
+          ("URBTC_GET_WRITE_STATUS" . ((number "8" 293 . 294)))
+          ("URBTC_WAITREAD" . ((number "10" 342 . 344)))
+          ("URBTC_CONTINUOUS_READ" . ((number "4" 173 . 174)))
+          ("URBTC_GET_VENDOR" . ((number "1" 84 . 85)))
+          ("URBTC_BUFREAD" . ((number "9" 317 . 318)))
+          ("URBTC_REQUEST_READ" . ((number "3" 141 . 142)))
+          ("URBTC_COUNTER_SET" . ((number "5" 201 . 202)))
+          ("URBTC_STATUS_WRITE_COUNTER" . ((number "2" 456 . 457)))
+          ("URBTC_STATUS_READ_CONTINUOUS" . ((number "1" 419 . 420)))
+          ("URBTC_STATUS_WRITE_DESIRE" . ((number "3" 492 . 493)))
+          )
+
+    )
+   (semanticdb-table "urbtc.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("DEBUG" variable (:constant-flag t) nil [562 567])
+            ("/usr/src/linux-headers-3.13.0-34-generic/include/generated/autoconf.h" include nil nil [721 801])
+            ("linux/kernel.h" include (:system-flag t) nil [802 827])
+            ("linux/errno.h" include (:system-flag t) nil [828 852])
+            ("linux/init.h" include (:system-flag t) nil [853 876])
+            ("linux/slab.h" include (:system-flag t) nil [877 900])
+            ("linux/module.h" include (:system-flag t) nil [901 926])
+            ("linux/kref.h" include (:system-flag t) nil [927 950])
+            ("asm/uaccess.h" include (:system-flag t) nil [951 975])
+            ("linux/usb.h" include (:system-flag t) nil [976 998])
+            ("urbtc.h" include nil nil [1000 1018])
+            ("urobotc.h" include nil nil [1019 1039])
+            ("urbtc_table" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type ("usb_device_id" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1041 1231])
+            ("MODULE_DEVICE_TABLE" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("usb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1253 1257])
+                    ("" variable (:type ("urbtc_table" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1258 1270]))                  
+                :type "int")
+                nil [1232 1271])
+            ("USB_URBTC_MINOR_BASE" variable (:constant-flag t) nil [1281 1301])
+            ("MAX_TRANSFER" variable (:constant-flag t) nil [1389 1401])
+            ("WRITES_IN_FLIGHT" variable (:constant-flag t) nil [1429 1445])
+            ("EP_READREQ" variable (:constant-flag t) nil [1457 1467])
+            ("EP_SCMD" variable (:constant-flag t) nil [1478 1485])
+            ("EP_READ" variable (:constant-flag t) nil [1497 1504])
+            ("EP_CCMD" variable (:constant-flag t) nil [1516 1523])
+            ("usb_urbtc" type
+               (:members 
+                  ( ("udev" variable
+                       (:pointer 1
+                        :type ("usb_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1605 1629])
+                    ("interface" variable
+                       (:pointer 1
+                        :type ("usb_interface" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1631 1663])
+                    ("limit_sem" variable (:type ("semaphore" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [1665 1692])
+                    ("read_status" variable (:type "int") (reparse-symbol classsubparts) [1695 1711])
+                    ("readreq_buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol classsubparts) [1713 1743])
+                    ("readreq_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1745 1765])
+                    ("readbuf_enabled" variable (:type "int") (reparse-symbol classsubparts) [1768 1788])
+                    ("readbuf_wait" variable (:type ("wait_queue_head_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1790 1821])
+                    ("readbuf_urb" variable
+                       (:pointer 1
+                        :type ("urb" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1823 1847])
+                    ("readbuf_work" variable
+                       (:pointer 1
+                        :type ("uin" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1849 1874])
+                    ("readbuf_sem" variable (:type ("semaphore" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [1876 1905])
+                    ("readbuf_buffered" variable
+                       (:pointer 1
+                        :type ("uin" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1907 1936])
+                    ("readbuf_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1938 1958])
+                    ("readbuf_last_buffered" variable (:type "unsigned short") (reparse-symbol classsubparts) [1960 1997])
+                    ("readbuf_last_read" variable (:type "unsigned short") (reparse-symbol classsubparts) [2022 2055])
+                    ("write_status" variable (:type "int") (reparse-symbol classsubparts) [2081 2098])
+                    ("write_counter_buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol classsubparts) [2100 2136])
+                    ("write_counter_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2138 2164])
+                    ("kref" variable (:type ("kref" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [2167 2185]))                  
+                :type "struct")
+                nil [1585 2188])
+            ("to_urbtc_dev" variable (:constant-flag t) nil [2197 2209])
+            ("urbtc_driver" variable
+               (:typemodifiers ("static")
+                :type ("usb_driver" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2254 2292])
+            ("urbtc_delete" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("kref" variable
+                       (:pointer 1
+                        :type ("kref" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2319 2337]))                  
+                :type "void")
+                nil [2294 2550])
+            ("urbtc_open" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("inode" variable
+                       (:pointer 1
+                        :type ("inode" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2574 2594])
+                    ("file" variable
+                       (:pointer 1
+                        :type ("file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2595 2613]))                  
+                :type "int")
+                nil [2552 3333])
+            ("urbtc_release" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("inode" variable
+                       (:pointer 1
+                        :type ("inode" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3360 3380])
+                    ("file" variable
+                       (:pointer 1
+                        :type ("file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3381 3399]))                  
+                :type "int")
+                nil [3335 3687])
+            ("urbtc_read_bulk_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("urb" variable
+                       (:pointer 1
+                        :type ("urb" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3804 3820]))                  
+                :type "void")
+                nil [3767 4841])
+            ("urbtc_read" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :type ("file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4869 4887])
+                    ("buffer" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4888 4901])
+                    ("count" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4902 4915])
+                    ("ppos" variable
+                       (:pointer 1
+                        :type ("loff_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4916 4929]))                  
+                :type ("ssize_t" type (:type "class") nil nil))
+                nil [4843 6806])
+            ("urbtc_write_bulk_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("urb" variable
+                       (:pointer 1
+                        :type ("urb" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6925 6941]))                  
+                :type "void")
+                nil [6887 7577])
+            ("urbtc_write_sync" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :type ("file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7611 7629])
+                    ("user_buffer" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7630 7654])
+                    ("count" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7655 7668])
+                    ("ppos" variable
+                       (:pointer 1
+                        :type ("loff_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7669 7682]))                  
+                :type ("ssize_t" type (:type "class") nil nil))
+                nil [7579 8238])
+            ("urbtc_write_async" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :type ("file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8273 8291])
+                    ("user_buffer" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8292 8316])
+                    ("count" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8317 8330])
+                    ("ppos" variable
+                       (:pointer 1
+                        :type ("loff_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8331 8344]))                  
+                :type ("ssize_t" type (:type "class") nil nil))
+                nil [8240 9915])
+            ("urbtc_write" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :type ("file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9944 9962])
+                    ("user_buffer" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9963 9987])
+                    ("count" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9988 10001])
+                    ("ppos" variable
+                       (:pointer 1
+                        :type ("loff_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10002 10015]))                  
+                :type ("ssize_t" type (:type "class") nil nil))
+                nil [9917 10442])
+            ("urbtc_ioctl" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :type ("file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10577 10595])
+                    ("cmd" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [10601 10618])
+                    ("arg" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [10619 10637]))                  
+                :type "long")
+                nil [10553 12192])
+            ("urbtc_fops" variable
+               (:typemodifiers ("static")
+                :type ("file_operations" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [12194 12431])
+            ("urbtc_class" variable
+               (:typemodifiers ("static")
+                :type ("usb_class_driver" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [12574 12704])
+            ("urbtc_probe" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("interface" variable
+                       (:pointer 1
+                        :type ("usb_interface" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12729 12761])
+                    ("id" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("usb_device_id" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12762 12793]))                  
+                :type "int")
+                nil [12706 16921])
+            ("urbtc_disconnect" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("interface" variable
+                       (:pointer 1
+                        :type ("usb_interface" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [16952 16984]))                  
+                :type "void")
+                nil [16923 17555])
+            ("urbtc_driver" variable
+               (:typemodifiers ("static")
+                :type ("usb_driver" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [17557 17702])
+            ("usb_urbtc_init" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [17737 17742]))                  
+                :type ("__init" type (:type "class") nil nil))
+                nil [17715 17943])
+            ("usb_urbtc_exit" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [17979 17984]))                  
+                :type ("__exit" type (:type "class") nil nil))
+                nil [17957 18073])
+            ("module_init" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("usb_urbtc_init" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18088 18103]))                  
+                :type "int")
+                nil [18075 18104])
+            ("module_exit" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("usb_urbtc_exit" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18118 18133]))                  
+                :type "int")
+                nil [18105 18134])
+            ("MODULE_LICENSE" function
+               (:prototype-flag t
+                :type "int")
+                nil [18136 18158]))          
+    :file "urbtc.c"
+    :pointmax 18215
+    :fsize 18214
+    :lastmodtime '(21509 45399 0 0)
+    :unmatched-syntax '((string 18151 . 18156) (VOID 17952 . 17956) (STATIC 17945 . 17951) (INT 17711 . 17714) (STATIC 17704 . 17710))
+    :lexical-table 
+        '(("EP_CCMD" . ((number "6" 1525 . 1526)))
+          ("to_urbtc_dev" (spp-arg-list ("d") 2209 . 2212) . ((symbol "container_of" 2213 . 2225) (semantic-list "(d, struct usb_urbtc, kref)" 2225 . 2252)))
+          ("EP_SCMD" . ((number "2" 1487 . 1488)))
+          ("MAX_TRANSFER" . ((semantic-list "(PAGE_SIZE - 512)" 1403 . 1420)))
+          ("DEBUG")
+          ("USB_URBTC_MINOR_BASE" . ((number "100" 1302 . 1305)))
+          ("EP_READREQ" . ((number "1" 1468 . 1469)))
+          ("WRITES_IN_FLIGHT" . ((number "8" 1446 . 1447)))
+          ("EP_READ" . ((number "5" 1506 . 1507)))
+          )
+
+    )
+   (semanticdb-table "urobotc.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("CH0" variable (:constant-flag t) nil [28 31])
+            ("CH1" variable (:constant-flag t) nil [42 45])
+            ("CH2" variable (:constant-flag t) nil [56 59])
+            ("CH3" variable (:constant-flag t) nil [70 73])
+            ("DIN0" variable (:constant-flag t) nil [103 107])
+            ("DIN1" variable (:constant-flag t) nil [121 125])
+            ("DO_DOUT" variable (:constant-flag t) nil [158 165])
+            ("DOUT0" variable (:constant-flag t) nil [178 183])
+            ("DOUT1" variable (:constant-flag t) nil [197 202])
+            ("DOUT2" variable (:constant-flag t) nil [216 221])
+            ("DOUT3" variable (:constant-flag t) nil [235 240])
+            ("uin" type
+               (:members 
+                  ( ("time" variable (:type "unsigned short") (reparse-symbol classsubparts) [262 282])
+                    ("ad" variable
+                       (:dereference 1
+                        :type "unsigned short")
+                        (reparse-symbol classsubparts) [308 329])
+                    ("ct" variable
+                       (:dereference 1
+                        :type "short")
+                        (reparse-symbol classsubparts) [356 368])
+                    ("da" variable
+                       (:dereference 1
+                        :type "unsigned short")
+                        (reparse-symbol classsubparts) [401 422])
+                    ("din" variable (:type "unsigned char") (reparse-symbol classsubparts) [454 472])
+                    ("dout" variable (:type "unsigned char") (reparse-symbol classsubparts) [490 509])
+                    ("intmax" variable (:type "unsigned short") (reparse-symbol classsubparts) [526 548])
+                    ("interval" variable (:type "unsigned short") (reparse-symbol classsubparts) [574 598])
+                    ("magicno" variable (:type "unsigned short") (reparse-symbol classsubparts) [623 646])
+                    ("dmy" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [667 680]))                  
+                :type "struct")
+                nil [247 683])
+            ("scmd" type
+               (:members 
+                  ( ("x" variable (:type "short") (reparse-symbol classsubparts) [701 709])
+                    ("d" variable (:type "short") (reparse-symbol classsubparts) [735 743])
+                    ("kp" variable (:type "signed short") (reparse-symbol classsubparts) [769 785])
+                    ("kpx" variable (:type "unsigned short") (reparse-symbol classsubparts) [810 829])
+                    ("kd" variable (:type "signed short") (reparse-symbol classsubparts) [851 867])
+                    ("kdx" variable (:type "unsigned short") (reparse-symbol classsubparts) [892 911])
+                    ("ki" variable (:type "signed short") (reparse-symbol classsubparts) [933 949])
+                    ("kix" variable (:type "unsigned short") (reparse-symbol classsubparts) [974 993]))                  
+                :type "struct")
+                nil [685 1015])
+            ("uout" type
+               (:members 
+                  ( ("ch" variable
+                       (:dereference 1
+                        :type ("scmd" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1033 1051]))                  
+                :type "struct")
+                nil [1017 1054])
+            ("RETURN_VAL" variable (:constant-flag t) nil [1064 1074])
+            ("SET_SELECT" variable (:constant-flag t) nil [1085 1095])
+            ("SET_POSNEG" variable (:constant-flag t) nil [1109 1119])
+            ("SET_BREAKS" variable (:constant-flag t) nil [1133 1143])
+            ("SET_CH2_HIN" variable (:constant-flag t) nil [1157 1168])
+            ("WR_MAGIC" variable (:constant-flag t) nil [1182 1190])
+            ("WR_SELOUT" variable (:constant-flag t) nil [1204 1213])
+            ("WR_OFFSET" variable (:constant-flag t) nil [1227 1236])
+            ("WR_BREAKS" variable (:constant-flag t) nil [1250 1259])
+            ("ccmd" type
+               (:members 
+                  ( ("retval" variable (:type "unsigned char") (reparse-symbol classsubparts) [1282 1303])
+                    ("setoffset" variable (:type "unsigned char") (reparse-symbol classsubparts) [1343 1367])
+                    ("setcounter" variable (:type "unsigned char") (reparse-symbol classsubparts) [1396 1421])
+                    ("resetint" variable (:type "unsigned char") (reparse-symbol classsubparts) [1450 1473])
+                    ("selin" variable (:type "unsigned char") (reparse-symbol classsubparts) [1502 1522])
+                    ("dout" variable (:type "unsigned char") (reparse-symbol classsubparts) [1557 1576])
+                    ("offset" variable
+                       (:dereference 1
+                        :type "unsigned short")
+                        (reparse-symbol classsubparts) [1597 1622])
+                    ("counter" variable
+                       (:dereference 1
+                        :type "short")
+                        (reparse-symbol classsubparts) [1647 1664])
+                    ("selout" variable (:type "unsigned char") (reparse-symbol classsubparts) [1687 1708])
+                    ("wrrom" variable (:type "unsigned char") (reparse-symbol classsubparts) [1765 1785])
+                    ("magicno" variable (:type "unsigned short") (reparse-symbol classsubparts) [1788 1811])
+                    ("posneg" variable (:type "unsigned char") (reparse-symbol classsubparts) [1814 1835])
+                    ("breaks" variable (:type "unsigned char") (reparse-symbol classsubparts) [1859 1880])
+                    ("dummy" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1901 1916]))                  
+                :type "struct")
+                nil [1266 1919]))          
+    :file "urobotc.h"
+    :pointmax 1920
+    :fsize 2503
+    :lastmodtime '(21509 11196 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("SET_CH2_HIN" . ((number "0x40" 1169 . 1173)))
+          ("WR_MAGIC" . ((number "0x80" 1191 . 1195)))
+          ("WR_BREAKS" . ((number "0x10" 1260 . 1264)))
+          ("SET_POSNEG" . ((number "0x80" 1120 . 1124)))
+          ("DIN0" . ((number "0x10" 108 . 112)))
+          ("RETURN_VAL" . ((number "1" 1075 . 1076)))
+          ("SET_BREAKS" . ((number "0x80" 1144 . 1148)))
+          ("WR_SELOUT" . ((number "0x40" 1214 . 1218)))
+          ("DIN1" . ((number "0x20" 126 . 130)))
+          ("WR_OFFSET" . ((number "0x20" 1237 . 1241)))
+          ("CH0" . ((number "1" 32 . 33)))
+          ("DOUT0" . ((number "0x08" 184 . 188)))
+          ("CH1" . ((number "2" 46 . 47)))
+          ("DOUT1" . ((number "0x20" 203 . 207)))
+          ("SET_SELECT" . ((number "0x80" 1096 . 1100)))
+          ("CH2" . ((number "4" 60 . 61)))
+          ("DO_DOUT" . ((number "0x1" 166 . 169)))
+          ("DOUT2" . ((number "0x40" 222 . 226)))
+          ("CH3" . ((number "8" 74 . 75)))
+          ("DOUT3" . ((number "0x80" 241 . 245)))
+          )
+
+    )
+   )
+  :file "!home!yuta!catkin_ws!src!third_robot_driver!include!ThirdRobotInterface!imcs01_driver!driver!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

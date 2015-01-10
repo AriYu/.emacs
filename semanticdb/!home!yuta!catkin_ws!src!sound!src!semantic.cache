@@ -1,0 +1,44 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "sound_client.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("ros/ros.h" include (:system-flag t) nil [1 21])
+            ("sound/sound_service.h" include nil nil [22 54])
+            ("cstdlib" include (:system-flag t) nil [55 73])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [84 93])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [94 106]))                  
+                :type "int")
+                nil [75 517]))          
+    :file "sound_client.cpp"
+    :pointmax 518
+    :fsize 517
+    :lastmodtime '(21581 57218 725659 269000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "sound_server.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("ros/ros.h" include (:system-flag t) nil [1 21])
+            ("interface" variable
+               (:typemodifiers ("static")
+                :type ("rospeex::Interface" type (:type "class") nil nil))
+                nil [90 126]))          
+    :file "sound_server.cpp"
+    :pointmax 939
+    :fsize 938
+    :lastmodtime '(21593 46648 589444 412000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!yuta!catkin_ws!src!sound!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

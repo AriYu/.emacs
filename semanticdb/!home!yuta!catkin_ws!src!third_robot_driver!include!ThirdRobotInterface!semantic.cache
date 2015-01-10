@@ -1,0 +1,216 @@
+;; Object ThirdRobotInterface/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ThirdRobotInterface/"
+  :tables (list 
+   (semanticdb-table "ThirdRobotInterface.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("THIRD_ROBOT_INTERFACE_H_" variable (:constant-flag t) nil [42 66])
+            ("stdexcept" include (:system-flag t) nil [68 88])
+            ("termios.h" include (:system-flag t) nil [89 109])
+            ("string" include (:system-flag t) nil [110 127])
+            ("vector" include (:system-flag t) nil [128 145])
+            ("stdint.h" include (:system-flag t) nil [146 165])
+            ("numeric" include (:system-flag t) nil [166 184])
+            ("unistd.h" include (:system-flag t) nil [197 216])
+            ("sys/types.h" include (:system-flag t) nil [228 250])
+            ("sys/stat.h" include (:system-flag t) nil [251 272])
+            ("fcntl.h" include (:system-flag t) nil [273 291])
+            ("sys/ioctl.h" include (:system-flag t) nil [304 326])
+            ("imcs01_driver/driver/urbtc.h" include nil nil [338 377])
+            ("imcs01_driver/driver/urobotc.h" include nil nil [378 419])
+            ("FRONT" variable (:constant-flag t) nil [429 434])
+            ("REAR" variable (:constant-flag t) nil [445 449])
+            ("ROBOT_STASIS_FORWARD" variable (:constant-flag t) nil [461 481])
+            ("ROBOT_STASIS_FORWARD_STOP" variable (:constant-flag t) nil [494 519])
+            ("ROBOT_STASIS_BACK" variable (:constant-flag t) nil [531 548])
+            ("ROBOT_STASIS_BACK_STOP" variable (:constant-flag t) nil [562 584])
+            ("ROBOT_STASIS_OTHERWISE" variable (:constant-flag t) nil [597 619])
+            ("FORWARD_MODE" variable (:constant-flag t) nil [633 645])
+            ("FORWARD_STOP_MODE" variable (:constant-flag t) nil [658 675])
+            ("BACK_MODE" variable (:constant-flag t) nil [687 696])
+            ("BACK_STOP_MODE" variable (:constant-flag t) nil [710 724])
+            ("STOP_MODE" variable (:constant-flag t) nil [737 746])
+            ("ROBOT_MAX_ENCODER_COUNTS" variable (:constant-flag t) nil [792 816])
+            ("WHEELBASE_LENGTH" variable (:constant-flag t) nil [885 901])
+            ("TREAD_WIDTH" variable (:constant-flag t) nil [939 950])
+            ("MAX_LIN_VEL" variable (:constant-flag t) nil [996 1007])
+            ("SENDSIZE" variable (:constant-flag t) nil [1104 1112])
+            ("MIN" variable (:constant-flag t) nil [1136 1139])
+            ("MAX" variable (:constant-flag t) nil [1194 1197])
+            ("NORMALIZE" variable (:constant-flag t) nil [1258 1267])
+            ("plus_or_minus" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("value" variable (:type "double") (reparse-symbol arg-sub-list) [1319 1332]))                  
+                :type "int")
+                nil [1301 1333])
+            ("cirkit" type
+               (:members 
+                  ( ("ThirdRobotInterface" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1388 1395])
+                            ("ThirdRobotInterface" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("new_serial_port_imcs01" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1440 1475])
+                                    ("new_baudrate_imcs01" variable (:type "int") (reparse-symbol arg-sub-list) [1476 1500])
+                                    ("new_serial_port_arduino" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1507 1543])
+                                    ("new_baudrate_arduino" variable (:type "int") (reparse-symbol arg-sub-list) [1544 1569]))                                  
+                                :type ("ThirdRobotInterface" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1420 1570])
+                            ("ThirdRobotInterface" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1595 1618])
+                            ("openSerialPort" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "int")
+                                (reparse-symbol classsubparts) [1653 1682])
+                            ("setSerialPort" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "int")
+                                (reparse-symbol classsubparts) [1720 1748])
+                            ("closeSerialPort" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "int")
+                                (reparse-symbol classsubparts) [1784 1814])
+                            ("drive" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("linear_speed" variable (:type "double") (reparse-symbol arg-sub-list) [1852 1872])
+                                    ("angular_speed" variable (:type "double") (reparse-symbol arg-sub-list) [1873 1894]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1834 1895])
+                            ("driveDirect" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("front_angular" variable (:type "double") (reparse-symbol arg-sub-list) [1946 1967])
+                                    ("rear_speed" variable (:type "double") (reparse-symbol arg-sub-list) [1968 1986]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1922 1987])
+                            ("getEncoderPacket" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "int")
+                                (reparse-symbol classsubparts) [2062 2093])
+                            ("calculateOdometry" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2174 2207])
+                            ("resetOdometry" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2249 2278])
+                            ("setOdometry" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("new_x" variable (:type "double") (reparse-symbol arg-sub-list) [2335 2348])
+                                    ("new_y" variable (:type "double") (reparse-symbol arg-sub-list) [2349 2362])
+                                    ("new_yaw" variable (:type "double") (reparse-symbol arg-sub-list) [2363 2378]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2310 2379])
+                            ("sendOpcode" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("code" variable
+                                       (:constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [2454 2470]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2439 2471])
+                            ("odometry_x_" variable (:type "double") (reparse-symbol classsubparts) [2506 2525])
+                            ("odometry_y_" variable (:type "double") (reparse-symbol classsubparts) [2558 2577])
+                            ("odometry_yaw_" variable (:type "double") (reparse-symbol classsubparts) [2614 2635])
+                            ("steer_angle" variable (:type "double") (reparse-symbol classsubparts) [2674 2693])
+                            ("stasis_" variable (:type "int") (reparse-symbol classsubparts) [2728 2740])
+                            ("protected" label nil (reparse-symbol classsubparts) [2744 2754])
+                            ("parseEncoderPackets" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [2945 2971])
+                            ("parseFrontEncoderCounts" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [2976 3006])
+                            ("parseRearEncoderCounts" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [3011 3040])
+                            ("cmd_uin" variable (:type ("uin" type
+                                 (:prototype t
+                                  :type "struct")
+                                  nil nil)) (reparse-symbol classsubparts) [3077 3096])
+                            ("cmd_ccmd" variable (:type ("ccmd" type
+                                 (:prototype t
+                                  :type "struct")
+                                  nil nil)) (reparse-symbol classsubparts) [3129 3150])
+                            ("imcs01_port_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3208 3237])
+                            ("arduino_port_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3242 3272])
+                            ("fd_imcs01" variable (:type "int") (reparse-symbol classsubparts) [3302 3316])
+                            ("fd_arduino" variable (:type "int") (reparse-symbol classsubparts) [3321 3336])
+                            ("baudrate_imcs01" variable (:type "int") (reparse-symbol classsubparts) [3359 3379])
+                            ("baudrate_arduino" variable (:type "int") (reparse-symbol classsubparts) [3384 3405])
+                            ("oldtio_imcs01" variable (:type ("termios" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3446 3468])
+                            ("newtio_imcs01" variable (:type ("termios" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3473 3495])
+                            ("oldtio_arduino" variable (:type ("termios" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3500 3523])
+                            ("newtio_arduino" variable (:type ("termios" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3528 3551])
+                            ("delta_rear_encoder_counts" variable (:type "int") (reparse-symbol classsubparts) [3593 3623])
+                            ("last_rear_encoder_counts" variable (:type "int") (reparse-symbol classsubparts) [3697 3726])
+                            ("last_rear_encoder_time" variable (:type "double") (reparse-symbol classsubparts) [3760 3790])
+                            ("delta_rear_encoder_time" variable (:type "double") (reparse-symbol classsubparts) [3809 3840])
+                            ("linear_velocity" variable (:type "double") (reparse-symbol classsubparts) [3864 3887])
+                            ("sendPacket" variable
+                               (:dereference 1
+                                :type "char")
+                                (reparse-symbol classsubparts) [3930 3956])
+                            ("runmode" variable (:type "int") (reparse-symbol classsubparts) [3990 4002]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1356 4007]))                  
+                :type "namespace")
+                nil [1335 4009]))          
+    :file "ThirdRobotInterface.h"
+    :pointmax 4045
+    :fsize 4044
+    :lastmodtime '(21566 24844 535046 346000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("BACK_STOP_MODE" . ((number "3" 727 . 728)))
+          ("MAX" (spp-arg-list ("a" "b") 1197 . 1202) . ((semantic-list "((a > b) ? (a) : (b))" 1203 . 1224)))
+          ("FORWARD_MODE" . ((number "0" 648 . 649)))
+          ("FORWARD_STOP_MODE" . ((number "1" 677 . 678)))
+          ("WHEELBASE_LENGTH" . ((number "0.94" 902 . 906)))
+          ("TREAD_WIDTH" . ((number "0.53" 951 . 955)))
+          ("SENDSIZE" . ((number "7" 1113 . 1114)))
+          ("MIN" (spp-arg-list ("a" "b") 1139 . 1144) . ((semantic-list "((a < b) ? (a) : (b))" 1145 . 1166)))
+          ("ROBOT_STASIS_BACK_STOP" . ((number "3" 587 . 588)))
+          ("BACK_MODE" . ((number "2" 700 . 701)))
+          ("NORMALIZE" (spp-arg-list ("z") 1267 . 1270) . ((symbol "atan2" 1271 . 1276) (semantic-list "(sin(z), cos(z))" 1276 . 1292)))
+          ("REAR" . ((number "1" 450 . 451)))
+          ("ROBOT_STASIS_FORWARD" . ((number "0" 484 . 485)))
+          ("ROBOT_STASIS_FORWARD_STOP" . ((number "1" 521 . 522)))
+          ("ROBOT_MAX_ENCODER_COUNTS" . ((number "65535" 817 . 822)))
+          ("FRONT" . ((number "0" 435 . 436)))
+          ("ROBOT_STASIS_OTHERWISE" . ((number "4" 622 . 623)))
+          ("MAX_LIN_VEL" . ((number "1.11" 1008 . 1012)))
+          ("THIRD_ROBOT_INTERFACE_H_")
+          ("ROBOT_STASIS_BACK" . ((number "2" 552 . 553)))
+          ("STOP_MODE" . ((number "4" 750 . 751)))
+          )
+
+    )
+   )
+  :file "!home!yuta!catkin_ws!src!third_robot_driver!include!ThirdRobotInterface!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

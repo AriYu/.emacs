@@ -1,0 +1,483 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "plant_flag_tool.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("OGRE/OgreSceneNode.h" include (:system-flag t) nil [1613 1644])
+            ("OGRE/OgreSceneManager.h" include (:system-flag t) nil [1645 1679])
+            ("OGRE/OgreEntity.h" include (:system-flag t) nil [1680 1708])
+            ("ros/console.h" include (:system-flag t) nil [1710 1734])
+            ("rviz/viewport_mouse_event.h" include (:system-flag t) nil [1736 1774])
+            ("rviz/visualization_manager.h" include (:system-flag t) nil [1775 1814])
+            ("rviz/mesh_loader.h" include (:system-flag t) nil [1815 1844])
+            ("rviz/geometry.h" include (:system-flag t) nil [1845 1871])
+            ("rviz/properties/vector_property.h" include (:system-flag t) nil [1872 1916])
+            ("plant_flag_tool.h" include nil nil [1918 1946])
+            ("rviz_plugin_tutorials" type
+               (:members 
+                  ( ("PlantFlagTool" function
+                       (:constructor-flag t
+                        :parent "PlantFlagTool"
+                        :type ("PlantFlagTool" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2320 2442])
+                    ("PlantFlagTool" function
+                       (:destructor-flag t
+                        :parent "PlantFlagTool"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2666 2819])
+                    ("onInitialize" function
+                       (:parent "PlantFlagTool"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [3427 3955])
+                    ("activate" function
+                       (:parent "PlantFlagTool"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [4765 5095])
+                    ("deactivate" function
+                       (:parent "PlantFlagTool"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5502 5686])
+                    ("processMouseEvent" function
+                       (:parent "PlantFlagTool"
+                        :arguments 
+                          ( ("event" variable
+                               (:reference 1
+                                :type ("rviz::ViewportMouseEvent" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6421 6454]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [6383 7297])
+                    ("makeFlag" function
+                       (:parent "PlantFlagTool"
+                        :arguments 
+                          ( ("position" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Ogre::Vector3" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7432 7463]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [7402 7752])
+                    ("save" function
+                       (:parent "PlantFlagTool"
+                        :arguments 
+                          ( ("config" variable (:type ("rviz::Config" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8522 8543]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [8496 9577])
+                    ("load" function
+                       (:parent "PlantFlagTool"
+                        :arguments 
+                          ( ("config" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("rviz::Config" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9779 9807]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [9753 11270]))                  
+                :type "namespace")
+                nil [1948 11515])
+            ("pluginlib/class_list_macros.h" include (:system-flag t) nil [11556 11596]))          
+    :file "plant_flag_tool.cpp"
+    :pointmax 11686
+    :fsize 11685
+    :lastmodtime '(21047 21015 0 0)
+    :unmatched-syntax '((semantic-list 11619 . 11669) (symbol 11597 . 11619))
+    )
+   (semanticdb-table "plant_flag_tool.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("PLANT_FLAG_TOOL_H" variable (:constant-flag t) nil [1646 1663])
+            ("rviz/tool.h" include (:system-flag t) nil [1665 1687])
+            ("Ogre" type
+               (:members 
+                  ( ("SceneNode" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1706 1722])
+                    ("Vector3" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1723 1737]))                  
+                :type "namespace")
+                nil [1689 1739])
+            ("rviz" type
+               (:members 
+                  ( ("VectorProperty" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1758 1779])
+                    ("VisualizationManager" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1780 1807])
+                    ("ViewportMouseEvent" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1808 1833]))                  
+                :type "namespace")
+                nil [1741 1835])
+            ("rviz_plugin_tutorials" type
+               (:members 
+                  ( ("PlantFlagTool" type
+                       (:superclasses 
+                          ( ("rviz::Tool" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2073 2080])
+                            ("PlantFlagTool" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("PlantFlagTool" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2083 2099])
+                            ("PlantFlagTool" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [2102 2119])
+                            ("onInitialize" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2123 2151])
+                            ("activate" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2155 2179])
+                            ("deactivate" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2182 2208])
+                            ("processMouseEvent" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("event" variable
+                                       (:reference 1
+                                        :type ("rviz::ViewportMouseEvent" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2243 2276]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2212 2277])
+                            ("load" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("config" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("rviz::Config" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2300 2328]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2281 2329])
+                            ("save" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("config" variable (:type ("rviz::Config" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2351 2372]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2332 2379])
+                            ("private" label nil (reparse-symbol classsubparts) [2381 2389])
+                            ("makeFlag" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("position" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Ogre::Vector3" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2407 2438]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2392 2439])
+                            ("flag_nodes_" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("Ogre::SceneNode" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2443 2485])
+                            ("moving_flag_node_" variable
+                               (:pointer 1
+                                :type ("Ogre::SceneNode" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2488 2523])
+                            ("flag_resource_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2526 2553])
+                            ("current_flag_property_" variable
+                               (:pointer 1
+                                :type ("rviz::VectorProperty" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2556 2601]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2023 2604]))                  
+                :type "namespace")
+                nil [1837 2623]))          
+    :file "plant_flag_tool.h"
+    :pointmax 2692
+    :fsize 2691
+    :lastmodtime '(21047 21015 0 0)
+    :unmatched-syntax '((symbol 2064 . 2072))
+    :lexical-table 
+        '(("PLANT_FLAG_TOOL_H")
+          )
+
+    )
+   (semanticdb-table "flag.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("FLAG_H" variable (:constant-flag t) nil [1635 1641])
+            ("rviz_plugin_tutorials" type
+               (:members 
+                  ( ("Flag" type
+                       (:superclasses 
+                          ( ("rviz::Property" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1723 1730])
+                            ("Flag" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("Flag" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1733 1740]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1678 1743]))                  
+                :type "namespace")
+                nil [1643 1746]))          
+    :file "flag.h"
+    :pointmax 1765
+    :fsize 1764
+    :lastmodtime '(21047 21015 0 0)
+    :unmatched-syntax '((symbol 1714 . 1722))
+    :lexical-table 
+        '(("FLAG_H")
+          )
+
+    )
+   (semanticdb-table "teleop_panel.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("TELEOP_PANEL_H" variable (:constant-flag t) nil [1643 1657])
+            ("ros/ros.h" include (:system-flag t) nil [1677 1698])
+            ("rviz/panel.h" include (:system-flag t) nil [1700 1724])
+            ("QLineEdit" type
+               (:prototype t
+                :type "class")
+                nil [1733 1749])
+            ("rviz_plugin_tutorials" type
+               (:members 
+                  ( ("DriveWidget" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1786 1804])
+                    ("TeleopPanel" type
+                       (:superclasses 
+                          ( ("rviz::Panel" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2306 2313])
+                            ("TeleopPanel" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("parent" variable
+                                       (:pointer 1
+                                        :type ("QWidget" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2778 2795]))                                  
+                                :type ("TeleopPanel" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2765 2800])
+                            ("load" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("config" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("rviz::Config" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2972 3000]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2953 3001])
+                            ("save" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("config" variable (:type ("rviz::Config" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3023 3044]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3004 3051])
+                            ("public" label nil (reparse-symbol classsubparts) [3097 3112])
+                            ("setVel" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("linear_velocity_" variable (:type "float") (reparse-symbol arg-sub-list) [3265 3288])
+                                    ("angular_velocity_" variable (:type "float") (reparse-symbol arg-sub-list) [3289 3314]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3252 3315])
+                            ("setTopic" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("topic" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("QString" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3565 3587]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3550 3588])
+                            ("protected" label nil (reparse-symbol classsubparts) [3632 3650])
+                            ("sendVel" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [3809 3824])
+                            ("updateTopic" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [3930 3949])
+                            ("protected" label nil (reparse-symbol classsubparts) [4007 4017])
+                            ("drive_widget_" variable
+                               (:pointer 1
+                                :type ("DriveWidget" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4104 4131])
+                            ("output_topic_editor_" variable
+                               (:pointer 1
+                                :type ("QLineEdit" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4203 4235])
+                            ("output_topic_" variable (:type ("QString" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4282 4304])
+                            ("velocity_publisher_" variable (:type ("ros::Publisher" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4357 4392])
+                            ("nh_" variable (:type ("ros::NodeHandle" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4422 4442])
+                            ("linear_velocity_" variable (:type "float") (reparse-symbol classsubparts) [4501 4524])
+                            ("angular_velocity_" variable (:type "float") (reparse-symbol classsubparts) [4527 4551]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2164 4572]))                  
+                :type "namespace")
+                nil [1751 4575]))          
+    :file "teleop_panel.h"
+    :pointmax 4641
+    :fsize 4640
+    :lastmodtime '(21047 21015 0 0)
+    :unmatched-syntax '((number 2796 . 2797) (punctuation 2794 . 2795) (symbol 2297 . 2305))
+    :lexical-table 
+        '(("TELEOP_PANEL_H")
+          )
+
+    )
+   (semanticdb-table "drive_widget.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("DRIVE_WIDGET_H" variable (:constant-flag t) nil [1643 1657])
+            ("QWidget" include (:system-flag t) nil [1659 1677])
+            ("rviz_plugin_tutorials" type
+               (:members 
+                  ( ("DriveWidget" type
+                       (:superclasses 
+                          ( ("QWidget" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2141 2148])
+                            ("DriveWidget" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("parent" variable
+                                       (:pointer 1
+                                        :type ("QWidget" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2272 2289]))                                  
+                                :type ("DriveWidget" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2259 2294])
+                            ("paintEvent" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("event" variable
+                                       (:pointer 1
+                                        :type ("QPaintEvent" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2385 2405]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2360 2406])
+                            ("mouseMoveEvent" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("event" variable
+                                       (:pointer 1
+                                        :type ("QMouseEvent" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2537 2557]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2508 2558])
+                            ("mousePressEvent" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("event" variable
+                                       (:pointer 1
+                                        :type ("QMouseEvent" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2591 2611]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2561 2612])
+                            ("mouseReleaseEvent" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("event" variable
+                                       (:pointer 1
+                                        :type ("QMouseEvent" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2647 2667]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2615 2668])
+                            ("leaveEvent" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("event" variable
+                                       (:pointer 1
+                                        :type ("QEvent" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2696 2711]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2671 2712])
+                            ("sizeHint" function
+                               (:typemodifiers ("virtual")
+                                :type ("QSize" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2809 2869])
+                            ("outputVelocity" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("linear" variable (:type "float") (reparse-symbol arg-sub-list) [2956 2969])
+                                    ("angular" variable (:type "float") (reparse-symbol arg-sub-list) [2970 2985]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2935 2986])
+                            ("protected" label nil (reparse-symbol classsubparts) [3105 3115])
+                            ("sendVelocitiesFromMouse" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [3148 3154])
+                                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [3155 3161])
+                                    ("width" variable (:type "int") (reparse-symbol arg-sub-list) [3162 3172])
+                                    ("height" variable (:type "int") (reparse-symbol arg-sub-list) [3173 3185]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3118 3186])
+                            ("stop" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [3229 3241])
+                            ("linear_velocity_" variable (:type "float") (reparse-symbol classsubparts) [3280 3303])
+                            ("angular_velocity_" variable (:type "float") (reparse-symbol classsubparts) [3316 3340])
+                            ("linear_scale_" variable (:type "float") (reparse-symbol classsubparts) [3359 3379])
+                            ("angular_scale_" variable (:type "float") (reparse-symbol classsubparts) [3392 3413]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2096 3432]))                  
+                :type "namespace")
+                nil [1679 3451]))          
+    :file "drive_widget.h"
+    :pointmax 3518
+    :fsize 3517
+    :lastmodtime '(21047 21015 0 0)
+    :unmatched-syntax '((punctuation 2931 . 2932) (symbol 2922 . 2931) (number 2290 . 2291) (punctuation 2288 . 2289) (symbol 2132 . 2140))
+    :lexical-table 
+        '(("DRIVE_WIDGET_H")
+          )
+
+    )
+   )
+  :file "!home!yuta!Downloads!visualization_tutorials-hydro-devel!rviz_plugin_tutorials!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

@@ -1,0 +1,171 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "main500.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("ros/ros.h" include (:system-flag t) nil [482 502])
+            ("roomba500sci.h" include nil nil [504 529])
+            ("roomba_500driver_meiji/Roomba500State.h" include (:system-flag t) nil [530 580])
+            ("roomba_500driver_meiji/RoombaCtrl.h" include (:system-flag t) nil [581 627])
+            ("tf/transform_broadcaster.h" include (:system-flag t) nil [629 666])
+            ("geometry_msgs/Pose2D.h" include (:system-flag t) nil [667 700])
+            ("nav_msgs/Odometry.h" include (:system-flag t) nil [701 731])
+            ("boost/thread.hpp" include (:system-flag t) nil [733 760])
+            ("cntl_mutex_" variable (:type ("boost::mutex" type (:type "class") nil nil)) nil [761 786])
+            ("iostream" include (:system-flag t) nil [788 807])
+            ("math.h" include (:system-flag t) nil [808 825])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [826 846])
+            ("roomba" variable
+               (:pointer 1
+                :type ("roombaSci" type (:type "class") nil nil))
+                nil [848 866])
+            ("roombactrl" variable (:type ("roomba_500driver_meiji::RoombaCtrl" type (:type "class") nil nil)) nil [867 913])
+            ("cntl_callback" function
+               (:arguments 
+                  ( ("msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("roomba_500driver_meiji::RoombaCtrlConstPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [934 988]))                  
+                :type "void")
+                nil [915 2521])
+            ("printSensors" function
+               (:arguments 
+                  ( ("sens" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("roomba_500driver_meiji::Roomba500State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2541 2592]))                  
+                :type "void")
+                nil [2523 3937])
+            ("piToPI" function
+               (:arguments 
+                  ( ("rad" variable (:type "double") (reparse-symbol arg-sub-list) [3953 3964]))                  
+                :type "double")
+                nil [3939 4077])
+            ("calcOdometry" function
+               (:arguments 
+                  ( ("x" variable
+                       (:reference 1
+                        :type ("geometry_msgs::Pose2D" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4099 4124])
+                    ("pre_x" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("geometry_msgs::Pose2D" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4126 4161])
+                    ("dist" variable (:type "float") (reparse-symbol arg-sub-list) [4163 4174])
+                    ("angle" variable (:type "float") (reparse-symbol arg-sub-list) [4176 4188]))                  
+                :type "void")
+                nil [4079 4311])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [4322 4331])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4332 4344]))                  
+                :type "int")
+                nil [4313 7555]))          
+    :file "main500.cpp"
+    :pointmax 7556
+    :fsize 7669
+    :lastmodtime '(21460 65070 383136 718000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "roomba500sci.h"
+    :file "roomba500sci.h"
+    :fsize 4539
+    :lastmodtime '(21460 65070 383136 718000)
+    )
+   (semanticdb-table "serial.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("sys/types.h" include (:system-flag t) nil [483 505])
+            ("sys/stat.h" include (:system-flag t) nil [506 527])
+            ("sys/ioctl.h" include (:system-flag t) nil [528 550])
+            ("fcntl.h" include (:system-flag t) nil [551 569])
+            ("termios.h" include (:system-flag t) nil [570 590])
+            ("stdio.h" include (:system-flag t) nil [591 609])
+            ("stdlib.h" include (:system-flag t) nil [610 629])
+            ("string.h" include (:system-flag t) nil [630 649])
+            ("unistd.h" include (:system-flag t) nil [650 669])
+            ("serial.h" include nil nil [671 690])
+            ("iostream" include (:system-flag t) nil [692 711])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [712 732])
+            ("Serial" function
+               (:constructor-flag t
+                :parent "Serial"
+                :arguments 
+                  ( ("baudrate" variable (:type "int") (reparse-symbol arg-sub-list) [766 779])
+                    ("modemdevice" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [780 804])
+                    ("vmin" variable (:type "int") (reparse-symbol arg-sub-list) [805 814])
+                    ("lflag" variable (:type "int") (reparse-symbol arg-sub-list) [815 825]))                  
+                :type ("Serial" type (:type "class") nil nil))
+                nil [751 1974])
+            ("Serial" function
+               (:destructor-flag t
+                :parent "Serial"
+                :type "void")
+                nil [1977 2045])
+            ("read" function
+               (:parent "Serial"
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [2065 2082])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [2083 2091]))                  
+                :type "int")
+                nil [2048 2124])
+            ("write" function
+               (:parent "Serial"
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [2144 2167])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [2168 2176]))                  
+                :type "int")
+                nil [2126 2210])
+            ("setVmin" function
+               (:parent "Serial"
+                :arguments 
+                  ( ("vmin" variable (:type "int") (reparse-symbol arg-sub-list) [2233 2242]))                  
+                :type "void")
+                nil [2212 2384])
+            ("setRts" function
+               (:parent "Serial"
+                :arguments 
+                  ( ("sw" variable (:type "int") (reparse-symbol arg-sub-list) [2406 2413]))                  
+                :type "void")
+                nil [2386 2651]))          
+    :file "serial.cpp"
+    :pointmax 2896
+    :fsize 2947
+    :lastmodtime '(21460 65070 379136 718000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "serial.h"
+    :file "serial.h"
+    :fsize 1146
+    :lastmodtime '(21460 65070 383136 718000)
+    )
+   )
+  :file "!home!yuta!catkin_ws!src!roomba_robot!roomba_500driver_meiji!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

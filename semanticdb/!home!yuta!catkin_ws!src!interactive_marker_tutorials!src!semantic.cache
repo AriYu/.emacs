@@ -1,0 +1,277 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "basic_controls.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("ros/ros.h" include (:system-flag t) nil [1614 1634])
+            ("interactive_markers/interactive_marker_server.h" include (:system-flag t) nil [1636 1694])
+            ("interactive_markers/menu_handler.h" include (:system-flag t) nil [1695 1740])
+            ("tf/transform_broadcaster.h" include (:system-flag t) nil [1742 1779])
+            ("tf/tf.h" include (:system-flag t) nil [1780 1798])
+            ("math.h" include (:system-flag t) nil [1800 1817])
+            ("visualization_msgs" using (:type ("visualization_msgs" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1819 1854])
+            ("server" variable (:type ("boost::shared_ptr" type
+                 (:template-specifier 
+                    ( ("interactive_markers::InteractiveMarkerServer" type nil nil nil))                    
+                  :type "class")
+                  nil nil)) nil [1872 1943])
+            ("menu_handler" variable (:type ("interactive_markers::MenuHandler" type (:type "class") nil nil)) nil [1944 1990])
+            ("makeBox" function
+               (:arguments 
+                  ( ("msg" variable
+                       (:reference 1
+                        :type ("InteractiveMarker" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2041 2065]))                  
+                :type ("Marker" type (:type "class") nil nil))
+                nil [2025 2342])
+            ("makeBoxControl" function
+               (:arguments 
+                  ( ("msg" variable
+                       (:reference 1
+                        :type ("InteractiveMarker" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2386 2410]))                  
+                :type ("InteractiveMarkerControl" type (:type "class") nil nil))
+                nil [2344 2596])
+            ("frameCallback" function
+               (:arguments 
+                  ( ("" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ros::TimerEvent" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2658 2681]))                  
+                :type "void")
+                nil [2639 3236])
+            ("processFeedback" function
+               (:arguments 
+                  ( ("feedback" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("visualization_msgs::InteractiveMarkerFeedbackConstPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3313 3384]))                  
+                :type "void")
+                nil [3291 5310])
+            ("alignMarker" function
+               (:arguments 
+                  ( ("feedback" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("visualization_msgs::InteractiveMarkerFeedbackConstPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5381 5452]))                  
+                :type "void")
+                nil [5363 5996])
+            ("rand" function
+               (:arguments 
+                  ( ("min" variable (:type "double") (reparse-symbol arg-sub-list) [6036 6047])
+                    ("max" variable (:type "double") (reparse-symbol arg-sub-list) [6048 6060]))                  
+                :type "double")
+                nil [6023 6140])
+            ("saveMarker" function
+               (:arguments 
+                  ( ("int_marker" variable (:type ("InteractiveMarker" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6159 6189]))                  
+                :type "void")
+                nil [6142 6281])
+            ("make6DofMarker" function
+               (:arguments 
+                  ( ("fixed" variable (:type "bool") (reparse-symbol arg-sub-list) [6405 6416])
+                    ("interaction_mode" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [6417 6447])
+                    ("position" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("tf::Vector3" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6448 6476])
+                    ("show_6dof" variable (:type "bool") (reparse-symbol arg-sub-list) [6477 6493]))                  
+                :type "void")
+                nil [6384 9176])
+            ("makeRandomDofMarker" function
+               (:arguments 
+                  ( ("position" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("tf::Vector3" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9242 9271]))                  
+                :type "void")
+                nil [9216 10106])
+            ("makeViewFacingMarker" function
+               (:arguments 
+                  ( ("position" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("tf::Vector3" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10180 10209]))                  
+                :type "void")
+                nil [10153 11308])
+            ("makeQuadrocopterMarker" function
+               (:arguments 
+                  ( ("position" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("tf::Vector3" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11387 11416]))                  
+                :type "void")
+                nil [11358 12148])
+            ("makeChessPieceMarker" function
+               (:arguments 
+                  ( ("position" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("tf::Vector3" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12224 12253]))                  
+                :type "void")
+                nil [12197 13259])
+            ("makePanTiltMarker" function
+               (:arguments 
+                  ( ("position" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("tf::Vector3" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13327 13356]))                  
+                :type "void")
+                nil [13303 14327])
+            ("makeMenuMarker" function
+               (:arguments 
+                  ( ("position" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("tf::Vector3" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14386 14415]))                  
+                :type "void")
+                nil [14365 15102])
+            ("makeButtonMarker" function
+               (:arguments 
+                  ( ("position" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("tf::Vector3" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15162 15191]))                  
+                :type "void")
+                nil [15139 15814])
+            ("makeMovingMarker" function
+               (:arguments 
+                  ( ("position" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("tf::Vector3" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15876 15905]))                  
+                :type "void")
+                nil [15853 16712])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [16758 16767])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [16768 16780]))                  
+                :type "int")
+                nil [16749 18899]))          
+    :file "basic_controls.cpp"
+    :pointmax 18818
+    :fsize 18917
+    :lastmodtime '(21567 28735 22920 9000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "menu.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("ros/ros.h" include (:system-flag t) nil [1614 1634])
+            ("interactive_markers/interactive_marker_server.h" include (:system-flag t) nil [1636 1694])
+            ("interactive_markers/menu_handler.h" include (:system-flag t) nil [1695 1740])
+            ("tf/transform_broadcaster.h" include (:system-flag t) nil [1742 1779])
+            ("tf/tf.h" include (:system-flag t) nil [1780 1798])
+            ("math.h" include (:system-flag t) nil [1800 1817])
+            ("visualization_msgs" using (:type ("visualization_msgs" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1819 1854])
+            ("interactive_markers" using (:type ("interactive_markers" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1855 1891])
+            ("server" variable (:type ("boost::shared_ptr" type
+                 (:template-specifier 
+                    ( ("InteractiveMarkerServer" type nil nil nil))                    
+                  :type "class")
+                  nil nil)) nil [1893 1943])
+            ("marker_pos" variable (:type "float") nil [1944 1965])
+            ("menu_handler" variable (:type ("MenuHandler" type (:type "class") nil nil)) nil [1967 1992])
+            ("h_first_entry" variable (:type ("MenuHandler::EntryHandle" type (:type "class") nil nil)) nil [1994 2033])
+            ("h_mode_last" variable (:type ("MenuHandler::EntryHandle" type (:type "class") nil nil)) nil [2034 2071])
+            ("enableCb" function
+               (:arguments 
+                  ( ("feedback" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("visualization_msgs::InteractiveMarkerFeedbackConstPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2089 2160]))                  
+                :type "void")
+                nil [2074 2799])
+            ("modeCb" function
+               (:arguments 
+                  ( ("feedback" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("visualization_msgs::InteractiveMarkerFeedbackConstPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2814 2885]))                  
+                :type "void")
+                nil [2801 3185])
+            ("makeBox" function
+               (:arguments 
+                  ( ("msg" variable
+                       (:reference 1
+                        :type ("InteractiveMarker" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3205 3229]))                  
+                :type ("Marker" type (:type "class") nil nil))
+                nil [3189 3506])
+            ("makeBoxControl" function
+               (:arguments 
+                  ( ("msg" variable
+                       (:reference 1
+                        :type ("InteractiveMarker" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3550 3574]))                  
+                :type ("InteractiveMarkerControl" type (:type "class") nil nil))
+                nil [3508 3760])
+            ("makeEmptyMarker" function
+               (:arguments 
+                  ( ("dummyBox" variable (:type "bool") (reparse-symbol arg-sub-list) [3797 3811])
+                    ("" variable (:type ("true" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3811 3817]))                  
+                :type ("InteractiveMarker" type (:type "class") nil nil))
+                nil [3762 3997])
+            ("makeMenuMarker" function
+               (:arguments 
+                  ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4020 4038]))                  
+                :type "void")
+                nil [3999 4384])
+            ("deepCb" function
+               (:arguments 
+                  ( ("feedback" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("visualization_msgs::InteractiveMarkerFeedbackConstPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4399 4470]))                  
+                :type "void")
+                nil [4386 4523])
+            ("initMenu" function (:type "void") nil [4525 5305])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [5316 5325])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5326 5338]))                  
+                :type "int")
+                nil [5307 5668]))          
+    :file "menu.cpp"
+    :pointmax 5669
+    :fsize 5668
+    :lastmodtime '(21410 10168 0 0)
+    :unmatched-syntax '((punctuation 3810 . 3811))
+    )
+   )
+  :file "!home!yuta!catkin_ws!src!interactive_marker_tutorials!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

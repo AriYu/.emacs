@@ -1,0 +1,1610 @@
+;; Object roomba_500_series/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "roomba_500_series/"
+  :tables (list 
+   (semanticdb-table "OpenInterface.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("cereal_port/CerealPort.h" include nil nil [1834 1869])
+            ("OI_PACKET_GROUP_0_SIZE" variable (:constant-flag t) nil [1896 1918])
+            ("OI_PACKET_GROUP_1_SIZE" variable (:constant-flag t) nil [1935 1957])
+            ("OI_PACKET_GROUP_2_SIZE" variable (:constant-flag t) nil [1974 1996])
+            ("OI_PACKET_GROUP_3_SIZE" variable (:constant-flag t) nil [2012 2034])
+            ("OI_PACKET_GROUP_4_SIZE" variable (:constant-flag t) nil [2051 2073])
+            ("OI_PACKET_GROUP_5_SIZE" variable (:constant-flag t) nil [2090 2112])
+            ("OI_PACKET_GROUP_6_SIZE" variable (:constant-flag t) nil [2129 2151])
+            ("OI_PACKET_GROUP_100_SIZE" variable (:constant-flag t) nil [2168 2192])
+            ("OI_PACKET_GROUP_101_SIZE" variable (:constant-flag t) nil [2208 2232])
+            ("OI_PACKET_GROUP_106_SIZE" variable (:constant-flag t) nil [2248 2272])
+            ("OI_PACKET_GROUP_107_SIZE" variable (:constant-flag t) nil [2288 2312])
+            ("OI_PACKET_BUMPS_DROPS_SIZE" variable (:constant-flag t) nil [2327 2353])
+            ("OI_PACKET_WALL_SIZE" variable (:constant-flag t) nil [2368 2387])
+            ("OI_PACKET_CLIFF_LEFT_SIZE" variable (:constant-flag t) nil [2404 2429])
+            ("OI_PACKET_CLIFF_FRONT_LEFT_SIZE" variable (:constant-flag t) nil [2444 2475])
+            ("OI_PACKET_CLIFF_FRONT_RIGHT_SIZE" variable (:constant-flag t) nil [2489 2521])
+            ("OI_PACKET_CLIFF_RIGHT_SIZE" variable (:constant-flag t) nil [2534 2560])
+            ("OI_PACKET_VIRTUAL_WALL_SIZE" variable (:constant-flag t) nil [2575 2602])
+            ("OI_PACKET_WHEEL_OVERCURRENTS_SIZE" variable (:constant-flag t) nil [2617 2650])
+            ("OI_PACKET_DIRT_DETECT_SIZE" variable (:constant-flag t) nil [2663 2689])
+            ("OI_PACKET_IR_CHAR_OMNI_SIZE" variable (:constant-flag t) nil [2705 2732])
+            ("OI_PACKET_IR_CHAR_LEFT_SIZE" variable (:constant-flag t) nil [2747 2774])
+            ("OI_PACKET_IR_CHAR_RIGHT_SIZE" variable (:constant-flag t) nil [2789 2817])
+            ("OI_PACKET_BUTTONS_SIZE" variable (:constant-flag t) nil [2831 2853])
+            ("OI_PACKET_DISTANCE_SIZE" variable (:constant-flag t) nil [2870 2893])
+            ("OI_PACKET_ANGLE_SIZE" variable (:constant-flag t) nil [2909 2929])
+            ("OI_PACKET_CHARGING_STATE_SIZE" variable (:constant-flag t) nil [2945 2974])
+            ("OI_PACKET_VOLTAGE_SIZE" variable (:constant-flag t) nil [2988 3010])
+            ("OI_PACKET_CURRENT_SIZE" variable (:constant-flag t) nil [3026 3048])
+            ("OI_PACKET_TEMPERATURE_SIZE" variable (:constant-flag t) nil [3064 3090])
+            ("OI_PACKET_BATTERY_CHARGE_SIZE" variable (:constant-flag t) nil [3105 3134])
+            ("OI_PACKET_BATTERY_CAPACITY_SIZE" variable (:constant-flag t) nil [3148 3179])
+            ("OI_PACKET_WALL_SIGNAL_SIZE" variable (:constant-flag t) nil [3193 3219])
+            ("OI_PACKET_CLIFF_LEFT_SIGNAL_SIZE" variable (:constant-flag t) nil [3234 3266])
+            ("OI_PACKET_CLIFF_FRONT_LEFT_SIGNAL_SIZE" variable (:constant-flag t) nil [3279 3317])
+            ("OI_PACKET_CLIFF_FRONT_RIGHT_SIGNAL_SIZE" variable (:constant-flag t) nil [3329 3368])
+            ("OI_PACKET_CLIFF_RIGHT_SIGNAL_SIZE" variable (:constant-flag t) nil [3380 3413])
+            ("OI_PACKET_CHARGE_SOURCES_SIZE" variable (:constant-flag t) nil [3426 3455])
+            ("OI_PACKET_OI_MODE_SIZE" variable (:constant-flag t) nil [3469 3491])
+            ("OI_PACKET_SONG_NUMBER_SIZE" variable (:constant-flag t) nil [3507 3533])
+            ("OI_PACKET_SONG_PLAYING_SIZE" variable (:constant-flag t) nil [3548 3575])
+            ("OI_PACKET_STREAM_PACKETS_SIZE" variable (:constant-flag t) nil [3590 3619])
+            ("OI_PACKET_REQ_VELOCITY_SIZE" variable (:constant-flag t) nil [3633 3660])
+            ("OI_PACKET_REQ_RADIUS_SIZE" variable (:constant-flag t) nil [3675 3700])
+            ("OI_PACKET_REQ_RIGHT_VELOCITY_SIZE" variable (:constant-flag t) nil [3715 3748])
+            ("OI_PACKET_REQ_LEFT_VELOCITY_SIZE" variable (:constant-flag t) nil [3761 3793])
+            ("OI_PACKET_RIGHT_ENCODER_SIZE" variable (:constant-flag t) nil [3806 3834])
+            ("OI_PACKET_LEFT_ENCODER_SIZE" variable (:constant-flag t) nil [3848 3875])
+            ("OI_PACKET_LIGHT_BUMPER_SIZE" variable (:constant-flag t) nil [3890 3917])
+            ("OI_PACKET_LIGHT_BUMPER_LEFT_SIZE" variable (:constant-flag t) nil [3932 3964])
+            ("OI_PACKET_LIGHT_BUMPER_FRONT_LEFT_SIZE" variable (:constant-flag t) nil [3977 4015])
+            ("OI_PACKET_LIGHT_BUMPER_CENTER_LEFT_SIZE" variable (:constant-flag t) nil [4027 4066])
+            ("OI_PACKET_LIGHT_BUMPER_CENTER_RIGHT_SIZE" variable (:constant-flag t) nil [4078 4118])
+            ("OI_PACKET_LIGHT_BUMPER_FRONT_RIGHT_SIZE" variable (:constant-flag t) nil [4129 4168])
+            ("OI_PACKET_LIGHT_BUMPER_RIGHT_SIZE" variable (:constant-flag t) nil [4180 4213])
+            ("OI_PACKET_LEFT_MOTOR_CURRENT_SIZE" variable (:constant-flag t) nil [4226 4259])
+            ("OI_PACKET_RIGHT_MOTOR_CURRENT_SIZE" variable (:constant-flag t) nil [4273 4307])
+            ("OI_PACKET_BRUSH_MOTOR_CURRENT_SIZE" variable (:constant-flag t) nil [4320 4354])
+            ("OI_PACKET_SIDE_BRUSH_MOTOR_CURRENT_SIZE" variable (:constant-flag t) nil [4367 4406])
+            ("OI_PACKET_STASIS_SIZE" variable (:constant-flag t) nil [4418 4439])
+            ("OI_MODE_OFF" variable (:constant-flag t) nil [4468 4479])
+            ("OI_MODE_PASSIVE" variable (:constant-flag t) nil [4493 4508])
+            ("OI_MODE_SAFE" variable (:constant-flag t) nil [4521 4533])
+            ("OI_MODE_FULL" variable (:constant-flag t) nil [4546 4558])
+            ("OI_DELAY_MODECHANGE_MS" variable (:constant-flag t) nil [4605 4627])
+            ("OI_CHARGING_NO" variable (:constant-flag t) nil [4659 4673])
+            ("OI_CHARGING_RECOVERY" variable (:constant-flag t) nil [4686 4706])
+            ("OI_CHARGING_CHARGING" variable (:constant-flag t) nil [4717 4737])
+            ("OI_CHARGING_TRICKLE" variable (:constant-flag t) nil [4748 4767])
+            ("OI_CHARGING_WAITING" variable (:constant-flag t) nil [4779 4798])
+            ("OI_CHARGING_ERROR" variable (:constant-flag t) nil [4810 4827])
+            ("FORCE_FIELD" variable (:constant-flag t) nil [4857 4868])
+            ("GREEN_BUOY" variable (:constant-flag t) nil [4886 4896])
+            ("GREEN_BUOY_FORCE_FIELD" variable (:constant-flag t) nil [4914 4936])
+            ("RED_BUOY" variable (:constant-flag t) nil [4951 4959])
+            ("RED_BUOY_FORCE_FIELD" variable (:constant-flag t) nil [4977 4997])
+            ("RED_BUOY_GREEN_BUOY" variable (:constant-flag t) nil [5012 5031])
+            ("RED_BUOY_GREEN_BUOY_FORCE_FIELD" variable (:constant-flag t) nil [5047 5078])
+            ("VIRTUAL_WALL" variable (:constant-flag t) nil [5091 5103])
+            ("LEFT" variable (:constant-flag t) nil [5134 5138])
+            ("RIGHT" variable (:constant-flag t) nil [5152 5157])
+            ("FRONT_LEFT" variable (:constant-flag t) nil [5171 5181])
+            ("FRONT_RIGHT" variable (:constant-flag t) nil [5194 5205])
+            ("CENTER_LEFT" variable (:constant-flag t) nil [5218 5229])
+            ("CENTER_RIGHT" variable (:constant-flag t) nil [5242 5254])
+            ("OMNI" variable (:constant-flag t) nil [5266 5270])
+            ("MAIN_BRUSH" variable (:constant-flag t) nil [5284 5294])
+            ("SIDE_BRUSH" variable (:constant-flag t) nil [5307 5317])
+            ("BUTTON_CLOCK" variable (:constant-flag t) nil [5342 5354])
+            ("BUTTON_SCHEDULE" variable (:constant-flag t) nil [5366 5381])
+            ("BUTTON_DAY" variable (:constant-flag t) nil [5393 5403])
+            ("BUTTON_HOUR" variable (:constant-flag t) nil [5416 5427])
+            ("BUTTON_MINUTE" variable (:constant-flag t) nil [5440 5453])
+            ("BUTTON_DOCK" variable (:constant-flag t) nil [5465 5476])
+            ("BUTTON_SPOT" variable (:constant-flag t) nil [5489 5500])
+            ("BUTTON_CLEAN" variable (:constant-flag t) nil [5513 5525])
+            ("ROOMBA_BUMPER_X_OFFSET" variable (:constant-flag t) nil [5559 5581])
+            ("ROOMBA_DIAMETER" variable (:constant-flag t) nil [5597 5612])
+            ("ROOMBA_AXLE_LENGTH" variable (:constant-flag t) nil [5630 5648])
+            ("ROOMBA_MAX_LIN_VEL_MM_S" variable (:constant-flag t) nil [5666 5689])
+            ("ROOMBA_MAX_ANG_VEL_RAD_S" variable (:constant-flag t) nil [5703 5727])
+            ("ROOMBA_MAX_RADIUS_MM" variable (:constant-flag t) nil [5740 5760])
+            ("ROOMBA_MAX_ENCODER_COUNTS" variable (:constant-flag t) nil [5806 5831])
+            ("ROOMBA_PULSES_TO_M" variable (:constant-flag t) nil [5890 5908])
+            ("MAX_PATH" variable (:constant-flag t) nil [5941 5949])
+            ("MIN" variable (:constant-flag t) nil [5975 5978])
+            ("MAX" variable (:constant-flag t) nil [6033 6036])
+            ("NORMALIZE" variable (:constant-flag t) nil [6097 6106])
+            ("irobot" type
+               (:members 
+                  ( ("OI_Opcode" type
+                       (:typedef ("_OI_Opcode" type (:type "enum") nil nil)
+                        :superclasses "_OI_Opcode"
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [6256 7089])
+                    ("_OI_Opcode" type
+                       (:members 
+                          ( ("OI_OPCODE_START" variable
+                               (:constant-flag t
+                                :default-value (6324 6327)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [6306 6327])
+                            ("OI_OPCODE_BAUD" variable
+                               (:constant-flag t
+                                :default-value (6348 6351)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [6331 6351])
+                            ("OI_OPCODE_CONTROL" variable
+                               (:constant-flag t
+                                :default-value (6375 6378)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [6355 6378])
+                            ("OI_OPCODE_SAFE" variable
+                               (:constant-flag t
+                                :default-value (6399 6402)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [6382 6402])
+                            ("OI_OPCODE_FULL" variable
+                               (:constant-flag t
+                                :default-value (6423 6426)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [6406 6426])
+                            ("OI_OPCODE_POWER" variable
+                               (:constant-flag t
+                                :default-value (6448 6451)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [6430 6451])
+                            ("OI_OPCODE_SPOT" variable
+                               (:constant-flag t
+                                :default-value (6472 6475)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [6455 6475])
+                            ("OI_OPCODE_CLEAN" variable
+                               (:constant-flag t
+                                :default-value (6497 6500)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [6479 6500])
+                            ("OI_OPCODE_MAX" variable
+                               (:constant-flag t
+                                :default-value (6520 6523)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [6504 6523])
+                            ("OI_OPCODE_DRIVE" variable
+                               (:constant-flag t
+                                :default-value (6545 6548)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [6527 6548])
+                            ("OI_OPCODE_MOTORS" variable
+                               (:constant-flag t
+                                :default-value (6571 6574)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [6552 6574])
+                            ("OI_OPCODE_LEDS" variable
+                               (:constant-flag t
+                                :default-value (6595 6598)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [6578 6598])
+                            ("OI_OPCODE_SONG" variable
+                               (:constant-flag t
+                                :default-value (6619 6622)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [6602 6622])
+                            ("OI_OPCODE_PLAY" variable
+                               (:constant-flag t
+                                :default-value (6643 6646)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [6626 6646])
+                            ("OI_OPCODE_SENSORS" variable
+                               (:constant-flag t
+                                :default-value (6670 6673)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [6650 6673])
+                            ("OI_OPCODE_FORCE_DOCK" variable
+                               (:constant-flag t
+                                :default-value (6700 6703)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [6677 6703])
+                            ("OI_OPCODE_PWM_MOTORS" variable
+                               (:constant-flag t
+                                :default-value (6730 6733)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [6707 6733])
+                            ("OI_OPCODE_DRIVE_DIRECT" variable
+                               (:constant-flag t
+                                :default-value (6762 6765)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [6737 6765])
+                            ("OI_OPCODE_DRIVE_PWM" variable
+                               (:constant-flag t
+                                :default-value (6791 6794)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [6769 6794])
+                            ("OI_OPCODE_STREAM" variable
+                               (:constant-flag t
+                                :default-value (6817 6820)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [6798 6820])
+                            ("OI_OPCODE_QUERY" variable
+                               (:constant-flag t
+                                :default-value (6842 6845)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [6824 6845])
+                            ("OI_OPCODE_PAUSE_RESUME_STREAM" variable
+                               (:constant-flag t
+                                :default-value (6881 6884)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [6849 6884])
+                            ("OI_OPCODE_SCHEDULE_LEDS" variable
+                               (:constant-flag t
+                                :default-value (6914 6917)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [6888 6917])
+                            ("OI_OPCODE_DIGIT_LEDS_RAW" variable
+                               (:constant-flag t
+                                :default-value (6948 6951)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [6921 6951])
+                            ("OI_OPCODE_DIGIT_LEDS_ASCII" variable
+                               (:constant-flag t
+                                :default-value (6984 6987)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [6955 6987])
+                            ("OI_OPCODE_BUTTONS" variable
+                               (:constant-flag t
+                                :default-value (7011 7014)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [6991 7014])
+                            ("OI_OPCODE_SCHEDULE" variable
+                               (:constant-flag t
+                                :default-value (7039 7042)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [7018 7042])
+                            ("OI_OPCODE_SET_DAY_TIME" variable
+                               (:constant-flag t
+                                :default-value (7071 7074)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [7046 7074]))                          
+                        :type "enum")
+                        (reparse-symbol namespacesubparts) [6256 7089])
+                    ("OI_Packet_ID" type
+                       (:typedef ("_OI_Packet_ID" type (:type "enum") nil nil)
+                        :superclasses "_OI_Packet_ID"
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [7191 9421])
+                    ("_OI_Packet_ID" type
+                       (:members 
+                          ( ("OI_PACKET_GROUP_0" variable
+                               (:constant-flag t
+                                :default-value (7264 7265)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [7244 7265])
+                            ("OI_PACKET_GROUP_1" variable
+                               (:constant-flag t
+                                :default-value (7311 7312)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [7291 7312])
+                            ("OI_PACKET_GROUP_2" variable
+                               (:constant-flag t
+                                :default-value (7358 7359)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [7338 7359])
+                            ("OI_PACKET_GROUP_3" variable
+                               (:constant-flag t
+                                :default-value (7406 7407)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [7386 7407])
+                            ("OI_PACKET_GROUP_4" variable
+                               (:constant-flag t
+                                :default-value (7454 7455)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [7434 7455])
+                            ("OI_PACKET_GROUP_5" variable
+                               (:constant-flag t
+                                :default-value (7502 7503)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [7482 7503])
+                            ("OI_PACKET_GROUP_6" variable
+                               (:constant-flag t
+                                :default-value (7550 7551)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [7530 7551])
+                            ("OI_PACKET_GROUP_100" variable
+                               (:constant-flag t
+                                :default-value (7599 7602)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [7577 7602])
+                            ("OI_PACKET_GROUP_101" variable
+                               (:constant-flag t
+                                :default-value (7649 7652)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [7627 7652])
+                            ("OI_PACKET_GROUP_106" variable
+                               (:constant-flag t
+                                :default-value (7700 7703)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [7678 7703])
+                            ("OI_PACKET_GROUP_107" variable
+                               (:constant-flag t
+                                :default-value (7751 7754)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [7729 7754])
+                            ("OI_PACKET_BUMPS_DROPS" variable
+                               (:constant-flag t
+                                :default-value (7804 7805)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [7780 7805])
+                            ("OI_PACKET_WALL" variable
+                               (:constant-flag t
+                                :default-value (7826 7827)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [7809 7827])
+                            ("OI_PACKET_CLIFF_LEFT" variable
+                               (:constant-flag t
+                                :default-value (7854 7855)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [7831 7855])
+                            ("OI_PACKET_CLIFF_FRONT_LEFT" variable
+                               (:constant-flag t
+                                :default-value (7888 7890)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [7859 7890])
+                            ("OI_PACKET_CLIFF_FRONT_RIGHT" variable
+                               (:constant-flag t
+                                :default-value (7924 7926)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [7894 7926])
+                            ("OI_PACKET_CLIFF_RIGHT" variable
+                               (:constant-flag t
+                                :default-value (7954 7956)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [7930 7956])
+                            ("OI_PACKET_VIRTUAL_WALL" variable
+                               (:constant-flag t
+                                :default-value (7985 7987)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [7960 7987])
+                            ("OI_PACKET_WHEEL_OVERCURRENTS" variable
+                               (:constant-flag t
+                                :default-value (8022 8024)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [7991 8024])
+                            ("OI_PACKET_DIRT_DETECT" variable
+                               (:constant-flag t
+                                :default-value (8052 8054)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8028 8054])
+                            ("OI_PACKET_IR_CHAR_OMNI" variable
+                               (:constant-flag t
+                                :default-value (8083 8085)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8058 8085])
+                            ("OI_PACKET_BUTTONS" variable
+                               (:constant-flag t
+                                :default-value (8109 8111)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8089 8111])
+                            ("OI_PACKET_DISTANCE" variable
+                               (:constant-flag t
+                                :default-value (8136 8138)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8115 8138])
+                            ("OI_PACKET_ANGLE" variable
+                               (:constant-flag t
+                                :default-value (8160 8162)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8142 8162])
+                            ("OI_PACKET_CHARGING_STATE" variable
+                               (:constant-flag t
+                                :default-value (8193 8195)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8166 8195])
+                            ("OI_PACKET_VOLTAGE" variable
+                               (:constant-flag t
+                                :default-value (8219 8221)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8199 8221])
+                            ("OI_PACKET_CURRENT" variable
+                               (:constant-flag t
+                                :default-value (8245 8247)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8225 8247])
+                            ("OI_PACKET_TEMPERATURE" variable
+                               (:constant-flag t
+                                :default-value (8275 8277)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8251 8277])
+                            ("OI_PACKET_BATTERY_CHARGE" variable
+                               (:constant-flag t
+                                :default-value (8308 8310)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8281 8310])
+                            ("OI_PACKET_BATTERY_CAPACITY" variable
+                               (:constant-flag t
+                                :default-value (8343 8345)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8314 8345])
+                            ("OI_PACKET_WALL_SIGNAL" variable
+                               (:constant-flag t
+                                :default-value (8373 8375)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8349 8375])
+                            ("OI_PACKET_CLIFF_LEFT_SIGNAL" variable
+                               (:constant-flag t
+                                :default-value (8409 8411)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8379 8411])
+                            ("OI_PACKET_CLIFF_FRONT_LEFT_SIGNAL" variable
+                               (:constant-flag t
+                                :default-value (8451 8453)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8415 8453])
+                            ("OI_PACKET_CLIFF_FRONT_RIGHT_SIGNAL" variable
+                               (:constant-flag t
+                                :default-value (8494 8496)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8457 8496])
+                            ("OI_PACKET_CLIFF_RIGHT_SIGNAL" variable
+                               (:constant-flag t
+                                :default-value (8531 8533)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8500 8533])
+                            ("OI_PACKET_CHARGE_SOURCES" variable
+                               (:constant-flag t
+                                :default-value (8564 8566)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8537 8566])
+                            ("OI_PACKET_OI_MODE" variable
+                               (:constant-flag t
+                                :default-value (8590 8592)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8570 8592])
+                            ("OI_PACKET_SONG_NUMBER" variable
+                               (:constant-flag t
+                                :default-value (8620 8622)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8596 8622])
+                            ("OI_PACKET_SONG_PLAYING" variable
+                               (:constant-flag t
+                                :default-value (8651 8653)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8626 8653])
+                            ("OI_PACKET_STREAM_PACKETS" variable
+                               (:constant-flag t
+                                :default-value (8684 8686)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8657 8686])
+                            ("OI_PACKET_REQ_VELOCITY" variable
+                               (:constant-flag t
+                                :default-value (8715 8717)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8690 8717])
+                            ("OI_PACKET_REQ_RADIUS" variable
+                               (:constant-flag t
+                                :default-value (8744 8746)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8721 8746])
+                            ("OI_PACKET_REQ_RIGHT_VELOCITY" variable
+                               (:constant-flag t
+                                :default-value (8781 8783)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8750 8783])
+                            ("OI_PACKET_REQ_LEFT_VELOCITY" variable
+                               (:constant-flag t
+                                :default-value (8817 8819)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8787 8819])
+                            ("OI_PACKET_RIGHT_ENCODER" variable
+                               (:constant-flag t
+                                :default-value (8849 8851)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8823 8851])
+                            ("OI_PACKET_LEFT_ENCODER" variable
+                               (:constant-flag t
+                                :default-value (8880 8882)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8855 8882])
+                            ("OI_PACKET_LIGHT_BUMPER" variable
+                               (:constant-flag t
+                                :default-value (8911 8913)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8886 8913])
+                            ("OI_PACKET_LIGHT_BUMPER_LEFT" variable
+                               (:constant-flag t
+                                :default-value (8947 8949)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8917 8949])
+                            ("OI_PACKET_LIGHT_BUMPER_FRONT_LEFT" variable
+                               (:constant-flag t
+                                :default-value (8989 8991)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8953 8991])
+                            ("OI_PACKET_LIGHT_BUMPER_CENTER_LEFT" variable
+                               (:constant-flag t
+                                :default-value (9032 9034)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8995 9034])
+                            ("OI_PACKET_LIGHT_BUMPER_CENTER_RIGHT" variable
+                               (:constant-flag t
+                                :default-value (9076 9078)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [9038 9078])
+                            ("OI_PACKET_LIGHT_BUMPER_FRONT_RIGHT" variable
+                               (:constant-flag t
+                                :default-value (9119 9121)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [9082 9121])
+                            ("OI_PACKET_LIGHT_BUMPER_RIGHT" variable
+                               (:constant-flag t
+                                :default-value (9156 9158)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [9125 9158])
+                            ("OI_PACKET_IR_CHAR_LEFT" variable
+                               (:constant-flag t
+                                :default-value (9187 9189)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [9162 9189])
+                            ("OI_PACKET_IR_CHAR_RIGHT" variable
+                               (:constant-flag t
+                                :default-value (9219 9221)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [9193 9221])
+                            ("OI_PACKET_LEFT_MOTOR_CURRENT" variable
+                               (:constant-flag t
+                                :default-value (9256 9258)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [9225 9258])
+                            ("OI_PACKET_RIGHT_MOTOR_CURRENT" variable
+                               (:constant-flag t
+                                :default-value (9294 9296)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [9262 9296])
+                            ("OI_PACKET_BRUSH_MOTOR_CURRENT" variable
+                               (:constant-flag t
+                                :default-value (9332 9334)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [9300 9334])
+                            ("OI_PACKET_SIDE_BRUSH_MOTOR_CURRENT" variable
+                               (:constant-flag t
+                                :default-value (9375 9377)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [9338 9377])
+                            ("OI_PACKET_STASIS" variable
+                               (:constant-flag t
+                                :default-value (9400 9402)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [9381 9402]))                          
+                        :type "enum")
+                        (reparse-symbol namespacesubparts) [7191 9421])
+                    ("OpenInterface" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [9723 9730])
+                            ("OpenInterface" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("new_serial_port" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [9983 10012]))                                  
+                                :type ("OpenInterface" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9969 10013])
+                            ("OpenInterface" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [10033 10050])
+                            ("openSerialPort" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("full_control" variable (:type "bool") (reparse-symbol arg-sub-list) [10191 10209]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [10172 10210])
+                            ("closeSerialPort" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [10241 10263])
+                            ("powerDown" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [10297 10313])
+                            ("setSensorPackets" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("new_sensor_packets" variable
+                                       (:pointer 1
+                                        :type ("OI_Packet_ID" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10787 10821])
+                                    ("new_num_of_packets" variable (:type "int") (reparse-symbol arg-sub-list) [10822 10845])
+                                    ("new_buffer_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10846 10869]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [10766 10870])
+                            ("getSensorPackets" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("timeout" variable (:type "int") (reparse-symbol arg-sub-list) [11213 11225]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [11192 11226])
+                            ("streamSensorPackets" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [11272 11298])
+                            ("startStream" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [11332 11350])
+                            ("stopStream" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [11383 11400])
+                            ("calculateOdometry" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [11473 11498])
+                            ("drive" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("linear_speed" variable (:type "double") (reparse-symbol arg-sub-list) [11703 11723])
+                                    ("angular_speed" variable (:type "double") (reparse-symbol arg-sub-list) [11724 11745]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [11693 11746])
+                            ("driveDirect" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("left_speed" variable (:type "int") (reparse-symbol arg-sub-list) [11966 11981])
+                                    ("right_speed" variable (:type "int") (reparse-symbol arg-sub-list) [11982 11998]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [11950 11999])
+                            ("drivePWM" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("left_pwm" variable (:type "int") (reparse-symbol arg-sub-list) [12220 12233])
+                                    ("right_pwm" variable (:type "int") (reparse-symbol arg-sub-list) [12234 12248]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [12207 12249])
+                            ("brushes" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("side_brush" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [12674 12699])
+                                    ("vacuum" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [12700 12721])
+                                    ("main_brush" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [12722 12747])
+                                    ("side_brush_clockwise" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [12748 12783])
+                                    ("main_brush_dir" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [12784 12813]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [12662 12814])
+                            ("brushesPWM" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("main_brush" variable (:type "char") (reparse-symbol arg-sub-list) [13216 13232])
+                                    ("side_brush" variable (:type "char") (reparse-symbol arg-sub-list) [13233 13249])
+                                    ("vacuum" variable (:type "char") (reparse-symbol arg-sub-list) [13250 13262]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [13201 13263])
+                            ("clean" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [13335 13347])
+                            ("max" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [13421 13431])
+                            ("spot" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [13506 13517])
+                            ("goDock" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [13584 13597])
+                            ("setSong" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("song_number" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [14001 14027])
+                                    ("song_length" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [14028 14054])
+                                    ("notes" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [14055 14076])
+                                    ("note_lengths" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [14077 14105]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [13989 14106])
+                            ("playSong" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("song_number" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [14393 14419]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [14380 14420])
+                            ("setLeds" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("check_robot" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [14818 14844])
+                                    ("dock" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [14845 14864])
+                                    ("spot" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [14865 14884])
+                                    ("debris" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [14885 14906])
+                                    ("power_color" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [14907 14933])
+                                    ("power_intensity" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [14934 14964]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [14806 14965])
+                            ("setSchedulingLeds" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("sun" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [15482 15500])
+                                    ("mon" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [15501 15519])
+                                    ("tue" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [15520 15538])
+                                    ("wed" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [15539 15557])
+                                    ("thu" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [15558 15576])
+                                    ("fri" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [15577 15595])
+                                    ("sat" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [15596 15614])
+                                    ("colon" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [15615 15635])
+                                    ("pm" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [15636 15653])
+                                    ("am" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [15654 15671])
+                                    ("clock" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [15672 15692])
+                                    ("schedule" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [15693 15716]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [15460 15717])
+                            ("setDigitLeds" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("digit3" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [16052 16073])
+                                    ("digit2" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [16074 16095])
+                                    ("digit1" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [16096 16117])
+                                    ("digit0" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [16118 16139]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [16035 16140])
+                            ("OImode_" variable (:type "unsigned char") (reparse-symbol classsubparts) [16197 16219])
+                            ("resetOdometry" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [16288 16309])
+                            ("setOdometry" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("new_x" variable (:type "double") (reparse-symbol arg-sub-list) [16329 16342])
+                                    ("new_y" variable (:type "double") (reparse-symbol arg-sub-list) [16343 16356])
+                                    ("new_yaw" variable (:type "double") (reparse-symbol arg-sub-list) [16357 16372]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [16312 16373])
+                            ("odometry_x_" variable (:type "double") (reparse-symbol classsubparts) [16402 16421])
+                            ("odometry_y_" variable (:type "double") (reparse-symbol classsubparts) [16448 16467])
+                            ("odometry_yaw_" variable (:type "double") (reparse-symbol classsubparts) [16496 16517])
+                            ("wall_" variable (:type "bool") (reparse-symbol classsubparts) [16522 16533])
+                            ("virtual_wall_" variable (:type "bool") (reparse-symbol classsubparts) [16560 16579])
+                            ("cliff_" variable
+                               (:dereference 1
+                                :type "bool")
+                                (reparse-symbol classsubparts) [16612 16627])
+                            ("bumper_" variable
+                               (:dereference 1
+                                :type "bool")
+                                (reparse-symbol classsubparts) [16696 16712])
+                            ("ir_bumper_" variable
+                               (:dereference 1
+                                :type "bool")
+                                (reparse-symbol classsubparts) [16758 16777])
+                            ("wheel_drop_" variable
+                               (:dereference 1
+                                :type "bool")
+                                (reparse-symbol classsubparts) [16874 16894])
+                            ("wall_signal_" variable (:type "int") (reparse-symbol classsubparts) [16943 16960])
+                            ("cliff_signal_" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol classsubparts) [16983 17004])
+                            ("ir_bumper_signal_" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol classsubparts) [17078 17103])
+                            ("ir_char_" variable
+                               (:dereference 1
+                                :type "unsigned char")
+                                (reparse-symbol classsubparts) [17205 17231])
+                            ("buttons_" variable
+                               (:dereference 1
+                                :type "bool")
+                                (reparse-symbol classsubparts) [17290 17307])
+                            ("dirt_detect_" variable (:type "unsigned char") (reparse-symbol classsubparts) [17440 17467])
+                            ("motor_current_" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol classsubparts) [17491 17513])
+                            ("overcurrent_" variable
+                               (:dereference 1
+                                :type "bool")
+                                (reparse-symbol classsubparts) [17579 17600])
+                            ("charging_state_" variable (:type "unsigned char") (reparse-symbol classsubparts) [17672 17702])
+                            ("power_cord_" variable (:type "bool") (reparse-symbol classsubparts) [17731 17748])
+                            ("dock_" variable (:type "bool") (reparse-symbol classsubparts) [17816 17827])
+                            ("voltage_" variable (:type "float") (reparse-symbol classsubparts) [17876 17891])
+                            ("current_" variable (:type "float") (reparse-symbol classsubparts) [17928 17943])
+                            ("temperature_" variable (:type "char") (reparse-symbol classsubparts) [17979 17997])
+                            ("charge_" variable (:type "float") (reparse-symbol classsubparts) [18041 18055])
+                            ("capacity_" variable (:type "float") (reparse-symbol classsubparts) [18088 18104])
+                            ("stasis_" variable (:type "int") (reparse-symbol classsubparts) [18139 18151])
+                            ("private" label nil (reparse-symbol classsubparts) [18210 18218])
+                            ("parseSensorPackets" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [18478 18501])
+                                    ("buffer_length" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18502 18523]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [18455 18524])
+                            ("parseBumpersAndWheeldrops" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [18559 18582])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [18583 18593]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [18529 18594])
+                            ("parseWall" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [18611 18634])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [18635 18645]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [18597 18646])
+                            ("parseLeftCliff" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [18668 18691])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [18692 18702]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [18649 18703])
+                            ("parseFrontLeftCliff" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [18730 18753])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [18754 18764]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [18706 18765])
+                            ("parseFrontRightCliff" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [18793 18816])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [18817 18827]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [18768 18828])
+                            ("parseRightCliff" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [18851 18874])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [18875 18885]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [18831 18886])
+                            ("parseVirtualWall" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [18911 18934])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [18935 18945]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [18890 18946])
+                            ("parseOvercurrents" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [18971 18994])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [18995 19005]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [18949 19006])
+                            ("parseDirtDetector" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [19031 19054])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [19055 19065]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [19009 19066])
+                            ("parseIrOmniChar" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [19089 19112])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [19113 19123]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [19069 19124])
+                            ("parseButtons" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [19144 19167])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [19168 19178]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [19127 19179])
+                            ("parseDistance" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [19200 19223])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [19224 19234]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [19182 19235])
+                            ("parseAngle" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [19253 19276])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [19277 19287]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [19238 19288])
+                            ("parseChargingState" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [19314 19337])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [19338 19348]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [19291 19349])
+                            ("parseVoltage" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [19369 19392])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [19393 19403]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [19352 19404])
+                            ("parseCurrent" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [19424 19447])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [19448 19458]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [19407 19459])
+                            ("parseTemperature" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [19483 19506])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [19507 19517]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [19462 19518])
+                            ("parseBatteryCharge" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [19544 19567])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [19568 19578]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [19521 19579])
+                            ("parseBatteryCapacity" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [19607 19630])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [19631 19641]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [19582 19642])
+                            ("parseWallSignal" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [19665 19688])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [19689 19699]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [19645 19700])
+                            ("parseLeftCliffSignal" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [19728 19751])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [19752 19762]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [19703 19763])
+                            ("parseFrontLeftCliffSignal" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [19796 19819])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [19820 19830]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [19766 19831])
+                            ("parseFontRightCliffSignal" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [19864 19887])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [19888 19898]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [19834 19899])
+                            ("parseRightCliffSignal" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [19928 19951])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [19952 19962]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [19902 19963])
+                            ("parseChargingSource" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [19990 20013])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [20014 20024]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [19966 20025])
+                            ("parseOiMode" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [20044 20067])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [20068 20078]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [20028 20079])
+                            ("parseSongNumber" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [20102 20125])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [20126 20136]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [20082 20137])
+                            ("parseSongPlaying" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [20161 20184])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [20185 20195]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [20140 20196])
+                            ("parseNumberOfStreamPackets" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [20230 20253])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [20254 20264]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [20199 20265])
+                            ("parseRequestedVelocity" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [20295 20318])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [20319 20329]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [20268 20330])
+                            ("parseRequestedRadius" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [20358 20381])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [20382 20392]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [20333 20393])
+                            ("parseRequestedRightVelocity" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [20428 20451])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [20452 20462]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [20396 20463])
+                            ("parseRequestedLeftVelocity" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [20497 20520])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [20521 20531]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [20466 20532])
+                            ("parseRightEncoderCounts" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [20563 20586])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [20587 20597]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [20535 20598])
+                            ("parseLeftEncoderCounts" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [20628 20651])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [20652 20662]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [20601 20663])
+                            ("parseLightBumper" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [20687 20710])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [20711 20721]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [20666 20722])
+                            ("parseLightBumperLeftSignal" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [20756 20779])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [20780 20790]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [20725 20791])
+                            ("parseLightBumperFrontLeftSignal" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [20830 20853])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [20854 20864]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [20794 20865])
+                            ("parseLightBumperCenterLeftSignal" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [20905 20928])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [20929 20939]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [20868 20940])
+                            ("parseLightBumperCenterRightSignal" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [20981 21004])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [21005 21015]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [20943 21016])
+                            ("parseLightBumperFrontRightSignal" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [21056 21079])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [21080 21090]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [21019 21091])
+                            ("parseLightBumperRightSignal" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [21126 21149])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [21150 21160]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [21094 21161])
+                            ("parseIrCharLeft" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [21184 21207])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [21208 21218]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [21164 21219])
+                            ("parseIrCharRight" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [21243 21266])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [21267 21277]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [21222 21278])
+                            ("parseLeftMotorCurrent" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [21307 21330])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [21331 21341]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [21281 21342])
+                            ("parseRightMotorCurrent" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [21372 21395])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [21396 21406]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [21345 21407])
+                            ("parseMainBrushMotorCurrent" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [21441 21464])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [21465 21475]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [21410 21476])
+                            ("parseSideBrushMotorCurrent" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [21510 21533])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [21534 21544]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [21479 21545])
+                            ("parseStasis" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [21564 21587])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [21588 21598]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [21548 21599])
+                            ("buffer2signed_int" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [21918 21941])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [21942 21952]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [21896 21953])
+                            ("buffer2unsigned_int" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [22278 22301])
+                                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [22302 22312]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [22254 22313])
+                            ("startOI" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("full_control" variable (:type "bool") (reparse-symbol arg-sub-list) [22546 22564]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [22534 22565])
+                            ("sendOpcode" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("code" variable (:type ("OI_Opcode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22727 22742]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [22712 22743])
+                            ("port_name_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [22798 22821])
+                            ("serial_port_" variable
+                               (:pointer 1
+                                :type ("cereal::CerealPort" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [22849 22883])
+                            ("stream_defined_" variable (:type "bool") (reparse-symbol classsubparts) [22922 22943])
+                            ("num_of_packets_" variable (:type "int") (reparse-symbol classsubparts) [22973 22993])
+                            ("sensor_packets_" variable
+                               (:pointer 1
+                                :type ("OI_Packet_ID" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [23019 23050])
+                            ("packets_size_" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [23081 23102])
+                            ("distance_" variable (:type "int") (reparse-symbol classsubparts) [23196 23210])
+                            ("angle_" variable (:type "int") (reparse-symbol classsubparts) [23296 23307])
+                            ("encoder_counts_" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol classsubparts) [23338 23361])
+                            ("last_encoder_counts_" variable
+                               (:dereference 1
+                                :type ("uint16_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [23425 23458]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [9698 23462]))                  
+                :type "namespace")
+                nil [6140 23465]))          
+    :file "OpenInterface.h"
+    :pointmax 23474
+    :fsize 23474
+    :lastmodtime '(21508 16815 859135 123000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("OI_PACKET_GROUP_3_SIZE" . ((number "10" 2040 . 2042)))
+          ("OI_PACKET_CLIFF_RIGHT_SIZE" . ((number "1" 2565 . 2566)))
+          ("OI_PACKET_WHEEL_OVERCURRENTS_SIZE" . ((number "1" 2653 . 2654)))
+          ("OI_PACKET_DIRT_DETECT_SIZE" . ((number "1" 2694 . 2695)))
+          ("OI_PACKET_SONG_NUMBER_SIZE" . ((number "1" 3538 . 3539)))
+          ("OI_PACKET_SONG_PLAYING_SIZE" . ((number "1" 3580 . 3581)))
+          ("OI_MODE_OFF" . ((number "0" 4483 . 4484)))
+          ("OMNI" . ((number "2" 5274 . 5275)))
+          ("BUTTON_CLEAN" . ((number "0" 5527 . 5528)))
+          ("OI_PACKET_GROUP_6_SIZE" . ((number "52" 2157 . 2159)))
+          ("OI_PACKET_ANGLE_SIZE" . ((number "2" 2935 . 2936)))
+          ("OI_PACKET_CURRENT_SIZE" . ((number "2" 3054 . 3055)))
+          ("OI_PACKET_LIGHT_BUMPER_RIGHT_SIZE" . ((number "2" 4216 . 4217)))
+          ("RED_BUOY_FORCE_FIELD" . ((number "169" 5000 . 5003)))
+          ("VIRTUAL_WALL" . ((number "162" 5108 . 5111)))
+          ("ROOMBA_MAX_RADIUS_MM" . ((number "2000" 5762 . 5766)))
+          ("ROOMBA_PULSES_TO_M" . ((number "0.000445558279992234" 5911 . 5931)))
+          ("MAX" (spp-arg-list ("a" "b") 6036 . 6041) . ((semantic-list "((a > b) ? (a) : (b))" 6042 . 6063)))
+          ("OI_PACKET_CLIFF_FRONT_LEFT_SIGNAL_SIZE" . ((number "2" 3319 . 3320)))
+          ("OI_PACKET_CLIFF_FRONT_RIGHT_SIGNAL_SIZE" . ((number "2" 3370 . 3371)))
+          ("OI_PACKET_LEFT_ENCODER_SIZE" . ((number "2" 3880 . 3881)))
+          ("OI_PACKET_LIGHT_BUMPER_CENTER_RIGHT_SIZE" . ((number "2" 4119 . 4120)))
+          ("OI_MODE_SAFE" . ((number "2" 4536 . 4537)))
+          ("OI_CHARGING_CHARGING" . ((number "2" 4738 . 4739)))
+          ("FRONT_RIGHT" . ((number "3" 5208 . 5209)))
+          ("BUTTON_CLOCK" . ((number "7" 5356 . 5357)))
+          ("ROOMBA_DIAMETER" . ((number "0.330" 5616 . 5621)))
+          ("MIN" (spp-arg-list ("a" "b") 5978 . 5983) . ((semantic-list "((a < b) ? (a) : (b))" 5984 . 6005)))
+          ("OI_PACKET_IR_CHAR_OMNI_SIZE" . ((number "1" 2737 . 2738)))
+          ("OI_PACKET_TEMPERATURE_SIZE" . ((number "1" 3095 . 3096)))
+          ("OI_PACKET_REQ_LEFT_VELOCITY_SIZE" . ((number "2" 3796 . 3797)))
+          ("OI_PACKET_BRUSH_MOTOR_CURRENT_SIZE" . ((number "2" 4357 . 4358)))
+          ("RED_BUOY" . ((number "168" 4965 . 4968)))
+          ("LEFT" . ((number "0" 5142 . 5143)))
+          ("CENTER_RIGHT" . ((number "5" 5256 . 5257)))
+          ("OI_PACKET_GROUP_2_SIZE" . ((number "6" 2002 . 2003)))
+          ("OI_PACKET_GROUP_101_SIZE" . ((number "28" 2237 . 2239)))
+          ("OI_PACKET_IR_CHAR_LEFT_SIZE" . ((number "1" 2779 . 2780)))
+          ("OI_PACKET_OI_MODE_SIZE" . ((number "1" 3497 . 3498)))
+          ("OI_PACKET_LIGHT_BUMPER_LEFT_SIZE" . ((number "2" 3967 . 3968)))
+          ("ROOMBA_BUMPER_X_OFFSET" . ((number "0.050" 5583 . 5588)))
+          ("NORMALIZE" (spp-arg-list ("z") 6106 . 6109) . ((symbol "atan2" 6110 . 6115) (semantic-list "(sin(z), cos(z))" 6115 . 6131)))
+          ("OI_PACKET_GROUP_5_SIZE" . ((number "12" 2118 . 2120)))
+          ("OI_PACKET_CLIFF_FRONT_LEFT_SIZE" . ((number "1" 2479 . 2480)))
+          ("OI_PACKET_CLIFF_RIGHT_SIGNAL_SIZE" . ((number "2" 3416 . 3417)))
+          ("OI_PACKET_REQ_VELOCITY_SIZE" . ((number "2" 3665 . 3666)))
+          ("GREEN_BUOY" . ((number "164" 4902 . 4905)))
+          ("CENTER_LEFT" . ((number "4" 5232 . 5233)))
+          ("ROOMBA_MAX_LIN_VEL_MM_S" . ((number "500" 5691 . 5694)))
+          ("OI_PACKET_GROUP_107_SIZE" . ((number "9" 2317 . 2318)))
+          ("OI_PACKET_BATTERY_CAPACITY_SIZE" . ((number "2" 3183 . 3184)))
+          ("OI_PACKET_CHARGE_SOURCES_SIZE" . ((number "1" 3459 . 3460)))
+          ("OI_PACKET_LIGHT_BUMPER_FRONT_RIGHT_SIZE" . ((number "2" 4170 . 4171)))
+          ("OI_PACKET_STASIS_SIZE" . ((number "1" 4445 . 4446)))
+          ("GREEN_BUOY_FORCE_FIELD" . ((number "165" 4939 . 4942)))
+          ("RED_BUOY_GREEN_BUOY_FORCE_FIELD" . ((number "173" 5079 . 5082)))
+          ("BUTTON_HOUR" . ((number "4" 5430 . 5431)))
+          ("BUTTON_MINUTE" . ((number "3" 5455 . 5456)))
+          ("BUTTON_DOCK" . ((number "2" 5479 . 5480)))
+          ("OI_PACKET_WALL_SIZE" . ((number "1" 2394 . 2395)))
+          ("OI_PACKET_CLIFF_LEFT_SIZE" . ((number "1" 2434 . 2435)))
+          ("OI_PACKET_IR_CHAR_RIGHT_SIZE" . ((number "1" 2821 . 2822)))
+          ("OI_PACKET_BUTTONS_SIZE" . ((number "1" 2859 . 2860)))
+          ("OI_PACKET_STREAM_PACKETS_SIZE" . ((number "1" 3623 . 3624)))
+          ("OI_PACKET_REQ_RADIUS_SIZE" . ((number "2" 3705 . 3706)))
+          ("OI_PACKET_LIGHT_BUMPER_SIZE" . ((number "1" 3922 . 3923)))
+          ("OI_PACKET_LIGHT_BUMPER_CENTER_LEFT_SIZE" . ((number "2" 4068 . 4069)))
+          ("OI_CHARGING_ERROR" . ((number "5" 4829 . 4830)))
+          ("OI_PACKET_GROUP_1_SIZE" . ((number "10" 1963 . 1965)))
+          ("OI_PACKET_GROUP_100_SIZE" . ((number "80" 2197 . 2199)))
+          ("OI_PACKET_BATTERY_CHARGE_SIZE" . ((number "2" 3138 . 3139)))
+          ("OI_PACKET_REQ_RIGHT_VELOCITY_SIZE" . ((number "2" 3751 . 3752)))
+          ("OI_PACKET_SIDE_BRUSH_MOTOR_CURRENT_SIZE" . ((number "2" 4408 . 4409)))
+          ("OI_CHARGING_TRICKLE" . ((number "3" 4769 . 4770)))
+          ("OI_CHARGING_WAITING" . ((number "4" 4800 . 4801)))
+          ("RED_BUOY_GREEN_BUOY" . ((number "172" 5035 . 5038)))
+          ("MAIN_BRUSH" . ((number "2" 5297 . 5298)))
+          ("ROOMBA_MAX_ENCODER_COUNTS" . ((number "65535" 5832 . 5837)))
+          ("OI_PACKET_GROUP_4_SIZE" . ((number "14" 2079 . 2081)))
+          ("OI_PACKET_CHARGING_STATE_SIZE" . ((number "1" 2978 . 2979)))
+          ("OI_PACKET_RIGHT_ENCODER_SIZE" . ((number "2" 3838 . 3839)))
+          ("OI_PACKET_LIGHT_BUMPER_FRONT_LEFT_SIZE" . ((number "2" 4017 . 4018)))
+          ("OI_MODE_PASSIVE" . ((number "1" 4511 . 4512)))
+          ("FRONT_LEFT" . ((number "2" 5184 . 5185)))
+          ("BUTTON_DAY" . ((number "5" 5406 . 5407)))
+          ("ROOMBA_MAX_ANG_VEL_RAD_S" . ((number "2" 5728 . 5729)))
+          ("MAX_PATH" . ((number "32" 5950 . 5952)))
+          ("OI_PACKET_GROUP_106_SIZE" . ((number "12" 2277 . 2279)))
+          ("OI_PACKET_BUMPS_DROPS_SIZE" . ((number "1" 2358 . 2359)))
+          ("OI_PACKET_CLIFF_FRONT_RIGHT_SIZE" . ((number "1" 2524 . 2525)))
+          ("OI_PACKET_CLIFF_LEFT_SIGNAL_SIZE" . ((number "2" 3269 . 3270)))
+          ("OI_PACKET_LEFT_MOTOR_CURRENT_SIZE" . ((number "2" 4262 . 4263)))
+          ("OI_CHARGING_RECOVERY" . ((number "1" 4707 . 4708)))
+          ("RIGHT" . ((number "1" 5161 . 5162)))
+          ("SIDE_BRUSH" . ((number "3" 5320 . 5321)))
+          ("BUTTON_SPOT" . ((number "1" 5503 . 5504)))
+          ("OI_DELAY_MODECHANGE_MS" . ((number "20" 4628 . 4630)))
+          ("OI_CHARGING_NO" . ((number "0" 4676 . 4677)))
+          ("FORCE_FIELD" . ((number "161" 4874 . 4877)))
+          ("ROOMBA_AXLE_LENGTH" . ((number "0.235" 5651 . 5656)))
+          ("OI_PACKET_GROUP_0_SIZE" . ((number "26" 1924 . 1926)))
+          ("OI_PACKET_VIRTUAL_WALL_SIZE" . ((number "1" 2607 . 2608)))
+          ("OI_PACKET_DISTANCE_SIZE" . ((number "2" 2899 . 2900)))
+          ("OI_PACKET_VOLTAGE_SIZE" . ((number "2" 3016 . 3017)))
+          ("OI_PACKET_WALL_SIGNAL_SIZE" . ((number "2" 3224 . 3225)))
+          ("OI_PACKET_RIGHT_MOTOR_CURRENT_SIZE" . ((number "2" 4310 . 4311)))
+          ("OI_MODE_FULL" . ((number "3" 4561 . 4562)))
+          ("BUTTON_SCHEDULE" . ((number "6" 5383 . 5384)))
+          )
+
+    )
+   (semanticdb-table "GoDock.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("ros/ros.h" include (:system-flag t) nil [1834 1854])
+            ("actionlib/server/simple_action_server.h" include (:system-flag t) nil [1855 1905])
+            ("tf/transform_broadcaster.h" include (:system-flag t) nil [1906 1943])
+            ("geometry_msgs/Twist.h" include (:system-flag t) nil [1944 1976])
+            ("roomba_500_series/IRCharacter.h" include (:system-flag t) nil [1989 2031])
+            ("roomba_500_series/Battery.h" include (:system-flag t) nil [2048 2086])
+            ("roomba_500_series/GoDockAction.h" include (:system-flag t) nil [2099 2142])
+            ("FORCE_FIELD" variable (:constant-flag t) nil [2169 2180])
+            ("GREEN_BUOY" variable (:constant-flag t) nil [2198 2208])
+            ("GREEN_BUOY_FORCE_FIELD" variable (:constant-flag t) nil [2226 2248])
+            ("RED_BUOY" variable (:constant-flag t) nil [2263 2271])
+            ("RED_BUOY_FORCE_FIELD" variable (:constant-flag t) nil [2289 2309])
+            ("RED_BUOY_GREEN_BUOY" variable (:constant-flag t) nil [2324 2343])
+            ("RED_BUOY_GREEN_BUOY_FORCE_FIELD" variable (:constant-flag t) nil [2359 2390])
+            ("VIRTUAL_WALL" variable (:constant-flag t) nil [2403 2415])
+            ("GoDockAction" type
+               (:members 
+                  ( ("protected" label nil (reparse-symbol classsubparts) [2770 2780])
+                    ("nh_" variable (:type ("ros::NodeHandle" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2799 2819])
+                    ("as_" variable (:type ("actionlib::SimpleActionServer" type
+                         (:template-specifier 
+                            ( ("roomba_500_series::GoDockAction" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2840 2907])
+                    ("action_name_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2926 2951])
+                    ("feedback_" variable (:type ("roomba_500_series::GoDockFeedback" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2995 3039])
+                    ("result_" variable (:type ("roomba_500_series::GoDockResult" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3079 3119])
+                    ("private" label nil (reparse-symbol classsubparts) [3122 3130])
+                    ("cmd_vel_pub_" variable (:type ("ros::Publisher" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3178 3206])
+                    ("ir_sub_" variable (:type ("ros::Subscriber" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3267 3291])
+                    ("bat_sub_" variable (:type ("ros::Subscriber" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3355 3380])
+                    ("ir_character_" variable (:type ("roomba_500_series::IRCharacter" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3397 3442])
+                    ("dock_" variable (:type "bool") (reparse-symbol classsubparts) [3485 3496])
+                    ("sendCmdVel" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("linear" variable (:type "float") (reparse-symbol arg-sub-list) [3882 3895])
+                            ("angular" variable (:type "float") (reparse-symbol arg-sub-list) [3896 3910]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3866 3911])
+                    ("public" label nil (reparse-symbol classsubparts) [3914 3921])
+                    ("GoDockAction" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4008 4025]))                          
+                        :type ("GoDockAction" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3995 4026])
+                    ("GoDockAction" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [4044 4060])
+                    ("goalCallback" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("goal" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("roomba_500_series::GoDockGoalConstPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4197 4248]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4179 4249])
+                    ("irCallback" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("ir" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("roomba_500_series::IRCharacterConstPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4381 4431]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4365 4432])
+                    ("batteryCallback" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("bat" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("roomba_500_series::BatteryConstPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4580 4627]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4559 4628]))                  
+                :type "class")
+                nil [2748 4631]))          
+    :file "GoDock.h"
+    :pointmax 4640
+    :fsize 4640
+    :lastmodtime '(21508 16815 859135 123000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("RED_BUOY_FORCE_FIELD" . ((number "169" 2312 . 2315)))
+          ("VIRTUAL_WALL" . ((number "162" 2420 . 2423)))
+          ("RED_BUOY" . ((number "168" 2277 . 2280)))
+          ("GREEN_BUOY" . ((number "164" 2214 . 2217)))
+          ("GREEN_BUOY_FORCE_FIELD" . ((number "165" 2251 . 2254)))
+          ("RED_BUOY_GREEN_BUOY_FORCE_FIELD" . ((number "173" 2391 . 2394)))
+          ("RED_BUOY_GREEN_BUOY" . ((number "172" 2347 . 2350)))
+          ("FORCE_FIELD" . ((number "161" 2186 . 2189)))
+          )
+
+    )
+   )
+  :file "!home!yuta!Downloads!roomba_500_node!roomba_500_series!include!roomba_500_series!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

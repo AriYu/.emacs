@@ -1,0 +1,340 @@
+;; Object RCR2014_Program/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "RCR2014_Program/"
+  :tables (list 
+   (semanticdb-table "main.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("main.h" include nil nil [1 18])
+            ("PI" variable (:constant-flag t) nil [28 30])
+            ("TWOPI" variable (:constant-flag t) nil [50 55])
+            ("WH_RR0" variable (:constant-flag t) nil [75 81])
+            ("WH_RL0" variable (:constant-flag t) nil [121 127])
+            ("MachineWidth" variable (:constant-flag t) nil [210 222])
+            ("cycle" variable (:constant-flag t) nil [521 526])
+            ("KASAMASHI" variable (:constant-flag t) nil [660 669])
+            ("INIT_DUTY" variable (:constant-flag t) nil [683 692])
+            ("START_X" variable (:constant-flag t) nil [708 715])
+            ("START_Y" variable (:constant-flag t) nil [729 736])
+            ("START_T" variable (:constant-flag t) nil [749 756])
+            ("T_HAT" variable (:constant-flag t) nil [771 776])
+            ("X_HAT" variable (:constant-flag t) nil [787 792])
+            ("Y_HAT" variable (:constant-flag t) nil [803 808])
+            ("FINISH_NUM" variable (:constant-flag t) nil [820 830])
+            ("RESET_DIST" variable (:constant-flag t) nil [842 852])
+            ("TCSR0" variable (:constant-flag t) nil [873 878])
+            ("TCSR0_R" variable (:constant-flag t) nil [929 936])
+            ("TCNT0_W" variable (:constant-flag t) nil [987 994])
+            ("TCNT0_R" variable (:constant-flag t) nil [1044 1051])
+            ("RSTCSR0_W" variable (:constant-flag t) nil [1101 1110])
+            ("RSTCSR0_R" variable (:constant-flag t) nil [1159 1168])
+            ("IPRD" variable (:constant-flag t) nil [1218 1222])
+            ("Left_ch" variable (:constant-flag t) nil [1273 1280])
+            ("Right_ch" variable (:constant-flag t) nil [1301 1309])
+            ("P1DDR" variable (:constant-flag t) nil [1367 1372])
+            ("P1DR" variable (:constant-flag t) nil [1422 1426])
+            ("PORT1" variable (:constant-flag t) nil [1476 1481])
+            ("P3DDR" variable (:constant-flag t) nil [1553 1558])
+            ("P3DR" variable (:constant-flag t) nil [1608 1612])
+            ("PORT3" variable (:constant-flag t) nil [1662 1667])
+            ("P7DDR" variable (:constant-flag t) nil [1739 1744])
+            ("P7DR" variable (:constant-flag t) nil [1794 1798])
+            ("PORT7" variable (:constant-flag t) nil [1848 1853])
+            ("PFDDR" variable (:constant-flag t) nil [1925 1930])
+            ("PFDR" variable (:constant-flag t) nil [1980 1984])
+            ("PORTF" variable (:constant-flag t) nil [2034 2039])
+            ("PGDDR" variable (:constant-flag t) nil [2111 2116])
+            ("PGDR" variable (:constant-flag t) nil [2166 2170])
+            ("PORTG" variable (:constant-flag t) nil [2220 2225])
+            ("CYC" variable (:constant-flag t) nil [2276 2279])
+            ("Motor_left" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("Direction" variable (:type "int") (reparse-symbol arg-sub-list) [2321 2335])
+                    ("duty" variable (:type "int") (reparse-symbol arg-sub-list) [2335 2344]))                  
+                :type "void")
+                nil [2305 2345])
+            ("Motor_right" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("Direction" variable (:type "int") (reparse-symbol arg-sub-list) [2363 2377])
+                    ("duty" variable (:type "int") (reparse-symbol arg-sub-list) [2377 2386]))                  
+                :type "void")
+                nil [2346 2387])
+            ("kalman_v" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("v_r" variable (:type "double") (reparse-symbol arg-sub-list) [2402 2413])
+                    ("v_l" variable (:type "double") (reparse-symbol arg-sub-list) [2414 2425])
+                    ("ret_v_r" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [2426 2442])
+                    ("ret_v_l" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [2443 2459]))                  
+                :type "void")
+                nil [2388 2460])
+            ("omega_r" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [2507 2533])
+            ("omega_l" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [2534 2560])
+            ("omega_r_old" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [2561 2591])
+            ("omega_l_old" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [2592 2622])
+            ("cntl_omega_r" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [2623 2654])
+            ("cntl_omega_l" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [2655 2686])
+            ("omega_theta" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [2687 2717])
+            ("omega_theta_gyro_mean" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [2746 2786])
+            ("theta_gyro" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [2787 2822])
+            ("omega_theta_gyro" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [2838 2873])
+            ("omega_theta_gyro_old" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [2902 2941])
+            ("omega_theta_gyro_raw" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [2942 2981])
+            ("input_r" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [2982 3008])
+            ("input_l" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [3009 3035])
+            ("u_r" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [3036 3066])
+            ("u_l" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [3067 3097])
+            ("d_LR" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [3098 3121])
+            ("d_LL" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [3122 3145])
+            ("psd_right" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [3146 3171])
+            ("psd_left" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [3172 3196])
+            ("four_x_machine_width" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [3198 3237])
+            ("target_num" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [3239 3265])
+            ("phi" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [3266 3288])
+            ("now_state" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "double")
+                nil [3289 3330])
+            ("y_diff" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "double")
+                nil [3399 3431])
+            ("y_diff_old" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "double")
+                nil [3432 3468])
+            ("x_dot_diff" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "double")
+                nil [3469 3506])
+            ("y_dot_diff" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "double")
+                nil [3507 3543])
+            ("x_diff" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "double")
+                nil [3544 3576])
+            ("x_diff_old" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "double")
+                nil [3577 3613])
+            ("targetpoint" variable
+               (:dereference 2
+                :typemodifiers ("static")
+                :type "double")
+                nil [3615 4634])
+            ("controlWheel" function
+               (:arguments 
+                  ( ("d_LL_" variable (:type "double") (reparse-symbol arg-sub-list) [4743 4756])
+                    ("d_LR_" variable (:type "double") (reparse-symbol arg-sub-list) [4757 4770])
+                    ("V_L" variable (:type "double") (reparse-symbol arg-sub-list) [4771 4782])
+                    ("V_R" variable (:type "double") (reparse-symbol arg-sub-list) [4783 4794]))                  
+                :type "void")
+                nil [4725 6413])
+            ("moving2pose" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("target" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [6441 6458])
+                    ("state" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [6459 6475])
+                    ("nowtarget" variable (:type "int") (reparse-symbol arg-sub-list) [6476 6490]))                  
+                :type "double")
+                nil [6415 8632])
+            ("kalman" function
+               (:arguments 
+                  ( ("y" variable (:type "double") (reparse-symbol arg-sub-list) [8648 8657]))                  
+                :type "double")
+                nil [8634 8980])
+            ("kalman_v" function
+               (:arguments 
+                  ( ("v_r" variable (:type "double") (reparse-symbol arg-sub-list) [8996 9007])
+                    ("v_l" variable (:type "double") (reparse-symbol arg-sub-list) [9008 9019])
+                    ("ret_v_r" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [9020 9036])
+                    ("ret_v_l" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [9037 9053]))                  
+                :type "void")
+                nil [8982 9709])
+            ("psdmode" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [9722 9727]))                  
+                :type "int")
+                nil [9710 10247])
+            ("timer" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [10286 10291]))                  
+                :type "int")
+                nil [10280 15172])
+            ("Wait" function
+               (:arguments 
+                  ( ("msec" variable (:type "int") (reparse-symbol arg-sub-list) [15184 15193]))                  
+                :type "void")
+                nil [15174 15271])
+            ("Motor_left" function
+               (:arguments 
+                  ( ("Direction" variable (:type "int") (reparse-symbol arg-sub-list) [15555 15569])
+                    ("duty" variable (:type "int") (reparse-symbol arg-sub-list) [15569 15578]))                  
+                :type "void")
+                nil [15539 16333])
+            ("Motor_right" function
+               (:arguments 
+                  ( ("Direction" variable (:type "int") (reparse-symbol arg-sub-list) [16604 16618])
+                    ("duty" variable (:type "int") (reparse-symbol arg-sub-list) [16618 16627]))                  
+                :type "void")
+                nil [16587 17416])
+            ("main" function (:type "void") nil [19763 21779]))          
+    :file "main.c"
+    :pointmax 21779
+    :fsize 23099
+    :lastmodtime '(21435 59566 0 0)
+    :unmatched-syntax '((semantic-list 10275 . 10279) (symbol 10264 . 10274) (symbol 10254 . 10263) (VOID 10249 . 10253))
+    :lexical-table 
+        '(("T_HAT" . ((number "2" 777 . 778)))
+          ("RESET_DIST" . ((number "0.3" 853 . 856)))
+          ("PGDDR" . ((semantic-list "(*((volatile unsigned char *)0xfffe3f))" 2118 . 2157)))
+          ("PI" . ((number "3.14159265" 31 . 41)))
+          ("MachineWidth" . ((number "0.0925" 224 . 230)))
+          ("RSTCSR0_W" . ((semantic-list "(*((volatile unsigned char *)0xffff76))" 1111 . 1150)))
+          ("P1DR" . ((semantic-list "(*((volatile unsigned char *)0xffff00))" 1428 . 1467)))
+          ("PORTF" . ((semantic-list "(*((volatile unsigned char *)0xffffbe))" 2041 . 2080)))
+          ("CYC" . ((number "30000" 2280 . 2285)))
+          ("WH_RL0" . ((number "0.03129" 128 . 135)))
+          ("Y_HAT" . ((number "1" 809 . 810)))
+          ("TCNT0_W" . ((semantic-list "(*((volatile unsigned char *)0xffff74))" 996 . 1035)))
+          ("IPRD" . ((semantic-list "(*((volatile unsigned char *)0xfffec3))" 1224 . 1263)))
+          ("PORTG" . ((semantic-list "(*((volatile unsigned char *)0xffffbf))" 2227 . 2266)))
+          ("P7DR" . ((semantic-list "(*((volatile unsigned char *)0xffff06))" 1800 . 1839)))
+          ("P1DDR" . ((semantic-list "(*((volatile unsigned char *)0xfffe30))" 1374 . 1413)))
+          ("PGDR" . ((semantic-list "(*((volatile unsigned char *)0xffff0f))" 2172 . 2211)))
+          ("cycle" . ((number "0.036864" 527 . 535)))
+          ("START_T" . 
+              ((symbol "PI" 757 . 759) (punctuation "/" 759 . 760) (number "2" 760 . 761)))
+          ("FINISH_NUM" . ((number "14" 831 . 833)))
+          ("PORT1" . ((semantic-list "(*((volatile unsigned char *)0xffffb0))" 1483 . 1522)))
+          ("P3DDR" . ((semantic-list "(*((volatile unsigned char *)0xfffe32))" 1560 . 1599)))
+          ("P3DR" . ((semantic-list "(*((volatile unsigned char *)0xffff02))" 1614 . 1653)))
+          ("WH_RR0" . ((number "0.03105" 82 . 89)))
+          ("INIT_DUTY" . ((number "15000" 693 . 698)))
+          ("TCSR0" . ((semantic-list "(*((volatile unsigned short *)0xffff74))" 880 . 920)))
+          ("PORT3" . ((semantic-list "(*((volatile unsigned char *)0xffffb2))" 1669 . 1708)))
+          ("PFDR" . ((semantic-list "(*((volatile unsigned char *)0xffff0e))" 1986 . 2025)))
+          ("START_X" . ((number "1.35" 716 . 720)))
+          ("RSTCSR0_R" . ((semantic-list "(*((volatile unsigned char *)0xffff77))" 1169 . 1208)))
+          ("KASAMASHI" . ((number "130" 670 . 673)))
+          ("START_Y" . ((number "0.9" 737 . 740)))
+          ("TCSR0_R" . ((semantic-list "(*((volatile unsigned char *)0xffff74))" 938 . 977)))
+          ("TCNT0_R" . ((semantic-list "(*((volatile unsigned char *)0xffff75))" 1053 . 1092)))
+          ("P7DDR" . ((semantic-list "(*((volatile unsigned char *)0xfffe36))" 1746 . 1785)))
+          ("TWOPI" . ((number "6.2831853" 56 . 65)))
+          ("Left_ch" . ((number "1" 1281 . 1282)))
+          ("Right_ch" . ((number "0" 1310 . 1311)))
+          ("X_HAT" . ((number "0" 793 . 794)))
+          ("PORT7" . ((semantic-list "(*((volatile unsigned char *)0xffffb6))" 1855 . 1894)))
+          ("PFDDR" . ((semantic-list "(*((volatile unsigned char *)0xfffe3e))" 1932 . 1971)))
+          )
+
+    )
+   (semanticdb-table "main.h"
+    :file "main.h"
+    :fsize 215
+    :lastmodtime '(21375 24474 0 0)
+    )
+   )
+  :file "!home!yuta!Desktop!RCR2014_Program!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

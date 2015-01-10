@@ -1,0 +1,484 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "human_detection.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("ros/ros.h" include (:system-flag t) nil [1 21])
+            ("pthread.h" include (:system-flag t) nil [23 43])
+            ("human_detection/Classification.h" include nil nil [44 87])
+            ("human_detection/MeanShift.h" include nil nil [88 126])
+            ("human_detection/Common.h" include nil nil [127 162])
+            ("human_detection/IntegralHistogram.h" include nil nil [163 209])
+            ("geometry_msgs/Point.h" include nil nil [211 243])
+            ("thread_num" variable (:constant-flag t) nil [253 263])
+            ("SCAN_HEIGHT_START" variable (:constant-flag t) nil [284 301])
+            ("SCAN_HEIGHT_END" variable (:constant-flag t) nil [315 330])
+            ("fp_log" variable
+               (:pointer 1
+                :type ("FILE" type (:type "class") nil nil))
+                nil [338 351])
+            ("imgSource" variable
+               (:pointer 1
+                :type ("IplImage" type (:type "class") nil nil))
+                nil [353 381])
+            ("imgOriginal" variable
+               (:pointer 1
+                :type ("IplImage" type (:type "class") nil nil))
+                nil [382 412])
+            ("imgClone" variable
+               (:pointer 1
+                :type ("IplImage" type (:type "class") nil nil))
+                nil [413 440])
+            ("imgGray" variable
+               (:pointer 1
+                :type ("IplImage" type (:type "class") nil nil))
+                nil [441 468])
+            ("imgClone2" variable
+               (:pointer 1
+                :type ("IplImage" type (:type "class") nil nil))
+                nil [469 497])
+            ("ob_CL" variable
+               (:dereference 1
+                :type ("CClassification" type (:type "class") nil nil))
+                nil [499 535])
+            ("ob_MS" variable (:type ("CMeanShift" type (:type "class") nil nil)) nil [536 556])
+            ("ob_IH" variable (:type ("CIntegralHistogram" type (:type "class") nil nil)) nil [557 583])
+            ("FileNum" variable (:type "int") nil [585 597])
+            ("wincount" variable
+               (:dereference 1
+                :type "int")
+                nil [598 625])
+            ("mutex" variable (:type ("pthread_mutex_t" type (:type "class") nil nil)) nil [626 648])
+            ("HOGFeature" variable
+               (:dereference 2
+                :type "double")
+                nil [649 688])
+            ("func" function
+               (:pointer 1
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [701 711]))                  
+                :type "void")
+                nil [690 2762])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [2773 2782])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2783 2795]))                  
+                :type "int")
+                nil [2764 6075]))          
+    :file "human_detection.cpp"
+    :pointmax 6076
+    :fsize 6421
+    :lastmodtime '(21595 12144 51098 913000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("SCAN_HEIGHT_END" . ((number "440" 333 . 336)))
+          ("thread_num" . ((symbol "SCAN_NUM" 267 . 275)))
+          ("SCAN_HEIGHT_START" . ((number "100" 303 . 306)))
+          )
+
+    )
+   (semanticdb-table "Classification.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("human_detection/Common.h" include nil nil [1 36])
+            ("human_detection/Classification.h" include nil nil [37 80])
+            ("CClassification" function
+               (:constructor-flag t
+                :parent "CClassification"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [115 120]))                  
+                :type ("CClassification" type (:type "class") nil nil))
+                nil [82 124])
+            ("CClassification" function
+               (:destructor-flag t
+                :parent "CClassification"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [160 165]))                  
+                :type "void")
+                nil [126 169])
+            ("Init" function
+               (:parent "CClassification"
+                :type "int")
+                nil [171 417])
+            ("ReadData1st" function
+               (:parent "CClassification"
+                :type "int")
+                nil [436 2689])
+            ("ReadData2nd" function
+               (:parent "CClassification"
+                :type "int")
+                nil [2708 3550])
+            ("LUTFileOpen" function
+               (:parent "CClassification"
+                :type "int")
+                nil [3565 4597])
+            ("NormFileOpen" function
+               (:parent "CClassification"
+                :type "int")
+                nil [4629 5420])
+            ("FeatureStock" function
+               (:parent "CClassification"
+                :arguments 
+                  ( ("HOGFeature" variable
+                       (:dereference 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [5473 5510])
+                    ("s" variable (:type "int") (reparse-symbol arg-sub-list) [5510 5516]))                  
+                :type "int")
+                nil [5439 5712])
+            ("PredictionTest" function
+               (:parent "CClassification"
+                :arguments 
+                  ( ("number" variable (:type "int") (reparse-symbol arg-sub-list) [5770 5781])
+                    ("th" variable (:type "double") (reparse-symbol arg-sub-list) [5781 5791])
+                    ("p" variable (:type "int") (reparse-symbol arg-sub-list) [5792 5798]))                  
+                :type "int")
+                nil [5734 5903])
+            ("Prediction" function
+               (:parent "CClassification"
+                :arguments 
+                  ( ("cell" variable (:type "int") (reparse-symbol arg-sub-list) [5953 5962])
+                    ("round" variable (:type "int") (reparse-symbol arg-sub-list) [5963 5973]))                  
+                :type "double")
+                nil [5918 6500])
+            ("Prediction2" function
+               (:parent "CClassification"
+                :arguments 
+                  ( ("cell" variable (:type "int") (reparse-symbol arg-sub-list) [6538 6547])
+                    ("round" variable (:type "int") (reparse-symbol arg-sub-list) [6548 6558]))                  
+                :type "double")
+                nil [6502 7085])
+            ("Classification" function
+               (:parent "CClassification"
+                :arguments 
+                  ( ("cell" variable (:type "int") (reparse-symbol arg-sub-list) [7127 7136])
+                    ("learn2" variable (:type "int") (reparse-symbol arg-sub-list) [7137 7148]))                  
+                :type "double")
+                nil [7088 7609])
+            ("Classification2" function
+               (:parent "CClassification"
+                :arguments 
+                  ( ("cell" variable (:type "int") (reparse-symbol arg-sub-list) [7651 7660])
+                    ("learn2" variable (:type "int") (reparse-symbol arg-sub-list) [7661 7672]))                  
+                :type "double")
+                nil [7611 8134])
+            ("Classification" function
+               (:parent "CClassification"
+                :arguments 
+                  ( ("HOGFeature" variable
+                       (:dereference 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [8183 8220])
+                    ("s" variable (:type "int") (reparse-symbol arg-sub-list) [8220 8226]))                  
+                :type "int")
+                nil [8147 8576]))          
+    :file "Classification.cpp"
+    :pointmax 8503
+    :fsize 9352
+    :lastmodtime '(21593 43610 833537 23000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "IntegralHistogram.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("math.h" include (:system-flag t) nil [15 32])
+            ("human_detection/IntegralHistogram.h" include nil nil [53 99])
+            ("CIntegralHistogram" function
+               (:constructor-flag t
+                :parent "CIntegralHistogram"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [141 146]))                  
+                :type ("CIntegralHistogram" type (:type "class") nil nil))
+                nil [102 150])
+            ("CIntegralHistogram" function
+               (:destructor-flag t
+                :parent "CIntegralHistogram"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [192 197]))                  
+                :type "void")
+                nil [152 201])
+            ("Init" function
+               (:parent "CIntegralHistogram"
+                :arguments 
+                  ( ("img" variable
+                       (:pointer 1
+                        :type ("IplImage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [239 253]))                  
+                :type "int")
+                nil [210 496])
+            ("CreateGradLUT" function
+               (:parent "CIntegralHistogram"
+                :type "int")
+                nil [518 1167])
+            ("InitIH" function
+               (:parent "CIntegralHistogram"
+                :type "int")
+                nil [1202 1871])
+            ("ClearIH" function
+               (:parent "CIntegralHistogram"
+                :type "int")
+                nil [1907 2121])
+            ("CreateIntegralHistogram" function
+               (:parent "CIntegralHistogram"
+                :arguments 
+                  ( ("img" variable
+                       (:pointer 1
+                        :type ("IplImage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2196 2210]))                  
+                :type "int")
+                nil [2148 3371])
+            ("CompIntegralImage" function
+               (:parent "CIntegralHistogram"
+                :arguments 
+                  ( ("image_w" variable (:type "int") (reparse-symbol arg-sub-list) [3440 3452])
+                    ("image_h" variable (:type "int") (reparse-symbol arg-sub-list) [3453 3465]))                  
+                :type "int")
+                nil [3398 3881])
+            ("Getfeature" function
+               (:parent "CIntegralHistogram"
+                :arguments 
+                  ( ("feature" variable
+                       (:dereference 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [3945 3970])
+                    ("x" variable (:type "int") (reparse-symbol arg-sub-list) [3971 3977])
+                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [3978 3984])
+                    ("w_size" variable (:type "int") (reparse-symbol arg-sub-list) [3985 3996])
+                    ("h_size" variable (:type "int") (reparse-symbol arg-sub-list) [3997 4008])
+                    ("s" variable (:type "int") (reparse-symbol arg-sub-list) [4008 4014]))                  
+                :type "int")
+                nil [3910 4562])
+            ("Normalize" function
+               (:parent "CIntegralHistogram"
+                :arguments 
+                  ( ("feature" variable
+                       (:dereference 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [4615 4640])
+                    ("s" variable (:type "int") (reparse-symbol arg-sub-list) [4640 4646]))                  
+                :type "int")
+                nil [4581 5594])
+            ("FreeImg" function
+               (:parent "CIntegralHistogram"
+                :type "int")
+                nil [5606 5779]))          
+    :file "IntegralHistogram.cpp"
+    :pointmax 5764
+    :fsize 6466
+    :lastmodtime '(21593 41180 673611 111000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "_Classification.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("../include/human_detection/Common.h" include nil nil [55 101])
+            ("../include/human_detection/Classification.h" include nil nil [102 156])
+            ("CClassification" function
+               (:constructor-flag t
+                :parent "CClassification"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [191 196]))                  
+                :type ("CClassification" type (:type "class") nil nil))
+                nil [158 200])
+            ("CClassification" function
+               (:destructor-flag t
+                :parent "CClassification"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [236 241]))                  
+                :type "void")
+                nil [202 245])
+            ("Init" function
+               (:parent "CClassification"
+                :type "int")
+                nil [247 493])
+            ("ReadData1st" function
+               (:parent "CClassification"
+                :type "int")
+                nil [512 1685])
+            ("ReadData2nd" function
+               (:parent "CClassification"
+                :type "int")
+                nil [1704 2131])
+            ("LUTFileOpen" function
+               (:parent "CClassification"
+                :type "int")
+                nil [2146 2685])
+            ("NormFileOpen" function
+               (:parent "CClassification"
+                :type "int")
+                nil [2717 3124])
+            ("FeatureStock" function
+               (:parent "CClassification"
+                :arguments 
+                  ( ("HOGFeature" variable
+                       (:dereference 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [3177 3214])
+                    ("s" variable (:type "int") (reparse-symbol arg-sub-list) [3214 3220]))                  
+                :type "int")
+                nil [3143 3416])
+            ("PredictionTest" function
+               (:parent "CClassification"
+                :arguments 
+                  ( ("number" variable (:type "int") (reparse-symbol arg-sub-list) [3474 3485])
+                    ("th" variable (:type "double") (reparse-symbol arg-sub-list) [3485 3495])
+                    ("p" variable (:type "int") (reparse-symbol arg-sub-list) [3496 3502]))                  
+                :type "int")
+                nil [3438 3607])
+            ("Prediction" function
+               (:parent "CClassification"
+                :arguments 
+                  ( ("cell" variable (:type "int") (reparse-symbol arg-sub-list) [3657 3666])
+                    ("round" variable (:type "int") (reparse-symbol arg-sub-list) [3667 3677]))                  
+                :type "double")
+                nil [3622 4204])
+            ("Classification" function
+               (:parent "CClassification"
+                :arguments 
+                  ( ("cell" variable (:type "int") (reparse-symbol arg-sub-list) [4246 4255])
+                    ("learn2" variable (:type "int") (reparse-symbol arg-sub-list) [4256 4267]))                  
+                :type "double")
+                nil [4207 4795])
+            ("Classification" function
+               (:parent "CClassification"
+                :arguments 
+                  ( ("HOGFeature" variable
+                       (:dereference 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [4843 4880])
+                    ("s" variable (:type "int") (reparse-symbol arg-sub-list) [4880 4886]))                  
+                :type "int")
+                nil [4807 5156]))          
+    :file "_Classification.cpp"
+    :pointmax 5157
+    :fsize 5663
+    :lastmodtime '(21588 35222 336099 66000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "HOG.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("human_detection/HOG.h" include nil nil [1 33])
+            ("CHOG" function
+               (:constructor-flag t
+                :parent "CHOG"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [60 65]))                  
+                :type ("CHOG" type (:type "class") nil nil))
+                nil [49 69])
+            ("CHOG" function
+               (:destructor-flag t
+                :parent "CHOG"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [96 101]))                  
+                :type "void")
+                nil [84 105])
+            ("Init" function
+               (:parent "CHOG"
+                :arguments 
+                  ( ("img" variable
+                       (:pointer 1
+                        :type ("IplImage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [140 154]))                  
+                :type "int")
+                nil [125 292])
+            ("CompHist" function
+               (:parent "CHOG"
+                :arguments 
+                  ( ("img" variable
+                       (:pointer 1
+                        :type ("IplImage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [333 347])
+                    ("hog_feature" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [348 369]))                  
+                :type "int")
+                nil [314 2238])
+            ("Getfeature" function
+               (:parent "CHOG"
+                :arguments 
+                  ( ("hog_feature" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [2284 2305]))                  
+                :type "int")
+                nil [2263 3203]))          
+    :file "HOG.cpp"
+    :pointmax 3204
+    :fsize 3481
+    :lastmodtime '(21593 41164 721611 597000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "MeanShift.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("human_detection/MeanShift.h" include nil nil [1 39])
+            ("CMeanShift" function
+               (:constructor-flag t
+                :parent "CMeanShift"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [65 70]))                  
+                :type ("CMeanShift" type (:type "class") nil nil))
+                nil [42 74])
+            ("CMeanShift" function
+               (:destructor-flag t
+                :parent "CMeanShift"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [100 105]))                  
+                :type "void")
+                nil [76 109])
+            ("Init" function
+               (:parent "CMeanShift"
+                :arguments 
+                  ( ("img" variable
+                       (:pointer 1
+                        :type ("IplImage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [139 153]))                  
+                :type "int")
+                nil [118 324])
+            ("Voting" function
+               (:parent "CMeanShift"
+                :arguments 
+                  ( ("w" variable (:type "int") (reparse-symbol arg-sub-list) [360 366])
+                    ("h" variable (:type "int") (reparse-symbol arg-sub-list) [366 372])
+                    ("count" variable (:type "int") (reparse-symbol arg-sub-list) [372 382])
+                    ("scale" variable (:type "double") (reparse-symbol arg-sub-list) [382 395])
+                    ("s" variable (:type "int") (reparse-symbol arg-sub-list) [395 401]))                  
+                :type "int")
+                nil [337 514])
+            ("MeanShift" function
+               (:parent "CMeanShift"
+                :type "int")
+                nil [543 2002])
+            ("NearestNeighbor" function
+               (:parent "CMeanShift"
+                :type "int")
+                nil [2014 3134])
+            ("Gousei" function
+               (:parent "CMeanShift"
+                :arguments 
+                  ( ("k" variable (:type "int") (reparse-symbol arg-sub-list) [3159 3165])
+                    ("a" variable (:type "int") (reparse-symbol arg-sub-list) [3165 3171])
+                    ("window_ture_count" variable (:type "int") (reparse-symbol arg-sub-list) [3171 3193]))                  
+                :type "int")
+                nil [3136 3281]))          
+    :file "MeanShift.cpp"
+    :pointmax 3266
+    :fsize 3541
+    :lastmodtime '(21593 41032 829615 618000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!yuta!catkin_ws!src!human_detection!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

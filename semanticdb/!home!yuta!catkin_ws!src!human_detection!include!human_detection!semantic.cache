@@ -1,0 +1,163 @@
+;; Object human_detection/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "human_detection/"
+  :tables (list 
+   (semanticdb-table "Common.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("cv.h" include (:system-flag t) nil [1 16])
+            ("highgui.h" include (:system-flag t) nil [17 37])
+            ("math.h" include (:system-flag t) nil [38 55])
+            ("stdio.h" include (:system-flag t) nil [56 74])
+            ("stdlib.h" include (:system-flag t) nil [75 94])
+            ("math.h" include (:system-flag t) nil [95 112])
+            ("INPUT_BOOST_BORD_FILE1" variable (:constant-flag t) nil [122 144])
+            ("INPUT_BOOST_BORD_FILE2" variable (:constant-flag t) nil [216 238])
+            ("INPUT_BOOST_BORD_FILE2" variable (:constant-flag t) nil [216 238])
+            ("INPUT_BOOST_BORD_FILE2" variable (:constant-flag t) nil [216 238])
+            ("INPUT_BOOST_BORD_FILE2" variable (:constant-flag t) nil [216 238])
+            ("INPUT_BOOST_HITO_FILE1" variable (:constant-flag t) nil [311 333])
+            ("INPUT_BOOST_HITO_FILE1" variable (:constant-flag t) nil [311 333])
+            ("INPUT_BOOST_HITO_FILE1" variable (:constant-flag t) nil [311 333])
+            ("INPUT_BOOST_HITO_FILE2" variable (:constant-flag t) nil [405 427])
+            ("INPUT_BOOST_HITO_FILE2" variable (:constant-flag t) nil [405 427])
+            ("INPUT_BOOST_HITO_FILE2" variable (:constant-flag t) nil [405 427])
+            ("WINDOW_MOVE_X" variable (:constant-flag t) nil [500 513])
+            ("WINDOW_MOVE_X" variable (:constant-flag t) nil [500 513])
+            ("WINDOW_MOVE_X" variable (:constant-flag t) nil [500 513])
+            ("WINDOW_MOVE_Y" variable (:constant-flag t) nil [526 539])
+            ("SCALE_STEP" variable (:constant-flag t) nil [552 562])
+            ("SCAN_NUM" variable (:constant-flag t) nil [578 586])
+            ("START_COUNT" variable (:constant-flag t) nil [619 630])
+            ("END_COUNT" variable (:constant-flag t) nil [644 653])
+            ("INIT_WINDOW_X" variable (:constant-flag t) nil [668 681])
+            ("INIT_WINDOW_Y" variable (:constant-flag t) nil [714 727])
+            ("CELL_SIZE" variable (:constant-flag t) nil [772 781])
+            ("BLOCK_SIZE" variable (:constant-flag t) nil [795 805])
+            ("SET_X_SIZE" variable (:constant-flag t) nil [819 829])
+            ("SET_Y_SIZE" variable (:constant-flag t) nil [844 854])
+            ("ORIENTATION" variable (:constant-flag t) nil [869 880])
+            ("BLOCK_NUM" variable (:constant-flag t) nil [912 921])
+            ("NoCELL" variable (:constant-flag t) nil [1021 1027])
+            ("AlCELL" variable (:constant-flag t) nil [1091 1097])
+            ("NoHOG" variable (:constant-flag t) nil [1143 1148])
+            ("LN_E" variable (:constant-flag t) nil [1182 1186]))          
+    :file "Common.h"
+    :pointmax 1061
+    :fsize 1300
+    :lastmodtime '(21593 44185 489519 504000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("INIT_WINDOW_X" . ((number "80" 548 . 550)))
+          ("NoHOG" . 
+              ((symbol "NoCELL" 1017 . 1023) (punctuation "*" 1024 . 1025) (symbol "ORIENTATION" 1026 . 1037)))
+          ("LN_E" . ((number "1.0" 1055 . 1058)))
+          ("WINDOW_MOVE_X" . ((number "8" 516 . 517)))
+          ("SCAN_NUM" . ((number "7" 461 . 462)))
+          ("INIT_WINDOW_Y" . 
+              ((number "2" 594 . 595) (punctuation "*" 595 . 596) (symbol "INIT_WINDOW_X" 596 . 609)))
+          ("WINDOW_MOVE_Y" . ((number "8" 406 . 407)))
+          ("AlCELL" . 
+              ((symbol "NoCELL" 966 . 972) (punctuation "*" 972 . 973) (semantic-list "(NoCELL-1)" 973 . 983) (punctuation "/" 983 . 984) (number "2" 984 . 985)))
+          ("SET_Y_SIZE" . ((number "60" 722 . 724)))
+          ("ORIENTATION" . ((number "9" 748 . 749)))
+          ("INPUT_BOOST_HITO_FILE1" . ((string "\"/home/yuta/catkin_ws/src/human_detection/data/hito/1stboost/\"" 335 . 397)))
+          ("INPUT_BOOST_HITO_FILE2" . ((string "\"/home/yuta/catkin_ws/src/human_detection/data/hito/2ndboost/\"" 428 . 490)))
+          ("START_COUNT" . ((number "0" 498 . 499)))
+          ("END_COUNT" . ((number "2" 521 . 522)))
+          ("CELL_SIZE" . ((number "5" 649 . 650)))
+          ("SET_X_SIZE" . ((number "30" 697 . 699)))
+          ("INPUT_BOOST_BORD_FILE1" . ((string "\"../../data/bord/1stboost/\"" 146 . 173)))
+          ("BLOCK_NUM" . 
+              ((semantic-list "(SET_X_SIZE/CELL_SIZE - BLOCK_SIZE + 1)" 789 . 828) (punctuation "*" 828 . 829) (semantic-list "(SET_Y_SIZE/CELL_SIZE - BLOCK_SIZE + 1)" 829 . 868)))
+          ("INPUT_BOOST_BORD_FILE2" . ((string "\"/home/yuta/catkin_ws/src/human_detection/data/bord/2ndboost/\"" 240 . 302)))
+          ("SCALE_STEP" . ((number "0.2" 430 . 433)))
+          ("BLOCK_SIZE" . ((number "3" 673 . 674)))
+          ("NoCELL" . ((semantic-list "(BLOCK_NUM * BLOCK_SIZE * BLOCK_SIZE)" 896 . 933)))
+          )
+
+    )
+   (semanticdb-table "Classification.h"
+    :file "Classification.h"
+    :fsize 2488
+    :lastmodtime '(21590 178 0 0)
+    )
+   (semanticdb-table "HOG.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("string.h" include (:system-flag t) nil [20 39])
+            ("cv.h" include (:system-flag t) nil [40 55])
+            ("cxcore.h" include (:system-flag t) nil [56 75])
+            ("highgui.h" include (:system-flag t) nil [76 96])
+            ("Common.h" include nil nil [97 116])
+            ("CHOG" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [132 139])
+                    ("CHOG" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [146 151]))                          
+                        :type ("CHOG" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [141 152])
+                    ("CHOG" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [160 165]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [154 166])
+                    ("Init" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("img" variable
+                               (:pointer 1
+                                :type ("IplImage" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [177 191]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [168 192])
+                    ("CompHist" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("img" variable
+                               (:pointer 1
+                                :type ("IplImage" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [207 221])
+                            ("hog_feature" variable
+                               (:dereference 1
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [221 242]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [194 243])
+                    ("Getfeature" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("hog_feature" variable
+                               (:dereference 1
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [260 281]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [245 282])
+                    ("private" label nil (reparse-symbol classsubparts) [284 292])
+                    ("m_Width" variable (:type "int") (reparse-symbol classsubparts) [294 306])
+                    ("m_Height" variable (:type "int") (reparse-symbol classsubparts) [308 321])
+                    ("bpp" variable (:type "int") (reparse-symbol classsubparts) [323 331])
+                    ("wStep" variable (:type "int") (reparse-symbol classsubparts) [333 343])
+                    ("cell_hist" variable
+                       (:dereference 3
+                        :type "double")
+                        (reparse-symbol classsubparts) [345 423]))                  
+                :type "class")
+                nil [118 426]))          
+    :file "HOG.h"
+    :pointmax 427
+    :fsize 450
+    :lastmodtime '(21589 3755 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!yuta!catkin_ws!src!human_detection!include!human_detection!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

@@ -1,0 +1,36 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "lrf_tcp_ip.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("ros/ros.h" include (:system-flag t) nil [1 21])
+            ("sensor_msgs/LaserScan.h" include (:system-flag t) nil [22 56])
+            ("iostream" include (:system-flag t) nil [57 76])
+            ("cmath" include (:system-flag t) nil [77 93])
+            ("lrf_tcp_ip/lrf_tcp_ip.h" include nil nil [95 129])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [131 151])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [162 171])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [172 184]))                  
+                :type "int")
+                nil [153 1049]))          
+    :file "lrf_tcp_ip.cpp"
+    :pointmax 1050
+    :fsize 1049
+    :lastmodtime '(21590 10046 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!yuta!catkin_ws!src!lrf_tcp_ip!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

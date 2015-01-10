@@ -1,0 +1,300 @@
+;; Object iMCs_series/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "iMCs_series/"
+  :tables (list 
+   (semanticdb-table "imcs01.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("IMCS01_H_" variable (:constant-flag t) nil [27 36])
+            ("iostream" include (:system-flag t) nil [38 57])
+            ("string" include (:system-flag t) nil [58 75])
+            ("stdexcept" include (:system-flag t) nil [76 96])
+            ("stdio.h" include (:system-flag t) nil [98 116])
+            ("stdlib.h" include (:system-flag t) nil [117 136])
+            ("pthread.h" include (:system-flag t) nil [137 157])
+            ("math.h" include (:system-flag t) nil [158 175])
+            ("unistd.h" include (:system-flag t) nil [176 195])
+            ("sys/ioctl.h" include (:system-flag t) nil [196 218])
+            ("sys/types.h" include (:system-flag t) nil [219 241])
+            ("sys/stat.h" include (:system-flag t) nil [242 263])
+            ("fcntl.h" include (:system-flag t) nil [264 282])
+            ("signal.h" include (:system-flag t) nil [283 302])
+            ("string.h" include (:system-flag t) nil [303 322])
+            ("assert.h" include (:system-flag t) nil [323 342])
+            ("float.h" include (:system-flag t) nil [343 361])
+            ("limits.h" include (:system-flag t) nil [362 381])
+            ("time.h" include (:system-flag t) nil [382 399])
+            ("ctype.h" include (:system-flag t) nil [400 418])
+            ("sys/stat.h" include (:system-flag t) nil [419 440])
+            ("sys/mman.h" include (:system-flag t) nil [441 462])
+            ("errno.h" include (:system-flag t) nil [463 481])
+            ("sys/time.h" include (:system-flag t) nil [482 503])
+            ("../../imcs01_driver/driver/urbtc.h" include nil nil [514 559])
+            ("../../imcs01_driver/driver/urobotc.h" include nil nil [560 607])
+            ("../SerialCommunication/serial_communication.h" include nil nil [632 688])
+            ("../RobotState/robot_state.h" include nil nil [689 727])
+            ("../GPS/gps.h" include nil nil [735 758])
+            ("plus_or_minus" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("value" variable (:type "double") (reparse-symbol arg-sub-list) [778 791]))                  
+                :type "int")
+                nil [760 792])
+            ("iMCs01" type
+               (:superclasses 
+                  ( ("SerialCommunication" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil)
+                    ("RobotState" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [858 865])
+                    ("iMCs01" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("device_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [875 899])
+                            ("baudrate" variable (:type "int") (reparse-symbol arg-sub-list) [900 913]))                          
+                        :type ("iMCs01" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [868 914])
+                    ("iMCs01" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [917 927])
+                    ("Open" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [930 950])
+                    ("Close" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [953 974])
+                    ("Connect" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [977 1000])
+                    ("Forward" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("speed" variable (:type "int") (reparse-symbol arg-sub-list) [1051 1061]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1030 1062])
+                    ("Back" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1081 1101])
+                    ("Stop" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1120 1140])
+                    ("ReadEncData" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1159 1186])
+                    ("CalcOdometory" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1205 1234])
+                    ("GetHandleDir" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "double")
+                        (reparse-symbol classsubparts) [1237 1267])
+                    ("GetXY" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("CvPoint2D32f" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1286 1315])
+                    ("GetXYZ" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("CvPoint3D32f" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1318 1348])
+                    ("GetDir" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "double")
+                        (reparse-symbol classsubparts) [1351 1375])
+                    ("GetVelo" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "double")
+                        (reparse-symbol classsubparts) [1378 1403])
+                    ("PrintData" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1406 1431])
+                    ("GetIntegralEncMeter" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "double")
+                        (reparse-symbol classsubparts) [1434 1471])
+                    ("protected" label nil (reparse-symbol classsubparts) [1473 1483])
+                    ("m_imcs01_mtx" variable (:type ("pthread_mutex_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1486 1515])
+                    ("m_XYdir_mtx" variable (:type ("pthread_mutex_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1518 1546])
+                    ("m_uin_mtx" variable (:type ("pthread_mutex_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1549 1575])
+                    ("m_uout_mtx" variable (:type ("pthread_mutex_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1578 1605])
+                    ("m_ccmd_mtx" variable (:type ("pthread_mutex_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1608 1635])
+                    ("m_handle_mtx" variable (:type ("pthread_mutex_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1638 1667])
+                    ("m_handle_dir" variable (:type "double") (reparse-symbol classsubparts) [1670 1690])
+                    ("m_cmd_uin" variable (:type ("uin" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [1693 1714])
+                    ("m_cmd_uout" variable (:type ("uout" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [1717 1740])
+                    ("m_cmd_ccmd" variable (:type ("ccmd" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [1743 1766])
+                    ("private" label nil (reparse-symbol classsubparts) [1768 1776])
+                    ("machineLength" variable
+                       (:constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) [1779 1813])
+                    ("SetHandleDir" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("buf" variable (:type "unsigned short") (reparse-symbol arg-sub-list) [1834 1853]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1816 1854])
+                    ("m_rear_enc_count" variable (:type "int") (reparse-symbol classsubparts) [1873 1894])
+                    ("m_last_rear_enc_count" variable (:type "int") (reparse-symbol classsubparts) [1897 1923])
+                    ("m_integral_enc_count" variable (:type "int") (reparse-symbol classsubparts) [1926 1951])
+                    ("m_integral_enc_meter" variable (:type "double") (reparse-symbol classsubparts) [1954 1982])
+                    ("m_last_integral_enc_meter" variable (:type "double") (reparse-symbol classsubparts) [1985 2018])
+                    ("m_odometory_interval" variable (:type "double") (reparse-symbol classsubparts) [2021 2049])
+                    ("m_last_time" variable (:type "unsigned short") (reparse-symbol classsubparts) [2052 2079])
+                    ("m_delta_distance" variable (:type "double") (reparse-symbol classsubparts) [2082 2106]))                  
+                :type "class")
+                nil [795 2109]))          
+    :file "imcs01.h"
+    :pointmax 2131
+    :fsize 2130
+    :lastmodtime '(21374 4654 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("IMCS01_H_")
+          )
+
+    )
+   (semanticdb-table "imcs01.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("imcs01.h" include nil nil [1 20])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [22 42])
+            ("iMCs01" function
+               (:constructor-flag t
+                :parent "iMCs01"
+                :arguments 
+                  ( ("device_name" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [59 78])
+                    ("baudrate" variable (:type "int") (reparse-symbol arg-sub-list) [79 92]))                  
+                :type ("iMCs01" type (:type "class") nil nil))
+                nil [44 629])
+            ("iMCs01" function
+               (:destructor-flag t
+                :parent "iMCs01"
+                :type "void")
+                nil [631 651])
+            ("Open" function
+               (:parent "iMCs01"
+                :type "bool")
+                nil [653 818])
+            ("Close" function
+               (:parent "iMCs01"
+                :type "bool")
+                nil [819 1095])
+            ("Connect" function
+               (:parent "iMCs01"
+                :type "bool")
+                nil [1097 3146])
+            ("ReadEncData" function
+               (:parent "iMCs01"
+                :type "bool")
+                nil [3148 3415])
+            ("GetHandleDir" function
+               (:parent "iMCs01"
+                :type "double")
+                nil [3416 3587])
+            ("SetHandleDir" function
+               (:parent "iMCs01"
+                :arguments 
+                  ( ("buf" variable (:type "unsigned short") (reparse-symbol arg-sub-list) [3615 3634]))                  
+                :type "void")
+                nil [3589 4004])
+            ("GetXY" function
+               (:parent "iMCs01"
+                :type ("CvPoint2D32f" type (:type "class") nil nil))
+                nil [4006 4188])
+            ("GetXYZ" function
+               (:parent "iMCs01"
+                :type ("CvPoint3D32f" type (:type "class") nil nil))
+                nil [4190 4392])
+            ("GetDir" function
+               (:parent "iMCs01"
+                :type "double")
+                nil [4394 4542])
+            ("GetVelo" function
+               (:parent "iMCs01"
+                :type "double")
+                nil [4543 4939])
+            ("CalcOdometory" function
+               (:parent "iMCs01"
+                :type "void")
+                nil [4942 8132])
+            ("PrintData" function
+               (:parent "iMCs01"
+                :type "void")
+                nil [8134 8292])
+            ("GetIntegralEncMeter" function
+               (:parent "iMCs01"
+                :type "double")
+                nil [8293 8364])
+            ("Forward" function
+               (:parent "iMCs01"
+                :arguments 
+                  ( ("speed" variable (:type "int") (reparse-symbol arg-sub-list) [8387 8397]))                  
+                :type "void")
+                nil [8366 9679])
+            ("Back" function
+               (:parent "iMCs01"
+                :type "void")
+                nil [9680 10558])
+            ("Stop" function
+               (:parent "iMCs01"
+                :type "void")
+                nil [10559 11023])
+            ("plus_or_minus" function
+               (:arguments 
+                  ( ("value" variable (:type "double") (reparse-symbol arg-sub-list) [11043 11056]))                  
+                :type "int")
+                nil [11025 11155]))          
+    :file "imcs01.cpp"
+    :pointmax 11156
+    :fsize 11165
+    :lastmodtime '(21374 4654 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!yuta!Desktop!NN3rd_forTV_2!src!iMCs_series!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

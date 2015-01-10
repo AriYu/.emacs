@@ -1,0 +1,46 @@
+;; Object cpp/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "cpp/"
+  :tables (list 
+   (semanticdb-table "talking_watch_sample.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("sstream" include (:system-flag t) nil [21 39])
+            ("boost/regex.hpp" include (:system-flag t) nil [40 66])
+            ("boost/date_time/posix_time/posix_time.hpp" include (:system-flag t) nil [67 119])
+            ("ros/ros.h" include (:system-flag t) nil [120 140])
+            ("rospeex_if/rospeex.h" include nil nil [141 172])
+            ("interface" variable
+               (:typemodifiers ("static")
+                :type ("rospeex::Interface" type (:type "class") nil nil))
+                nil [174 210])
+            ("sr_response" function
+               (:arguments 
+                  ( ("msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [230 254]))                  
+                :type "void")
+                nil [212 746])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [758 767])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [768 781]))                  
+                :type "int")
+                nil [748 953]))          
+    :file "talking_watch_sample.cpp"
+    :pointmax 954
+    :fsize 965
+    :lastmodtime '(21572 46293 883467 392000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!yuta!catkin_ws!src!rospeex!rospeex_samples!src!cpp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

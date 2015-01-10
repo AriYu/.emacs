@@ -1,0 +1,72 @@
+;; Object test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "test/"
+  :tables (list 
+   (semanticdb-table "main.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("../ParticleFilter.h" include nil nil [1 31])
+            ("../GridMap.h" include nil nil [32 55])
+            ("../ICP.h" include nil nil [56 75])
+            ("../DrawMap.h" include nil nil [76 99])
+            ("../ParticleFilter.h" include nil nil [100 130])
+            ("exception" include (:system-flag t) nil [131 151])
+            ("X_RESOLUTION" variable (:constant-flag t) nil [161 173])
+            ("Y_RESOLUTION" variable (:constant-flag t) nil [195 207])
+            ("RESOLUTION" variable (:constant-flag t) nil [238 248])
+            ("NumOfParticle" variable (:constant-flag t) nil [270 283])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [288 308])
+            ("cv" using (:type ("cv" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [309 328])
+            ("state_equation" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("x_old" variable (:type "double") (reparse-symbol arg-sub-list) [352 365])
+                    ("i" variable (:type "double") (reparse-symbol arg-sub-list) [366 375]))                  
+                :type "double")
+                nil [330 376])
+            ("observation_equation" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("x" variable (:type "double") (reparse-symbol arg-sub-list) [405 414]))                  
+                :type "double")
+                nil [377 415])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [426 431]))                  
+                :type "int")
+                nil [417 1876])
+            ("state_equation" function
+               (:arguments 
+                  ( ("x_old" variable (:type "double") (reparse-symbol arg-sub-list) [1900 1913])
+                    ("i" variable (:type "double") (reparse-symbol arg-sub-list) [1914 1923]))                  
+                :type "double")
+                nil [1878 1939])
+            ("observation_equation" function
+               (:arguments 
+                  ( ("x" variable (:type "double") (reparse-symbol arg-sub-list) [1969 1978]))                  
+                :type "double")
+                nil [1941 1994]))          
+    :file "main.cpp"
+    :pointmax 1994
+    :fsize 1994
+    :lastmodtime '(21504 992 662219 505000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("Y_RESOLUTION" . ((symbol "X_RESOLUTION" 208 . 220)))
+          ("X_RESOLUTION" . ((number "128" 174 . 177)))
+          ("RESOLUTION" . ((number "500" 249 . 252)))
+          ("NumOfParticle" . ((number "10" 284 . 286)))
+          )
+
+    )
+   )
+  :file "!home!yuta!Documents!Products!ParticleSLAM!test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

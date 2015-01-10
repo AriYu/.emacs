@@ -1,0 +1,230 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "my_plant_flag_tool.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("OGRE/OgreSceneNode.h" include (:system-flag t) nil [1613 1644])
+            ("OGRE/OgreSceneManager.h" include (:system-flag t) nil [1645 1679])
+            ("OGRE/OgreEntity.h" include (:system-flag t) nil [1680 1708])
+            ("ros/console.h" include (:system-flag t) nil [1710 1734])
+            ("rviz/viewport_mouse_event.h" include (:system-flag t) nil [1736 1774])
+            ("rviz/visualization_manager.h" include (:system-flag t) nil [1775 1814])
+            ("rviz/mesh_loader.h" include (:system-flag t) nil [1815 1844])
+            ("rviz/geometry.h" include (:system-flag t) nil [1845 1871])
+            ("rviz/properties/vector_property.h" include (:system-flag t) nil [1872 1916])
+            ("interactive_markers/interactive_marker_server.h" include (:system-flag t) nil [1918 1976])
+            ("interactive_markers/menu_handler.h" include (:system-flag t) nil [1977 2022])
+            ("tf/transform_broadcaster.h" include (:system-flag t) nil [2024 2061])
+            ("tf/tf.h" include (:system-flag t) nil [2062 2080])
+            ("math.h" include (:system-flag t) nil [2082 2099])
+            ("my_plant_flag_tool.h" include nil nil [2102 2133])
+            ("my_plant_flag_tool" type
+               (:members 
+                  ( ("PlantFlagTool" function
+                       (:constructor-flag t
+                        :parent "PlantFlagTool"
+                        :type ("PlantFlagTool" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2527 2650])
+                    ("PlantFlagTool" function
+                       (:destructor-flag t
+                        :parent "PlantFlagTool"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2884 3040])
+                    ("onInitialize" function
+                       (:parent "PlantFlagTool"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [3672 4193])
+                    ("activate" function
+                       (:parent "PlantFlagTool"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5039 5366])
+                    ("deactivate" function
+                       (:parent "PlantFlagTool"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5791 5974])
+                    ("processMouseEvent" function
+                       (:parent "PlantFlagTool"
+                        :arguments 
+                          ( ("event" variable
+                               (:reference 1
+                                :type ("rviz::ViewportMouseEvent" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6741 6774]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [6703 7544])
+                    ("makeFlag" function
+                       (:parent "PlantFlagTool"
+                        :arguments 
+                          ( ("position" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Ogre::Vector3" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7683 7714]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [7653 8001])
+                    ("save" function
+                       (:parent "PlantFlagTool"
+                        :arguments 
+                          ( ("config" variable (:type ("rviz::Config" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8805 8826]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [8779 9839])
+                    ("load" function
+                       (:parent "PlantFlagTool"
+                        :arguments 
+                          ( ("config" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("rviz::Config" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10049 10077]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [10023 11500]))                  
+                :type "namespace")
+                nil [2138 11757])
+            ("pluginlib/class_list_macros.h" include (:system-flag t) nil [11798 11838]))          
+    :file "my_plant_flag_tool.cpp"
+    :pointmax 11925
+    :fsize 11924
+    :lastmodtime '(21567 20751 543163 399000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "my_plant_flag_tool.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("PLANT_FLAG_TOOL_H" variable (:constant-flag t) nil [1646 1663])
+            ("rviz/tool.h" include (:system-flag t) nil [1665 1687])
+            ("Ogre" type
+               (:members 
+                  ( ("SceneNode" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1706 1722])
+                    ("Vector3" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1723 1737]))                  
+                :type "namespace")
+                nil [1689 1739])
+            ("rviz" type
+               (:members 
+                  ( ("VectorProperty" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1758 1779])
+                    ("VisualizationManager" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1780 1807])
+                    ("ViewportMouseEvent" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1808 1833]))                  
+                :type "namespace")
+                nil [1741 1835])
+            ("my_plant_flag_tool" type
+               (:members 
+                  ( ("PlantFlagTool" type
+                       (:superclasses 
+                          ( ("rviz::Tool" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2070 2077])
+                            ("PlantFlagTool" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("PlantFlagTool" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2080 2096])
+                            ("PlantFlagTool" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [2099 2116])
+                            ("onInitialize" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2120 2148])
+                            ("activate" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2152 2176])
+                            ("deactivate" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2179 2205])
+                            ("processMouseEvent" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("event" variable
+                                       (:reference 1
+                                        :type ("rviz::ViewportMouseEvent" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2240 2273]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2209 2274])
+                            ("load" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("config" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("rviz::Config" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2297 2325]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2278 2326])
+                            ("save" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("config" variable (:type ("rviz::Config" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2348 2369]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2329 2376])
+                            ("private" label nil (reparse-symbol classsubparts) [2378 2386])
+                            ("makeFlag" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("position" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Ogre::Vector3" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2404 2435]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2389 2436])
+                            ("flag_nodes_" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("Ogre::SceneNode" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2440 2482])
+                            ("moving_flag_node_" variable
+                               (:pointer 1
+                                :type ("Ogre::SceneNode" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2485 2520])
+                            ("flag_resource_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2523 2550])
+                            ("current_flag_property_" variable
+                               (:pointer 1
+                                :type ("rviz::VectorProperty" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2553 2598]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2020 2601]))                  
+                :type "namespace")
+                nil [1837 2620]))          
+    :file "my_plant_flag_tool.h"
+    :pointmax 2689
+    :fsize 2688
+    :lastmodtime '(21566 11218 52020 616000)
+    :unmatched-syntax '((symbol 2061 . 2069))
+    :lexical-table 
+        '(("PLANT_FLAG_TOOL_H")
+          )
+
+    )
+   )
+  :file "!home!yuta!catkin_ws!src!my_plant_flag_tool!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

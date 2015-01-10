@@ -1,0 +1,29 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "offset_urg_tf.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("ros/ros.h" include (:system-flag t) nil [63 83])
+            ("tf/transform_broadcaster.h" include (:system-flag t) nil [84 121])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [132 141])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [142 154]))                  
+                :type "int")
+                nil [123 983]))          
+    :file "offset_urg_tf.cpp"
+    :pointmax 984
+    :fsize 983
+    :lastmodtime '(21608 14226 732580 26000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!yuta!catkin_ws!src!offset_urg_tf!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

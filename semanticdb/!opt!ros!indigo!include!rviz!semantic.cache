@@ -1,0 +1,131 @@
+;; Object rviz/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "rviz/"
+  :tables (list 
+   (semanticdb-table "viewport_mouse_event.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("VIEWPORT_MOUSE_EVENT_H" variable (:constant-flag t) nil [1652 1674])
+            ("QMouseEvent" include (:system-flag t) nil [1676 1698])
+            ("QWheelEvent" include (:system-flag t) nil [1699 1721])
+            ("Ogre" type
+               (:members 
+                  ( ("Viewport" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1740 1755]))                  
+                :type "namespace")
+                nil [1723 1757])
+            ("rviz" type
+               (:members 
+                  ( ("RenderPanel" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1777 1795])
+                    ("ViewportMouseEvent" type
+                       (:members 
+                          ( ("ViewportMouseEvent" function
+                               (:constructor-flag t
+                                :type ("ViewportMouseEvent" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [1827 1850])
+                            ("ViewportMouseEvent" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("p" variable
+                                       (:pointer 1
+                                        :type ("RenderPanel" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1922 1937])
+                                    ("vp" variable
+                                       (:pointer 1
+                                        :type ("Ogre::Viewport" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1938 1957])
+                                    ("e" variable
+                                       (:pointer 1
+                                        :type ("QMouseEvent" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1958 1973])
+                                    ("lx" variable (:type "int") (reparse-symbol arg-sub-list) [1974 1981])
+                                    ("ly" variable (:type "int") (reparse-symbol arg-sub-list) [1982 1989]))                                  
+                                :type ("ViewportMouseEvent" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [1903 2238])
+                            ("ViewportMouseEvent" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("p" variable
+                                       (:pointer 1
+                                        :type ("RenderPanel" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2447 2462])
+                                    ("vp" variable
+                                       (:pointer 1
+                                        :type ("Ogre::Viewport" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2463 2482])
+                                    ("e" variable
+                                       (:pointer 1
+                                        :type ("QWheelEvent" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2483 2498])
+                                    ("lx" variable (:type "int") (reparse-symbol arg-sub-list) [2499 2506])
+                                    ("ly" variable (:type "int") (reparse-symbol arg-sub-list) [2507 2514]))                                  
+                                :type ("ViewportMouseEvent" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [2428 2773])
+                            ("left" function (:type "bool") (reparse-symbol classsubparts) [2965 3018])
+                            ("middle" function (:type "bool") (reparse-symbol classsubparts) [3021 3075])
+                            ("right" function (:type "bool") (reparse-symbol classsubparts) [3078 3133])
+                            ("shift" function (:type "bool") (reparse-symbol classsubparts) [3137 3191])
+                            ("control" function (:type "bool") (reparse-symbol classsubparts) [3194 3252])
+                            ("alt" function (:type "bool") (reparse-symbol classsubparts) [3255 3305])
+                            ("leftUp" function (:type "bool") (reparse-symbol classsubparts) [3424 3519])
+                            ("middleUp" function (:type "bool") (reparse-symbol classsubparts) [3522 3618])
+                            ("rightUp" function (:type "bool") (reparse-symbol classsubparts) [3621 3718])
+                            ("leftDown" function (:type "bool") (reparse-symbol classsubparts) [3722 3817])
+                            ("middleDown" function (:type "bool") (reparse-symbol classsubparts) [3820 3916])
+                            ("rightDown" function (:type "bool") (reparse-symbol classsubparts) [3919 4016])
+                            ("panel" variable
+                               (:pointer 1
+                                :type ("RenderPanel" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4020 4039])
+                            ("viewport" variable
+                               (:pointer 1
+                                :type ("Ogre::Viewport" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4042 4067])
+                            ("type" variable (:type ("QEvent::Type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4070 4088])
+                            ("x" variable (:type "int") (reparse-symbol classsubparts) [4091 4097])
+                            ("y" variable (:type "int") (reparse-symbol classsubparts) [4100 4106])
+                            ("wheel_delta" variable (:type "int") (reparse-symbol classsubparts) [4109 4125])
+                            ("acting_button" variable (:type ("Qt::MouseButton" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4128 4158])
+                            ("buttons_down" variable (:type ("Qt::MouseButtons" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4244 4274])
+                            ("modifiers" variable (:type ("Qt::KeyboardModifiers" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4277 4309])
+                            ("last_x" variable (:type "int") (reparse-symbol classsubparts) [4312 4323])
+                            ("last_y" variable (:type "int") (reparse-symbol classsubparts) [4326 4337]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [1797 4340]))                  
+                :type "namespace")
+                nil [1759 4343]))          
+    :file "viewport_mouse_event.h"
+    :pointmax 4396
+    :fsize 4395
+    :lastmodtime '(21420 39875 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("VIEWPORT_MOUSE_EVENT_H")
+          )
+
+    )
+   (semanticdb-table "visualization_manager.h"
+    :file "visualization_manager.h"
+    :fsize 12628
+    :lastmodtime '(21420 39875 0 0)
+    )
+   (semanticdb-table "mesh_loader.h"
+    :file "mesh_loader.h"
+    :fsize 1830
+    :lastmodtime '(21420 39875 0 0)
+    )
+   (semanticdb-table "geometry.h"
+    :file "geometry.h"
+    :fsize 2606
+    :lastmodtime '(21420 39875 0 0)
+    )
+   )
+  :file "!opt!ros!indigo!include!rviz!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

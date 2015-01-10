@@ -1,0 +1,248 @@
+;; Object pf/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "pf/"
+  :tables (list 
+   (semanticdb-table "pf_1.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [35 53])
+            ("fcntl.h" include (:system-flag t) nil [54 72])
+            ("unistd.h" include (:system-flag t) nil [73 92])
+            ("pthread.h" include (:system-flag t) nil [93 113])
+            ("stdlib.h" include (:system-flag t) nil [114 133])
+            ("string.h" include (:system-flag t) nil [134 153])
+            ("assert.h" include (:system-flag t) nil [154 173])
+            ("math.h" include (:system-flag t) nil [174 191])
+            ("float.h" include (:system-flag t) nil [192 210])
+            ("limits.h" include (:system-flag t) nil [211 230])
+            ("time.h" include (:system-flag t) nil [231 248])
+            ("ctype.h" include (:system-flag t) nil [249 267])
+            ("sys/time.h" include (:system-flag t) nil [269 290])
+            ("sys/ioctl.h" include (:system-flag t) nil [291 313])
+            ("sys/types.h" include (:system-flag t) nil [314 336])
+            ("sys/stat.h" include (:system-flag t) nil [337 358])
+            ("sys/mman.h" include (:system-flag t) nil [359 380])
+            ("errno.h" include (:system-flag t) nil [381 399])
+            ("cv.h" include (:system-flag t) nil [401 416])
+            ("highgui.h" include (:system-flag t) nil [433 453])
+            ("cvaux.h" include (:system-flag t) nil [465 483])
+            ("cxcore.h" include (:system-flag t) nil [497 516])
+            ("NofParticles" variable (:constant-flag t) nil [537 549])
+            ("L" variable (:constant-flag t) nil [562 563])
+            ("STATE" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("pos" variable (:type ("CvPoint2D32f" type (:type "class") nil nil)) (reparse-symbol classsubparts) [608 625])
+                          ("dir" variable (:type "double") (reparse-symbol classsubparts) [646 657]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [590 690])
+            ("PARTICLE" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("state" variable (:type ("STATE" type (:type "class") nil nil)) (reparse-symbol classsubparts) [710 723])
+                          ("weight" variable (:type "double") (reparse-symbol classsubparts) [746 760])
+                          ("n_particle" variable (:type "int") (reparse-symbol classsubparts) [776 794]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [692 818])
+            ("INPUT" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("v" variable (:type "double") (reparse-symbol classsubparts) [838 847])
+                          ("phi" variable (:type "double") (reparse-symbol classsubparts) [870 881]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [820 907])
+            ("n_rand" function
+               (:arguments 
+                  ( ("sigma" variable (:type "double") (reparse-symbol arg-sub-list) [1268 1281])
+                    ("m" variable (:type "double") (reparse-symbol arg-sub-list) [1282 1291]))                  
+                :type "double")
+                nil [1254 1493])
+            ("sampling" function
+               (:arguments 
+                  ( ("input" variable
+                       (:pointer 1
+                        :type ("INPUT" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1978 1991])
+                    ("delta_t" variable (:type "double") (reparse-symbol arg-sub-list) [1992 2007])
+                    ("src" variable
+                       (:pointer 1
+                        :type ("PARTICLE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2013 2027])
+                    ("dst" variable
+                       (:pointer 1
+                        :type ("PARTICLE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2029 2043]))                  
+                :type "int")
+                nil [1965 3412])
+            ("NoiseModelGenerater" function
+               (:arguments 
+                  ( ("robot" variable
+                       (:pointer 1
+                        :type ("STATE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3563 3576])
+                    ("input" variable
+                       (:pointer 1
+                        :type ("INPUT" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3586 3599])
+                    ("delta_t" variable (:type "double") (reparse-symbol arg-sub-list) [3609 3624]))                  
+                :type ("STATE" type (:type "class") nil nil))
+                nil [3537 4827])
+            ("likelihood" function
+               (:arguments 
+                  ( ("ptl" variable
+                       (:pointer 1
+                        :type ("PARTICLE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5131 5145])
+                    ("odm" variable
+                       (:pointer 1
+                        :type ("STATE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5153 5164])
+                    ("GPS" variable
+                       (:pointer 1
+                        :type ("STATE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5171 5182]))                  
+                :type "int")
+                nil [5116 6465])
+            ("resampling" function
+               (:arguments 
+                  ( ("src" variable
+                       (:pointer 1
+                        :type ("PARTICLE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6583 6597])
+                    ("dst" variable
+                       (:pointer 1
+                        :type ("PARTICLE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6598 6612]))                  
+                :type "int")
+                nil [6568 7593])
+            ("DrawAxis" function
+               (:arguments 
+                  ( ("img" variable
+                       (:pointer 1
+                        :type ("IplImage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7704 7718])
+                    ("scale" variable (:type "double") (reparse-symbol arg-sub-list) [7719 7732]))                  
+                :type "int")
+                nil [7691 8431])
+            ("DrawTargetPoints" function
+               (:arguments 
+                  ( ("img" variable
+                       (:pointer 1
+                        :type ("IplImage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8578 8592])
+                    ("pt" variable (:type ("CvPoint2D32f" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8593 8609])
+                    ("size" variable (:type "double") (reparse-symbol arg-sub-list) [8616 8628])
+                    ("view_scale" variable (:type "double") (reparse-symbol arg-sub-list) [8629 8647]))                  
+                :type "int")
+                nil [8557 9160])
+            ("DrawStateMark" function
+               (:arguments 
+                  ( ("img" variable
+                       (:pointer 1
+                        :type ("IplImage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9306 9320])
+                    ("state" variable
+                       (:pointer 1
+                        :type ("STATE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9321 9334])
+                    ("color" variable (:type ("CvScalar" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9342 9357])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [9358 9367])
+                    ("view_scale" variable (:type "double") (reparse-symbol arg-sub-list) [9375 9393])
+                    ("line" variable (:type "int") (reparse-symbol arg-sub-list) [9394 9403]))                  
+                :type "int")
+                nil [9288 9836])
+            ("DrawAveMark" function
+               (:arguments 
+                  ( ("img" variable
+                       (:pointer 1
+                        :type ("IplImage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9980 9994])
+                    ("ptcl" variable
+                       (:pointer 1
+                        :type ("PARTICLE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10003 10018])
+                    ("scale" variable (:type "double") (reparse-symbol arg-sub-list) [10026 10039])
+                    ("line" variable (:type "int") (reparse-symbol arg-sub-list) [10040 10049]))                  
+                :type ("STATE" type (:type "class") nil nil))
+                nil [9962 10456])
+            ("DrawMaxMark" function
+               (:arguments 
+                  ( ("img" variable
+                       (:pointer 1
+                        :type ("IplImage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10594 10608])
+                    ("ptcl" variable
+                       (:pointer 1
+                        :type ("PARTICLE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10610 10625])
+                    ("scale" variable (:type "double") (reparse-symbol arg-sub-list) [10626 10639])
+                    ("line" variable (:type "int") (reparse-symbol arg-sub-list) [10640 10649]))                  
+                :type ("STATE" type (:type "class") nil nil))
+                nil [10576 11112])
+            ("DrawParticle" function
+               (:arguments 
+                  ( ("img" variable
+                       (:pointer 1
+                        :type ("IplImage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11236 11250])
+                    ("ptcl" variable
+                       (:pointer 1
+                        :type ("PARTICLE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11251 11266])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [11273 11282])
+                    ("view_scale" variable (:type "double") (reparse-symbol arg-sub-list) [11282 11300])
+                    ("line" variable (:type "int") (reparse-symbol arg-sub-list) [11301 11310]))                  
+                :type "int")
+                nil [11219 11651])
+            ("calcPhi" function
+               (:arguments 
+                  ( ("robot" variable (:type ("STATE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11775 11787])
+                    ("pt" variable (:type ("CvPoint2D32f" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11788 11804]))                  
+                :type "double")
+                nil [11760 11867])
+            ("SetTargets" function
+               (:arguments 
+                  ( ("target" variable
+                       (:pointer 1
+                        :type ("CvPoint2D32f" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11994 12015]))                  
+                :type "void")
+                nil [11978 12340])
+            ("InitState" function
+               (:arguments 
+                  ( ("s" variable (:type ("STATE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12368 12376])
+                    ("in" variable (:type "double") (reparse-symbol arg-sub-list) [12377 12387]))                  
+                :type "void")
+                nil [12353 12415])
+            ("InitPF" function
+               (:arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("PARTICLE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12440 12452])
+                    ("s" variable (:type ("STATE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12453 12461]))                  
+                :type "void")
+                nil [12428 12700])
+            ("main" function (:type "int") nil [12758 15656]))          
+    :file "pf_1.cpp"
+    :pointmax 15712
+    :fsize 16020
+    :lastmodtime '(21503 11715 269619 686000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("NofParticles" . ((number "100" 550 . 553)))
+          ("L" . ((number "0.904" 564 . 569)))
+          )
+
+    )
+   )
+  :file "!home!yuta!Documents!Products!pf!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

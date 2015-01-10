@@ -1,0 +1,61 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "roomba500_lightweight.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("NODE_VERSION" variable (:constant-flag t) nil [1842 1854])
+            ("ros/ros.h" include (:system-flag t) nil [1861 1881])
+            ("tf/transform_broadcaster.h" include (:system-flag t) nil [1882 1919])
+            ("nav_msgs/Odometry.h" include (:system-flag t) nil [1920 1950])
+            ("geometry_msgs/Twist.h" include (:system-flag t) nil [1961 1993])
+            ("roomba_500_series/OpenInterface.h" include nil nil [2007 2051])
+            ("string" include (:system-flag t) nil [2053 2070])
+            ("port" variable (:type ("std::string" type (:type "class") nil nil)) nil [2072 2089])
+            ("roomba" variable
+               (:pointer 1
+                :type ("irobot::OpenInterface" type (:type "class") nil nil))
+                nil [2090 2121])
+            ("prefixTopic" function
+               (:arguments 
+                  ( ("prefix" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2148 2167])
+                    ("name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2168 2180]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [2124 2266])
+            ("cmdVelReceived" function
+               (:arguments 
+                  ( ("cmd_vel" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("geometry_msgs::Twist::ConstPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2288 2334]))                  
+                :type "void")
+                nil [2268 2393])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [2405 2414])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2415 2427]))                  
+                :type "int")
+                nil [2396 5347]))          
+    :file "roomba500_lightweight.cpp"
+    :pointmax 5356
+    :fsize 5356
+    :lastmodtime '(21508 16816 227135 137000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("NODE_VERSION" . ((number "2.01" 1855 . 1859)))
+          )
+
+    )
+   )
+  :file "!home!yuta!Downloads!roomba_500_node!roomba_500_series!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

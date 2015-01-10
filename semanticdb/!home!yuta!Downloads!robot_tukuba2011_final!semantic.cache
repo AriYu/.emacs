@@ -1,0 +1,105 @@
+;; Object robot_tukuba2011_final/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "robot_tukuba2011_final/"
+  :tables (list 
+   (semanticdb-table "robot.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("robot.h" include nil nil [315 333])
+            ("LRF" variable (:constant-flag t) nil [342 345])
+            ("GPS" variable (:constant-flag t) nil [354 357])
+            ("motor" variable (:constant-flag t) nil [366 371])
+            ("odometry" variable (:constant-flag t) nil [380 388])
+            ("LRF_show" variable (:constant-flag t) nil [397 405])
+            ("LOG" variable (:constant-flag t) nil [433 436])
+            ("sequence" variable (:constant-flag t) nil [461 469])
+            ("motor_daemon" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [639 644]))                  
+                :type "void")
+                nil [614 3175])
+            ("motor_term" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3192 3197]))                  
+                :type "int")
+                nil [3177 3351])
+            ("odometry_daemon" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3492 3497]))                  
+                :type "void")
+                nil [3464 7059])
+            ("odometry_term" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [7079 7084]))                  
+                :type "int")
+                nil [7061 7240])
+            ("sequence_daemon" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [11594 11599]))                  
+                :type "void")
+                nil [11566 12341])
+            ("sequence_term" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [12361 12366]))                  
+                :type "int")
+                nil [12343 12526])
+            ("GPS_daemon" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [12656 12661]))                  
+                :type "void")
+                nil [12633 14142])
+            ("GPS_term" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [14171 14176]))                  
+                :type "int")
+                nil [14158 14323])
+            ("LRF_daemon" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [14452 14457]))                  
+                :type "void")
+                nil [14429 16435])
+            ("LRF_term" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [16541 16546]))                  
+                :type "int")
+                nil [16528 16925])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [17074 17083])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [17084 17096]))                  
+                :type "int")
+                nil [17065 27353]))          
+    :file "robot.c"
+    :pointmax 27432
+    :fsize 27565
+    :lastmodtime '(21158 63184 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("GPS")
+          ("odometry")
+          ("sequence")
+          ("LOG")
+          ("motor")
+          ("LRF_show")
+          ("LRF")
+          )
+
+    )
+   (semanticdb-table "robot.h"
+    :file "robot.h"
+    :fsize 7057
+    :lastmodtime '(20163 53044 0 0)
+    )
+   )
+  :file "!home!yuta!Downloads!robot_tukuba2011_final!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

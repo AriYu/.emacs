@@ -1,0 +1,250 @@
+;; Object k_means/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "k_means/"
+  :tables (list 
+   (semanticdb-table "k_means.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("k_means.h" include nil nil [1 21])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [23 43])
+            ("Kmeans" function
+               (:constructor-flag t
+                :parent "Kmeans"
+                :arguments 
+                  ( ("points" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::vector" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [60 103])
+                    ("cluster_num" variable (:type "int") (reparse-symbol arg-sub-list) [110 126])
+                    ("dim" variable (:type "int") (reparse-symbol arg-sub-list) [133 141]))                  
+                :type ("Kmeans" type (:type "class") nil nil))
+                nil [45 478])
+            ("Kmeans" function
+               (:destructor-flag t
+                :parent "Kmeans"
+                :type "void")
+                nil [480 501])
+            ("EuclideanDistance" function
+               (:parent "Kmeans"
+                :arguments 
+                  ( ("p1" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("double" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [535 558])
+                    ("p2" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("double" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [566 589]))                  
+                :type "double")
+                nil [502 713])
+            ("UpdateCentroid" function
+               (:parent "Kmeans"
+                :type "void")
+                nil [714 1276])
+            ("Clustering" function
+               (:parent "Kmeans"
+                :arguments 
+                  ( ("result_clusters" variable
+                       (:reference 1
+                        :type ("Cluster" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1302 1327]))                  
+                :type "void")
+                nil [1278 2244])
+            ("ReadDataFromFile" function
+               (:arguments 
+                  ( ("filename" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2268 2284])
+                    ("data" variable
+                       (:reference 1
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("vector" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2292 2323])
+                    ("splitchar" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2331 2348]))                  
+                :type "int")
+                nil [2247 2898]))          
+    :file "k_means.cpp"
+    :pointmax 2858
+    :fsize 2941
+    :lastmodtime '(21670 52444 310593 462000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "k_means.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("K_MEANS" variable (:constant-flag t) nil [25 32])
+            ("iostream" include (:system-flag t) nil [34 53])
+            ("string" include (:system-flag t) nil [54 71])
+            ("vector" include (:system-flag t) nil [72 89])
+            ("fstream" include (:system-flag t) nil [90 108])
+            ("istream" include (:system-flag t) nil [109 127])
+            ("ctime" include (:system-flag t) nil [128 144])
+            ("cmath" include (:system-flag t) nil [145 161])
+            ("cstdlib" include (:system-flag t) nil [162 180])
+            ("sstream" include (:system-flag t) nil [181 199])
+            ("boost/algorithm/string.hpp" include (:system-flag t) nil [200 237])
+            ("Point" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [253 260])
+                    ("x" variable (:type "double") (reparse-symbol classsubparts) [263 272])
+                    ("y" variable (:type "double") (reparse-symbol classsubparts) [275 284]))                  
+                :type "class")
+                nil [239 287])
+            ("ReadDataFromFile" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("filename" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [309 330])
+                    ("data" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::vector" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [338 379])
+                    ("splitchar" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [386 408]))                  
+                :type "int")
+                nil [288 413])
+            ("Cluster" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [432 439])
+                    ("Cluster" function (:type "int") (reparse-symbol classsubparts) [442 453])
+                    ("Cluster" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("cluster_num" variable (:type "int") (reparse-symbol arg-sub-list) [464 480])
+                            ("dim" variable (:type "int") (reparse-symbol arg-sub-list) [481 489]))                          
+                        :type ("Cluster" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [456 699])
+                    ("public" label nil (reparse-symbol classsubparts) [700 707])
+                    ("centroids" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("std::vector" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [710 755])
+                    ("copy_centroids" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("std::vector" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [758 808])
+                    ("clusters" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("std::vector" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [811 852]))                  
+                :type "class")
+                nil [416 855])
+            ("Kmeans" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [873 880])
+                    ("Kmeans" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("points" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::vector" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [890 933])
+                            ("cluster_num" variable (:type "int") (reparse-symbol arg-sub-list) [937 953])
+                            ("dim" variable (:type "int") (reparse-symbol arg-sub-list) [957 965]))                          
+                        :type ("Kmeans" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [883 966])
+                    ("Kmeans" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [969 979])
+                    ("Clustering" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("result_clusters" variable
+                               (:reference 1
+                                :type ("Cluster" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [998 1023]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [982 1024])
+                    ("private" label nil (reparse-symbol classsubparts) [1028 1036])
+                    ("UpdateCentroid" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1039 1061])
+                    ("EuclideanDistance" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("p1" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("double" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [1089 1112])
+                            ("p2" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("double" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [1120 1143]))                          
+                        :type "double")
+                        (reparse-symbol classsubparts) [1064 1144])
+                    ("cluster_" variable (:type ("Cluster" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1147 1164])
+                    ("points_" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("std::vector" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1167 1210])
+                    ("spep_" variable (:type "int") (reparse-symbol classsubparts) [1213 1223])
+                    ("points_num_" variable (:type "int") (reparse-symbol classsubparts) [1246 1262])
+                    ("cluster_num_" variable (:type "int") (reparse-symbol classsubparts) [1287 1304])
+                    ("dim_" variable (:type "int") (reparse-symbol classsubparts) [1307 1316])
+                    ("distance" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("double" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1344 1373]))                  
+                :type "class")
+                nil [857 1378]))          
+    :file "k_means.h"
+    :pointmax 1375
+    :fsize 1397
+    :lastmodtime '(21670 22760 833561 965000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("K_MEANS")
+          )
+
+    )
+   (semanticdb-table "test.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("k_means.h" include nil nil [1 21])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [23 43])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [56 61]))                  
+                :type "int")
+                nil [47 1049]))          
+    :file "test.cpp"
+    :pointmax 1050
+    :fsize 1049
+    :lastmodtime '(21670 52355 438590 373000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!yuta!Soucecode!k_means!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

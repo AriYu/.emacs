@@ -1,0 +1,88 @@
+;; Object SerialCommunication/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "SerialCommunication/"
+  :tables (list 
+   (semanticdb-table "serial_communication.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("SERIAL_COMMUNICATION_H_" variable (:constant-flag t) nil [41 64])
+            ("iostream" include (:system-flag t) nil [308 327])
+            ("string" include (:system-flag t) nil [328 345])
+            ("stdexcept" include (:system-flag t) nil [346 366])
+            ("stdio.h" include (:system-flag t) nil [387 405])
+            ("stdlib.h" include (:system-flag t) nil [406 425])
+            ("pthread.h" include (:system-flag t) nil [426 446])
+            ("math.h" include (:system-flag t) nil [447 464])
+            ("termios.h" include (:system-flag t) nil [465 485])
+            ("unistd.h" include (:system-flag t) nil [486 505])
+            ("sys/ioctl.h" include (:system-flag t) nil [506 528])
+            ("sys/types.h" include (:system-flag t) nil [529 551])
+            ("sys/stat.h" include (:system-flag t) nil [552 573])
+            ("fcntl.h" include (:system-flag t) nil [574 592])
+            ("signal.h" include (:system-flag t) nil [593 612])
+            ("string.h" include (:system-flag t) nil [613 632])
+            ("assert.h" include (:system-flag t) nil [633 652])
+            ("float.h" include (:system-flag t) nil [653 671])
+            ("limits.h" include (:system-flag t) nil [672 691])
+            ("time.h" include (:system-flag t) nil [692 709])
+            ("ctype.h" include (:system-flag t) nil [710 728])
+            ("sys/stat.h" include (:system-flag t) nil [729 750])
+            ("sys/mman.h" include (:system-flag t) nil [751 772])
+            ("errno.h" include (:system-flag t) nil [773 791])
+            ("sys/time.h" include (:system-flag t) nil [792 813])
+            ("opencv2/opencv.hpp" include (:system-flag t) nil [856 885])
+            ("opencv2/core/core.hpp" include (:system-flag t) nil [886 918])
+            ("SerialCommunication" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [949 957])
+                    ("Open" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [960 984])
+                    ("Connect" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [987 1014])
+                    ("Close" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1017 1042])
+                    ("protected" label nil (reparse-symbol classsubparts) [1044 1055])
+                    ("m_device_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1058 1084])
+                    ("m_fd" variable (:type "int") (reparse-symbol classsubparts) [1087 1096])
+                    ("m_baudrate" variable (:type "int") (reparse-symbol classsubparts) [1099 1114])
+                    ("m_oldtio" variable (:type ("termios" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1117 1134])
+                    ("m_newtio" variable (:type ("termios" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1137 1154]))                  
+                :type "class")
+                nil [920 1157]))          
+    :file "serial_communication.h"
+    :pointmax 1193
+    :fsize 1192
+    :lastmodtime '(21374 4654 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("SERIAL_COMMUNICATION_H_")
+          )
+
+    )
+   (semanticdb-table "serial_communication.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("serial_communication.h" include nil nil [1 34]))          
+    :file "serial_communication.cpp"
+    :pointmax 35
+    :fsize 34
+    :lastmodtime '(21374 4654 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!yuta!Desktop!NN3rd_forTV_2!src!SerialCommunication!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

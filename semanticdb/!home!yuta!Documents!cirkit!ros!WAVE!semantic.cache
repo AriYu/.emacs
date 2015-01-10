@@ -1,0 +1,26 @@
+;; Object WAVE/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "WAVE/"
+  :tables (list 
+   (semanticdb-table "createWavefile_ja.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("sys" include nil nil [1 11])
+            ("string" include nil nil [12 25])
+            ("base64" include nil nil [26 39])
+            ("urllib2" include nil nil [40 54])
+            ("json" include nil nil [55 66])
+            ("wave" include nil nil [67 78])
+            ("tts_url" variable nil nil [80 152])
+            ("if" code nil nil [161 533]))          
+    :file "createWavefile_ja.py"
+    :pointmax 855
+    :fsize 852
+    :lastmodtime '(21566 34564 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!yuta!Documents!cirkit!ros!WAVE!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

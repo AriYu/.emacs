@@ -1,0 +1,38 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "urg_filter.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("ros/ros.h" include (:system-flag t) nil [1 21])
+            ("sensor_msgs/LaserScan.h" include (:system-flag t) nil [22 56])
+            ("iostream" include (:system-flag t) nil [58 77])
+            ("math.h" include (:system-flag t) nil [78 95])
+            ("boost/thread.hpp" include (:system-flag t) nil [97 124])
+            ("cntl_mutex_" variable (:type ("boost::mutex" type (:type "class") nil nil)) nil [125 150])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [152 172])
+            ("pub_filtered_scan" variable (:type ("ros::Publisher" type (:type "class") nil nil)) nil [174 207])
+            ("filter_callback" function
+               (:arguments 
+                  ( ("msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("sensor_msgs::LaserScan::ConstPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [230 274]))                  
+                :type "void")
+                nil [209 281]))          
+    :file "urg_filter.cpp"
+    :pointmax 282
+    :fsize 281
+    :lastmodtime '(21606 11948 351012 236000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!yuta!catkin_ws!src!urg_filter!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

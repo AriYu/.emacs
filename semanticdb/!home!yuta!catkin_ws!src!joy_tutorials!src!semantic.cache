@@ -1,0 +1,50 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "joy_tutorials_node.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("ros/ros.h" include (:system-flag t) nil [1 21])
+            ("sensor_msgs/Joy.h" include (:system-flag t) nil [22 50])
+            ("geometry_msgs/Twist.h" include (:system-flag t) nil [51 83])
+            ("boost/thread.hpp" include (:system-flag t) nil [85 112])
+            ("cntl_mutex_" variable (:type ("boost::mutex" type (:type "class") nil nil)) nil [113 138])
+            ("iostream" include (:system-flag t) nil [140 159])
+            ("math.h" include (:system-flag t) nil [160 177])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [178 198])
+            ("joy_in" variable (:type ("sensor_msgs::Joy" type (:type "class") nil nil)) nil [200 224])
+            ("pub_state" variable (:type ("ros::Publisher" type (:type "class") nil nil)) nil [225 250])
+            ("base_cmd" variable (:type ("geometry_msgs::Twist" type (:type "class") nil nil)) nil [268 298])
+            ("joy_callback" function
+               (:arguments 
+                  ( ("msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("sensor_msgs::Joy::ConstPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [318 356]))                  
+                :type "void")
+                nil [300 516])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [527 536])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [537 549]))                  
+                :type "int")
+                nil [518 875]))          
+    :file "joy_tutorials_node.cpp"
+    :pointmax 877
+    :fsize 876
+    :lastmodtime '(21516 11609 83108 167000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!yuta!catkin_ws!src!joy_tutorials!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

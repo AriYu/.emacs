@@ -1,0 +1,119 @@
+;; Object ThirdRobotInterface/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ThirdRobotInterface/"
+  :tables (list 
+   (semanticdb-table "ThirdRobotInterface.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [1 20])
+            ("string.h" include (:system-flag t) nil [21 40])
+            ("math.h" include (:system-flag t) nil [41 58])
+            ("stdio.h" include (:system-flag t) nil [59 77])
+            ("string" include (:system-flag t) nil [78 95])
+            ("netinet/in.h" include (:system-flag t) nil [96 119])
+            ("sys/types.h" include (:system-flag t) nil [120 142])
+            ("iostream" include (:system-flag t) nil [143 162])
+            ("fstream" include (:system-flag t) nil [163 181])
+            ("ros/ros.h" include nil nil [183 203])
+            ("ThirdRobotInterface/ThirdRobotInterface.h" include nil nil [205 257])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [259 279])
+            ("ThirdRobotInterface" function
+               (:parent "cirkit::ThirdRobotInterface"
+                :arguments 
+                  ( ("new_serial_port_imcs01" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [335 370])
+                    ("new_baudrate_imcs01" variable (:type "int") (reparse-symbol arg-sub-list) [371 395])
+                    ("new_serial_port_arduino" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [400 436])
+                    ("new_baudrate_arduino" variable (:type "int") (reparse-symbol arg-sub-list) [437 462]))                  
+                :type "int")
+                nil [281 875])
+            ("ThirdRobotInterface" function
+               (:destructor-flag t
+                :parent "cirkit::ThirdRobotInterface"
+                :type "void")
+                nil [877 1446])
+            ("openSerialPort" function
+               (:parent "cirkit::ThirdRobotInterface"
+                :type "int")
+                nil [1553 1711])
+            ("setSerialPort" function
+               (:parent "cirkit::ThirdRobotInterface"
+                :type "int")
+                nil [1816 4964])
+            ("closeSerialPort" function
+               (:parent "cirkit::ThirdRobotInterface"
+                :type "int")
+                nil [5072 5474])
+            ("drive" function
+               (:parent "cirkit::ThirdRobotInterface"
+                :arguments 
+                  ( ("linear_speed" variable (:type "double") (reparse-symbol arg-sub-list) [5709 5729])
+                    ("angular_speed" variable (:type "double") (reparse-symbol arg-sub-list) [5730 5751]))                  
+                :type "int")
+                nil [5670 6297])
+            ("driveDirect" function
+               (:parent "cirkit::ThirdRobotInterface"
+                :arguments 
+                  ( ("front_angular" variable (:type "double") (reparse-symbol arg-sub-list) [6812 6833])
+                    ("rear_speed" variable (:type "double") (reparse-symbol arg-sub-list) [6834 6852]))                  
+                :type "int")
+                nil [6767 10592])
+            ("getEncoderPacket" function
+               (:parent "cirkit::ThirdRobotInterface"
+                :type "int")
+                nil [10708 10908])
+            ("parseEncoderPackets" function
+               (:parent "cirkit::ThirdRobotInterface"
+                :type "int")
+                nil [11013 11146])
+            ("parseFrontEncoderCounts" function
+               (:parent "cirkit::ThirdRobotInterface"
+                :type "int")
+                nil [11148 11921])
+            ("parseRearEncoderCounts" function
+               (:parent "cirkit::ThirdRobotInterface"
+                :type "int")
+                nil [11923 13073])
+            ("sendOpcode" function
+               (:parent "cirkit::ThirdRobotInterface"
+                :arguments 
+                  ( ("code" variable
+                       (:constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [13249 13265]))                  
+                :type "int")
+                nil [13205 13514])
+            ("resetOdometry" function
+               (:parent "cirkit::ThirdRobotInterface"
+                :type "void")
+                nil [13627 13712])
+            ("setOdometry" function
+               (:parent "cirkit::ThirdRobotInterface"
+                :arguments 
+                  ( ("new_x" variable (:type "double") (reparse-symbol arg-sub-list) [13869 13882])
+                    ("new_y" variable (:type "double") (reparse-symbol arg-sub-list) [13883 13896])
+                    ("new_yaw" variable (:type "double") (reparse-symbol arg-sub-list) [13897 13912]))                  
+                :type "void")
+                nil [13823 13999])
+            ("calculateOdometry" function
+               (:parent "cirkit::ThirdRobotInterface"
+                :type "void")
+                nil [14117 15075])
+            ("plus_or_minus" function
+               (:arguments 
+                  ( ("value" variable (:type "double") (reparse-symbol arg-sub-list) [15096 15109]))                  
+                :type "int")
+                nil [15078 15208]))          
+    :file "ThirdRobotInterface.cpp"
+    :pointmax 15209
+    :fsize 15318
+    :lastmodtime '(21607 62381 319509 108000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!yuta!catkin_ws!src!third_robot_driver!src!ThirdRobotInterface!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

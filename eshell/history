@@ -1,0 +1,6 @@
+ls
+cp ../CMakeFiles/ .
+cp ../CMakeLists.txt .
+ls
+cmake .
+make

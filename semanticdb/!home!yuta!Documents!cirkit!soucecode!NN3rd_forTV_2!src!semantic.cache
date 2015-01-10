@@ -1,0 +1,44 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "main.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("main.h" include nil nil [1 18])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [20 40])
+            ("cv" using (:type ("cv" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [41 60])
+            ("now_robot_pos" variable (:type ("CvPoint3D32f" type (:type "class") nil nil)) nil [62 89])
+            ("now_robot_dir" variable (:type "double") nil [90 111])
+            ("steer_angle" variable (:type "int") nil [112 132])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [143 152])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [153 165]))                  
+                :type "int")
+                nil [134 8655]))          
+    :file "main.cpp"
+    :pointmax 8656
+    :fsize 8663
+    :lastmodtime '(21374 4654 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "main.h"
+    :file "main.h"
+    :fsize 3443
+    :lastmodtime '(21374 4654 0 0)
+    )
+   )
+  :file "!home!yuta!Documents!cirkit!soucecode!NN3rd_forTV_2!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

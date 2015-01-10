@@ -1,0 +1,39 @@
+;; Object iMCs_ctrl/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "iMCs_ctrl/"
+  :tables (list 
+   (semanticdb-table "imcs01.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("IMCS01_H_" variable (:constant-flag t) nil [27 36])
+            ("stdexcept" include (:system-flag t) nil [38 58])
+            ("termios.h" include (:system-flag t) nil [59 79])
+            ("string" include (:system-flag t) nil [80 97])
+            ("vector" include (:system-flag t) nil [98 115])
+            ("stdint.h" include (:system-flag t) nil [116 135])
+            ("FRONT" variable (:constant-flag t) nil [146 151])
+            ("REAR" variable (:constant-flag t) nil [162 166])
+            ("MIN" variable (:constant-flag t) nil [190 193])
+            ("MAX" variable (:constant-flag t) nil [248 251])
+            ("NORMALIZE" variable (:constant-flag t) nil [312 321])
+            ("cirkit" type (:type "namespace") nil [355 2958]))          
+    :file "imcs01.h"
+    :pointmax 2703
+    :fsize 2978
+    :lastmodtime '(21508 32278 631443 230000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("MAX" (spp-arg-list ("a" "b") 251 . 256) . ((semantic-list "((a > b) ? (a) : (b))" 257 . 278)))
+          ("MIN" (spp-arg-list ("a" "b") 193 . 198) . ((semantic-list "((a < b) ? (a) : (b))" 199 . 220)))
+          ("NORMALIZE" (spp-arg-list ("z") 321 . 324) . ((symbol "atan2" 325 . 330) (semantic-list "(sin(z), cos(z))" 330 . 346)))
+          ("REAR" . ((number "1" 167 . 168)))
+          ("IMCS01_H_")
+          ("FRONT" . ((number "0" 152 . 153)))
+          )
+
+    )
+   )
+  :file "!home!yuta!catkin_ws!src!3rd_robot_driver!include!iMCs_ctrl!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

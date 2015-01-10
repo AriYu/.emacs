@@ -1,0 +1,130 @@
+;; Object icp/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "icp/"
+  :tables (list 
+   (semanticdb-table "main.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("main.h" include nil nil [1 18])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [20 40])
+            ("cv" using (:type ("cv" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [41 60])
+            ("THRESHOLD_E" variable (:constant-flag t) nil [70 81])
+            ("X_SIZE" variable (:constant-flag t) nil [96 102])
+            ("Y_SIZE" variable (:constant-flag t) nil [116 122])
+            ("step_to_radian" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("step" variable (:type "int") (reparse-symbol arg-sub-list) [151 160])
+                    ("lrf_data_max" variable (:type "int") (reparse-symbol arg-sub-list) [161 178]))                  
+                :type "double")
+                nil [129 179])
+            ("LimitUchar" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("value" variable (:type "double") (reparse-symbol arg-sub-list) [205 218]))                  
+                :type "unsigned char")
+                nil [180 219])
+            ("LimitSize" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("x" variable (:type "double") (reparse-symbol arg-sub-list) [234 243])
+                    ("max" variable (:type "int") (reparse-symbol arg-sub-list) [244 252]))                  
+                :type "int")
+                nil [220 253])
+            ("PaintPixels" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("image" variable
+                       (:reference 1
+                        :type ("Mat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [271 282])
+                    ("x" variable (:type "int") (reparse-symbol arg-sub-list) [283 289])
+                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [290 296])
+                    ("area_option" variable (:type "int") (reparse-symbol arg-sub-list) [297 313])
+                    ("rr" variable (:type "int") (reparse-symbol arg-sub-list) [314 321])
+                    ("gg" variable (:type "int") (reparse-symbol arg-sub-list) [322 329])
+                    ("bb" variable (:type "int") (reparse-symbol arg-sub-list) [330 337]))                  
+                :type "void")
+                nil [254 338])
+            ("main" function (:type "int") nil [340 11729])
+            ("step_to_radian" function
+               (:arguments 
+                  ( ("step" variable (:type "int") (reparse-symbol arg-sub-list) [11756 11765])
+                    ("lrf_data_max" variable (:type "int") (reparse-symbol arg-sub-list) [11766 11783]))                  
+                :type "double")
+                nil [11734 12022])
+            ("LimitUchar" function
+               (:arguments 
+                  ( ("value" variable (:type "double") (reparse-symbol arg-sub-list) [12051 12064]))                  
+                :type "unsigned char")
+                nil [12026 12193])
+            ("LimitSize" function
+               (:arguments 
+                  ( ("x" variable (:type "double") (reparse-symbol arg-sub-list) [12211 12220])
+                    ("max" variable (:type "int") (reparse-symbol arg-sub-list) [12221 12229]))                  
+                :type "int")
+                nil [12197 12328])
+            ("PaintPixels" function
+               (:arguments 
+                  ( ("image" variable
+                       (:reference 1
+                        :type ("Mat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12380 12391])
+                    ("x" variable (:type "int") (reparse-symbol arg-sub-list) [12392 12398])
+                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [12399 12405])
+                    ("area_option" variable (:type "int") (reparse-symbol arg-sub-list) [12406 12422])
+                    ("rr" variable (:type "int") (reparse-symbol arg-sub-list) [12423 12430])
+                    ("gg" variable (:type "int") (reparse-symbol arg-sub-list) [12431 12438])
+                    ("bb" variable (:type "int") (reparse-symbol arg-sub-list) [12439 12446]))                  
+                :type "void")
+                nil [12363 13646]))          
+    :file "main.cpp"
+    :pointmax 13648
+    :fsize 13691
+    :lastmodtime '(21491 27334 721808 531000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("THRESHOLD_E" . ((number "20000" 82 . 87)))
+          ("Y_SIZE" . ((number "1024" 123 . 127)))
+          ("X_SIZE" . ((number "1024" 103 . 107)))
+          )
+
+    )
+   (semanticdb-table "main.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("string" include (:system-flag t) nil [21 38])
+            ("vector" include (:system-flag t) nil [39 56])
+            ("fstream" include (:system-flag t) nil [57 75])
+            ("istream" include (:system-flag t) nil [76 94])
+            ("sstream" include (:system-flag t) nil [95 113])
+            ("boost/algorithm/string.hpp" include (:system-flag t) nil [114 151])
+            ("cv.h" include (:system-flag t) nil [153 168])
+            ("highgui.h" include (:system-flag t) nil [169 189])
+            ("BB" variable (:constant-flag t) nil [199 201])
+            ("GG" variable (:constant-flag t) nil [212 214])
+            ("RR" variable (:constant-flag t) nil [225 227]))          
+    :file "main.h"
+    :pointmax 231
+    :fsize 230
+    :lastmodtime '(21479 7554 340235 969000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("RR" . ((number "2" 228 . 229)))
+          ("BB" . ((number "0" 202 . 203)))
+          ("GG" . ((number "1" 215 . 216)))
+          )
+
+    )
+   )
+  :file "!home!yuta!Documents!Products!icp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

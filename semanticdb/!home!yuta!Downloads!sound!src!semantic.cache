@@ -1,0 +1,46 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "sound_server.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("ros/ros.h" include (:system-flag t) nil [1 21])
+            ("sound/sound_service.h" include nil nil [22 54])
+            ("/home/taku/catkin_ws/src/rospeex/rospeex_if/src/cpp/rospeex_if/rospeex.cpp" include nil nil [55 140])
+            ("interface" variable
+               (:typemodifiers ("static")
+                :type ("rospeex::Interface" type (:type "class") nil nil))
+                nil [142 178])
+            ("play" function
+               (:arguments 
+                  ( ("req" variable
+                       (:reference 1
+                        :type ("sound::sound_service::Request" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [190 226])
+                    ("res" variable
+                       (:reference 1
+                        :type ("sound::sound_service::Response" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [231 267]))                  
+                :type "bool")
+                nil [180 686])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [697 706])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [707 719]))                  
+                :type "int")
+                nil [688 938]))          
+    :file "sound_server.cpp"
+    :pointmax 939
+    :fsize 938
+    :lastmodtime '(21572 46131 531472 342000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!yuta!Downloads!sound!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

@@ -1,0 +1,105 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "menu.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("ros/ros.h" include (:system-flag t) nil [1614 1634])
+            ("interactive_markers/interactive_marker_server.h" include (:system-flag t) nil [1636 1694])
+            ("interactive_markers/menu_handler.h" include (:system-flag t) nil [1695 1740])
+            ("tf/transform_broadcaster.h" include (:system-flag t) nil [1742 1779])
+            ("tf/tf.h" include (:system-flag t) nil [1780 1798])
+            ("math.h" include (:system-flag t) nil [1800 1817])
+            ("visualization_msgs" using (:type ("visualization_msgs" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1819 1854])
+            ("interactive_markers" using (:type ("interactive_markers" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1855 1891])
+            ("server" variable (:type ("boost::shared_ptr" type
+                 (:template-specifier 
+                    ( ("InteractiveMarkerServer" type nil nil nil))                    
+                  :type "class")
+                  nil nil)) nil [1893 1943])
+            ("marker_pos" variable (:type "float") nil [1944 1965])
+            ("menu_handler" variable (:type ("MenuHandler" type (:type "class") nil nil)) nil [1967 1992])
+            ("h_first_entry" variable (:type ("MenuHandler::EntryHandle" type (:type "class") nil nil)) nil [1994 2033])
+            ("h_mode_last" variable (:type ("MenuHandler::EntryHandle" type (:type "class") nil nil)) nil [2034 2071])
+            ("enableCb" function
+               (:arguments 
+                  ( ("feedback" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("visualization_msgs::InteractiveMarkerFeedbackConstPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2089 2160]))                  
+                :type "void")
+                nil [2074 2799])
+            ("modeCb" function
+               (:arguments 
+                  ( ("feedback" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("visualization_msgs::InteractiveMarkerFeedbackConstPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2814 2885]))                  
+                :type "void")
+                nil [2801 3185])
+            ("makeBox" function
+               (:arguments 
+                  ( ("msg" variable
+                       (:reference 1
+                        :type ("InteractiveMarker" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3205 3229]))                  
+                :type ("Marker" type (:type "class") nil nil))
+                nil [3189 3506])
+            ("makeBoxControl" function
+               (:arguments 
+                  ( ("msg" variable
+                       (:reference 1
+                        :type ("InteractiveMarker" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3550 3574]))                  
+                :type ("InteractiveMarkerControl" type (:type "class") nil nil))
+                nil [3508 3760])
+            ("makeEmptyMarker" function
+               (:arguments 
+                  ( ("dummyBox" variable (:type "bool") (reparse-symbol arg-sub-list) [3797 3811])
+                    ("" variable (:type ("true" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3811 3817]))                  
+                :type ("InteractiveMarker" type (:type "class") nil nil))
+                nil [3762 3997])
+            ("makeMenuMarker" function
+               (:arguments 
+                  ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4020 4038]))                  
+                :type "void")
+                nil [3999 4384])
+            ("deepCb" function
+               (:arguments 
+                  ( ("feedback" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("visualization_msgs::InteractiveMarkerFeedbackConstPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4399 4470]))                  
+                :type "void")
+                nil [4386 4523])
+            ("initMenu" function (:type "void") nil [4525 5305])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [5316 5325])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5326 5338]))                  
+                :type "int")
+                nil [5307 5668]))          
+    :file "menu.cpp"
+    :pointmax 5669
+    :fsize 5668
+    :lastmodtime '(21410 10168 0 0)
+    :unmatched-syntax '((punctuation 3810 . 3811))
+    )
+   )
+  :file "!home!yuta!Downloads!visualization_tutorials-indigo-devel!interactive_marker_tutorials!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

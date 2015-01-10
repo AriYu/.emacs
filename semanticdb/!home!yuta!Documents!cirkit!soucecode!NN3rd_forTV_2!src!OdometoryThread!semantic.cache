@@ -1,0 +1,93 @@
+;; Object OdometoryThread/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "OdometoryThread/"
+  :tables (list 
+   (semanticdb-table "odometory_thread.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("odometory_thread.h" include nil nil [202 231])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [232 252])
+            ("now_robot_pos" variable
+               (:typemodifiers ("extern")
+                :type ("CvPoint3D32f" type (:type "class") nil nil))
+                nil [253 287])
+            ("now_robot_dir" variable
+               (:typemodifiers ("extern")
+                :type "double")
+                nil [300 328])
+            ("RegressionLine" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("data" variable (:type ("CvPoint3D32f" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [364 382]))                  
+                :type "double")
+                nil [342 383])
+            ("now_robot_pos_mtx" variable (:type ("pthread_mutex_t" type (:type "class") nil nil)) nil [385 447])
+            ("now_robot_dir_mtx" variable (:type ("pthread_mutex_t" type (:type "class") nil nil)) nil [448 510])
+            ("OdometoryThread" function
+               (:pointer 1
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [534 544]))                  
+                :type "void")
+                nil [512 2380])
+            ("MedianFilter" function
+               (:arguments 
+                  ( ("newdata" variable (:type "double") (reparse-symbol arg-sub-list) [2402 2417]))                  
+                :type "double")
+                nil [2382 2717])
+            ("SelectionSort" function
+               (:arguments 
+                  ( ("hito" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [2738 2751])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [2752 2761]))                  
+                :type "void")
+                nil [2719 2972])
+            ("BubbleSort" function
+               (:arguments 
+                  ( ("data" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [2990 3003])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [3004 3013]))                  
+                :type "void")
+                nil [2974 3162])
+            ("swap" function
+               (:arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [3173 3183])
+                    ("b" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [3184 3194]))                  
+                :type "void")
+                nil [3163 3240])
+            ("RegressionLine" function
+               (:arguments 
+                  ( ("new_data" variable (:type ("CvPoint3D32f" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3264 3286]))                  
+                :type "double")
+                nil [3242 6018]))          
+    :file "odometory_thread.cpp"
+    :pointmax 6019
+    :fsize 6018
+    :lastmodtime '(21374 4654 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "odometory_thread.h"
+    :file "odometory_thread.h"
+    :fsize 426
+    :lastmodtime '(21374 4654 0 0)
+    )
+   )
+  :file "!home!yuta!Documents!cirkit!soucecode!NN3rd_forTV_2!src!OdometoryThread!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

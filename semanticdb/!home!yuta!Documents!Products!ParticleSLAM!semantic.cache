@@ -1,0 +1,1092 @@
+;; Object ParticleSLAM/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ParticleSLAM/"
+  :tables (list 
+   (semanticdb-table "main.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("GridMap.h" include nil nil [1 21])
+            ("ICP.h" include nil nil [22 38])
+            ("DrawMap.h" include nil nil [39 59])
+            ("ParticleFilter.h" include nil nil [60 87])
+            ("exception" include (:system-flag t) nil [88 108])
+            ("X_RESOLUTION" variable (:constant-flag t) nil [117 129])
+            ("Y_RESOLUTION" variable (:constant-flag t) nil [151 163])
+            ("RESOLUTION" variable (:constant-flag t) nil [194 204])
+            ("NumOfParticle" variable (:constant-flag t) nil [225 238])
+            ("NumOfParticle" variable (:constant-flag t) nil [225 238])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [244 264])
+            ("cv" using (:type ("cv" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [265 284])
+            ("state_equation" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("x_old" variable (:type "double") (reparse-symbol arg-sub-list) [308 321])
+                    ("i" variable (:type "double") (reparse-symbol arg-sub-list) [322 331]))                  
+                :type "double")
+                nil [286 332])
+            ("observation_equation" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("x" variable (:type "double") (reparse-symbol arg-sub-list) [361 370]))                  
+                :type "double")
+                nil [333 371])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [382 387]))                  
+                :type "int")
+                nil [373 4820])
+            ("state_equation" function
+               (:arguments 
+                  ( ("x_old" variable (:type "double") (reparse-symbol arg-sub-list) [4867 4880])
+                    ("i" variable (:type "double") (reparse-symbol arg-sub-list) [4881 4890]))                  
+                :type "double")
+                nil [4845 4906])
+            ("observation_equation" function
+               (:arguments 
+                  ( ("x" variable (:type "double") (reparse-symbol arg-sub-list) [4958 4967]))                  
+                :type "double")
+                nil [4930 4983]))          
+    :file "main.cpp"
+    :pointmax 4984
+    :fsize 5089
+    :lastmodtime '(21542 64914 618022 917000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("Y_RESOLUTION" . ((symbol "X_RESOLUTION" 164 . 176)))
+          ("X_RESOLUTION" . ((number "128" 130 . 133)))
+          ("RESOLUTION" . ((number "500" 205 . 208)))
+          ("NumOfParticle" . ((number "10" 239 . 241)))
+          )
+
+    )
+   (semanticdb-table "GridMap.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("GRID_MAP_H_" variable (:constant-flag t) nil [29 40])
+            ("iostream" include (:system-flag t) nil [42 61])
+            ("vector" include (:system-flag t) nil [62 79])
+            ("string" include (:system-flag t) nil [80 97])
+            ("fstream" include (:system-flag t) nil [98 116])
+            ("istream" include (:system-flag t) nil [117 135])
+            ("sstream" include (:system-flag t) nil [136 154])
+            ("boost/algorithm/string.hpp" include (:system-flag t) nil [155 192])
+            ("cv.h" include (:system-flag t) nil [194 209])
+            ("highgui.h" include (:system-flag t) nil [210 230])
+            ("draw_line" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("map" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::vector" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [248 288])
+                    ("x0" variable (:type "int") (reparse-symbol arg-sub-list) [298 305])
+                    ("y0" variable (:type "int") (reparse-symbol arg-sub-list) [306 313])
+                    ("x1" variable (:type "int") (reparse-symbol arg-sub-list) [314 321])
+                    ("y1" variable (:type "int") (reparse-symbol arg-sub-list) [322 329])
+                    ("occupancy" variable (:type "double") (reparse-symbol arg-sub-list) [330 347]))                  
+                :type "void")
+                nil [233 348])
+            ("Polar" type
+               (:members 
+                  ( ("theta" variable (:type "double") (reparse-symbol classsubparts) [366 379])
+                    ("r" variable (:type "long") (reparse-symbol classsubparts) [382 389]))                  
+                :type "struct")
+                nil [350 392])
+            ("grid_map" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [413 420])
+                    ("grid_map" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("grid_map" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [423 434])
+                    ("grid_map" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("x_size" variable (:type "int") (reparse-symbol arg-sub-list) [446 457])
+                            ("y_size" variable (:type "int") (reparse-symbol arg-sub-list) [458 469])
+                            ("resolution" variable (:type "int") (reparse-symbol arg-sub-list) [470 485]))                          
+                        :type ("grid_map" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [437 486])
+                    ("is_map" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("x" variable (:type "double") (reparse-symbol arg-sub-list) [501 510])
+                            ("y" variable (:type "double") (reparse-symbol arg-sub-list) [511 520]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [489 521])
+                    ("ResetMap" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [560 576])
+                    ("PointUpdate" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("continuous_xy" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("CvPoint2D32f" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [596 637]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [579 638])
+                    ("PointUpdate" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("polars" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("Polar" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [658 685]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [641 686])
+                    ("PointTransform" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("rot" variable (:type "double") (reparse-symbol arg-sub-list) [709 720])
+                            ("trans_x" variable (:type "double") (reparse-symbol arg-sub-list) [721 736])
+                            ("trans_y" variable (:type "double") (reparse-symbol arg-sub-list) [737 752]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [689 753])
+                    ("EndPointUpdate" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("continuous_xy" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("CvPoint2D32f" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [776 817]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [756 818])
+                    ("RayCastingUpdate" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("continuous_xy" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("CvPoint2D32f" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [843 884]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [821 885])
+                    ("RayCastingUpdate" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("polars" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("Polar" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [910 937]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [888 938])
+                    ("RayCastingUpdate" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [941 965])
+                    ("public" label nil (reparse-symbol classsubparts) [1053 1060])
+                    ("m_x_size" variable (:type "int") (reparse-symbol classsubparts) [1063 1076])
+                    ("m_y_size" variable (:type "int") (reparse-symbol classsubparts) [1079 1092])
+                    ("m_minimum_x_size" variable (:type "int") (reparse-symbol classsubparts) [1095 1116])
+                    ("m_maximum_x_size" variable (:type "int") (reparse-symbol classsubparts) [1119 1140])
+                    ("m_minimum_y_size" variable (:type "int") (reparse-symbol classsubparts) [1143 1164])
+                    ("m_maximum_y_size" variable (:type "int") (reparse-symbol classsubparts) [1167 1188])
+                    ("m_origin" variable (:type ("CvPoint2D32f" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1191 1213])
+                    ("m_rot" variable (:type "double") (reparse-symbol classsubparts) [1216 1229])
+                    ("m_resolution" variable (:type "int") (reparse-symbol classsubparts) [1232 1249])
+                    ("m_map" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("std::vector" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1260 1301])
+                    ("points" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("CvPoint2D32f" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1304 1339]))                  
+                :type "class")
+                nil [395 1342]))          
+    :file "GridMap.h"
+    :pointmax 1352
+    :fsize 1351
+    :lastmodtime '(21503 15568 345766 525000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("GRID_MAP_H_")
+          )
+
+    )
+   (semanticdb-table "ICP.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("ICP_H_" variable (:constant-flag t) nil [24 30])
+            ("iostream" include (:system-flag t) nil [32 51])
+            ("vector" include (:system-flag t) nil [52 69])
+            ("string" include (:system-flag t) nil [70 87])
+            ("fstream" include (:system-flag t) nil [88 106])
+            ("istream" include (:system-flag t) nil [107 125])
+            ("sstream" include (:system-flag t) nil [126 144])
+            ("boost/algorithm/string.hpp" include (:system-flag t) nil [145 182])
+            ("cv.h" include (:system-flag t) nil [184 199])
+            ("highgui.h" include (:system-flag t) nil [200 220])
+            ("GridMap.h" include nil nil [222 242])
+            ("DrawMap.h" include nil nil [243 263])
+            ("ICP" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [278 286])
+                    ("ICP" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("ICP" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [289 295])
+                    ("ICP" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("mapA" variable
+                               (:reference 1
+                                :type ("grid_map" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [302 317])
+                            ("mapB" variable
+                               (:reference 1
+                                :type ("grid_map" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [318 333]))                          
+                        :type ("ICP" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [298 334])
+                    ("SetParam" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("num_of_iterate" variable (:type "int") (reparse-symbol arg-sub-list) [351 370])
+                            ("threshold" variable (:type "double") (reparse-symbol arg-sub-list) [371 388])
+                            ("finish" variable (:type "double") (reparse-symbol arg-sub-list) [389 403]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [337 404])
+                    ("Registration" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [407 427])
+                    ("Iterate" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [430 445])
+                    ("Result" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("rot" variable
+                               (:pointer 1
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [464 476])
+                            ("trans_x" variable
+                               (:pointer 1
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [477 493])
+                            ("trans_y" variable
+                               (:pointer 1
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [494 510]))                          
+                        :type ("grid_map" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [448 511])
+                    ("protected" label nil (reparse-symbol classsubparts) [514 524])
+                    ("ResetVariables" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [527 549])
+                    ("m_mapA" variable (:type ("grid_map" type (:type "class") nil nil)) (reparse-symbol classsubparts) [552 568])
+                    ("m_mapB" variable (:type ("grid_map" type (:type "class") nil nil)) (reparse-symbol classsubparts) [571 587])
+                    ("m_map_result" variable (:type ("grid_map" type (:type "class") nil nil)) (reparse-symbol classsubparts) [590 612])
+                    ("m_tmp_xy" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("CvPoint2D32f" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [615 653])
+                    ("m_num_of_iterate" variable (:type "int") (reparse-symbol classsubparts) [656 677])
+                    ("m_threshold" variable (:type "double") (reparse-symbol classsubparts) [680 699])
+                    ("m_finish_threshold" variable (:type "double") (reparse-symbol classsubparts) [702 728])
+                    ("e" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("std::vector" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [731 768])
+                    ("e_T" variable (:type "double") (reparse-symbol classsubparts) [771 782])
+                    ("p_T" variable (:type "double") (reparse-symbol classsubparts) [785 796])
+                    ("n_T" variable (:type "double") (reparse-symbol classsubparts) [799 810])
+                    ("P_T" variable (:type "double") (reparse-symbol classsubparts) [813 824])
+                    ("I_T" variable (:type "double") (reparse-symbol classsubparts) [827 838])
+                    ("tmp" variable (:type "double") (reparse-symbol classsubparts) [841 852])
+                    ("p_Txe_T" variable (:type "double") (reparse-symbol classsubparts) [855 870])
+                    ("sum_p_Txe_T" variable (:type "double") (reparse-symbol classsubparts) [873 892])
+                    ("n_TxP_T" variable (:type "double") (reparse-symbol classsubparts) [895 910])
+                    ("delta_phi_new" variable (:type "double") (reparse-symbol classsubparts) [913 934])
+                    ("delta_x_new" variable (:type "double") (reparse-symbol classsubparts) [937 956])
+                    ("delta_y_new" variable (:type "double") (reparse-symbol classsubparts) [959 978])
+                    ("delta_phi_new_tmp" variable (:type "double") (reparse-symbol classsubparts) [981 1006])
+                    ("l" variable (:type "int") (reparse-symbol classsubparts) [1009 1015])
+                    ("save_loop" variable (:type "int") (reparse-symbol classsubparts) [1018 1032])
+                    ("min_I_T" variable (:type "double") (reparse-symbol classsubparts) [1035 1050])
+                    ("flag" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1053 1075])
+                    ("m_trans_x" variable (:type "double") (reparse-symbol classsubparts) [1078 1095])
+                    ("m_trans_y" variable (:type "double") (reparse-symbol classsubparts) [1098 1115])
+                    ("m_rot" variable (:type "double") (reparse-symbol classsubparts) [1118 1131])
+                    ("m_save_trans_x" variable (:type "double") (reparse-symbol classsubparts) [1134 1156])
+                    ("m_save_trans_y" variable (:type "double") (reparse-symbol classsubparts) [1159 1181])
+                    ("m_save_rot" variable (:type "double") (reparse-symbol classsubparts) [1184 1202])
+                    ("S_x_k" variable (:type "long") (reparse-symbol classsubparts) [1206 1218])
+                    ("S_y_k" variable (:type "long") (reparse-symbol classsubparts) [1219 1231])
+                    ("S_x_k1" variable (:type "long") (reparse-symbol classsubparts) [1232 1245])
+                    ("S_y_k1" variable (:type "long") (reparse-symbol classsubparts) [1246 1259])
+                    ("S_x_k_x_k1" variable (:type "long") (reparse-symbol classsubparts) [1262 1279])
+                    ("S_x_k_y_k1" variable (:type "long") (reparse-symbol classsubparts) [1280 1297])
+                    ("S_y_k_x_k1" variable (:type "long") (reparse-symbol classsubparts) [1300 1317])
+                    ("S_y_k_y_k1" variable (:type "long") (reparse-symbol classsubparts) [1318 1335])
+                    ("j_m" variable (:type "int") (reparse-symbol classsubparts) [1339 1347])
+                    ("i_m" variable (:type "int") (reparse-symbol classsubparts) [1350 1358])
+                    ("i_min" variable (:type "int") (reparse-symbol classsubparts) [1361 1371])
+                    ("j_min" variable (:type "int") (reparse-symbol classsubparts) [1374 1384]))                  
+                :type "class")
+                nil [265 1387]))          
+    :file "ICP.h"
+    :pointmax 1405
+    :fsize 1404
+    :lastmodtime '(21502 48291 158603 99000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("ICP_H_")
+          )
+
+    )
+   (semanticdb-table "DrawMap.h"
+    :major-mode 'c-mode
+    :tags nil
+    :file "DrawMap.h"
+    :pointmax 570
+    :fsize 775
+    :lastmodtime '(21503 21731 582001 403000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "ParticleFilter.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("ParticleFilter.h" include nil nil [1 28])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [31 51])
+            ("rand_init_flag" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [53 83])
+            ("calc_around_pi" function
+               (:arguments 
+                  ( ("theta" variable (:type "double") (reparse-symbol arg-sub-list) [118 131]))                  
+                :type "double")
+                nil [96 253])
+            ("+" function
+               (:operator-flag t
+                :arguments 
+                  ( ("m" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("STATE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [271 286])
+                    ("n" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("STATE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [287 302]))                  
+                :type ("STATE" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [255 408])
+            ("-" function
+               (:operator-flag t
+                :arguments 
+                  ( ("m" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("STATE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [425 440])
+                    ("n" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("STATE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [441 456]))                  
+                :type ("STATE" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [409 562])
+            ("PFilter" function
+               (:constructor-flag t
+                :parent "PFilter"
+                :arguments 
+                  ( ("num" variable (:type "int") (reparse-symbol arg-sub-list) [582 590])
+                    ("" variable (:type "double") (reparse-symbol arg-sub-list) [591 610])
+                    ("" variable (:type "double") (reparse-symbol arg-sub-list) [628 645])
+                    ("init_xy_mean" variable (:type "double") (reparse-symbol arg-sub-list) [655 675])
+                    ("init_xy_variance" variable (:type "double") (reparse-symbol arg-sub-list) [676 700])
+                    ("init_dir_mean" variable (:type "double") (reparse-symbol arg-sub-list) [701 722])
+                    ("init_dir_variance" variable (:type "double") (reparse-symbol arg-sub-list) [723 748]))                  
+                :type ("PFilter" type (:type "class") nil nil))
+                nil [565 1500])
+            ("PFilter" function
+               (:destructor-flag t
+                :parent "PFilter"
+                :type "void")
+                nil [1502 1581])
+            ("SetNoiseParam" function
+               (:parent "PFilter"
+                :arguments 
+                  ( ("xy_mean_s" variable (:type "double") (reparse-symbol arg-sub-list) [1610 1627])
+                    ("xy_variance_s" variable (:type "double") (reparse-symbol arg-sub-list) [1636 1657])
+                    ("xy_mean_w" variable (:type "double") (reparse-symbol arg-sub-list) [1666 1683])
+                    ("xy_variance_w" variable (:type "double") (reparse-symbol arg-sub-list) [1692 1713])
+                    ("dir_mean_s" variable (:type "double") (reparse-symbol arg-sub-list) [1721 1739])
+                    ("dir_variance_s" variable (:type "double") (reparse-symbol arg-sub-list) [1748 1770])
+                    ("dir_mean_w" variable (:type "double") (reparse-symbol arg-sub-list) [1779 1797])
+                    ("dir_variance_w" variable (:type "double") (reparse-symbol arg-sub-list) [1806 1828]))                  
+                :type "void")
+                nil [1582 2122])
+            ("Sampling" function
+               (:parent "PFilter"
+                :arguments 
+                  ( ("delta_t" variable (:type "double") (reparse-symbol arg-sub-list) [2146 2161])
+                    ("icpstate" variable (:type ("STATE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2162 2177])
+                    ("last" variable (:type ("STATE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2178 2189]))                  
+                :type "void")
+                nil [2123 2806])
+            ("CalcLikehood" function
+               (:parent "PFilter"
+                :arguments 
+                  ( ("map" variable
+                       (:reference 1
+                        :type ("grid_map" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2835 2849])
+                    ("polars" variable
+                       (:reference 1
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("Polar" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2850 2872])
+                    ("ss" variable (:type "double") (reparse-symbol arg-sub-list) [2872 2882]))                  
+                :type "void")
+                nil [2808 4365])
+            ("Resampling" function
+               (:parent "PFilter"
+                :type "void")
+                nil [4367 5129])
+            ("GetPredictiveState" function
+               (:parent "PFilter"
+                :arguments 
+                  ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [5165 5171]))                  
+                :type ("STATE" type (:type "class") nil nil))
+                nil [5131 5209])
+            ("GetPosteriorState" function
+               (:parent "PFilter"
+                :arguments 
+                  ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [5244 5250]))                  
+                :type ("STATE" type (:type "class") nil nil))
+                nil [5211 5288])
+            ("GetMMSE" function
+               (:parent "PFilter"
+                :type ("STATE" type (:type "class") nil nil))
+                nil [5290 5702])
+            ("GetWeight" function
+               (:parent "PFilter"
+                :arguments 
+                  ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [5730 5736]))                  
+                :type "double")
+                nil [5704 5775])
+            ("GetMaxWeightState" function
+               (:parent "PFilter"
+                :type ("STATE" type (:type "class") nil nil))
+                nil [5777 6045])
+            ("bm_rand" function
+               (:arguments 
+                  ( ("sigma" variable (:type "double") (reparse-symbol arg-sub-list) [6407 6420])
+                    ("m" variable (:type "double") (reparse-symbol arg-sub-list) [6421 6430]))                  
+                :type "double")
+                nil [6392 6642])
+            ("bm_rand_v2" function
+               (:arguments 
+                  ( ("sigma" variable (:type "double") (reparse-symbol arg-sub-list) [6662 6675])
+                    ("m" variable (:type "double") (reparse-symbol arg-sub-list) [6676 6685]))                  
+                :type "double")
+                nil [6644 7001])
+            ("GetRandom" function
+               (:arguments 
+                  ( ("min" variable (:type "double") (reparse-symbol arg-sub-list) [7020 7031])
+                    ("max" variable (:type "double") (reparse-symbol arg-sub-list) [7032 7043]))                  
+                :type "double")
+                nil [7003 7199])
+            ("logsumexp" function
+               (:arguments 
+                  ( ("x" variable (:type "double") (reparse-symbol arg-sub-list) [7218 7227])
+                    ("y" variable (:type "double") (reparse-symbol arg-sub-list) [7228 7237])
+                    ("flg" variable (:type "bool") (reparse-symbol arg-sub-list) [7238 7247]))                  
+                :type "double")
+                nil [7201 7612]))          
+    :file "ParticleFilter.cpp"
+    :pointmax 10887
+    :fsize 11551
+    :lastmodtime '(21507 6841 575762 534000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "ParticleFilter.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("PARTICLE_FILTER" variable (:constant-flag t) nil [33 48])
+            ("iostream" include (:system-flag t) nil [50 69])
+            ("cmath" include (:system-flag t) nil [70 86])
+            ("vector" include (:system-flag t) nil [87 104])
+            ("cv.h" include (:system-flag t) nil [105 120])
+            ("highgui.h" include (:system-flag t) nil [137 157])
+            ("cvaux.h" include (:system-flag t) nil [169 187])
+            ("cxcore.h" include (:system-flag t) nil [201 220])
+            ("GridMap.h" include nil nil [234 254])
+            ("bm_rand" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sigma" variable (:type "double") (reparse-symbol arg-sub-list) [271 284])
+                    ("m" variable (:type "double") (reparse-symbol arg-sub-list) [285 294]))                  
+                :type "double")
+                nil [256 295])
+            ("bm_rand_v2" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sigma" variable (:type "double") (reparse-symbol arg-sub-list) [314 327])
+                    ("m" variable (:type "double") (reparse-symbol arg-sub-list) [328 337]))                  
+                :type "double")
+                nil [296 338])
+            ("GetRandom" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("min" variable (:type "double") (reparse-symbol arg-sub-list) [356 367])
+                    ("max" variable (:type "double") (reparse-symbol arg-sub-list) [368 379]))                  
+                :type "double")
+                nil [339 380])
+            ("logsumexp" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("x" variable (:type "double") (reparse-symbol arg-sub-list) [398 407])
+                    ("y" variable (:type "double") (reparse-symbol arg-sub-list) [408 417])
+                    ("flg" variable (:type "bool") (reparse-symbol arg-sub-list) [418 427]))                  
+                :type "double")
+                nil [381 428])
+            ("STATE" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("x" variable (:type "double") (reparse-symbol classsubparts) [448 457])
+                          ("y" variable (:type "double") (reparse-symbol classsubparts) [460 469])
+                          ("dir" variable (:type "double") (reparse-symbol classsubparts) [472 483]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [430 491])
+            ("PState" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("state" variable (:type ("STATE" type (:type "class") nil nil)) (reparse-symbol classsubparts) [512 524])
+                          ("weight" variable (:type "double") (reparse-symbol classsubparts) [527 541]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [494 569])
+            ("PFilter" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [589 597])
+                    ("PFilter" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("num" variable (:type "int") (reparse-symbol arg-sub-list) [608 616])
+                            ("" variable (:type "double") (reparse-symbol arg-sub-list) [617 636])
+                            ("" variable (:type "double") (reparse-symbol arg-sub-list) [654 671])
+                            ("init_xy_mean" variable (:type "double") (reparse-symbol arg-sub-list) [681 701])
+                            ("init_xy_variance" variable (:type "double") (reparse-symbol arg-sub-list) [702 726])
+                            ("init_dir_mean" variable (:type "double") (reparse-symbol arg-sub-list) [727 748])
+                            ("init_dir_variance" variable (:type "double") (reparse-symbol arg-sub-list) [749 774]))                          
+                        :type ("PFilter" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [600 775])
+                    ("PFilter" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [778 789])
+                    ("SetNoiseParam" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("xy_mean_s" variable (:type "double") (reparse-symbol arg-sub-list) [819 836])
+                            ("xy_variance_s" variable (:type "double") (reparse-symbol arg-sub-list) [837 858])
+                            ("xy_mean_w" variable (:type "double") (reparse-symbol arg-sub-list) [859 876])
+                            ("xy_variance_w" variable (:type "double") (reparse-symbol arg-sub-list) [877 898])
+                            ("dir_mean_s" variable (:type "double") (reparse-symbol arg-sub-list) [907 925])
+                            ("dir_variance_s" variable (:type "double") (reparse-symbol arg-sub-list) [926 948])
+                            ("dir_mean_w" variable (:type "double") (reparse-symbol arg-sub-list) [949 967])
+                            ("dir_variance_w" variable (:type "double") (reparse-symbol arg-sub-list) [968 990]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [792 991])
+                    ("Sampling" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("delta_t" variable (:type "double") (reparse-symbol arg-sub-list) [1016 1031])
+                            ("icpstate" variable (:type ("STATE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1032 1047])
+                            ("last" variable (:type ("STATE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1048 1059]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [994 1060])
+                    ("CalcLikehood" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("map" variable
+                               (:reference 1
+                                :type ("grid_map" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1089 1103])
+                            ("polars" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("Polar" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1104 1131])
+                            ("ss" variable (:type "double") (reparse-symbol arg-sub-list) [1132 1142]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1063 1143])
+                    ("Resampling" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1146 1172])
+                    ("GetPredictiveState" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [1208 1214]))                          
+                        :type ("STATE" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1175 1215])
+                    ("GetPosteriorState" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [1250 1256]))                          
+                        :type ("STATE" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1218 1257])
+                    ("GetWeight" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [1285 1291]))                          
+                        :type "double")
+                        (reparse-symbol classsubparts) [1260 1292])
+                    ("GetMMSE" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("STATE" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1295 1319])
+                    ("GetMaxWeightState" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("STATE" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1322 1356])
+                    ("public" label nil (reparse-symbol classsubparts) [1358 1366])
+                    ("m_num" variable (:type "int") (reparse-symbol classsubparts) [1369 1379])
+                    ("m_xy_mean_s" variable (:type "double") (reparse-symbol classsubparts) [1401 1420])
+                    ("m_xy_variance_s" variable (:type "double") (reparse-symbol classsubparts) [1450 1473])
+                    ("m_xy_mean_w" variable (:type "double") (reparse-symbol classsubparts) [1504 1523])
+                    ("m_xy_variance_w" variable (:type "double") (reparse-symbol classsubparts) [1558 1581])
+                    ("m_dir_mean_s" variable (:type "double") (reparse-symbol classsubparts) [1617 1637])
+                    ("m_dir_variance_s" variable (:type "double") (reparse-symbol classsubparts) [1667 1691])
+                    ("m_dir_mean_w" variable (:type "double") (reparse-symbol classsubparts) [1722 1742])
+                    ("m_dir_variance_w" variable (:type "double") (reparse-symbol classsubparts) [1777 1801])
+                    ("m_state_eqn" variable
+                       (:functionpointer-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) [1838 1876])
+                    ("m_obs_eqn" variable
+                       (:functionpointer-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) [1914 1942])
+                    ("m_c_particle" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("PState" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1986 2021])
+                    ("m_n_particle" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("PState" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2045 2080]))                  
+                :type "class")
+                nil [572 2104]))          
+    :file "ParticleFilter.h"
+    :pointmax 3611
+    :fsize 3610
+    :lastmodtime '(21506 48887 396478 673000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("PARTICLE_FILTER")
+          )
+
+    )
+   (semanticdb-table "GridMap.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("GridMap.h" include nil nil [1 21])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [23 43])
+            ("CheckAreaLimit" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("value" variable (:type "double") (reparse-symbol arg-sub-list) [65 78])
+                    ("max" variable (:type "int") (reparse-symbol arg-sub-list) [79 87])
+                    ("min" variable (:type "int") (reparse-symbol arg-sub-list) [88 96]))                  
+                :type "bool")
+                nil [45 97])
+            ("grid_map" function
+               (:constructor-flag t
+                :parent "grid_map"
+                :type ("grid_map" type (:type "class") nil nil))
+                nil [100 342])
+            ("grid_map" function
+               (:constructor-flag t
+                :parent "grid_map"
+                :arguments 
+                  ( ("x_size" variable (:type "int") (reparse-symbol arg-sub-list) [363 374])
+                    ("y_size" variable (:type "int") (reparse-symbol arg-sub-list) [375 386])
+                    ("resolution" variable (:type "int") (reparse-symbol arg-sub-list) [387 402]))                  
+                :type ("grid_map" type (:type "class") nil nil))
+                nil [344 930])
+            ("is_map" function
+               (:parent "grid_map"
+                :arguments 
+                  ( ("x" variable (:type "double") (reparse-symbol arg-sub-list) [954 963])
+                    ("y" variable (:type "double") (reparse-symbol arg-sub-list) [964 973]))                  
+                :type "bool")
+                nil [932 1106])
+            ("RayCastingUpdate" function
+               (:parent "grid_map"
+                :arguments 
+                  ( ("polars" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("Polar" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1139 1166]))                  
+                :type "void")
+                nil [1107 2034])
+            ("PointUpdate" function
+               (:parent "grid_map"
+                :arguments 
+                  ( ("polars" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("Polar" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2062 2089]))                  
+                :type "void")
+                nil [2035 2594])
+            ("RayCastingUpdate" function
+               (:parent "grid_map"
+                :arguments 
+                  ( ("continuous_xy" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("CvPoint2D32f" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2627 2668]))                  
+                :type "void")
+                nil [2595 3332])
+            ("RayCastingUpdate" function
+               (:parent "grid_map"
+                :type "void")
+                nil [3333 3803])
+            ("PointUpdate" function
+               (:parent "grid_map"
+                :arguments 
+                  ( ("continuous_xy" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("CvPoint2D32f" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3831 3872]))                  
+                :type "void")
+                nil [3804 4182])
+            ("PointTransform" function
+               (:parent "grid_map"
+                :arguments 
+                  ( ("rot" variable (:type "double") (reparse-symbol arg-sub-list) [4213 4224])
+                    ("trans_x" variable (:type "double") (reparse-symbol arg-sub-list) [4225 4240])
+                    ("trans_y" variable (:type "double") (reparse-symbol arg-sub-list) [4241 4256]))                  
+                :type "void")
+                nil [4183 4677])
+            ("EndPointUpdate" function
+               (:parent "grid_map"
+                :arguments 
+                  ( ("continuous_xy" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("CvPoint2D32f" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4708 4749]))                  
+                :type "void")
+                nil [4678 5471])
+            ("CheckAreaLimit" function
+               (:arguments 
+                  ( ("value" variable (:type "double") (reparse-symbol arg-sub-list) [5494 5507])
+                    ("max" variable (:type "int") (reparse-symbol arg-sub-list) [5508 5516])
+                    ("min" variable (:type "int") (reparse-symbol arg-sub-list) [5517 5525]))                  
+                :type "bool")
+                nil [5474 5639])
+            ("draw_line" function
+               (:arguments 
+                  ( ("map" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::vector" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5713 5753])
+                    ("x0" variable (:type "int") (reparse-symbol arg-sub-list) [5770 5777])
+                    ("y0" variable (:type "int") (reparse-symbol arg-sub-list) [5778 5785])
+                    ("x1" variable (:type "int") (reparse-symbol arg-sub-list) [5786 5793])
+                    ("y1" variable (:type "int") (reparse-symbol arg-sub-list) [5794 5801])
+                    ("occupancy" variable (:type "double") (reparse-symbol arg-sub-list) [5802 5819]))                  
+                :type "void")
+                nil [5698 6673])
+            ("ResetMap" function
+               (:parent "grid_map"
+                :type "void")
+                nil [6674 6832]))          
+    :file "GridMap.cpp"
+    :pointmax 6734
+    :fsize 6832
+    :lastmodtime '(21504 4036 62335 487000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "DrawMap.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("DrawMap.h" include nil nil [1 21])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [23 43])
+            ("cv" using (:type ("cv" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [44 63])
+            ("step_to_radian" function
+               (:arguments 
+                  ( ("step" variable (:type "int") (reparse-symbol arg-sub-list) [87 96])
+                    ("lrf_data_max" variable (:type "int") (reparse-symbol arg-sub-list) [97 114]))                  
+                :type "double")
+                nil [65 353])
+            ("LimitUchar" function
+               (:arguments 
+                  ( ("value" variable (:type "double") (reparse-symbol arg-sub-list) [380 393]))                  
+                :type "unsigned char")
+                nil [355 522])
+            ("CheckThres" function
+               (:arguments 
+                  ( ("value" variable (:type "double") (reparse-symbol arg-sub-list) [549 562])
+                    ("thres" variable (:type "int") (reparse-symbol arg-sub-list) [563 573]))                  
+                :type "unsigned char")
+                nil [524 698])
+            ("LimitSize" function
+               (:arguments 
+                  ( ("x" variable (:type "double") (reparse-symbol arg-sub-list) [714 723])
+                    ("max" variable (:type "int") (reparse-symbol arg-sub-list) [724 732]))                  
+                :type "int")
+                nil [700 857])
+            ("PrintMap" function
+               (:arguments 
+                  ( ("map" variable
+                       (:reference 1
+                        :type ("grid_map" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [873 887])
+                    ("image" variable
+                       (:reference 1
+                        :type ("cv::Mat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [888 903]))                  
+                :type "void")
+                nil [859 1134])
+            ("DrawState" function
+               (:arguments 
+                  ( ("state" variable (:type ("STATE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1150 1162])
+                    ("image" variable
+                       (:reference 1
+                        :type ("cv::Mat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1163 1178])
+                    ("color" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("cv::Scalar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1179 1203])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [1204 1213]))                  
+                :type "void")
+                nil [1135 1629])
+            ("DrawAveState" function
+               (:arguments 
+                  ( ("state" variable (:type ("STATE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1648 1660])
+                    ("image" variable
+                       (:reference 1
+                        :type ("cv::Mat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1661 1676]))                  
+                :type "void")
+                nil [1630 1748])
+            ("DrawParticle" function
+               (:arguments 
+                  ( ("ptcl" variable
+                       (:reference 1
+                        :type ("PFilter" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1767 1781])
+                    ("image" variable
+                       (:reference 1
+                        :type ("cv::Mat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1782 1797]))                  
+                :type "void")
+                nil [1749 1961])
+            ("ComposeMap" function
+               (:arguments 
+                  ( ("mapA" variable
+                       (:reference 1
+                        :type ("grid_map" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1982 1997])
+                    ("mapB" variable
+                       (:reference 1
+                        :type ("grid_map" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1998 2013]))                  
+                :type ("grid_map" type (:type "class") nil nil))
+                nil [1962 2456]))          
+    :file "DrawMap.cpp"
+    :pointmax 2454
+    :fsize 2468
+    :lastmodtime '(21506 51642 296394 685000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "ICP.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("ICP.h" include nil nil [1 17])
+            ("DEBUG" variable (:constant-flag t) nil [27 32])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [34 54])
+            ("cv" using (:type ("cv" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [55 74])
+            ("ICP" function
+               (:constructor-flag t
+                :parent "ICP"
+                :type ("ICP" type (:type "class") nil nil))
+                nil [76 443])
+            ("ICP" function
+               (:constructor-flag t
+                :parent "ICP"
+                :arguments 
+                  ( ("mapA" variable
+                       (:reference 1
+                        :type ("grid_map" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [453 468])
+                    ("mapB" variable
+                       (:reference 1
+                        :type ("grid_map" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [469 484]))                  
+                :type ("ICP" type (:type "class") nil nil))
+                nil [444 1377])
+            ("SetParam" function
+               (:parent "ICP"
+                :arguments 
+                  ( ("num_of_iterate" variable (:type "int") (reparse-symbol arg-sub-list) [1397 1416])
+                    ("threshold" variable (:type "double") (reparse-symbol arg-sub-list) [1417 1434])
+                    ("finish" variable (:type "double") (reparse-symbol arg-sub-list) [1435 1449]))                  
+                :type "void")
+                nil [1378 1607])
+            ("Iterate" function
+               (:parent "ICP"
+                :type "void")
+                nil [1609 3665])
+            ("ResetVariables" function
+               (:parent "ICP"
+                :type "void")
+                nil [3666 3950])
+            ("Registration" function
+               (:parent "ICP"
+                :type "bool")
+                nil [3951 7558])
+            ("false" variable (:type "int") nil [7550 7556])
+            ("rot" variable
+               (:pointer 1
+                :type "int")
+                nil [7634 7652])
+            ("trans_x" variable
+               (:pointer 1
+                :type "int")
+                nil [7657 7683])
+            ("trans_y" variable
+               (:pointer 1
+                :type "int")
+                nil [7688 7714])
+            ("m_map_result" variable (:type "int") nil [7726 7739]))          
+    :file "ICP.cpp"
+    :pointmax 7749
+    :fsize 7827
+    :lastmodtime '(21504 7357 606462 70000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("DEBUG")
+          )
+
+    )
+   )
+  :file "!home!yuta!Documents!Products!ParticleSLAM!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

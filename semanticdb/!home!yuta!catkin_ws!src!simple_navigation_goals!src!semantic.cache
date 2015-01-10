@@ -1,0 +1,87 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "simple_navigation_goals.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("ros/ros.h" include (:system-flag t) nil [1 21])
+            ("move_base_msgs/MoveBaseAction.h" include (:system-flag t) nil [22 64])
+            ("actionlib/client/simple_action_client.h" include (:system-flag t) nil [65 115])
+            ("MoveBaseClient" type
+               (:typedef ("actionlib::SimpleActionClient" type
+                     (:template-specifier 
+                        ( ("move_base_msgs::MoveBaseAction" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "actionlib::SimpleActionClient"
+                :type "typedef")
+                nil [117 202])
+            ("calculateDistance" function
+               (:arguments 
+                  ( ("target_x" variable (:type "double") (reparse-symbol arg-sub-list) [229 245])
+                    ("target_y" variable (:type "double") (reparse-symbol arg-sub-list) [246 263])
+                    ("now_x" variable (:type "double") (reparse-symbol arg-sub-list) [264 277])
+                    ("now_y" variable (:type "double") (reparse-symbol arg-sub-list) [278 291]))                  
+                :type "double")
+                nil [204 369])
+            ("MyMoveBaseClient" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [396 403])
+                    ("ac" function
+                       (:arguments 
+                          ( ("" variable (:type ("true" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [443 448]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [427 600])
+                    ("doStuff" function
+                       (:arguments 
+                          ( ("goal" variable (:type ("move_base_msgs::MoveBaseGoal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [617 651]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [604 1005])
+                    ("doneCb" function
+                       (:arguments 
+                          ( ("state" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("actionlib::SimpleClientGoalState" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1021 1067]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1009 1177])
+                    ("activeCb" function (:type "void") (reparse-symbol classsubparts) [1227 1286])
+                    ("feedbackCb" function
+                       (:arguments 
+                          ( ("feedback" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("move_base_msgs::MoveBaseFeedbackConstPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1364 1421]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1348 1744])
+                    ("getStasis" function (:type "int") (reparse-symbol classsubparts) [1747 1783])
+                    ("cancelGoal" function (:type "void") (reparse-symbol classsubparts) [1786 1866])
+                    ("private" label nil (reparse-symbol classsubparts) [1868 1876])
+                    ("ac" variable (:type ("MoveBaseClient" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1879 1897])
+                    ("stasis" variable (:type "int") (reparse-symbol classsubparts) [1900 1911])
+                    ("m_goal" variable (:type ("move_base_msgs::MoveBaseGoal" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1914 1950]))                  
+                :type "class")
+                nil [371 1953])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1965 1974])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1975 1987]))                  
+                :type "int")
+                nil [1956 2899]))          
+    :file "simple_navigation_goals.cpp"
+    :pointmax 2900
+    :fsize 2899
+    :lastmodtime '(21562 6523 414925 987000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!yuta!catkin_ws!src!simple_navigation_goals!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

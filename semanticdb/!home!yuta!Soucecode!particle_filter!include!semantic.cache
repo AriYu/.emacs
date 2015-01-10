@@ -1,0 +1,557 @@
+;; Object include/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "include/"
+  :tables (list 
+   (semanticdb-table "ParticleFilter.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("PARTICLE_FILTER" variable (:constant-flag t) nil [33 48])
+            ("iostream" include (:system-flag t) nil [50 69])
+            ("cmath" include (:system-flag t) nil [70 86])
+            ("vector" include (:system-flag t) nil [87 104])
+            ("cv.h" include (:system-flag t) nil [105 120])
+            ("highgui.h" include (:system-flag t) nil [137 157])
+            ("cvaux.h" include (:system-flag t) nil [169 187])
+            ("cxcore.h" include (:system-flag t) nil [201 220])
+            ("fstream" include (:system-flag t) nil [234 252])
+            ("bm_rand" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sigma" variable (:type "double") (reparse-symbol arg-sub-list) [269 282])
+                    ("m" variable (:type "double") (reparse-symbol arg-sub-list) [283 292]))                  
+                :type "double")
+                nil [254 293])
+            ("bm_rand_v2" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sigma" variable (:type "double") (reparse-symbol arg-sub-list) [312 325])
+                    ("m" variable (:type "double") (reparse-symbol arg-sub-list) [326 335]))                  
+                :type "double")
+                nil [294 336])
+            ("GetRandom" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("min" variable (:type "double") (reparse-symbol arg-sub-list) [354 365])
+                    ("max" variable (:type "double") (reparse-symbol arg-sub-list) [366 377]))                  
+                :type "double")
+                nil [337 378])
+            ("logsumexp" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("x" variable (:type "double") (reparse-symbol arg-sub-list) [396 405])
+                    ("y" variable (:type "double") (reparse-symbol arg-sub-list) [406 415])
+                    ("flg" variable (:type "bool") (reparse-symbol arg-sub-list) [416 425]))                  
+                :type "double")
+                nil [379 426])
+            ("PState" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("x" variable (:type "double") (reparse-symbol classsubparts) [446 455])
+                          ("weight" variable (:type "double") (reparse-symbol classsubparts) [458 472]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [428 482])
+            ("PFilter" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [502 510])
+                    ("PFilter" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("PFilter" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [513 523])
+                    ("PFilter" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("num" variable (:type "int") (reparse-symbol arg-sub-list) [534 542])
+                            ("variance1" variable (:type "double") (reparse-symbol arg-sub-list) [543 560])
+                            ("likehood" variable (:type "double") (reparse-symbol arg-sub-list) [561 577])
+                            ("" variable (:type "double") (reparse-symbol arg-sub-list) [578 597])
+                            ("" variable (:type "double") (reparse-symbol arg-sub-list) [615 632]))                          
+                        :type ("PFilter" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [526 642])
+                    ("PFilter" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [645 656])
+                    ("SetNoiseParam" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("mean_s" variable (:type "double") (reparse-symbol arg-sub-list) [686 700])
+                            ("variance_s" variable (:type "double") (reparse-symbol arg-sub-list) [701 719])
+                            ("mean_w" variable (:type "double") (reparse-symbol arg-sub-list) [720 734])
+                            ("variance_w" variable (:type "double") (reparse-symbol arg-sub-list) [735 753]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [659 754])
+                    ("Sampling" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("delta_t" variable (:type "double") (reparse-symbol arg-sub-list) [779 794]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [757 795])
+                    ("CalcLikehood" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("observed" variable (:type "double") (reparse-symbol arg-sub-list) [824 840]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [798 841])
+                    ("Resampling" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [844 870])
+                    ("GetPredictiveX" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [903 909]))                          
+                        :type "double")
+                        (reparse-symbol classsubparts) [873 910])
+                    ("GetPosteriorX" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [942 948]))                          
+                        :type "double")
+                        (reparse-symbol classsubparts) [913 949])
+                    ("GetWeight" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [977 983]))                          
+                        :type "double")
+                        (reparse-symbol classsubparts) [952 984])
+                    ("GetMMSE" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "double")
+                        (reparse-symbol classsubparts) [987 1012])
+                    ("GetMaxWeightX" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "double")
+                        (reparse-symbol classsubparts) [1015 1046])
+                    ("m_c_particle" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("PState" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1049 1084])
+                    ("m_n_particle" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("PState" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1111 1146])
+                    ("protected" label nil (reparse-symbol classsubparts) [1170 1181])
+                    ("m_num" variable (:type "int") (reparse-symbol classsubparts) [1184 1194])
+                    ("m_mean_s" variable (:type "double") (reparse-symbol classsubparts) [1216 1232])
+                    ("m_variance_s" variable (:type "double") (reparse-symbol classsubparts) [1262 1282])
+                    ("m_mean_w" variable (:type "double") (reparse-symbol classsubparts) [1313 1329])
+                    ("m_variance_w" variable (:type "double") (reparse-symbol classsubparts) [1364 1384])
+                    ("m_state_eqn" variable
+                       (:functionpointer-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) [1420 1458])
+                    ("m_obs_eqn" variable
+                       (:functionpointer-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) [1496 1524])
+                    ("likehood_variance" variable (:type "double") (reparse-symbol classsubparts) [1568 1593]))                  
+                :type "class")
+                nil [485 1596])
+            ("ViterbiMapEstimation" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1628 1635])
+                    ("ViterbiMapEstimation" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("num" variable (:type "int") (reparse-symbol arg-sub-list) [1659 1667])
+                            ("ss" variable (:type "double") (reparse-symbol arg-sub-list) [1668 1678])
+                            ("" variable (:type "double") (reparse-symbol arg-sub-list) [1679 1698])
+                            ("" variable (:type "double") (reparse-symbol arg-sub-list) [1716 1733]))                          
+                        :type ("ViterbiMapEstimation" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1638 1743])
+                    ("ViterbiMapEstimation" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1746 1770])
+                    ("SetNoiseParam" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("mean_s" variable (:type "double") (reparse-symbol arg-sub-list) [1817 1831])
+                            ("variance_s" variable (:type "double") (reparse-symbol arg-sub-list) [1832 1850])
+                            ("mean_w" variable (:type "double") (reparse-symbol arg-sub-list) [1851 1865])
+                            ("variance_w" variable (:type "double") (reparse-symbol arg-sub-list) [1866 1884]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1790 1885])
+                    ("Initialization" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("pfilter" variable
+                               (:reference 1
+                                :type ("PFilter" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1916 1933])
+                            ("obs_y" variable (:type "double") (reparse-symbol arg-sub-list) [1934 1947]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1888 1948])
+                    ("Recursion" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("t" variable (:type "double") (reparse-symbol arg-sub-list) [1974 1983])
+                            ("pfilter" variable
+                               (:reference 1
+                                :type ("PFilter" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1984 2001])
+                            ("obs_y" variable (:type "double") (reparse-symbol arg-sub-list) [2002 2015]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1951 2016])
+                    ("GetEstimation" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("t" variable (:type "double") (reparse-symbol arg-sub-list) [2048 2057]))                          
+                        :type "double")
+                        (reparse-symbol classsubparts) [2019 2058])
+                    ("GetEstimationAlpha" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("t" variable (:type "int") (reparse-symbol arg-sub-list) [2095 2101]))                          
+                        :type "double")
+                        (reparse-symbol classsubparts) [2061 2102])
+                    ("Backtracking" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("t" variable (:type "int") (reparse-symbol arg-sub-list) [2131 2137]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2105 2138])
+                    ("GetBacktrackingEstimation" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [2182 2188]))                          
+                        :type "double")
+                        (reparse-symbol classsubparts) [2141 2189])
+                    ("protected" label nil (reparse-symbol classsubparts) [2192 2202])
+                    ("m_num" variable (:type "int") (reparse-symbol classsubparts) [2205 2215])
+                    ("loop" variable (:type "int") (reparse-symbol classsubparts) [2218 2227])
+                    ("m_ss" variable (:type "double") (reparse-symbol classsubparts) [2230 2242])
+                    ("m_i_t" variable (:type "int") (reparse-symbol classsubparts) [2245 2255])
+                    ("m_subparticle" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("PState" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2258 2292])
+                    ("m_observed_y" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("double" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2295 2328])
+                    ("m_subdelta" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("double" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2331 2362])
+                    ("m_subphi" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2365 2391])
+                    ("m_particles" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("std::vector" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2395 2442])
+                    ("m_delta" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("std::vector" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2445 2488])
+                    ("m_phi" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("std::vector" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2491 2529])
+                    ("m_x_map" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("double" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2533 2563])
+                    ("m_i" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2566 2589])
+                    ("m_mean_s" variable (:type "double") (reparse-symbol classsubparts) [2593 2609])
+                    ("m_variance_s" variable (:type "double") (reparse-symbol classsubparts) [2639 2659])
+                    ("m_mean_w" variable (:type "double") (reparse-symbol classsubparts) [2690 2706])
+                    ("m_variance_w" variable (:type "double") (reparse-symbol classsubparts) [2741 2761])
+                    ("m_state_eqn" variable
+                       (:functionpointer-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) [2797 2835])
+                    ("m_obs_eqn" variable
+                       (:functionpointer-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) [2873 2901])
+                    ("savefile" variable (:type ("std::fstream" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2946 2968]))                  
+                :type "class")
+                nil [1598 2971])
+            ("pfMAP" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [2988 2995])
+                    ("pfMAP" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("" variable (:type "double") (reparse-symbol arg-sub-list) [3004 3023])
+                            ("" variable (:type "double") (reparse-symbol arg-sub-list) [3041 3058]))                          
+                        :type ("pfMAP" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2998 3068])
+                    ("pfMAP" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3071 3080])
+                    ("SetNoiseParam" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("mean_s" variable (:type "double") (reparse-symbol arg-sub-list) [3110 3124])
+                            ("variance_s" variable (:type "double") (reparse-symbol arg-sub-list) [3125 3143])
+                            ("mean_w" variable (:type "double") (reparse-symbol arg-sub-list) [3144 3158])
+                            ("variance_w" variable (:type "double") (reparse-symbol arg-sub-list) [3159 3177]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3083 3178])
+                    ("Initialization" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("pfilter" variable
+                               (:reference 1
+                                :type ("PFilter" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3209 3226]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3181 3227])
+                    ("GetEstimation" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("pfilter" variable
+                               (:reference 1
+                                :type ("PFilter" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3259 3276])
+                            ("t" variable (:type "double") (reparse-symbol arg-sub-list) [3277 3286])
+                            ("obs_y" variable (:type "double") (reparse-symbol arg-sub-list) [3287 3300]))                          
+                        :type "double")
+                        (reparse-symbol classsubparts) [3230 3301])
+                    ("protected" label nil (reparse-symbol classsubparts) [3304 3314])
+                    ("last_pfilter" variable (:type ("PFilter" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3317 3338])
+                    ("m_mean_s" variable (:type "double") (reparse-symbol classsubparts) [3342 3358])
+                    ("m_variance_s" variable (:type "double") (reparse-symbol classsubparts) [3388 3408])
+                    ("m_mean_w" variable (:type "double") (reparse-symbol classsubparts) [3439 3455])
+                    ("m_variance_w" variable (:type "double") (reparse-symbol classsubparts) [3490 3510])
+                    ("m_state_eqn" variable
+                       (:functionpointer-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) [3547 3585])
+                    ("m_obs_eqn" variable
+                       (:functionpointer-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) [3623 3651]))                  
+                :type "class")
+                nil [2973 3696]))          
+    :file "ParticleFilter.h"
+    :pointmax 3721
+    :fsize 3726
+    :lastmodtime '(21578 29703 334169 959000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("PARTICLE_FILTER")
+          )
+
+    )
+   (semanticdb-table "ExtendedKalmanFilter.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("EXTENDED_KALMAN_FILTER_H_" variable (:constant-flag t) nil [43 68])
+            ("iostream" include (:system-flag t) nil [70 89])
+            ("cmath" include (:system-flag t) nil [90 106])
+            ("cv.h" include (:system-flag t) nil [107 122])
+            ("highgui.h" include (:system-flag t) nil [139 159])
+            ("cvaux.h" include (:system-flag t) nil [171 189])
+            ("cxcore.h" include (:system-flag t) nil [203 222])
+            ("EKFilter" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [254 262])
+                    ("EKFilter" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("" variable (:type "double") (reparse-symbol arg-sub-list) [274 293])
+                            ("" variable (:type "double") (reparse-symbol arg-sub-list) [311 335])
+                            ("" variable (:type "double") (reparse-symbol arg-sub-list) [353 370])
+                            ("" variable (:type "double") (reparse-symbol arg-sub-list) [380 402])
+                            ("x_hat0" variable (:type "double") (reparse-symbol arg-sub-list) [412 427])
+                            ("p0" variable (:type "double") (reparse-symbol arg-sub-list) [431 442]))                          
+                        :type ("EKFilter" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [265 446])
+                    ("SetNoiseParam" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("variance_s" variable (:type "double") (reparse-symbol arg-sub-list) [518 536])
+                            ("variance_w" variable (:type "double") (reparse-symbol arg-sub-list) [537 555]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [491 556])
+                    ("Calc" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("delta_t" variable (:type "double") (reparse-symbol arg-sub-list) [577 592])
+                            ("obs_y" variable (:type "double") (reparse-symbol arg-sub-list) [593 606]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [559 607])
+                    ("GetEstimation" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "double")
+                        (reparse-symbol classsubparts) [610 641])
+                    ("EKFilter" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [644 656])
+                    ("protected" label nil (reparse-symbol classsubparts) [658 669])
+                    ("m_s_v" variable (:type "double") (reparse-symbol classsubparts) [672 685])
+                    ("m_s_w" variable (:type "double") (reparse-symbol classsubparts) [698 711])
+                    ("x_bar" variable (:type "double") (reparse-symbol classsubparts) [722 735])
+                    ("x_hat" variable (:type "double") (reparse-symbol classsubparts) [749 762])
+                    ("a_k" variable (:type "double") (reparse-symbol classsubparts) [774 785])
+                    ("c_k" variable (:type "double") (reparse-symbol classsubparts) [808 819])
+                    ("g_k" variable (:type "double") (reparse-symbol classsubparts) [840 851])
+                    ("p_bar" variable (:type "double") (reparse-symbol classsubparts) [865 878])
+                    ("p" variable (:type "double") (reparse-symbol classsubparts) [894 903])
+                    ("m_y" variable (:type "double") (reparse-symbol classsubparts) [918 929])
+                    ("m_state_eqn" variable
+                       (:functionpointer-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) [932 970])
+                    ("m_state_diff_eqn" variable
+                       (:functionpointer-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) [1008 1051])
+                    ("m_obs_eqn" variable
+                       (:functionpointer-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) [1102 1130])
+                    ("m_obs_diff_eqn" variable
+                       (:functionpointer-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) [1174 1207]))                  
+                :type "class")
+                nil [236 1264]))          
+    :file "ExtendedKalmanFilter.h"
+    :pointmax 1304
+    :fsize 1457
+    :lastmodtime '(21578 27300 742078 397000)
+    :unmatched-syntax '((number 443 . 444) (punctuation 441 . 442) (number 428 . 429) (punctuation 426 . 427) (semantic-list 402 . 410) (semantic-list 387 . 402) (semantic-list 370 . 378) (semantic-list 360 . 370) (semantic-list 335 . 351) (semantic-list 318 . 335) (semantic-list 293 . 309) (semantic-list 281 . 293))
+    :lexical-table 
+        '(("EXTENDED_KALMAN_FILTER_H_")
+          )
+
+    )
+   (semanticdb-table "RootMeanSquareError.h"
+    :file "RootMeanSquareError.h"
+    :fsize 512
+    :lastmodtime '(21578 27300 742078 397000)
+    )
+   (semanticdb-table "KalmanFilter.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("KALMAN_FILTER_H_" variable (:constant-flag t) nil [34 50])
+            ("iostream" include (:system-flag t) nil [52 71])
+            ("cmath" include (:system-flag t) nil [72 88])
+            ("cv.h" include (:system-flag t) nil [89 104])
+            ("highgui.h" include (:system-flag t) nil [121 141])
+            ("cvaux.h" include (:system-flag t) nil [153 171])
+            ("cxcore.h" include (:system-flag t) nil [185 204])
+            ("KalmanFilter" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [240 248])
+                    ("KalmanFilter" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("A" variable (:type "double") (reparse-symbol arg-sub-list) [264 273])
+                            ("b" variable (:type "double") (reparse-symbol arg-sub-list) [274 283])
+                            ("c" variable (:type "double") (reparse-symbol arg-sub-list) [284 293])
+                            ("x_hat0" variable (:type "double") (reparse-symbol arg-sub-list) [294 308])
+                            ("p0" variable (:type "double") (reparse-symbol arg-sub-list) [309 319]))                          
+                        :type ("KalmanFilter" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [251 320])
+                    ("SetNoiseParam" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("variance_s" variable (:type "double") (reparse-symbol arg-sub-list) [392 410])
+                            ("variance_w" variable (:type "double") (reparse-symbol arg-sub-list) [411 429]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [365 430])
+                    ("Calc" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("input" variable (:type "double") (reparse-symbol arg-sub-list) [451 464])
+                            ("obs_y" variable (:type "double") (reparse-symbol arg-sub-list) [465 478]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [433 479])
+                    ("GetEstimation" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "double")
+                        (reparse-symbol classsubparts) [482 513])
+                    ("KalmanFilter" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [516 532])
+                    ("protected" label nil (reparse-symbol classsubparts) [534 545])
+                    ("m_A" variable (:type "double") (reparse-symbol classsubparts) [548 559])
+                    ("m_b" variable (:type "double") (reparse-symbol classsubparts) [562 573])
+                    ("m_c" variable (:type "double") (reparse-symbol classsubparts) [576 587])
+                    ("m_s_v" variable (:type "double") (reparse-symbol classsubparts) [590 603])
+                    ("m_s_w" variable (:type "double") (reparse-symbol classsubparts) [616 629])
+                    ("x_bar" variable (:type "double") (reparse-symbol classsubparts) [640 653])
+                    ("x_hat" variable (:type "double") (reparse-symbol classsubparts) [667 680])
+                    ("g_k" variable (:type "double") (reparse-symbol classsubparts) [692 703])
+                    ("p_bar" variable (:type "double") (reparse-symbol classsubparts) [717 730])
+                    ("p" variable (:type "double") (reparse-symbol classsubparts) [746 755])
+                    ("m_y" variable (:type "double") (reparse-symbol classsubparts) [770 781]))                  
+                :type "class")
+                nil [218 785]))          
+    :file "KalmanFilter.h"
+    :pointmax 825
+    :fsize 918
+    :lastmodtime '(21580 20005 123727 277000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("KALMAN_FILTER_H_")
+          )
+
+    )
+   )
+  :file "!home!yuta!Soucecode!particle_filter!include!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

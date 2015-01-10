@@ -1,0 +1,51 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "main.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("ros/ros.h" include (:system-flag t) nil [223 243])
+            ("tf/transform_broadcaster.h" include (:system-flag t) nil [244 281])
+            ("nav_msgs/Odometry.h" include (:system-flag t) nil [282 312])
+            ("geometry_msgs/Twist.h" include (:system-flag t) nil [323 355])
+            ("iostream" include (:system-flag t) nil [369 388])
+            ("string" include (:system-flag t) nil [389 406])
+            ("boost/thread.hpp" include (:system-flag t) nil [408 435])
+            ("interface.h" include nil nil [437 459])
+            ("access_mutex_" variable (:type ("boost::mutex" type (:type "class") nil nil)) nil [461 488])
+            ("imcs01_port" variable (:type ("std::string" type (:type "class") nil nil)) nil [490 514])
+            ("Fourthrobot" variable
+               (:pointer 1
+                :type ("cirkit::FourthRobotInterface" type (:type "class") nil nil))
+                nil [516 558])
+            ("cmd_vel" variable (:type ("geometry_msgs::Twist::ConstPtr" type (:type "class") nil nil)) nil [560 599])
+            ("cmdVelReceived" function
+               (:arguments 
+                  ( ("cmd_vel" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("geometry_msgs::Twist::ConstPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [622 668]))                  
+                :type "void")
+                nil [602 805])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [816 825])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [826 838]))                  
+                :type "int")
+                nil [807 3769]))          
+    :file "main.cpp"
+    :pointmax 3778
+    :fsize 3874
+    :lastmodtime '(21590 10987 863063 939000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!yuta!catkin_ws!src!fourth_robot_driver!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

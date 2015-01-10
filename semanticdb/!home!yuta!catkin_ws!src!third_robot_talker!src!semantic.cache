@@ -1,0 +1,49 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "third_robot_talker.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("ros/ros.h" include (:system-flag t) nil [1 21])
+            ("string" include (:system-flag t) nil [22 39])
+            ("sound/sound_service.h" include nil nil [40 72])
+            ("rospeex_if/rospeex.h" include nil nil [73 104])
+            ("unistd.h" include (:system-flag t) nil [106 125])
+            ("interface" variable
+               (:typemodifiers ("static")
+                :type ("rospeex::Interface" type (:type "class") nil nil))
+                nil [127 163])
+            ("filepath" variable (:type ("std::string" type (:type "class") nil nil)) nil [165 186])
+            ("play" function
+               (:arguments 
+                  ( ("req" variable
+                       (:reference 1
+                        :type ("sound::sound_service::Request" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [198 234])
+                    ("res" variable
+                       (:reference 1
+                        :type ("sound::sound_service::Response" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [239 275]))                  
+                :type "bool")
+                nil [188 904])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [915 924])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [925 937]))                  
+                :type "int")
+                nil [906 1445]))          
+    :file "third_robot_talker.cpp"
+    :pointmax 1446
+    :fsize 1445
+    :lastmodtime '(21593 46785 69440 251000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!yuta!catkin_ws!src!third_robot_talker!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

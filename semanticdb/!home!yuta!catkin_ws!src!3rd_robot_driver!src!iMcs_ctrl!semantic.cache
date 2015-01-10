@@ -1,0 +1,61 @@
+;; Object iMcs_ctrl/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "iMcs_ctrl/"
+  :tables (list 
+   (semanticdb-table "imcs01.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [1 20])
+            ("string.h" include (:system-flag t) nil [21 40])
+            ("math.h" include (:system-flag t) nil [41 58])
+            ("stdio.h" include (:system-flag t) nil [59 77])
+            ("string" include (:system-flag t) nil [78 95])
+            ("netinet/in.h" include (:system-flag t) nil [96 119])
+            ("sys/types.h" include (:system-flag t) nil [120 142])
+            ("iMCs_ctrl/imcs01.h" include nil nil [144 173])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [175 195])
+            ("iMcs01" function
+               (:parent "cirkit::iMcs01"
+                :arguments 
+                  ( ("new_serial_port" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [220 248])
+                    ("new_baudrate" variable (:type "int") (reparse-symbol arg-sub-list) [249 266]))                  
+                :type "int")
+                nil [197 544])
+            ("iMCs01" function
+               (:destructor-flag t
+                :parent "cirkit::iMCs01"
+                :type "void")
+                nil [546 658])
+            ("openSerialPort" function
+               (:parent "cirkit::iMCs01"
+                :type "int")
+                nil [765 916])
+            ("setSerialPort" function
+               (:parent "cirkit::iMCs01"
+                :type "int")
+                nil [1021 2957])
+            ("closeSerialPort" function
+               (:parent "cirkit::iMCs01"
+                :type "int")
+                nil [3065 3268])
+            ("drive" function
+               (:parent "cirkit::iMCs01"
+                :arguments 
+                  ( ("linear_speed" variable (:type "double") (reparse-symbol arg-sub-list) [3395 3415])
+                    ("angular_speed" variable (:type "double") (reparse-symbol arg-sub-list) [3416 3437]))                  
+                :type "int")
+                nil [3369 3740]))          
+    :file "imcs01.cpp"
+    :pointmax 3751
+    :fsize 3741
+    :lastmodtime '(21508 33019 691471 472000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!yuta!catkin_ws!src!3rd_robot_driver!src!iMcs_ctrl!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

@@ -1,0 +1,114 @@
+;; Object iMCs_series/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "iMCs_series/"
+  :tables (list 
+   (semanticdb-table "imcs01.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("imcs01.h" include nil nil [1 20])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [22 42])
+            ("iMCs01" function
+               (:constructor-flag t
+                :parent "iMCs01"
+                :arguments 
+                  ( ("device_name" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [59 78])
+                    ("baudrate" variable (:type "int") (reparse-symbol arg-sub-list) [79 92]))                  
+                :type ("iMCs01" type (:type "class") nil nil))
+                nil [44 629])
+            ("iMCs01" function
+               (:destructor-flag t
+                :parent "iMCs01"
+                :type "void")
+                nil [631 651])
+            ("Open" function
+               (:parent "iMCs01"
+                :type "bool")
+                nil [653 818])
+            ("Close" function
+               (:parent "iMCs01"
+                :type "bool")
+                nil [819 1095])
+            ("Connect" function
+               (:parent "iMCs01"
+                :type "bool")
+                nil [1097 3146])
+            ("ReadEncData" function
+               (:parent "iMCs01"
+                :type "bool")
+                nil [3148 3415])
+            ("GetHandleDir" function
+               (:parent "iMCs01"
+                :type "double")
+                nil [3416 3587])
+            ("SetHandleDir" function
+               (:parent "iMCs01"
+                :arguments 
+                  ( ("buf" variable (:type "unsigned short") (reparse-symbol arg-sub-list) [3615 3634]))                  
+                :type "void")
+                nil [3589 4004])
+            ("GetXY" function
+               (:parent "iMCs01"
+                :type ("CvPoint2D32f" type (:type "class") nil nil))
+                nil [4006 4188])
+            ("GetXYZ" function
+               (:parent "iMCs01"
+                :type ("CvPoint3D32f" type (:type "class") nil nil))
+                nil [4190 4392])
+            ("GetDir" function
+               (:parent "iMCs01"
+                :type "double")
+                nil [4394 4542])
+            ("GetVelo" function
+               (:parent "iMCs01"
+                :type "double")
+                nil [4543 4939])
+            ("CalcOdometory" function
+               (:parent "iMCs01"
+                :type "void")
+                nil [4942 8132])
+            ("PrintData" function
+               (:parent "iMCs01"
+                :type "void")
+                nil [8134 8292])
+            ("GetIntegralEncMeter" function
+               (:parent "iMCs01"
+                :type "double")
+                nil [8293 8364])
+            ("Forward" function
+               (:parent "iMCs01"
+                :arguments 
+                  ( ("speed" variable (:type "int") (reparse-symbol arg-sub-list) [8387 8397]))                  
+                :type "void")
+                nil [8366 9679])
+            ("Back" function
+               (:parent "iMCs01"
+                :type "void")
+                nil [9680 10558])
+            ("Stop" function
+               (:parent "iMCs01"
+                :type "void")
+                nil [10559 11023])
+            ("plus_or_minus" function
+               (:arguments 
+                  ( ("value" variable (:type "double") (reparse-symbol arg-sub-list) [11043 11056]))                  
+                :type "int")
+                nil [11025 11155]))          
+    :file "imcs01.cpp"
+    :pointmax 11156
+    :fsize 11165
+    :lastmodtime '(21374 4654 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "imcs01.h"
+    :file "imcs01.h"
+    :fsize 2130
+    :lastmodtime '(21374 4654 0 0)
+    )
+   )
+  :file "!home!yuta!Documents!cirkit!soucecode!NN3rd_forTV_2!src!iMCs_series!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

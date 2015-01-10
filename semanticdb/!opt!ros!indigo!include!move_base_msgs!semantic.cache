@@ -1,0 +1,377 @@
+;; Object move_base_msgs/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "move_base_msgs/"
+  :tables (list 
+   (semanticdb-table "MoveBaseAction.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("MOVE_BASE_MSGS_MESSAGE_MOVEBASEACTION_H" variable (:constant-flag t) nil [1885 1924])
+            ("string" include (:system-flag t) nil [1927 1944])
+            ("vector" include (:system-flag t) nil [1945 1962])
+            ("map" include (:system-flag t) nil [1963 1977])
+            ("ros/types.h" include (:system-flag t) nil [1979 2001])
+            ("ros/serialization.h" include (:system-flag t) nil [2002 2032])
+            ("ros/builtin_message_traits.h" include (:system-flag t) nil [2033 2072])
+            ("ros/message_operations.h" include (:system-flag t) nil [2073 2108])
+            ("move_base_msgs/MoveBaseActionGoal.h" include (:system-flag t) nil [2110 2156])
+            ("move_base_msgs/MoveBaseActionResult.h" include (:system-flag t) nil [2157 2205])
+            ("move_base_msgs/MoveBaseActionFeedback.h" include (:system-flag t) nil [2206 2256])
+            ("move_base_msgs" type
+               (:members 
+                  ( ("MoveBaseAction_" type
+                       (:template 
+                          ( ("ContainerAllocator" type (:type "class") nil nil))                          
+                        :type "struct"
+                        :members 
+                          ( ("Type" type
+                               (:typedef ("MoveBaseAction_" type
+                                     (:template-specifier 
+                                        ( ("ContainerAllocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :superclasses "MoveBaseAction_"
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [2348 2397])
+                            ("MoveBaseAction_" function
+                               (:constructor-flag t
+                                :type ("MoveBaseAction_" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [2401 2493])
+                            ("MoveBaseAction_" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("_alloc" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ContainerAllocator" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2512 2545]))                                  
+                                :type ("MoveBaseAction_" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [2496 2638])
+                            ("_action_goal_type" variable (:type ("move_base_msgs::MoveBaseActionGoal_" type
+                                 (:template-specifier 
+                                    ( ("ContainerAllocator" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2656 2731])
+                            ("action_goal" variable (:type ("_action_goal_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2734 2764])
+                            ("_action_result_type" variable (:type ("move_base_msgs::MoveBaseActionResult_" type
+                                 (:template-specifier 
+                                    ( ("ContainerAllocator" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2780 2859])
+                            ("action_result" variable (:type ("_action_result_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2862 2896])
+                            ("_action_feedback_type" variable (:type ("move_base_msgs::MoveBaseActionFeedback_" type
+                                 (:template-specifier 
+                                    ( ("ContainerAllocator" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2912 2995])
+                            ("action_feedback" variable (:type ("_action_feedback_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2998 3036])
+                            ("Ptr" variable (:type "int") (reparse-symbol classsubparts) [3126 3130])
+                            ("ConstPtr" variable (:type "int") (reparse-symbol classsubparts) [3221 3230]))                          )
+                        (reparse-symbol namespacesubparts) [2285 3234])
+                    ("MoveBaseAction" variable (:type ("move_base_msgs::MoveBaseAction_" type
+                         (:template-specifier 
+                            ( ("std::allocator" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol namespacesubparts) [3272 3342])
+                    ("MoveBaseActionPtr" variable (:type "int") (reparse-symbol namespacesubparts) [3406 3424])
+                    ("MoveBaseActionConstPtr" variable (:type "int") (reparse-symbol namespacesubparts) [3492 3515])
+                    ("<<" function
+                       (:template 
+                          ( ("ContainerAllocator" type (:type "class") nil nil))                          
+                        :type ("std::ostream" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("s" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3629 3645])
+                            ("v" variable
+                               (:reference 1
+                                :type ("move_base_msgs::MoveBaseAction_" type
+                                     (:template-specifier 
+                                        ( ("ContainerAllocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3654 3710]))                          
+                        :operator-flag t)
+                        (reparse-symbol namespacesubparts) [3566 3833]))                  
+                :type "namespace")
+                nil [2258 3836])
+            ("ros" type
+               (:members 
+                  ( ("message_traits" type
+                       (:members 
+                          ( ("FalseType" variable (:type "int") (reparse-symbol namespacesubparts) [4903 4919])
+                            ("FalseType" variable (:type "int") (reparse-symbol namespacesubparts) [5042 5058])
+                            ("TrueType" variable (:type "int") (reparse-symbol namespacesubparts) [5174 5189])
+                            ("TrueType" variable (:type "int") (reparse-symbol namespacesubparts) [5310 5325])
+                            ("FalseType" variable (:type "int") (reparse-symbol namespacesubparts) [5441 5457])
+                            ("FalseType" variable (:type "int") (reparse-symbol namespacesubparts) [5578 5594]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [3882 12304]))                  
+                :type "namespace")
+                nil [3866 12334])
+            ("ros" type
+               (:members 
+                  ( ("serialization" type (:type "namespace") (reparse-symbol namespacesubparts) [12369 12794]))                  
+                :type "namespace")
+                nil [12353 12823])
+            ("ros" type
+               (:members 
+                  ( ("message_operations" type (:type "namespace") (reparse-symbol namespacesubparts) [12858 13692]))                  
+                :type "namespace")
+                nil [12842 13726]))          
+    :file "MoveBaseAction.h"
+    :pointmax 13795
+    :fsize 13794
+    :lastmodtime '(21512 51220 0 0)
+    :unmatched-syntax '((punctuation 13688 . 13689) (semantic-list 12997 . 13688) (punctuation 12995 . 12996) (punctuation 12993 . 12994) (symbol 12975 . 12993) (punctuation 12974 . 12975) (symbol 12959 . 12974) (punctuation 12958 . 12959) (punctuation 12957 . 12958) (symbol 12943 . 12957) (punctuation 12942 . 12943) (punctuation 12941 . 12942) (punctuation 12939 . 12940) (symbol 12932 . 12939) (STRUCT 12925 . 12931) (punctuation 12923 . 12924) (symbol 12905 . 12923) (CLASS 12899 . 12904) (punctuation 12898 . 12899) (TEMPLATE 12890 . 12898) (punctuation 12764 . 12765) (semantic-list 12510 . 12764) (punctuation 12506 . 12507) (punctuation 12504 . 12505) (symbol 12486 . 12504) (punctuation 12485 . 12486) (symbol 12470 . 12485) (punctuation 12469 . 12470) (punctuation 12468 . 12469) (symbol 12454 . 12468) (punctuation 12453 . 12454) (punctuation 12452 . 12453) (punctuation 12450 . 12451) (symbol 12440 . 12450) (STRUCT 12433 . 12439) (punctuation 12431 . 12432) (symbol 12413 . 12431) (CLASS 12407 . 12412) (punctuation 12406 . 12407) (TEMPLATE 12398 . 12406) (punctuation 12300 . 12301) (semantic-list 6444 . 12300) (punctuation 6442 . 6443) (punctuation 6440 . 6441) (symbol 6422 . 6440) (punctuation 6421 . 6422) (symbol 6406 . 6421) (punctuation 6405 . 6406) (punctuation 6404 . 6405) (symbol 6390 . 6404) (punctuation 6389 . 6390) (punctuation 6388 . 6389) (punctuation 6386 . 6387) (symbol 6376 . 6386) (STRUCT 6369 . 6375) (punctuation 6367 . 6368) (symbol 6349 . 6367) (CLASS 6343 . 6348) (punctuation 6342 . 6343) (TEMPLATE 6334 . 6342) (punctuation 6331 . 6332) (semantic-list 6137 . 6331) (punctuation 6135 . 6136) (punctuation 6133 . 6134) (symbol 6115 . 6133) (punctuation 6114 . 6115) (symbol 6099 . 6114) (punctuation 6098 . 6099) (punctuation 6097 . 6098) (symbol 6083 . 6097) (punctuation 6082 . 6083) (punctuation 6081 . 6082) (punctuation 6079 . 6080) (symbol 6071 . 6079) (STRUCT 6064 . 6070) (punctuation 6062 . 6063) (symbol 6044 . 6062) (CLASS 6038 . 6043) (punctuation 6037 . 6038) (TEMPLATE 6029 . 6037) (punctuation 6026 . 6027) (semantic-list 5703 . 6026) (punctuation 5701 . 5702) (punctuation 5699 . 5700) (symbol 5681 . 5699) (punctuation 5680 . 5681) (symbol 5665 . 5680) (punctuation 5664 . 5665) (punctuation 5663 . 5664) (symbol 5649 . 5663) (punctuation 5648 . 5649) (punctuation 5647 . 5648) (punctuation 5645 . 5646) (symbol 5639 . 5645) (STRUCT 5632 . 5638) (punctuation 5630 . 5631) (symbol 5612 . 5630) (CLASS 5606 . 5611) (punctuation 5605 . 5606) (TEMPLATE 5597 . 5605) (punctuation 5576 . 5577) (punctuation 5572 . 5573) (CONST 5567 . 5572) (punctuation 5565 . 5566) (symbol 5547 . 5565) (punctuation 5546 . 5547) (symbol 5531 . 5546) (punctuation 5530 . 5531) (punctuation 5529 . 5530) (symbol 5515 . 5529) (punctuation 5514 . 5515) (punctuation 5513 . 5514) (punctuation 5511 . 5512) (symbol 5502 . 5511) (STRUCT 5495 . 5501) (punctuation 5493 . 5494) (symbol 5475 . 5493) (CLASS 5469 . 5474) (punctuation 5468 . 5469) (TEMPLATE 5459 . 5467) (punctuation 5439 . 5440) (punctuation 5435 . 5436) (punctuation 5433 . 5434) (symbol 5415 . 5433) (punctuation 5414 . 5415) (symbol 5399 . 5414) (punctuation 5398 . 5399) (punctuation 5397 . 5398) (symbol 5383 . 5397) (punctuation 5382 . 5383) (punctuation 5381 . 5382) (punctuation 5379 . 5380) (symbol 5370 . 5379) (STRUCT 5363 . 5369) (punctuation 5361 . 5362) (symbol 5343 . 5361) (CLASS 5337 . 5342) (punctuation 5336 . 5337) (TEMPLATE 5327 . 5335) (punctuation 5308 . 5309) (punctuation 5304 . 5305) (CONST 5299 . 5304) (punctuation 5297 . 5298) (symbol 5279 . 5297) (punctuation 5278 . 5279) (symbol 5263 . 5278) (punctuation 5262 . 5263) (punctuation 5261 . 5262) (symbol 5247 . 5261) (punctuation 5246 . 5247) (punctuation 5245 . 5246) (punctuation 5243 . 5244) (symbol 5234 . 5243) (STRUCT 5227 . 5233) (punctuation 5225 . 5226) (symbol 5207 . 5225) (CLASS 5201 . 5206) (punctuation 5200 . 5201) (TEMPLATE 5191 . 5199) (punctuation 5172 . 5173) (punctuation 5168 . 5169) (punctuation 5166 . 5167) (symbol 5148 . 5166) (punctuation 5147 . 5148) (symbol 5132 . 5147) (punctuation 5131 . 5132) (punctuation 5130 . 5131) (symbol 5116 . 5130) (punctuation 5115 . 5116) (punctuation 5114 . 5115) (punctuation 5112 . 5113) (symbol 5103 . 5112) (STRUCT 5096 . 5102) (punctuation 5094 . 5095) (symbol 5076 . 5094) (CLASS 5070 . 5075) (punctuation 5069 . 5070) (TEMPLATE 5060 . 5068) (punctuation 5040 . 5041) (punctuation 5036 . 5037) (CONST 5031 . 5036) (punctuation 5029 . 5030) (symbol 5011 . 5029) (punctuation 5010 . 5011) (symbol 4995 . 5010) (punctuation 4994 . 4995) (punctuation 4993 . 4994) (symbol 4979 . 4993) (punctuation 4978 . 4979) (punctuation 4977 . 4978) (punctuation 4975 . 4976) (symbol 4964 . 4975) (STRUCT 4957 . 4963) (punctuation 4955 . 4956) (symbol 4937 . 4955) (CLASS 4931 . 4936) (punctuation 4930 . 4931) (TEMPLATE 4921 . 4929) (punctuation 4901 . 4902) (punctuation 4897 . 4898) (punctuation 4895 . 4896) (symbol 4877 . 4895) (punctuation 4876 . 4877) (symbol 4861 . 4876) (punctuation 4860 . 4861) (punctuation 4859 . 4860) (symbol 4845 . 4859) (punctuation 4844 . 4845) (punctuation 4843 . 4844) (punctuation 4841 . 4842) (symbol 4830 . 4841) (STRUCT 4823 . 4829) (punctuation 4821 . 4822) (symbol 4803 . 4821) (CLASS 4797 . 4802) (punctuation 4796 . 4797) (TEMPLATE 4787 . 4795) (punctuation 3653 . 3654) (punctuation 3652 . 3653) (CONST 3646 . 3651) (punctuation 3490 . 3491) (CONST 3485 . 3490) (symbol 3470 . 3484) (punctuation 3469 . 3470) (punctuation 3468 . 3469) (symbol 3454 . 3468) (punctuation 3453 . 3454) (punctuation 3452 . 3453) (punctuation 3450 . 3451) (symbol 3440 . 3450) (punctuation 3439 . 3440) (punctuation 3438 . 3439) (symbol 3433 . 3438) (TYPEDEF 3425 . 3432) (punctuation 3404 . 3405) (symbol 3389 . 3403) (punctuation 3388 . 3389) (punctuation 3387 . 3388) (symbol 3373 . 3387) (punctuation 3372 . 3373) (punctuation 3371 . 3372) (punctuation 3369 . 3370) (symbol 3359 . 3369) (punctuation 3358 . 3359) (punctuation 3357 . 3358) (symbol 3352 . 3357) (TYPEDEF 3344 . 3351) (punctuation 3271 . 3272) (punctuation 3270 . 3271) (TYPEDEF 3262 . 3269) (punctuation 3219 . 3220) (CONST 3214 . 3219) (punctuation 3212 . 3213) (symbol 3194 . 3212) (punctuation 3193 . 3194) (symbol 3178 . 3193) (punctuation 3177 . 3178) (punctuation 3176 . 3177) (symbol 3162 . 3176) (punctuation 3161 . 3162) (punctuation 3160 . 3161) (punctuation 3158 . 3159) (symbol 3148 . 3158) (punctuation 3147 . 3148) (punctuation 3146 . 3147) (symbol 3141 . 3146) (TYPEDEF 3133 . 3140) (punctuation 3124 . 3125) (punctuation 3122 . 3123) (symbol 3104 . 3122) (punctuation 3103 . 3104) (symbol 3088 . 3103) (punctuation 3087 . 3088) (punctuation 3086 . 3087) (symbol 3072 . 3086) (punctuation 3071 . 3072) (punctuation 3070 . 3071) (punctuation 3068 . 3069) (symbol 3058 . 3068) (punctuation 3057 . 3058) (punctuation 3056 . 3057) (symbol 3051 . 3056) (TYPEDEF 3043 . 3050) (punctuation 2911 . 2912) (punctuation 2910 . 2911) (TYPEDEF 2901 . 2908) (punctuation 2779 . 2780) (punctuation 2778 . 2779) (TYPEDEF 2769 . 2776) (punctuation 2655 . 2656) (punctuation 2654 . 2655) (TYPEDEF 2645 . 2652))
+    :lexical-table 
+        '(("MOVE_BASE_MSGS_MESSAGE_MOVEBASEACTION_H")
+          )
+
+    )
+   (semanticdb-table "MoveBaseFeedback.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("MOVE_BASE_MSGS_MESSAGE_MOVEBASEFEEDBACK_H" variable (:constant-flag t) nil [1889 1930])
+            ("string" include (:system-flag t) nil [1933 1950])
+            ("vector" include (:system-flag t) nil [1951 1968])
+            ("map" include (:system-flag t) nil [1969 1983])
+            ("ros/types.h" include (:system-flag t) nil [1985 2007])
+            ("ros/serialization.h" include (:system-flag t) nil [2008 2038])
+            ("ros/builtin_message_traits.h" include (:system-flag t) nil [2039 2078])
+            ("ros/message_operations.h" include (:system-flag t) nil [2079 2114])
+            ("geometry_msgs/PoseStamped.h" include (:system-flag t) nil [2116 2154])
+            ("move_base_msgs" type
+               (:members 
+                  ( ("MoveBaseFeedback_" type
+                       (:template 
+                          ( ("ContainerAllocator" type (:type "class") nil nil))                          
+                        :type "struct"
+                        :members 
+                          ( ("Type" type
+                               (:typedef ("MoveBaseFeedback_" type
+                                     (:template-specifier 
+                                        ( ("ContainerAllocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :superclasses "MoveBaseFeedback_"
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [2248 2299])
+                            ("MoveBaseFeedback_" function
+                               (:constructor-flag t
+                                :type ("MoveBaseFeedback_" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [2303 2353])
+                            ("MoveBaseFeedback_" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("_alloc" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ContainerAllocator" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2374 2407]))                                  
+                                :type ("MoveBaseFeedback_" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [2356 2444])
+                            ("_base_position_type" variable (:type ("geometry_msgs::PoseStamped_" type
+                                 (:template-specifier 
+                                    ( ("ContainerAllocator" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2462 2531])
+                            ("base_position" variable (:type ("_base_position_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2534 2568])
+                            ("Ptr" variable (:type "int") (reparse-symbol classsubparts) [2660 2664])
+                            ("ConstPtr" variable (:type "int") (reparse-symbol classsubparts) [2757 2766]))                          )
+                        (reparse-symbol namespacesubparts) [2183 2770])
+                    ("MoveBaseFeedback" variable (:type ("move_base_msgs::MoveBaseFeedback_" type
+                         (:template-specifier 
+                            ( ("std::allocator" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol namespacesubparts) [2810 2884])
+                    ("MoveBaseFeedbackPtr" variable (:type "int") (reparse-symbol namespacesubparts) [2950 2970])
+                    ("MoveBaseFeedbackConstPtr" variable (:type "int") (reparse-symbol namespacesubparts) [3040 3065])
+                    ("<<" function
+                       (:template 
+                          ( ("ContainerAllocator" type (:type "class") nil nil))                          
+                        :type ("std::ostream" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("s" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3179 3195])
+                            ("v" variable
+                               (:reference 1
+                                :type ("move_base_msgs::MoveBaseFeedback_" type
+                                     (:template-specifier 
+                                        ( ("ContainerAllocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3204 3262]))                          
+                        :operator-flag t)
+                        (reparse-symbol namespacesubparts) [3116 3387]))                  
+                :type "namespace")
+                nil [2156 3390])
+            ("ros" type
+               (:members 
+                  ( ("message_traits" type
+                       (:members 
+                          ( ("FalseType" variable (:type "int") (reparse-symbol namespacesubparts) [4459 4475])
+                            ("FalseType" variable (:type "int") (reparse-symbol namespacesubparts) [4600 4616])
+                            ("TrueType" variable (:type "int") (reparse-symbol namespacesubparts) [4734 4749])
+                            ("TrueType" variable (:type "int") (reparse-symbol namespacesubparts) [4872 4887])
+                            ("FalseType" variable (:type "int") (reparse-symbol namespacesubparts) [5005 5021])
+                            ("FalseType" variable (:type "int") (reparse-symbol namespacesubparts) [5144 5160]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [3436 7965]))                  
+                :type "namespace")
+                nil [3420 7995])
+            ("ros" type
+               (:members 
+                  ( ("serialization" type (:type "namespace") (reparse-symbol namespacesubparts) [8030 8387]))                  
+                :type "namespace")
+                nil [8014 8416])
+            ("ros" type
+               (:members 
+                  ( ("message_operations" type (:type "namespace") (reparse-symbol namespacesubparts) [8451 8925]))                  
+                :type "namespace")
+                nil [8435 8959]))          
+    :file "MoveBaseFeedback.h"
+    :pointmax 9030
+    :fsize 9029
+    :lastmodtime '(21512 51220 0 0)
+    :unmatched-syntax '((punctuation 8921 . 8922) (semantic-list 8592 . 8921) (punctuation 8590 . 8591) (punctuation 8588 . 8589) (symbol 8570 . 8588) (punctuation 8569 . 8570) (symbol 8552 . 8569) (punctuation 8551 . 8552) (punctuation 8550 . 8551) (symbol 8536 . 8550) (punctuation 8535 . 8536) (punctuation 8534 . 8535) (punctuation 8532 . 8533) (symbol 8525 . 8532) (STRUCT 8518 . 8524) (punctuation 8516 . 8517) (symbol 8498 . 8516) (CLASS 8492 . 8497) (punctuation 8491 . 8492) (TEMPLATE 8483 . 8491) (punctuation 8355 . 8356) (semantic-list 8173 . 8355) (punctuation 8169 . 8170) (punctuation 8167 . 8168) (symbol 8149 . 8167) (punctuation 8148 . 8149) (symbol 8131 . 8148) (punctuation 8130 . 8131) (punctuation 8129 . 8130) (symbol 8115 . 8129) (punctuation 8114 . 8115) (punctuation 8113 . 8114) (punctuation 8111 . 8112) (symbol 8101 . 8111) (STRUCT 8094 . 8100) (punctuation 8092 . 8093) (symbol 8074 . 8092) (CLASS 8068 . 8073) (punctuation 8067 . 8068) (TEMPLATE 8059 . 8067) (punctuation 7961 . 7962) (semantic-list 6022 . 7961) (punctuation 6020 . 6021) (punctuation 6018 . 6019) (symbol 6000 . 6018) (punctuation 5999 . 6000) (symbol 5982 . 5999) (punctuation 5981 . 5982) (punctuation 5980 . 5981) (symbol 5966 . 5980) (punctuation 5965 . 5966) (punctuation 5964 . 5965) (punctuation 5962 . 5963) (symbol 5952 . 5962) (STRUCT 5945 . 5951) (punctuation 5943 . 5944) (symbol 5925 . 5943) (CLASS 5919 . 5924) (punctuation 5918 . 5919) (TEMPLATE 5910 . 5918) (punctuation 5907 . 5908) (semantic-list 5709 . 5907) (punctuation 5707 . 5708) (punctuation 5705 . 5706) (symbol 5687 . 5705) (punctuation 5686 . 5687) (symbol 5669 . 5686) (punctuation 5668 . 5669) (punctuation 5667 . 5668) (symbol 5653 . 5667) (punctuation 5652 . 5653) (punctuation 5651 . 5652) (punctuation 5649 . 5650) (symbol 5641 . 5649) (STRUCT 5634 . 5640) (punctuation 5632 . 5633) (symbol 5614 . 5632) (CLASS 5608 . 5613) (punctuation 5607 . 5608) (TEMPLATE 5599 . 5607) (punctuation 5596 . 5597) (semantic-list 5271 . 5596) (punctuation 5269 . 5270) (punctuation 5267 . 5268) (symbol 5249 . 5267) (punctuation 5248 . 5249) (symbol 5231 . 5248) (punctuation 5230 . 5231) (punctuation 5229 . 5230) (symbol 5215 . 5229) (punctuation 5214 . 5215) (punctuation 5213 . 5214) (punctuation 5211 . 5212) (symbol 5205 . 5211) (STRUCT 5198 . 5204) (punctuation 5196 . 5197) (symbol 5178 . 5196) (CLASS 5172 . 5177) (punctuation 5171 . 5172) (TEMPLATE 5163 . 5171) (punctuation 5142 . 5143) (punctuation 5138 . 5139) (CONST 5133 . 5138) (punctuation 5131 . 5132) (symbol 5113 . 5131) (punctuation 5112 . 5113) (symbol 5095 . 5112) (punctuation 5094 . 5095) (punctuation 5093 . 5094) (symbol 5079 . 5093) (punctuation 5078 . 5079) (punctuation 5077 . 5078) (punctuation 5075 . 5076) (symbol 5066 . 5075) (STRUCT 5059 . 5065) (punctuation 5057 . 5058) (symbol 5039 . 5057) (CLASS 5033 . 5038) (punctuation 5032 . 5033) (TEMPLATE 5023 . 5031) (punctuation 5003 . 5004) (punctuation 4999 . 5000) (punctuation 4997 . 4998) (symbol 4979 . 4997) (punctuation 4978 . 4979) (symbol 4961 . 4978) (punctuation 4960 . 4961) (punctuation 4959 . 4960) (symbol 4945 . 4959) (punctuation 4944 . 4945) (punctuation 4943 . 4944) (punctuation 4941 . 4942) (symbol 4932 . 4941) (STRUCT 4925 . 4931) (punctuation 4923 . 4924) (symbol 4905 . 4923) (CLASS 4899 . 4904) (punctuation 4898 . 4899) (TEMPLATE 4889 . 4897) (punctuation 4870 . 4871) (punctuation 4866 . 4867) (CONST 4861 . 4866) (punctuation 4859 . 4860) (symbol 4841 . 4859) (punctuation 4840 . 4841) (symbol 4823 . 4840) (punctuation 4822 . 4823) (punctuation 4821 . 4822) (symbol 4807 . 4821) (punctuation 4806 . 4807) (punctuation 4805 . 4806) (punctuation 4803 . 4804) (symbol 4794 . 4803) (STRUCT 4787 . 4793) (punctuation 4785 . 4786) (symbol 4767 . 4785) (CLASS 4761 . 4766) (punctuation 4760 . 4761) (TEMPLATE 4751 . 4759) (punctuation 4732 . 4733) (punctuation 4728 . 4729) (punctuation 4726 . 4727) (symbol 4708 . 4726) (punctuation 4707 . 4708) (symbol 4690 . 4707) (punctuation 4689 . 4690) (punctuation 4688 . 4689) (symbol 4674 . 4688) (punctuation 4673 . 4674) (punctuation 4672 . 4673) (punctuation 4670 . 4671) (symbol 4661 . 4670) (STRUCT 4654 . 4660) (punctuation 4652 . 4653) (symbol 4634 . 4652) (CLASS 4628 . 4633) (punctuation 4627 . 4628) (TEMPLATE 4618 . 4626) (punctuation 4598 . 4599) (punctuation 4594 . 4595) (CONST 4589 . 4594) (punctuation 4587 . 4588) (symbol 4569 . 4587) (punctuation 4568 . 4569) (symbol 4551 . 4568) (punctuation 4550 . 4551) (punctuation 4549 . 4550) (symbol 4535 . 4549) (punctuation 4534 . 4535) (punctuation 4533 . 4534) (punctuation 4531 . 4532) (symbol 4520 . 4531) (STRUCT 4513 . 4519) (punctuation 4511 . 4512) (symbol 4493 . 4511) (CLASS 4487 . 4492) (punctuation 4486 . 4487) (TEMPLATE 4477 . 4485) (punctuation 4457 . 4458) (punctuation 4453 . 4454) (punctuation 4451 . 4452) (symbol 4433 . 4451) (punctuation 4432 . 4433) (symbol 4415 . 4432) (punctuation 4414 . 4415) (punctuation 4413 . 4414) (symbol 4399 . 4413) (punctuation 4398 . 4399) (punctuation 4397 . 4398) (punctuation 4395 . 4396) (symbol 4384 . 4395) (STRUCT 4377 . 4383) (punctuation 4375 . 4376) (symbol 4357 . 4375) (CLASS 4351 . 4356) (punctuation 4350 . 4351) (TEMPLATE 4341 . 4349) (punctuation 3203 . 3204) (punctuation 3202 . 3203) (CONST 3196 . 3201) (punctuation 3038 . 3039) (CONST 3033 . 3038) (symbol 3016 . 3032) (punctuation 3015 . 3016) (punctuation 3014 . 3015) (symbol 3000 . 3014) (punctuation 2999 . 3000) (punctuation 2998 . 2999) (punctuation 2996 . 2997) (symbol 2986 . 2996) (punctuation 2985 . 2986) (punctuation 2984 . 2985) (symbol 2979 . 2984) (TYPEDEF 2971 . 2978) (punctuation 2948 . 2949) (symbol 2931 . 2947) (punctuation 2930 . 2931) (punctuation 2929 . 2930) (symbol 2915 . 2929) (punctuation 2914 . 2915) (punctuation 2913 . 2914) (punctuation 2911 . 2912) (symbol 2901 . 2911) (punctuation 2900 . 2901) (punctuation 2899 . 2900) (symbol 2894 . 2899) (TYPEDEF 2886 . 2893) (punctuation 2809 . 2810) (punctuation 2808 . 2809) (TYPEDEF 2800 . 2807) (punctuation 2755 . 2756) (CONST 2750 . 2755) (punctuation 2748 . 2749) (symbol 2730 . 2748) (punctuation 2729 . 2730) (symbol 2712 . 2729) (punctuation 2711 . 2712) (punctuation 2710 . 2711) (symbol 2696 . 2710) (punctuation 2695 . 2696) (punctuation 2694 . 2695) (punctuation 2692 . 2693) (symbol 2682 . 2692) (punctuation 2681 . 2682) (punctuation 2680 . 2681) (symbol 2675 . 2680) (TYPEDEF 2667 . 2674) (punctuation 2658 . 2659) (punctuation 2656 . 2657) (symbol 2638 . 2656) (punctuation 2637 . 2638) (symbol 2620 . 2637) (punctuation 2619 . 2620) (punctuation 2618 . 2619) (symbol 2604 . 2618) (punctuation 2603 . 2604) (punctuation 2602 . 2603) (punctuation 2600 . 2601) (symbol 2590 . 2600) (punctuation 2589 . 2590) (punctuation 2588 . 2589) (symbol 2583 . 2588) (TYPEDEF 2575 . 2582) (punctuation 2461 . 2462) (punctuation 2460 . 2461) (TYPEDEF 2451 . 2458))
+    :lexical-table 
+        '(("MOVE_BASE_MSGS_MESSAGE_MOVEBASEFEEDBACK_H")
+          )
+
+    )
+   (semanticdb-table "MoveBaseActionGoal.h"
+    :file "MoveBaseActionGoal.h"
+    :fsize 10463
+    :lastmodtime '(21512 51220 0 0)
+    )
+   (semanticdb-table "MoveBaseActionResult.h"
+    :file "MoveBaseActionResult.h"
+    :fsize 11435
+    :lastmodtime '(21512 51220 0 0)
+    )
+   (semanticdb-table "MoveBaseActionFeedback.h"
+    :file "MoveBaseActionFeedback.h"
+    :fsize 12493
+    :lastmodtime '(21512 51220 0 0)
+    )
+   (semanticdb-table "MoveBaseGoal.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("MOVE_BASE_MSGS_MESSAGE_MOVEBASEGOAL_H" variable (:constant-flag t) nil [1881 1918])
+            ("string" include (:system-flag t) nil [1921 1938])
+            ("vector" include (:system-flag t) nil [1939 1956])
+            ("map" include (:system-flag t) nil [1957 1971])
+            ("ros/types.h" include (:system-flag t) nil [1973 1995])
+            ("ros/serialization.h" include (:system-flag t) nil [1996 2026])
+            ("ros/builtin_message_traits.h" include (:system-flag t) nil [2027 2066])
+            ("ros/message_operations.h" include (:system-flag t) nil [2067 2102])
+            ("geometry_msgs/PoseStamped.h" include (:system-flag t) nil [2104 2142])
+            ("move_base_msgs" type
+               (:members 
+                  ( ("MoveBaseGoal_" type
+                       (:template 
+                          ( ("ContainerAllocator" type (:type "class") nil nil))                          
+                        :type "struct"
+                        :members 
+                          ( ("Type" type
+                               (:typedef ("MoveBaseGoal_" type
+                                     (:template-specifier 
+                                        ( ("ContainerAllocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :superclasses "MoveBaseGoal_"
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [2232 2279])
+                            ("MoveBaseGoal_" function
+                               (:constructor-flag t
+                                :type ("MoveBaseGoal_" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [2283 2327])
+                            ("MoveBaseGoal_" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("_alloc" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ContainerAllocator" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2344 2377]))                                  
+                                :type ("MoveBaseGoal_" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [2330 2412])
+                            ("_target_pose_type" variable (:type ("geometry_msgs::PoseStamped_" type
+                                 (:template-specifier 
+                                    ( ("ContainerAllocator" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2430 2497])
+                            ("target_pose" variable (:type ("_target_pose_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2500 2530])
+                            ("Ptr" variable (:type "int") (reparse-symbol classsubparts) [2618 2622])
+                            ("ConstPtr" variable (:type "int") (reparse-symbol classsubparts) [2711 2720]))                          )
+                        (reparse-symbol namespacesubparts) [2171 2724])
+                    ("MoveBaseGoal" variable (:type ("move_base_msgs::MoveBaseGoal_" type
+                         (:template-specifier 
+                            ( ("std::allocator" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol namespacesubparts) [2760 2826])
+                    ("MoveBaseGoalPtr" variable (:type "int") (reparse-symbol namespacesubparts) [2888 2904])
+                    ("MoveBaseGoalConstPtr" variable (:type "int") (reparse-symbol namespacesubparts) [2970 2991])
+                    ("<<" function
+                       (:template 
+                          ( ("ContainerAllocator" type (:type "class") nil nil))                          
+                        :type ("std::ostream" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("s" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3105 3121])
+                            ("v" variable
+                               (:reference 1
+                                :type ("move_base_msgs::MoveBaseGoal_" type
+                                     (:template-specifier 
+                                        ( ("ContainerAllocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3130 3184]))                          
+                        :operator-flag t)
+                        (reparse-symbol namespacesubparts) [3042 3305]))                  
+                :type "namespace")
+                nil [2144 3308])
+            ("ros" type
+               (:members 
+                  ( ("message_traits" type
+                       (:members 
+                          ( ("FalseType" variable (:type "int") (reparse-symbol namespacesubparts) [4373 4389])
+                            ("FalseType" variable (:type "int") (reparse-symbol namespacesubparts) [4510 4526])
+                            ("TrueType" variable (:type "int") (reparse-symbol namespacesubparts) [4640 4655])
+                            ("TrueType" variable (:type "int") (reparse-symbol namespacesubparts) [4774 4789])
+                            ("FalseType" variable (:type "int") (reparse-symbol namespacesubparts) [4903 4919])
+                            ("FalseType" variable (:type "int") (reparse-symbol namespacesubparts) [5038 5054]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [3354 7825]))                  
+                :type "namespace")
+                nil [3338 7855])
+            ("ros" type
+               (:members 
+                  ( ("serialization" type (:type "namespace") (reparse-symbol namespacesubparts) [7890 8237]))                  
+                :type "namespace")
+                nil [7874 8266])
+            ("ros" type
+               (:members 
+                  ( ("message_operations" type (:type "namespace") (reparse-symbol namespacesubparts) [8301 8763]))                  
+                :type "namespace")
+                nil [8285 8797]))          
+    :file "MoveBaseGoal.h"
+    :pointmax 8864
+    :fsize 8863
+    :lastmodtime '(21512 51220 0 0)
+    :unmatched-syntax '((punctuation 8759 . 8760) (semantic-list 8438 . 8759) (punctuation 8436 . 8437) (punctuation 8434 . 8435) (symbol 8416 . 8434) (punctuation 8415 . 8416) (symbol 8402 . 8415) (punctuation 8401 . 8402) (punctuation 8400 . 8401) (symbol 8386 . 8400) (punctuation 8385 . 8386) (punctuation 8384 . 8385) (punctuation 8382 . 8383) (symbol 8375 . 8382) (STRUCT 8368 . 8374) (punctuation 8366 . 8367) (symbol 8348 . 8366) (CLASS 8342 . 8347) (punctuation 8341 . 8342) (TEMPLATE 8333 . 8341) (punctuation 8209 . 8210) (semantic-list 8029 . 8209) (punctuation 8025 . 8026) (punctuation 8023 . 8024) (symbol 8005 . 8023) (punctuation 8004 . 8005) (symbol 7991 . 8004) (punctuation 7990 . 7991) (punctuation 7989 . 7990) (symbol 7975 . 7989) (punctuation 7974 . 7975) (punctuation 7973 . 7974) (punctuation 7971 . 7972) (symbol 7961 . 7971) (STRUCT 7954 . 7960) (punctuation 7952 . 7953) (symbol 7934 . 7952) (CLASS 7928 . 7933) (punctuation 7927 . 7928) (TEMPLATE 7919 . 7927) (punctuation 7821 . 7822) (semantic-list 5892 . 7821) (punctuation 5890 . 5891) (punctuation 5888 . 5889) (symbol 5870 . 5888) (punctuation 5869 . 5870) (symbol 5856 . 5869) (punctuation 5855 . 5856) (punctuation 5854 . 5855) (symbol 5840 . 5854) (punctuation 5839 . 5840) (punctuation 5838 . 5839) (punctuation 5836 . 5837) (symbol 5826 . 5836) (STRUCT 5819 . 5825) (punctuation 5817 . 5818) (symbol 5799 . 5817) (CLASS 5793 . 5798) (punctuation 5792 . 5793) (TEMPLATE 5784 . 5792) (punctuation 5781 . 5782) (semantic-list 5591 . 5781) (punctuation 5589 . 5590) (punctuation 5587 . 5588) (symbol 5569 . 5587) (punctuation 5568 . 5569) (symbol 5555 . 5568) (punctuation 5554 . 5555) (punctuation 5553 . 5554) (symbol 5539 . 5553) (punctuation 5538 . 5539) (punctuation 5537 . 5538) (punctuation 5535 . 5536) (symbol 5527 . 5535) (STRUCT 5520 . 5526) (punctuation 5518 . 5519) (symbol 5500 . 5518) (CLASS 5494 . 5499) (punctuation 5493 . 5494) (TEMPLATE 5485 . 5493) (punctuation 5482 . 5483) (semantic-list 5161 . 5482) (punctuation 5159 . 5160) (punctuation 5157 . 5158) (symbol 5139 . 5157) (punctuation 5138 . 5139) (symbol 5125 . 5138) (punctuation 5124 . 5125) (punctuation 5123 . 5124) (symbol 5109 . 5123) (punctuation 5108 . 5109) (punctuation 5107 . 5108) (punctuation 5105 . 5106) (symbol 5099 . 5105) (STRUCT 5092 . 5098) (punctuation 5090 . 5091) (symbol 5072 . 5090) (CLASS 5066 . 5071) (punctuation 5065 . 5066) (TEMPLATE 5057 . 5065) (punctuation 5036 . 5037) (punctuation 5032 . 5033) (CONST 5027 . 5032) (punctuation 5025 . 5026) (symbol 5007 . 5025) (punctuation 5006 . 5007) (symbol 4993 . 5006) (punctuation 4992 . 4993) (punctuation 4991 . 4992) (symbol 4977 . 4991) (punctuation 4976 . 4977) (punctuation 4975 . 4976) (punctuation 4973 . 4974) (symbol 4964 . 4973) (STRUCT 4957 . 4963) (punctuation 4955 . 4956) (symbol 4937 . 4955) (CLASS 4931 . 4936) (punctuation 4930 . 4931) (TEMPLATE 4921 . 4929) (punctuation 4901 . 4902) (punctuation 4897 . 4898) (punctuation 4895 . 4896) (symbol 4877 . 4895) (punctuation 4876 . 4877) (symbol 4863 . 4876) (punctuation 4862 . 4863) (punctuation 4861 . 4862) (symbol 4847 . 4861) (punctuation 4846 . 4847) (punctuation 4845 . 4846) (punctuation 4843 . 4844) (symbol 4834 . 4843) (STRUCT 4827 . 4833) (punctuation 4825 . 4826) (symbol 4807 . 4825) (CLASS 4801 . 4806) (punctuation 4800 . 4801) (TEMPLATE 4791 . 4799) (punctuation 4772 . 4773) (punctuation 4768 . 4769) (CONST 4763 . 4768) (punctuation 4761 . 4762) (symbol 4743 . 4761) (punctuation 4742 . 4743) (symbol 4729 . 4742) (punctuation 4728 . 4729) (punctuation 4727 . 4728) (symbol 4713 . 4727) (punctuation 4712 . 4713) (punctuation 4711 . 4712) (punctuation 4709 . 4710) (symbol 4700 . 4709) (STRUCT 4693 . 4699) (punctuation 4691 . 4692) (symbol 4673 . 4691) (CLASS 4667 . 4672) (punctuation 4666 . 4667) (TEMPLATE 4657 . 4665) (punctuation 4638 . 4639) (punctuation 4634 . 4635) (punctuation 4632 . 4633) (symbol 4614 . 4632) (punctuation 4613 . 4614) (symbol 4600 . 4613) (punctuation 4599 . 4600) (punctuation 4598 . 4599) (symbol 4584 . 4598) (punctuation 4583 . 4584) (punctuation 4582 . 4583) (punctuation 4580 . 4581) (symbol 4571 . 4580) (STRUCT 4564 . 4570) (punctuation 4562 . 4563) (symbol 4544 . 4562) (CLASS 4538 . 4543) (punctuation 4537 . 4538) (TEMPLATE 4528 . 4536) (punctuation 4508 . 4509) (punctuation 4504 . 4505) (CONST 4499 . 4504) (punctuation 4497 . 4498) (symbol 4479 . 4497) (punctuation 4478 . 4479) (symbol 4465 . 4478) (punctuation 4464 . 4465) (punctuation 4463 . 4464) (symbol 4449 . 4463) (punctuation 4448 . 4449) (punctuation 4447 . 4448) (punctuation 4445 . 4446) (symbol 4434 . 4445) (STRUCT 4427 . 4433) (punctuation 4425 . 4426) (symbol 4407 . 4425) (CLASS 4401 . 4406) (punctuation 4400 . 4401) (TEMPLATE 4391 . 4399) (punctuation 4371 . 4372) (punctuation 4367 . 4368) (punctuation 4365 . 4366) (symbol 4347 . 4365) (punctuation 4346 . 4347) (symbol 4333 . 4346) (punctuation 4332 . 4333) (punctuation 4331 . 4332) (symbol 4317 . 4331) (punctuation 4316 . 4317) (punctuation 4315 . 4316) (punctuation 4313 . 4314) (symbol 4302 . 4313) (STRUCT 4295 . 4301) (punctuation 4293 . 4294) (symbol 4275 . 4293) (CLASS 4269 . 4274) (punctuation 4268 . 4269) (TEMPLATE 4259 . 4267) (punctuation 3129 . 3130) (punctuation 3128 . 3129) (CONST 3122 . 3127) (punctuation 2968 . 2969) (CONST 2963 . 2968) (symbol 2950 . 2962) (punctuation 2949 . 2950) (punctuation 2948 . 2949) (symbol 2934 . 2948) (punctuation 2933 . 2934) (punctuation 2932 . 2933) (punctuation 2930 . 2931) (symbol 2920 . 2930) (punctuation 2919 . 2920) (punctuation 2918 . 2919) (symbol 2913 . 2918) (TYPEDEF 2905 . 2912) (punctuation 2886 . 2887) (symbol 2873 . 2885) (punctuation 2872 . 2873) (punctuation 2871 . 2872) (symbol 2857 . 2871) (punctuation 2856 . 2857) (punctuation 2855 . 2856) (punctuation 2853 . 2854) (symbol 2843 . 2853) (punctuation 2842 . 2843) (punctuation 2841 . 2842) (symbol 2836 . 2841) (TYPEDEF 2828 . 2835) (punctuation 2759 . 2760) (punctuation 2758 . 2759) (TYPEDEF 2750 . 2757) (punctuation 2709 . 2710) (CONST 2704 . 2709) (punctuation 2702 . 2703) (symbol 2684 . 2702) (punctuation 2683 . 2684) (symbol 2670 . 2683) (punctuation 2669 . 2670) (punctuation 2668 . 2669) (symbol 2654 . 2668) (punctuation 2653 . 2654) (punctuation 2652 . 2653) (punctuation 2650 . 2651) (symbol 2640 . 2650) (punctuation 2639 . 2640) (punctuation 2638 . 2639) (symbol 2633 . 2638) (TYPEDEF 2625 . 2632) (punctuation 2616 . 2617) (punctuation 2614 . 2615) (symbol 2596 . 2614) (punctuation 2595 . 2596) (symbol 2582 . 2595) (punctuation 2581 . 2582) (punctuation 2580 . 2581) (symbol 2566 . 2580) (punctuation 2565 . 2566) (punctuation 2564 . 2565) (punctuation 2562 . 2563) (symbol 2552 . 2562) (punctuation 2551 . 2552) (punctuation 2550 . 2551) (symbol 2545 . 2550) (TYPEDEF 2537 . 2544) (punctuation 2429 . 2430) (punctuation 2428 . 2429) (TYPEDEF 2419 . 2426))
+    :lexical-table 
+        '(("MOVE_BASE_MSGS_MESSAGE_MOVEBASEGOAL_H")
+          )
+
+    )
+   )
+  :file "!opt!ros!indigo!include!move_base_msgs!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

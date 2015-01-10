@@ -1,0 +1,745 @@
+;; Object iRobot/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "iRobot/"
+  :tables (list 
+   (semanticdb-table "OpenInterface.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [1834 1853])
+            ("string.h" include (:system-flag t) nil [1854 1873])
+            ("math.h" include (:system-flag t) nil [1874 1891])
+            ("stdio.h" include (:system-flag t) nil [1892 1910])
+            ("string" include (:system-flag t) nil [1911 1928])
+            ("netinet/in.h" include (:system-flag t) nil [1929 1952])
+            ("sys/types.h" include (:system-flag t) nil [1953 1975])
+            ("roomba_500_series/OpenInterface.h" include nil nil [1977 2021])
+            ("OpenInterface" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("new_serial_port" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2156 2185]))                  
+                :type "int")
+                nil [2119 2727])
+            ("OpenInterface" function
+               (:destructor-flag t
+                :parent "irobot::OpenInterface"
+                :type "void")
+                nil [2825 2904])
+            ("openSerialPort" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("full_control" variable (:type "bool") (reparse-symbol arg-sub-list) [3054 3072]))                  
+                :type "int")
+                nil [3012 3220])
+            ("startOI" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("full_control" variable (:type "bool") (reparse-symbol arg-sub-list) [3355 3373]))                  
+                :type "int")
+                nil [3320 3996])
+            ("closeSerialPort" function
+               (:parent "irobot::OpenInterface"
+                :type "int")
+                nil [4105 4305])
+            ("sendOpcode" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("code" variable (:type ("OI_Opcode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4460 4475]))                  
+                :type "int")
+                nil [4422 4599])
+            ("powerDown" function
+               (:parent "irobot::OpenInterface"
+                :type "int")
+                nil [4708 4787])
+            ("drive" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("linear_speed" variable (:type "double") (reparse-symbol arg-sub-list) [4922 4942])
+                    ("angular_speed" variable (:type "double") (reparse-symbol arg-sub-list) [4943 4964]))                  
+                :type "int")
+                nil [4889 5267])
+            ("driveDirect" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("left_speed" variable (:type "int") (reparse-symbol arg-sub-list) [5414 5429])
+                    ("right_speed" variable (:type "int") (reparse-symbol arg-sub-list) [5430 5446]))                  
+                :type "int")
+                nil [5375 6120])
+            ("drivePWM" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("left_pwm" variable (:type "int") (reparse-symbol arg-sub-list) [6262 6275])
+                    ("right_pwm" variable (:type "int") (reparse-symbol arg-sub-list) [6276 6290]))                  
+                :type "int")
+                nil [6226 6362])
+            ("brushes" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("side_brush" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [6514 6539])
+                    ("vacuum" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [6540 6561])
+                    ("main_brush" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [6562 6587])
+                    ("side_brush_clockwise" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [6588 6623])
+                    ("main_brush_dir" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [6624 6653]))                  
+                :type "int")
+                nil [6479 6934])
+            ("brushesPWM" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("main_brush" variable (:type "char") (reparse-symbol arg-sub-list) [7086 7102])
+                    ("side_brush" variable (:type "char") (reparse-symbol arg-sub-list) [7103 7119])
+                    ("vacuum" variable (:type "char") (reparse-symbol arg-sub-list) [7120 7132]))                  
+                :type "int")
+                nil [7048 7401])
+            ("setSensorPackets" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("new_sensor_packets" variable
+                       (:pointer 1
+                        :type ("OI_Packet_ID" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7556 7590])
+                    ("new_num_of_packets" variable (:type "int") (reparse-symbol arg-sub-list) [7591 7614])
+                    ("new_buffer_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7615 7638]))                  
+                :type "int")
+                nil [7512 7968])
+            ("getSensorPackets" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("timeout" variable (:type "int") (reparse-symbol arg-sub-list) [8116 8128]))                  
+                :type "int")
+                nil [8072 8771])
+            ("streamSensorPackets" function
+               (:parent "irobot::OpenInterface"
+                :type "int")
+                nil [8882 9633])
+            ("startStream" function
+               (:parent "irobot::OpenInterface"
+                :type "int")
+                nil [9635 9874])
+            ("stopStream" function
+               (:parent "irobot::OpenInterface"
+                :type "int")
+                nil [9876 10114])
+            ("parseSensorPackets" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [10265 10289])
+                    ("buffer_lenght" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10290 10311]))                  
+                :type "int")
+                nil [10219 25004])
+            ("parseBumpersAndWheeldrops" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [25059 25082])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [25083 25093]))                  
+                :type "int")
+                nil [25006 25371])
+            ("parseWall" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [25410 25433])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [25434 25444]))                  
+                :type "int")
+                nil [25373 25525])
+            ("parseLeftCliff" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [25570 25593])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [25594 25604]))                  
+                :type "int")
+                nil [25528 25700])
+            ("parseFrontLeftCliff" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [25749 25772])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [25773 25783]))                  
+                :type "int")
+                nil [25702 25891])
+            ("parseFrontRightCliff" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [25941 25964])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [25965 25975]))                  
+                :type "int")
+                nil [25893 26085])
+            ("parseRightCliff" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [26130 26153])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [26154 26164]))                  
+                :type "int")
+                nil [26087 26262])
+            ("parseVirtualWall" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [26308 26331])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [26332 26342]))                  
+                :type "int")
+                nil [26264 26447])
+            ("parseOvercurrents" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [26495 26518])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [26519 26529]))                  
+                :type "int")
+                nil [26450 26838])
+            ("parseDirtDetector" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [26885 26908])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [26909 26919]))                  
+                :type "int")
+                nil [26840 27015])
+            ("parseIrOmniChar" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [27061 27084])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [27085 27095]))                  
+                :type "int")
+                nil [27018 27204])
+            ("parseButtons" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [27246 27269])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [27270 27280]))                  
+                :type "int")
+                nil [27206 27405])
+            ("parseDistance" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [27449 27472])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [27473 27483]))                  
+                :type "int")
+                nil [27408 27588])
+            ("parseAngle" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [27628 27651])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [27652 27662]))                  
+                :type "int")
+                nil [27590 27757])
+            ("parseChargingState" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [27806 27829])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [27830 27840]))                  
+                :type "int")
+                nil [27760 28018])
+            ("parseVoltage" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [28060 28083])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [28084 28094]))                  
+                :type "int")
+                nil [28020 28215])
+            ("parseCurrent" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [28257 28280])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [28281 28291]))                  
+                :type "int")
+                nil [28217 28410])
+            ("parseTemperature" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [28456 28479])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [28480 28490]))                  
+                :type "int")
+                nil [28412 28592])
+            ("parseBatteryCharge" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [28640 28663])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [28664 28674]))                  
+                :type "int")
+                nil [28594 28800])
+            ("parseBatteryCapacity" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [28850 28873])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [28874 28884]))                  
+                :type "int")
+                nil [28802 29016])
+            ("parseWallSignal" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [29062 29085])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [29086 29096]))                  
+                :type "int")
+                nil [29019 29212])
+            ("parseLeftCliffSignal" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [29263 29286])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [29287 29297]))                  
+                :type "int")
+                nil [29215 29428])
+            ("parseFrontLeftCliffSignal" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [29483 29506])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [29507 29517]))                  
+                :type "int")
+                nil [29430 29660])
+            ("parseFontRightCliffSignal" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [29716 29739])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [29740 29750]))                  
+                :type "int")
+                nil [29663 29895])
+            ("parseRightCliffSignal" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [29946 29969])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [29970 29980]))                  
+                :type "int")
+                nil [29897 30113])
+            ("parseChargingSource" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [30164 30187])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [30188 30198]))                  
+                :type "int")
+                nil [30117 30367])
+            ("parseOiMode" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [30408 30431])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [30432 30442]))                  
+                :type "int")
+                nil [30369 30511])
+            ("parseSongNumber" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [30556 30579])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [30580 30590]))                  
+                :type "int")
+                nil [30513 30639])
+            ("parseSongPlaying" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [30685 30708])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [30709 30719]))                  
+                :type "int")
+                nil [30641 30769])
+            ("parseNumberOfStreamPackets" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [30825 30848])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [30849 30859]))                  
+                :type "int")
+                nil [30771 30911])
+            ("parseRequestedVelocity" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [30963 30986])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [30987 30997]))                  
+                :type "int")
+                nil [30913 31047])
+            ("parseRequestedRadius" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [31097 31120])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [31121 31131]))                  
+                :type "int")
+                nil [31049 31179])
+            ("parseRequestedRightVelocity" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [31236 31259])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [31260 31270]))                  
+                :type "int")
+                nil [31181 31326])
+            ("parseRequestedLeftVelocity" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [31382 31405])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [31406 31416]))                  
+                :type "int")
+                nil [31328 31471])
+            ("parseRightEncoderCounts" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [31524 31547])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [31548 31558]))                  
+                :type "int")
+                nil [31473 32348])
+            ("parseLeftEncoderCounts" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [32400 32423])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [32424 32434]))                  
+                :type "int")
+                nil [32350 33204])
+            ("parseLightBumper" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [33251 33274])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [33275 33285]))                  
+                :type "int")
+                nil [33207 33699])
+            ("parseLightBumperLeftSignal" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [33755 33778])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [33779 33789]))                  
+                :type "int")
+                nil [33701 33930])
+            ("parseLightBumperFrontLeftSignal" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [33991 34014])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [34015 34025]))                  
+                :type "int")
+                nil [33932 34178])
+            ("parseLightBumperCenterLeftSignal" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [34240 34263])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [34264 34274]))                  
+                :type "int")
+                nil [34180 34429])
+            ("parseLightBumperCenterRightSignal" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [34492 34515])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [34516 34526]))                  
+                :type "int")
+                nil [34431 34683])
+            ("parseLightBumperFrontRightSignal" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [34745 34768])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [34769 34779]))                  
+                :type "int")
+                nil [34685 34934])
+            ("parseLightBumperRightSignal" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [34992 35015])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [35016 35026]))                  
+                :type "int")
+                nil [34937 35169])
+            ("parseIrCharLeft" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [35214 35237])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [35238 35248]))                  
+                :type "int")
+                nil [35171 35357])
+            ("parseIrCharRight" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [35404 35427])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [35428 35438]))                  
+                :type "int")
+                nil [35360 35550])
+            ("parseLeftMotorCurrent" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [35602 35625])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [35626 35636]))                  
+                :type "int")
+                nil [35553 35772])
+            ("parseRightMotorCurrent" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [35824 35847])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [35848 35858]))                  
+                :type "int")
+                nil [35774 35996])
+            ("parseMainBrushMotorCurrent" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [36052 36075])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [36076 36086]))                  
+                :type "int")
+                nil [35998 36235])
+            ("parseSideBrushMotorCurrent" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [36291 36314])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [36315 36325]))                  
+                :type "int")
+                nil [36237 36479])
+            ("parseStasis" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [36520 36543])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [36544 36554]))                  
+                :type "int")
+                nil [36481 36647])
+            ("buffer2signed_int" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [36694 36717])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [36718 36728]))                  
+                :type "int")
+                nil [36649 36854])
+            ("buffer2unsigned_int" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [36903 36926])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [36927 36937]))                  
+                :type "int")
+                nil [36856 37073])
+            ("calculateOdometry" function
+               (:parent "irobot::OpenInterface"
+                :type "void")
+                nil [37186 37707])
+            ("resetOdometry" function
+               (:parent "irobot::OpenInterface"
+                :type "void")
+                nil [37816 37898])
+            ("setOdometry" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("new_x" variable (:type "double") (reparse-symbol arg-sub-list) [38045 38058])
+                    ("new_y" variable (:type "double") (reparse-symbol arg-sub-list) [38059 38072])
+                    ("new_yaw" variable (:type "double") (reparse-symbol arg-sub-list) [38073 38088]))                  
+                :type "void")
+                nil [38005 38180])
+            ("clean" function
+               (:parent "irobot::OpenInterface"
+                :type "int")
+                nil [38273 38348])
+            ("max" function
+               (:parent "irobot::OpenInterface"
+                :type "int")
+                nil [38439 38510])
+            ("spot" function
+               (:parent "irobot::OpenInterface"
+                :type "int")
+                nil [38602 38675])
+            ("goDock" function
+               (:parent "irobot::OpenInterface"
+                :type "int")
+                nil [38777 38858])
+            ("setSong" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("song_number" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [38995 39021])
+                    ("song_length" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [39022 39048])
+                    ("notes" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [39049 39070])
+                    ("note_lengths" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [39071 39099]))                  
+                :type "int")
+                nil [38960 39524])
+            ("playSong" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("song_number" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [39673 39699]))                  
+                :type "int")
+                nil [39637 39922])
+            ("setLeds" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("check_robot" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [40057 40083])
+                    ("dock" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [40084 40103])
+                    ("spot" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [40104 40123])
+                    ("debris" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [40124 40145])
+                    ("power_color" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [40146 40172])
+                    ("power_intensity" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [40173 40203]))                  
+                :type "int")
+                nil [40022 40520])
+            ("setSchedulingLeds" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("sun" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [40676 40694])
+                    ("mon" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [40695 40713])
+                    ("tue" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [40714 40732])
+                    ("wed" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [40733 40751])
+                    ("thu" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [40752 40770])
+                    ("fri" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [40771 40789])
+                    ("sat" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [40790 40808])
+                    ("colon" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [40809 40829])
+                    ("pm" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [40830 40847])
+                    ("am" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [40848 40865])
+                    ("clock" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [40866 40886])
+                    ("schedule" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [40887 40910]))                  
+                :type "int")
+                nil [40631 41236])
+            ("setDigitLeds" function
+               (:parent "irobot::OpenInterface"
+                :arguments 
+                  ( ("digit3" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [41382 41403])
+                    ("digit2" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [41404 41425])
+                    ("digit1" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [41426 41447])
+                    ("digit0" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [41448 41469]))                  
+                :type "int")
+                nil [41342 41772]))          
+    :file "OpenInterface.cpp"
+    :pointmax 41782
+    :fsize 41782
+    :lastmodtime '(21508 16816 323135 140000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!yuta!Downloads!roomba_500_node!roomba_500_series!src!iRobot!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

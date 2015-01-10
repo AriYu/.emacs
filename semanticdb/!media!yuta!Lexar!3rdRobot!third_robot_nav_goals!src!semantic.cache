@@ -1,0 +1,279 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "hmn_detect.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("ros/ros.h" include (:system-flag t) nil [190 210])
+            ("move_base_msgs/MoveBaseAction.h" include (:system-flag t) nil [211 253])
+            ("actionlib/client/simple_action_client.h" include (:system-flag t) nil [254 304])
+            ("iostream" include (:system-flag t) nil [306 325])
+            ("string" include (:system-flag t) nil [326 343])
+            ("sstream" include (:system-flag t) nil [344 362])
+            ("fstream" include (:system-flag t) nil [363 381])
+            ("boost/tokenizer.hpp" include (:system-flag t) nil [382 412])
+            ("boost/shared_array.hpp" include (:system-flag t) nil [413 446])
+            ("sound/sound_service.h" include nil nil [448 480])
+            ("rospeex_if/rospeex.h" include nil nil [481 512])
+            ("MoveBaseClient" type
+               (:typedef ("actionlib::SimpleActionClient" type
+                     (:template-specifier 
+                        ( ("move_base_msgs::MoveBaseAction" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "actionlib::SimpleActionClient"
+                :type "typedef")
+                nil [514 599])
+            ("tokenizer" type
+               (:typedef ("boost::tokenizer" type
+                     (:template-specifier 
+                        ( ("boost::char_separator" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "boost::tokenizer"
+                :type "typedef")
+                nil [601 666])
+            ("NAVIGATING" variable (:constant-flag t) nil [676 686])
+            ("NEARGOAL" variable (:constant-flag t) nil [698 706])
+            ("INITNAVI" variable (:constant-flag t) nil [718 726])
+            ("HUMAN_DETECTED" variable (:constant-flag t) nil [738 752])
+            ("calculateDistance" function
+               (:arguments 
+                  ( ("target_x" variable (:type "double") (reparse-symbol arg-sub-list) [782 798])
+                    ("target_y" variable (:type "double") (reparse-symbol arg-sub-list) [799 816])
+                    ("now_x" variable (:type "double") (reparse-symbol arg-sub-list) [817 830])
+                    ("now_y" variable (:type "double") (reparse-symbol arg-sub-list) [831 844]))                  
+                :type "double")
+                nil [757 922])
+            ("MyMoveBaseClient" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [950 957])
+                    ("HmndtctReceived" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("hmn_dtct" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("geometry_msgs::Point::ConstPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [981 1028]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [960 1029])
+                    ("public" label nil (reparse-symbol classsubparts) [1030 1037])
+                    ("MyMoveBaseClient" function
+                       (:constructor-flag t
+                        :type ("MyMoveBaseClient" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1040 2034])
+                    ("sendNewGoal" function (:type "void") (reparse-symbol classsubparts) [2038 2526])
+                    ("doneCb" function
+                       (:arguments 
+                          ( ("state" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("actionlib::SimpleClientGoalState" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2542 2588]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2530 2735])
+                    ("activeCb" function (:type "void") (reparse-symbol classsubparts) [2785 2844])
+                    ("feedbackCb" function
+                       (:arguments 
+                          ( ("feedback" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("move_base_msgs::MoveBaseFeedbackConstPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2922 2979]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2906 3486])
+                    ("checkDetectionArea" function
+                       (:arguments 
+                          ( ("number" variable (:type "int") (reparse-symbol arg-sub-list) [3515 3526]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3491 3695])
+                    ("cancelGoal" function (:type "void") (reparse-symbol classsubparts) [3699 3781])
+                    ("readWaypoint" function
+                       (:arguments 
+                          ( ("filename" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3802 3823]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3785 4979])
+                    ("speakWaypointsNumber" function
+                       (:arguments 
+                          ( ("num" variable (:type "int") (reparse-symbol arg-sub-list) [5009 5017]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4983 5217])
+                    ("run" function (:type "void") (reparse-symbol classsubparts) [5222 5953])
+                    ("private" label nil (reparse-symbol classsubparts) [5955 5963])
+                    ("ac" variable (:type ("MoveBaseClient" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5966 5984])
+                    ("stasis" variable (:type "int") (reparse-symbol classsubparts) [5987 5998])
+                    ("target_num" variable (:type "int") (reparse-symbol classsubparts) [6001 6016])
+                    ("finish_num" variable (:type "int") (reparse-symbol classsubparts) [6019 6034])
+                    ("rate" variable (:type ("ros::Rate" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6037 6052])
+                    ("goals" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("move_base_msgs::MoveBaseGoal" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [6055 6103])
+                    ("nh" variable (:type ("ros::NodeHandle" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6107 6126])
+                    ("client" variable (:type ("ros::ServiceClient" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6129 6155])
+                    ("srv" variable (:type ("sound::sound_service" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6158 6183])
+                    ("hmn_dtct_sub" variable (:type ("ros::Subscriber" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6186 6215])
+                    ("stasis_mutex_" variable (:type ("boost::mutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6221 6248])
+                    ("detectcheck" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [6252 6281]))                  
+                :type "class")
+                nil [925 6285])
+            ("HmndtctReceived" function
+               (:parent "MyMoveBaseClient"
+                :arguments 
+                  ( ("hmn_dtct" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("geometry_msgs::Point::ConstPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6326 6373]))                  
+                :type "void")
+                nil [6287 6549])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [6562 6571])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6572 6584]))                  
+                :type "int")
+                nil [6553 6744]))          
+    :file "hmn_detect.cpp"
+    :pointmax 6745
+    :fsize 6782
+    :lastmodtime '(21594 6236 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("NAVIGATING" . ((number "0" 688 . 689)))
+          ("NEARGOAL" . ((number "1" 708 . 709)))
+          ("INITNAVI" . ((number "2" 728 . 729)))
+          ("HUMAN_DETECTED" . ((number "3" 754 . 755)))
+          )
+
+    )
+   (semanticdb-table "third_robot_send_goals.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("ros/ros.h" include (:system-flag t) nil [191 211])
+            ("move_base_msgs/MoveBaseAction.h" include (:system-flag t) nil [212 254])
+            ("actionlib/client/simple_action_client.h" include (:system-flag t) nil [255 305])
+            ("iostream" include (:system-flag t) nil [307 326])
+            ("string" include (:system-flag t) nil [327 344])
+            ("sstream" include (:system-flag t) nil [345 363])
+            ("fstream" include (:system-flag t) nil [364 382])
+            ("boost/tokenizer.hpp" include (:system-flag t) nil [383 413])
+            ("boost/shared_array.hpp" include (:system-flag t) nil [414 447])
+            ("MoveBaseClient" type
+               (:typedef ("actionlib::SimpleActionClient" type
+                     (:template-specifier 
+                        ( ("move_base_msgs::MoveBaseAction" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "actionlib::SimpleActionClient"
+                :type "typedef")
+                nil [521 606])
+            ("tokenizer" type
+               (:typedef ("boost::tokenizer" type
+                     (:template-specifier 
+                        ( ("boost::char_separator" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "boost::tokenizer"
+                :type "typedef")
+                nil [608 673])
+            ("NAVIGATING" variable (:constant-flag t) nil [683 693])
+            ("NEARGOAL" variable (:constant-flag t) nil [705 713])
+            ("INITNAVI" variable (:constant-flag t) nil [725 733])
+            ("calculateDistance" function
+               (:arguments 
+                  ( ("target_x" variable (:type "double") (reparse-symbol arg-sub-list) [764 780])
+                    ("target_y" variable (:type "double") (reparse-symbol arg-sub-list) [781 798])
+                    ("now_x" variable (:type "double") (reparse-symbol arg-sub-list) [799 812])
+                    ("now_y" variable (:type "double") (reparse-symbol arg-sub-list) [813 826]))                  
+                :type "double")
+                nil [739 904])
+            ("MyMoveBaseClient" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [932 939])
+                    ("MyMoveBaseClient" function
+                       (:constructor-flag t
+                        :type ("MyMoveBaseClient" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [942 1672])
+                    ("sendNewGoal" function (:type "void") (reparse-symbol classsubparts) [1676 2164])
+                    ("doneCb" function
+                       (:arguments 
+                          ( ("state" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("actionlib::SimpleClientGoalState" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2180 2226]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2168 2320])
+                    ("activeCb" function (:type "void") (reparse-symbol classsubparts) [2370 2429])
+                    ("feedbackCb" function
+                       (:arguments 
+                          ( ("feedback" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("move_base_msgs::MoveBaseFeedbackConstPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2507 2564]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2491 3273])
+                    ("getStasis" function (:type "int") (reparse-symbol classsubparts) [3277 3313])
+                    ("cancelGoal" function (:type "void") (reparse-symbol classsubparts) [3317 3397])
+                    ("readWaypoint" function
+                       (:arguments 
+                          ( ("filename" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3418 3439]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3401 4647])
+                    ("speakWaypointsNumber" function
+                       (:arguments 
+                          ( ("num" variable (:type "int") (reparse-symbol arg-sub-list) [4677 4685]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4651 4891])
+                    ("run" function (:type "void") (reparse-symbol classsubparts) [4895 5262])
+                    ("private" label nil (reparse-symbol classsubparts) [5264 5272])
+                    ("ac" variable (:type ("MoveBaseClient" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5275 5293])
+                    ("stasis" variable (:type "int") (reparse-symbol classsubparts) [5296 5307])
+                    ("target_num" variable (:type "int") (reparse-symbol classsubparts) [5310 5325])
+                    ("finish_num" variable (:type "int") (reparse-symbol classsubparts) [5328 5343])
+                    ("rate" variable (:type ("ros::Rate" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5346 5361])
+                    ("goals" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("move_base_msgs::MoveBaseGoal" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [5364 5412])
+                    ("nh" variable (:type ("ros::NodeHandle" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5416 5435]))                  
+                :type "class")
+                nil [907 5501])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [5513 5522])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5523 5535]))                  
+                :type "int")
+                nil [5504 5684]))          
+    :file "third_robot_send_goals.cpp"
+    :pointmax 5685
+    :fsize 5698
+    :lastmodtime '(21607 63884 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("NAVIGATING" . ((number "0" 695 . 696)))
+          ("NEARGOAL" . ((number "1" 715 . 716)))
+          ("INITNAVI" . ((number "2" 735 . 736)))
+          )
+
+    )
+   )
+  :file "!media!yuta!Lexar!3rdRobot!third_robot_nav_goals!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

@@ -1,0 +1,427 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "main.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("fstream" include (:system-flag t) nil [21 39])
+            ("cmath" include (:system-flag t) nil [40 56])
+            ("random" include (:system-flag t) nil [57 74])
+            ("chrono" include (:system-flag t) nil [75 92])
+            ("cv.h" include (:system-flag t) nil [93 108])
+            ("highgui.h" include (:system-flag t) nil [125 145])
+            ("cvaux.h" include (:system-flag t) nil [157 175])
+            ("cxcore.h" include (:system-flag t) nil [189 208])
+            ("../include/ParticleFilter.h" include nil nil [221 259])
+            ("../include/ExtendedKalmanFilter.h" include nil nil [260 304])
+            ("../include/KalmanFilter.h" include nil nil [305 341])
+            ("../include/RootMeanSquareError.h" include nil nil [342 385])
+            ("DATAOUTPUT" variable (:constant-flag t) nil [396 406])
+            ("NumOfParticle" variable (:constant-flag t) nil [416 429])
+            ("NumOfIterate" variable (:constant-flag t) nil [442 454])
+            ("STATE_EQN_MODE" variable (:constant-flag t) nil [467 481])
+            ("STATE_EQN_MODE" variable (:constant-flag t) nil [467 481])
+            ("STATE_EQN_MODE" variable (:constant-flag t) nil [467 481])
+            ("OBS_EQN_MODE" variable (:constant-flag t) nil [492 504])
+            ("OBS_EQN_MODE" variable (:constant-flag t) nil [492 504])
+            ("SAMPLING_TIME" variable (:constant-flag t) nil [529 542])
+            ("TIME_CONSTANT" variable (:constant-flag t) nil [556 569])
+            ("SYSTEM_GAIN" variable (:constant-flag t) nil [583 594])
+            ("STEP_GAIN" variable (:constant-flag t) nil [607 616])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [622 642])
+            ("state_equation" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("x_old" variable (:type "double") (reparse-symbol arg-sub-list) [666 679])
+                    ("i" variable (:type "double") (reparse-symbol arg-sub-list) [680 689]))                  
+                :type "double")
+                nil [644 690])
+            ("observation_equation" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("x" variable (:type "double") (reparse-symbol arg-sub-list) [719 728]))                  
+                :type "double")
+                nil [691 729])
+            ("state_diff_equation" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("x_old" variable (:type "double") (reparse-symbol arg-sub-list) [757 770])
+                    ("i" variable (:type "double") (reparse-symbol arg-sub-list) [771 780]))                  
+                :type "double")
+                nil [730 781])
+            ("observation_diff_equation" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("x" variable (:type "double") (reparse-symbol arg-sub-list) [815 824]))                  
+                :type "double")
+                nil [782 825])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [836 841]))                  
+                :type "int")
+                nil [827 9322])
+            ("state_equation" function
+               (:arguments 
+                  ( ("x_old" variable (:type "double") (reparse-symbol arg-sub-list) [9346 9359])
+                    ("i" variable (:type "double") (reparse-symbol arg-sub-list) [9360 9369]))                  
+                :type "double")
+                nil [9324 9838])
+            ("state_diff_equation" function
+               (:arguments 
+                  ( ("x_old" variable (:type "double") (reparse-symbol arg-sub-list) [9867 9880])
+                    ("i" variable (:type "double") (reparse-symbol arg-sub-list) [9881 9890]))                  
+                :type "double")
+                nil [9840 10303])
+            ("observation_equation" function
+               (:arguments 
+                  ( ("x" variable (:type "double") (reparse-symbol arg-sub-list) [10333 10342]))                  
+                :type "double")
+                nil [10305 10614])
+            ("observation_diff_equation" function
+               (:arguments 
+                  ( ("x" variable (:type "double") (reparse-symbol arg-sub-list) [10649 10658]))                  
+                :type "double")
+                nil [10616 10926]))          
+    :file "main.cpp"
+    :pointmax 10927
+    :fsize 10934
+    :lastmodtime '(21665 3836 650591 426000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("NumOfIterate" . ((number "500" 455 . 458)))
+          ("TIME_CONSTANT" . ((number "1.0" 571 . 574)))
+          ("SYSTEM_GAIN" . ((number "1.0" 596 . 599)))
+          ("NumOfParticle" . ((number "100" 430 . 433)))
+          ("STATE_EQN_MODE" . ((number "1" 482 . 483)))
+          ("OBS_EQN_MODE" . ((symbol "STATE_EQN_MODE" 506 . 520)))
+          ("STEP_GAIN" . ((number "1.0" 618 . 621)))
+          ("DATAOUTPUT")
+          ("SAMPLING_TIME" . ((number "0.01" 544 . 548)))
+          )
+
+    )
+   (semanticdb-table "ParticleFilter.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("../include/ParticleFilter.h" include nil nil [1 39])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [42 62])
+            ("rand_init_flag" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [64 94])
+            ("PFilter" function
+               (:constructor-flag t
+                :parent "PFilter"
+                :type ("PFilter" type (:type "class") nil nil))
+                nil [108 130])
+            ("PFilter" function
+               (:constructor-flag t
+                :parent "PFilter"
+                :arguments 
+                  ( ("num" variable (:type "int") (reparse-symbol arg-sub-list) [149 157])
+                    ("variance1" variable (:type "double") (reparse-symbol arg-sub-list) [158 175])
+                    ("likehood" variable (:type "double") (reparse-symbol arg-sub-list) [176 192])
+                    ("" variable (:type "double") (reparse-symbol arg-sub-list) [193 212])
+                    ("" variable (:type "double") (reparse-symbol arg-sub-list) [230 247]))                  
+                :type ("PFilter" type (:type "class") nil nil))
+                nil [132 765])
+            ("PFilter" function
+               (:destructor-flag t
+                :parent "PFilter"
+                :type "void")
+                nil [767 790])
+            ("SetNoiseParam" function
+               (:parent "PFilter"
+                :arguments 
+                  ( ("mean_s" variable (:type "double") (reparse-symbol arg-sub-list) [820 834])
+                    ("variance_s" variable (:type "double") (reparse-symbol arg-sub-list) [835 853])
+                    ("mean_w" variable (:type "double") (reparse-symbol arg-sub-list) [854 868])
+                    ("variance_w" variable (:type "double") (reparse-symbol arg-sub-list) [869 887]))                  
+                :type "void")
+                nil [792 1007])
+            ("Sampling" function
+               (:parent "PFilter"
+                :arguments 
+                  ( ("delta_t" variable (:type "double") (reparse-symbol arg-sub-list) [1031 1046]))                  
+                :type "void")
+                nil [1008 1348])
+            ("CalcLikehood" function
+               (:parent "PFilter"
+                :arguments 
+                  ( ("observed" variable (:type "double") (reparse-symbol arg-sub-list) [1377 1393]))                  
+                :type "void")
+                nil [1350 1852])
+            ("Resampling" function
+               (:parent "PFilter"
+                :type "void")
+                nil [1854 2798])
+            ("GetPredictiveX" function
+               (:parent "PFilter"
+                :arguments 
+                  ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [2831 2837]))                  
+                :type "double")
+                nil [2800 2871])
+            ("GetPosteriorX" function
+               (:parent "PFilter"
+                :arguments 
+                  ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [2902 2908]))                  
+                :type "double")
+                nil [2872 2942])
+            ("GetMMSE" function
+               (:parent "PFilter"
+                :type "double")
+                nil [2943 3112])
+            ("GetWeight" function
+               (:parent "PFilter"
+                :arguments 
+                  ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [3140 3146]))                  
+                :type "double")
+                nil [3114 3185])
+            ("GetMaxWeightX" function
+               (:parent "PFilter"
+                :type "double")
+                nil [3187 3469])
+            ("bm_rand" function
+               (:arguments 
+                  ( ("sigma" variable (:type "double") (reparse-symbol arg-sub-list) [3831 3844])
+                    ("m" variable (:type "double") (reparse-symbol arg-sub-list) [3845 3854]))                  
+                :type "double")
+                nil [3816 4066])
+            ("bm_rand_v2" function
+               (:arguments 
+                  ( ("sigma" variable (:type "double") (reparse-symbol arg-sub-list) [4086 4099])
+                    ("m" variable (:type "double") (reparse-symbol arg-sub-list) [4100 4109]))                  
+                :type "double")
+                nil [4068 4425])
+            ("GetRandom" function
+               (:arguments 
+                  ( ("min" variable (:type "double") (reparse-symbol arg-sub-list) [4444 4455])
+                    ("max" variable (:type "double") (reparse-symbol arg-sub-list) [4456 4467]))                  
+                :type "double")
+                nil [4427 4623])
+            ("logsumexp" function
+               (:arguments 
+                  ( ("x" variable (:type "double") (reparse-symbol arg-sub-list) [4642 4651])
+                    ("y" variable (:type "double") (reparse-symbol arg-sub-list) [4652 4661])
+                    ("flg" variable (:type "bool") (reparse-symbol arg-sub-list) [4662 4671]))                  
+                :type "double")
+                nil [4625 5038])
+            ("ViterbiMapEstimation" function
+               (:constructor-flag t
+                :parent "ViterbiMapEstimation"
+                :arguments 
+                  ( ("num" variable (:type "int") (reparse-symbol arg-sub-list) [5083 5091])
+                    ("ss" variable (:type "double") (reparse-symbol arg-sub-list) [5092 5102])
+                    ("" variable (:type "double") (reparse-symbol arg-sub-list) [5147 5166])
+                    ("" variable (:type "double") (reparse-symbol arg-sub-list) [5227 5244]))                  
+                :type ("ViterbiMapEstimation" type (:type "class") nil nil))
+                nil [5040 5648])
+            ("ViterbiMapEstimation" function
+               (:destructor-flag t
+                :parent "ViterbiMapEstimation"
+                :type "void")
+                nil [5650 5699])
+            ("SetNoiseParam" function
+               (:parent "ViterbiMapEstimation"
+                :arguments 
+                  ( ("mean_s" variable (:type "double") (reparse-symbol arg-sub-list) [5741 5755])
+                    ("variance_s" variable (:type "double") (reparse-symbol arg-sub-list) [5756 5774])
+                    ("mean_w" variable (:type "double") (reparse-symbol arg-sub-list) [5775 5789])
+                    ("variance_w" variable (:type "double") (reparse-symbol arg-sub-list) [5790 5808]))                  
+                :type "void")
+                nil [5700 5928])
+            ("Initialization" function
+               (:parent "ViterbiMapEstimation"
+                :arguments 
+                  ( ("pfilter" variable
+                       (:reference 1
+                        :type ("PFilter" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5972 5989])
+                    ("obs_y" variable (:type "double") (reparse-symbol arg-sub-list) [5990 6003]))                  
+                :type "void")
+                nil [5930 6666])
+            ("Recursion" function
+               (:parent "ViterbiMapEstimation"
+                :arguments 
+                  ( ("t" variable (:type "double") (reparse-symbol arg-sub-list) [6705 6714])
+                    ("pfilter" variable
+                       (:reference 1
+                        :type ("PFilter" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6715 6732])
+                    ("obs_y" variable (:type "double") (reparse-symbol arg-sub-list) [6733 6746]))                  
+                :type "void")
+                nil [6668 8076])
+            ("GetEstimation" function
+               (:parent "ViterbiMapEstimation"
+                :arguments 
+                  ( ("t" variable (:type "double") (reparse-symbol arg-sub-list) [8121 8130]))                  
+                :type "double")
+                nil [8078 8737])
+            ("GetEstimationAlpha" function
+               (:parent "ViterbiMapEstimation"
+                :arguments 
+                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [8788 8794]))                  
+                :type "double")
+                nil [8740 9820])
+            ("Backtracking" function
+               (:parent "ViterbiMapEstimation"
+                :arguments 
+                  ( ("t" variable (:type "int") (reparse-symbol arg-sub-list) [9863 9869]))                  
+                :type "void")
+                nil [9823 9997])
+            ("GetBacktrackingEstimation" function
+               (:parent "ViterbiMapEstimation"
+                :arguments 
+                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [10054 10060]))                  
+                :type "double")
+                nil [9999 10087])
+            ("pfMAP" function
+               (:constructor-flag t
+                :parent "pfMAP"
+                :arguments 
+                  ( ("" variable (:type "double") (reparse-symbol arg-sub-list) [10102 10121])
+                    ("" variable (:type "double") (reparse-symbol arg-sub-list) [10139 10156]))                  
+                :type ("pfMAP" type (:type "class") nil nil))
+                nil [10089 10225])
+            ("pfMAP" function
+               (:destructor-flag t
+                :parent "pfMAP"
+                :type "void")
+                nil [10227 10246])
+            ("SetNoiseParam" function
+               (:parent "pfMAP"
+                :arguments 
+                  ( ("mean_s" variable (:type "double") (reparse-symbol arg-sub-list) [10274 10288])
+                    ("variance_s" variable (:type "double") (reparse-symbol arg-sub-list) [10289 10307])
+                    ("mean_w" variable (:type "double") (reparse-symbol arg-sub-list) [10308 10322])
+                    ("variance_w" variable (:type "double") (reparse-symbol arg-sub-list) [10323 10341]))                  
+                :type "void")
+                nil [10248 10461])
+            ("Initialization" function
+               (:parent "pfMAP"
+                :arguments 
+                  ( ("pfilter" variable
+                       (:reference 1
+                        :type ("PFilter" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10490 10507]))                  
+                :type "void")
+                nil [10463 10539])
+            ("GetEstimation" function
+               (:parent "pfMAP"
+                :arguments 
+                  ( ("pfilter" variable
+                       (:reference 1
+                        :type ("PFilter" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10569 10586])
+                    ("t" variable (:type "double") (reparse-symbol arg-sub-list) [10587 10596])
+                    ("obs_y" variable (:type "double") (reparse-symbol arg-sub-list) [10597 10610]))                  
+                :type "double")
+                nil [10541 11703]))          
+    :file "ParticleFilter.cpp"
+    :pointmax 11705
+    :fsize 11862
+    :lastmodtime '(21580 41517 559448 980000)
+    :unmatched-syntax '((semantic-list 10156 . 10164) (semantic-list 10146 . 10156) (semantic-list 10121 . 10137) (semantic-list 10109 . 10121) (semantic-list 5244 . 5252) (semantic-list 5234 . 5244) (semantic-list 5166 . 5182) (semantic-list 5154 . 5166) (semantic-list 247 . 255) (semantic-list 237 . 247) (semantic-list 212 . 228) (semantic-list 200 . 212))
+    )
+   (semanticdb-table "ExtendedKalmanFilter.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("../include/ExtendedKalmanFilter.h" include nil nil [1 45])
+            ("EKFilter" function
+               (:constructor-flag t
+                :parent "EKFilter"
+                :arguments 
+                  ( ("" variable (:type "double") (reparse-symbol arg-sub-list) [66 85])
+                    ("" variable (:type "double") (reparse-symbol arg-sub-list) [103 127])
+                    ("" variable (:type "double") (reparse-symbol arg-sub-list) [145 162])
+                    ("" variable (:type "double") (reparse-symbol arg-sub-list) [172 194])
+                    ("x_hat0" variable (:type "double") (reparse-symbol arg-sub-list) [204 218])
+                    ("p0" variable (:type "double") (reparse-symbol arg-sub-list) [219 229]))                  
+                :type ("EKFilter" type (:type "class") nil nil))
+                nil [47 405])
+            ("EKFilter" function
+               (:destructor-flag t
+                :parent "EKFilter"
+                :type "void")
+                nil [406 431])
+            ("SetNoiseParam" function
+               (:parent "EKFilter"
+                :arguments 
+                  ( ("variance_s" variable (:type "double") (reparse-symbol arg-sub-list) [462 480])
+                    ("variance_w" variable (:type "double") (reparse-symbol arg-sub-list) [481 499]))                  
+                :type "void")
+                nil [433 550])
+            ("Calc" function
+               (:parent "EKFilter"
+                :arguments 
+                  ( ("delta_t" variable (:type "double") (reparse-symbol arg-sub-list) [637 652])
+                    ("obs_y" variable (:type "double") (reparse-symbol arg-sub-list) [653 666]))                  
+                :type "void")
+                nil [617 1065])
+            ("GetEstimation" function
+               (:parent "EKFilter"
+                :type "double")
+                nil [1066 1120]))          
+    :file "ExtendedKalmanFilter.cpp"
+    :pointmax 1121
+    :fsize 1120
+    :lastmodtime '(21578 36312 719482 321000)
+    :unmatched-syntax '((semantic-list 194 . 202) (semantic-list 179 . 194) (semantic-list 162 . 170) (semantic-list 152 . 162) (semantic-list 127 . 143) (semantic-list 110 . 127) (semantic-list 85 . 101) (semantic-list 73 . 85))
+    )
+   (semanticdb-table "KalmanFilter.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("../include/KalmanFilter.h" include nil nil [1 37])
+            ("KalmanFilter" function
+               (:constructor-flag t
+                :parent "KalmanFilter"
+                :arguments 
+                  ( ("A" variable (:type "double") (reparse-symbol arg-sub-list) [66 75])
+                    ("b" variable (:type "double") (reparse-symbol arg-sub-list) [76 85])
+                    ("c" variable (:type "double") (reparse-symbol arg-sub-list) [86 95])
+                    ("x_hat0" variable (:type "double") (reparse-symbol arg-sub-list) [96 110])
+                    ("p0" variable (:type "double") (reparse-symbol arg-sub-list) [111 121]))                  
+                :type ("KalmanFilter" type (:type "class") nil nil))
+                nil [39 193])
+            ("KalmanFilter" function
+               (:destructor-flag t
+                :parent "KalmanFilter"
+                :type "void")
+                nil [194 227])
+            ("SetNoiseParam" function
+               (:parent "KalmanFilter"
+                :arguments 
+                  ( ("variance_s" variable (:type "double") (reparse-symbol arg-sub-list) [262 280])
+                    ("variance_w" variable (:type "double") (reparse-symbol arg-sub-list) [281 299]))                  
+                :type "void")
+                nil [229 350])
+            ("Calc" function
+               (:parent "KalmanFilter"
+                :arguments 
+                  ( ("input" variable (:type "double") (reparse-symbol arg-sub-list) [445 458])
+                    ("obs_y" variable (:type "double") (reparse-symbol arg-sub-list) [459 472]))                  
+                :type "void")
+                nil [421 773])
+            ("GetEstimation" function
+               (:parent "KalmanFilter"
+                :type "double")
+                nil [774 832]))          
+    :file "KalmanFilter.cpp"
+    :pointmax 856
+    :fsize 832
+    :lastmodtime '(21580 19978 911728 76000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!yuta!Soucecode!particle_filter!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

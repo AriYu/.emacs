@@ -1,0 +1,248 @@
+;; Object ParticleFilter_v1.0/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ParticleFilter_v1.0/"
+  :tables (list 
+   (semanticdb-table "main.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("fstream" include (:system-flag t) nil [21 39])
+            ("cmath" include (:system-flag t) nil [40 56])
+            ("random" include (:system-flag t) nil [57 74])
+            ("chrono" include (:system-flag t) nil [75 92])
+            ("cv.h" include (:system-flag t) nil [93 108])
+            ("highgui.h" include (:system-flag t) nil [125 145])
+            ("cvaux.h" include (:system-flag t) nil [157 175])
+            ("cxcore.h" include (:system-flag t) nil [189 208])
+            ("ParticleFilter.h" include nil nil [221 248])
+            ("ExtendedKalmanFilter.h" include nil nil [249 282])
+            ("DATAOUTPUT" variable (:constant-flag t) nil [292 302])
+            ("NumOfParticle" variable (:constant-flag t) nil [312 325])
+            ("NumOfIterate" variable (:constant-flag t) nil [339 351])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [355 375])
+            ("state_equation" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("x_old" variable (:type "double") (reparse-symbol arg-sub-list) [399 412])
+                    ("i" variable (:type "double") (reparse-symbol arg-sub-list) [413 422]))                  
+                :type "double")
+                nil [377 423])
+            ("observation_equation" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("x" variable (:type "double") (reparse-symbol arg-sub-list) [452 461]))                  
+                :type "double")
+                nil [424 462])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [473 478]))                  
+                :type "int")
+                nil [464 5838])
+            ("state_equation" function
+               (:arguments 
+                  ( ("x_old" variable (:type "double") (reparse-symbol arg-sub-list) [5861 5874])
+                    ("i" variable (:type "double") (reparse-symbol arg-sub-list) [5875 5884]))                  
+                :type "double")
+                nil [5839 6021])
+            ("observation_equation" function
+               (:arguments 
+                  ( ("x" variable (:type "double") (reparse-symbol arg-sub-list) [6051 6060]))                  
+                :type "double")
+                nil [6023 6119]))          
+    :file "main.cpp"
+    :pointmax 6120
+    :fsize 6127
+    :lastmodtime '(21554 6472 531655 963000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("NumOfIterate" . ((number "50" 352 . 354)))
+          ("NumOfParticle" . ((number "1000" 326 . 330)))
+          ("DATAOUTPUT")
+          )
+
+    )
+   (semanticdb-table "ParticleFilter.h"
+    :file "ParticleFilter.h"
+    :fsize 2835
+    :lastmodtime '(21490 46606 0 0)
+    )
+   (semanticdb-table "ExtendedKalmanFilter.h"
+    :file "ExtendedKalmanFilter.h"
+    :fsize 891
+    :lastmodtime '(21490 46606 0 0)
+    )
+   (semanticdb-table "ParticleFilter.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("ParticleFilter.h" include nil nil [1 28])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [31 51])
+            ("rand_init_flag" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [53 83])
+            ("PFilter" function
+               (:constructor-flag t
+                :parent "PFilter"
+                :arguments 
+                  ( ("num" variable (:type "int") (reparse-symbol arg-sub-list) [114 122])
+                    ("variance1" variable (:type "double") (reparse-symbol arg-sub-list) [123 140])
+                    ("" variable (:type "double") (reparse-symbol arg-sub-list) [141 160])
+                    ("" variable (:type "double") (reparse-symbol arg-sub-list) [178 195]))                  
+                :type ("PFilter" type (:type "class") nil nil))
+                nil [97 667])
+            ("PFilter" function
+               (:destructor-flag t
+                :parent "PFilter"
+                :type "void")
+                nil [669 748])
+            ("SetNoisePara" function
+               (:parent "PFilter"
+                :arguments 
+                  ( ("mean_s" variable (:type "double") (reparse-symbol arg-sub-list) [776 790])
+                    ("variance_s" variable (:type "double") (reparse-symbol arg-sub-list) [791 809])
+                    ("mean_w" variable (:type "double") (reparse-symbol arg-sub-list) [810 824])
+                    ("variance_w" variable (:type "double") (reparse-symbol arg-sub-list) [825 843]))                  
+                :type "void")
+                nil [749 963])
+            ("Sampling" function
+               (:parent "PFilter"
+                :arguments 
+                  ( ("delta_t" variable (:type "double") (reparse-symbol arg-sub-list) [987 1002]))                  
+                :type "void")
+                nil [964 1304])
+            ("CalcLikehood" function
+               (:parent "PFilter"
+                :arguments 
+                  ( ("observed" variable (:type "double") (reparse-symbol arg-sub-list) [1333 1349])
+                    ("ss" variable (:type "double") (reparse-symbol arg-sub-list) [1350 1360]))                  
+                :type "void")
+                nil [1306 1907])
+            ("Resampling" function
+               (:parent "PFilter"
+                :type "void")
+                nil [1909 2671])
+            ("GetPredictiveX" function
+               (:parent "PFilter"
+                :arguments 
+                  ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [2704 2710]))                  
+                :type "double")
+                nil [2673 2744])
+            ("GetPosteriorX" function
+               (:parent "PFilter"
+                :arguments 
+                  ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [2775 2781]))                  
+                :type "double")
+                nil [2745 2815])
+            ("GetMMSE" function
+               (:parent "PFilter"
+                :type "double")
+                nil [2816 2985])
+            ("GetWeight" function
+               (:parent "PFilter"
+                :arguments 
+                  ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [3013 3019]))                  
+                :type "double")
+                nil [2987 3058])
+            ("GetMaxWeightX" function
+               (:parent "PFilter"
+                :type "double")
+                nil [3060 3321])
+            ("bm_rand" function
+               (:arguments 
+                  ( ("sigma" variable (:type "double") (reparse-symbol arg-sub-list) [3683 3696])
+                    ("m" variable (:type "double") (reparse-symbol arg-sub-list) [3697 3706]))                  
+                :type "double")
+                nil [3668 3918])
+            ("bm_rand_v2" function
+               (:arguments 
+                  ( ("sigma" variable (:type "double") (reparse-symbol arg-sub-list) [3938 3951])
+                    ("m" variable (:type "double") (reparse-symbol arg-sub-list) [3952 3961]))                  
+                :type "double")
+                nil [3920 4277])
+            ("GetRandom" function
+               (:arguments 
+                  ( ("min" variable (:type "double") (reparse-symbol arg-sub-list) [4296 4307])
+                    ("max" variable (:type "double") (reparse-symbol arg-sub-list) [4308 4319]))                  
+                :type "double")
+                nil [4279 4475])
+            ("logsumexp" function
+               (:arguments 
+                  ( ("x" variable (:type "double") (reparse-symbol arg-sub-list) [4494 4503])
+                    ("y" variable (:type "double") (reparse-symbol arg-sub-list) [4504 4513])
+                    ("flg" variable (:type "bool") (reparse-symbol arg-sub-list) [4514 4523]))                  
+                :type "double")
+                nil [4477 4888])
+            ("ViterbiMapEstimation" function
+               (:constructor-flag t
+                :parent "ViterbiMapEstimation"
+                :arguments 
+                  ( ("num" variable (:type "int") (reparse-symbol arg-sub-list) [4933 4941])
+                    ("ss" variable (:type "double") (reparse-symbol arg-sub-list) [4942 4952])
+                    ("" variable (:type "double") (reparse-symbol arg-sub-list) [4997 5016])
+                    ("" variable (:type "double") (reparse-symbol arg-sub-list) [5077 5094]))                  
+                :type ("ViterbiMapEstimation" type (:type "class") nil nil))
+                nil [4890 5361])
+            ("ViterbiMapEstimation" function
+               (:destructor-flag t
+                :parent "ViterbiMapEstimation"
+                :type "void")
+                nil [5363 5412])
+            ("SetNoisePara" function
+               (:parent "ViterbiMapEstimation"
+                :arguments 
+                  ( ("mean_s" variable (:type "double") (reparse-symbol arg-sub-list) [5453 5467])
+                    ("variance_s" variable (:type "double") (reparse-symbol arg-sub-list) [5468 5486])
+                    ("mean_w" variable (:type "double") (reparse-symbol arg-sub-list) [5487 5501])
+                    ("variance_w" variable (:type "double") (reparse-symbol arg-sub-list) [5502 5520]))                  
+                :type "void")
+                nil [5413 5640])
+            ("Initialization" function
+               (:parent "ViterbiMapEstimation"
+                :arguments 
+                  ( ("pfilter" variable (:type ("PFilter" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5684 5700])
+                    ("obs_y" variable (:type "double") (reparse-symbol arg-sub-list) [5701 5714]))                  
+                :type "void")
+                nil [5642 6358])
+            ("Recursion" function
+               (:parent "ViterbiMapEstimation"
+                :arguments 
+                  ( ("t" variable (:type "int") (reparse-symbol arg-sub-list) [6397 6403])
+                    ("pfilter" variable (:type ("PFilter" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6404 6420])
+                    ("obs_y" variable (:type "double") (reparse-symbol arg-sub-list) [6421 6434]))                  
+                :type "void")
+                nil [6360 7714])
+            ("GetEstimation" function
+               (:parent "ViterbiMapEstimation"
+                :arguments 
+                  ( ("t" variable (:type "int") (reparse-symbol arg-sub-list) [7759 7765]))                  
+                :type "double")
+                nil [7716 8118])
+            ("Backtracking" function
+               (:parent "ViterbiMapEstimation"
+                :arguments 
+                  ( ("t" variable (:type "int") (reparse-symbol arg-sub-list) [8160 8166]))                  
+                :type "void")
+                nil [8120 8294])
+            ("GetBacktrackingEstimation" function
+               (:parent "ViterbiMapEstimation"
+                :arguments 
+                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [8351 8357]))                  
+                :type "double")
+                nil [8296 8384]))          
+    :file "ParticleFilter.cpp"
+    :pointmax 8385
+    :fsize 8486
+    :lastmodtime '(21490 46606 0 0)
+    :unmatched-syntax '((semantic-list 5094 . 5102) (semantic-list 5084 . 5094) (semantic-list 5016 . 5032) (semantic-list 5004 . 5016) (semantic-list 195 . 203) (semantic-list 185 . 195) (semantic-list 160 . 176) (semantic-list 148 . 160))
+    )
+   )
+  :file "!home!yuta!Documents!Products!ParticleFilter_v1.0!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

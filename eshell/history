@@ -4,3 +4,5 @@ cp ../CMakeLists.txt .
 ls
 cmake .
 make
+ls
+ls -la

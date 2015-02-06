@@ -261,3 +261,10 @@
         ("-telnet" . "telnet")
         ("dict" . "OnlineDict")
         ("*WL:Message*" . "Wanderlust")))
+
+;; smartparent
+(smartparens-global-mode)
+;; [DEL]キーもしくは[C-h]に当てられているdelete-backward-charにadviceをかけられて削除するたびにフリーズする．これを無効化.
+(ad-disable-advice 'delete-backward-char 'before 'sp-delete-pair-advice)
+(ad-activate 'delete-backward-char)
+

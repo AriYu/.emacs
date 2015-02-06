@@ -6,3 +6,17 @@ cmake .
 make
 ls
 ls -la
+cd ~/Soucecode/ParticleFilterMat/
+ls
+cd ParticleFilter_in_VS/
+ls
+ls
+ls
+./test_PFM12 
+./test_PFM12 
+./test_PFM12 
+./test_PFM12 
+./test_PFM12 
+./test_PFM12 
+./test_PFM12 
+./test_PFM12 

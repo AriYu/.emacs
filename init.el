@@ -66,11 +66,16 @@
 
 
 
-;;;(add-to-list 'load-path "~/.emacs.d/")	
+;;;(add-to-list 'load-path "~/.emacs.d/")
+(require 'auto-complete)
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d//ac-dict")
 (ac-config-default)
-
+;; 情報源として
+    ;; * ac-source-filename
+    ;; * ac-source-words-in-same-mode-buffers
+    ;; を利用
+(setq-default ac-sources '(ac-source-filename ac-source-words-in-same-mode-buffers))
 (setq ac-auto-start 2) ;;;2文字以上で補完
 (setq ac-delay 0.05) ;;;0.05秒後に補完開始
 (setq ac-use-fuzzy t) ;;;曖昧補完

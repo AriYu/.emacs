@@ -145,13 +145,13 @@
 (when platform-linux-p ; for GNU/Linux
 ;;; inverse search
   (require 'dbus)
-
+  
   (defun un-urlify (fname-or-url)
 	"A trivial function that replaces a prefix of file:/// with just /."
 	(if (string= (substring fname-or-url 0 8) "file:///")
 		(substring fname-or-url 7)
 	  fname-or-url))
-
+  
   (defun evince-inverse-search (file linecol &rest ignored)
 	(let* ((fname (un-urlify file))
 		   (buf (find-file fname))
@@ -163,7 +163,7 @@
 		(goto-line (car linecol))
 		(unless (= col -1)
 		  (move-to-column col)))))
-
+  
   (dbus-register-signal
    :session nil "/org/gnome/evince/Window/0"
    "org.gnome.evince.Window" "SyncSource"
@@ -273,3 +273,7 @@
 (ad-disable-advice 'delete-backward-char 'before 'sp-delete-pair-advice)
 (ad-activate 'delete-backward-char)
 
+;; gnuplot-mode
+(require 'gnuplot-mode)
+(setq auto-mode-alist 
+(append '(("\\.\\(gp\\|gnuplot\\|plt\\)$" . gnuplot-mode)) auto-mode-alist))

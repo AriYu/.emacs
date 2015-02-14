@@ -36,6 +36,9 @@ emacsの中でpdfを綺麗に開ける．検索とかダブルクリックでソ
 # Required
 - Ricty（フォント）
 
+# TODO
+- forward search(yatex + pdf-tools)の設定．
+
 # Note
 - Cocoaだとダメっぽい. Portsでインストールしたemacsなら可能.
 - package lists にはおそらく抜けがある．

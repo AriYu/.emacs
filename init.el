@@ -289,3 +289,5 @@
 			))
 ;; pdf-tools
 (pdf-tools-install)
+;;(setq revert-without-query 'yes)
+(add-hook 'doc-view-mode-hook 'auto-revert-mode)

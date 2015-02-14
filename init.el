@@ -277,3 +277,15 @@
 (require 'gnuplot-mode)
 (setq auto-mode-alist 
 (append '(("\\.\\(gp\\|gnuplot\\|plt\\)$" . gnuplot-mode)) auto-mode-alist))
+
+;; doc-view-modeのときに行番号を表示すると非常に重たい
+(add-hook 'doc-view-mode-hook
+		  (lambda ()
+			(linum-mode -1)
+			))
+(add-hook 'pdf-view-mode-hook
+		  (lambda ()
+			(linum-mode -1)
+			))
+;; pdf-tools
+(pdf-tools-install)

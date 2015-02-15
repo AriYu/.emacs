@@ -1,4 +1,4 @@
-(add-to-list 'load-path "~/.emacs.d/")
+(add-to-list 'load-path "~/.emacs.d/lisp")
 ;;; platfrom-p(http://ongaeshi.hatenablog.com/entry/20120725/1343232098)
 (require 'platform-p)
 ;;; カッコのハイライト
@@ -121,7 +121,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:family "Ricty" :foundry "nil" :slant normal :weight normal :height 181 :width normal)))))
 
 ;;;YaTexの設定
 (setq auto-mode-alist

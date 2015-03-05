@@ -33,6 +33,17 @@ emacsをタブエディタ化．タブごとにウィンドウ分割が維持で
 - `pdf-tools`
 emacsの中でpdfを綺麗に開ける．検索とかダブルクリックでソースに移動とか．
 
+- `tramp`
+デフォルトで入ってる．
+ssh先のファイルをローカルのように扱える．
+
+```bash
+C-x C-f /scp:user@xxx.xxx.com:/home/user/hogehoge/huga.txt
+```
+
+- `web-mode`
+htmlのシンタックスハイライトとかインデントとかフォールディングとか．
+
 # Required
 - Ricty（フォント）
 

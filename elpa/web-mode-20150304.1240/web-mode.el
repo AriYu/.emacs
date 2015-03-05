@@ -574,8 +574,12 @@ Must be used in conjunction with web-mode-enable-block-face."
   "bold face."
   :group 'web-mode-faces)
 
+;; (defface web-mode-current-element-highlight-face
+;;   '((t :background "#000000"))
+;;   "Overlay face for element highlight."
+;;   :group 'web-mode-faces)
 (defface web-mode-current-element-highlight-face
-  '((t :background "#000000"))
+  '((t :background "#2f4f4f"))
   "Overlay face for element highlight."
   :group 'web-mode-faces)
 

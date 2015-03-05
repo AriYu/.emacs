@@ -296,6 +296,7 @@
 (require 'tramp)
 (setq tramp-default-method "scp")
 
+;; web-mode
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
@@ -308,3 +309,6 @@
 (setq web-mode-engines-alist
 '(("php"    . "\\.phtml\\'")
   ("blade"  . "\\.blade\\.")))
+(setq web-mode-enable-current-element-highlight t)
+;;;(setq web-mode-enable-current-column-highlight t)
+;;(setq web-mode-current-element-highlight-face "#0000cd")

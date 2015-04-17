@@ -1,4 +1,4 @@
-;; -*- emacs-lisp -*- <15/03/05 23:16:42 /home/yuta/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <15/04/10 23:56:04 /home/yuta/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
@@ -17,4 +17,51 @@
   ("gid-integer" 510)
   ("perl-file-spec" t)
   ("perl-cwd-realpath" t)
-  ("perl" "\\perl")))
+  ("perl" "\\perl"))
+ (["scp" "admin" "192.168.0.90" nil nil]
+  ("uname" "Linux 3.4.6")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin" "/opt/bin" "/opt/sbin"))
+  ("remote-shell" "/bin/bash")
+  ("busybox" nil)
+  ("perl" nil)
+  ("ls" "/bin/ls")
+  ("file-exists" "test -e")
+  ("readlink" nil)
+  ("stat" nil)
+  ("id" "/usr/bin/id")
+  ("gid-integer" 0))
+ (["scp" "nishidalab" "192.168.0.157" nil nil]
+  ("uname" "Linux 3.13.0-46-generic")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("remote-shell" "/bin/sh")
+  ("busybox" nil)
+  ("file-exists" "test -e")
+  ("readlink" "\\readlink")
+  ("stat" "\\stat")
+  ("id" "/usr/bin/id")
+  ("gid-integer" 1000)
+  ("ls" "/bin/ls --color=never")
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("~" "/home/nishidalab"))
+ (["scp" "nishidalab" "192.168.0.158" nil nil]
+  ("uname" "Linux 3.13.0-24-generic")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("remote-shell" "/bin/sh")
+  ("busybox" nil)
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("file-exists" "test -e")
+  ("readlink" "\\readlink")
+  ("stat" "\\stat")
+  ("id" "/usr/bin/id")
+  ("gid-integer" 1000)
+  ("ls" "/bin/ls --color=never")))

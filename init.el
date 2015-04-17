@@ -133,7 +133,7 @@
 (setq YaTeX-latex-message-code 'utf-8)
 
 ;;;(setq tex-command "latexmk -pvc")  ;;保存したら自動で再コンパイル
-(setq tex-command "latexmk")
+(setq tex-command "latexmk -f")
 (setq dvi2-command "evince")
 
 ;;;auto-complete latex
@@ -322,3 +322,8 @@
 
 ;; magit
 (global-set-key (kbd "C-x g") 'magit-status)
+
+;; yaml-mode
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+(add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode))

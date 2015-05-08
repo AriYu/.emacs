@@ -133,8 +133,11 @@
 (setq YaTeX-latex-message-code 'utf-8)
 
 ;;;(setq tex-command "latexmk -pvc")  ;;保存したら自動で再コンパイル
-(setq tex-command "latexmk -f")
+;; 強制コンパイル
+(setq tex-command "latexmk -f") 
 (setq dvi2-command "evince")
+
+
 
 ;;;auto-complete latex
 (require 'auto-complete-latex)
@@ -198,7 +201,7 @@
 
 ;;; MELPA
 (require 'package)
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
@@ -327,3 +330,17 @@
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode))
+
+;; 矢印キーでウィンドウを移動できる？
+(global-set-key (kbd "C-c <left>")  'windmove-left)
+(global-set-key (kbd "C-c <right>") 'windmove-right)
+(global-set-key (kbd "C-c <up>")    'windmove-up)
+(global-set-key (kbd "C-c <down>")  'windmove-down)
+;; 画面の端に来たら反対側に移動する
+(setq windmove-wrap-around t)
+;; 別のwindowに移動するキーバインド
+(global-set-key "\C-t" 'other-window)
+
+;; fcitx.el
+(require 'fcitx)
+(fcitx-aggressive-setup)

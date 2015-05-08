@@ -44,6 +44,11 @@ C-x C-f /scp:user@xxx.xxx.com:/home/user/hogehoge/huga.txt
 - `web-mode`  
 htmlのシンタックスハイライトとかインデントとかフォールディングとか．
 
+- `fcitx.el`
+[prefix] + hogehoge のときに自動で日本語をoffにする．
+http://qiita.com/Ouvill/items/d21be847753eb5adf414
+https://github.com/cute-jumper/fcitx.el
+
 # Required
 - Ricty（フォント）
 

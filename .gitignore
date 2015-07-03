@@ -1,5 +1,5 @@
 /session.*
-
+*.cache
 /#platform-p.el#
 ac-comphist.dat
 /elpa/w3m-20141125.1729/

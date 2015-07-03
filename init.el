@@ -344,3 +344,10 @@
 ;; fcitx.el
 (require 'fcitx)
 (fcitx-aggressive-setup)
+
+(defun mkup ()
+  "Markdown on Firefox"
+  (interactive)
+  (shell-command (concat "mkup &"))
+  (shell-command (concat "firefox localhost:8000/README.md")))
+

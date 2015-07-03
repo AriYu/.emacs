@@ -345,6 +345,7 @@
 (require 'fcitx)
 (fcitx-aggressive-setup)
 
+;; README.mdをブラウザでチェック
 (defun mkup ()
   "Markdown on Firefox"
   (interactive)

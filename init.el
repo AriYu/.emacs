@@ -121,7 +121,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Ricty" :foundry "unknown" :slant normal :weight normal :height 128 :width normal)))))
+ '(default ((t (:family "Ricty for Powerline" :foundry "unknown" :slant normal :weight normal :height 128 :width normal)))))
 
 ;;;YaTexの設定
 (setq auto-mode-alist
@@ -137,6 +137,9 @@
 (setq tex-command "latexmk -f") 
 (setq dvi2-command "evince")
 
+;; Yatexの自動改行をなしにする．
+(add-hook 'yatex-mode-hook
+		  '(lambda () (auto-fill-mode -1)))
 
 
 ;;;auto-complete latex
@@ -344,3 +347,31 @@
 ;; fcitx.el
 (require 'fcitx)
 (fcitx-aggressive-setup)
+
+;; yasnipet
+;; konbu13.hatenablog.com/entry/2014/01/12/113300
+;; http://fukuyama.co/yasnippet
+;;自分用のスニペットフォルダと，拾ってきたスニペットフォルダの2つを作っておきます．
+(add-to-list 'load-path
+             (expand-file-name "~/.emacs.d/site-lisp/yasnippet"))
+;;(一つにまとめてもいいけど)
+(require 'yasnippet)
+(setq yas-snippet-dirs
+      '("~/.emacs.d/mySnippets" 
+        "~/.emacs.d/snippets"
+		"~/.emacs.d/site-lisp/yasnippet/snippets"
+        ))
+;; yas起動
+(yas-global-mode 1)
+
+;; 既存スニペットを挿入する
+(define-key yas-minor-mode-map (kbd "C-x i i") 'yas-insert-snippet)
+;; 新規スニペットを作成するバッファを用意する
+(define-key yas-minor-mode-map (kbd "C-x i n") 'yas-new-snippet)
+;; 既存スニペットを閲覧・編集する
+(define-key yas-minor-mode-map (kbd "C-x i v") 'yas-visit-snippet-file)
+
+;; 単語展開キーバインド (ver8.0から明記しないと機能しない)
+;; (setqだとtermなどで干渉問題ありでした)
+;; もちろんTAB以外でもOK 例えば "C-;"とか
+(custom-set-variables '(yas-trigger-key "TAB"))

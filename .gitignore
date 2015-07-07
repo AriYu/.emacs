@@ -1,5 +1,5 @@
 /session.*
-
+*.cache
 /#platform-p.el#
 ac-comphist.dat
 /elpa/w3m-20141125.1729/
@@ -42,3 +42,4 @@ ac-comphist.dat
 /semanticdb/!home!yuta!Downloads!3durg_pcl!semantic.cache
 /semanticdb/!home!yuta!Downloads!rsc-u485_sample-c_10!Sample3!semantic.cache
 *.cache
+

@@ -121,7 +121,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Ricty for Powerline" :foundry "unknown" :slant normal :weight normal :height 128 :width normal)))))
 
 ;;;YaTexの設定
 (setq auto-mode-alist
@@ -370,7 +369,12 @@
 (define-key yas-minor-mode-map (kbd "C-x i n") 'yas-new-snippet)
 ;; 既存スニペットを閲覧・編集する
 (define-key yas-minor-mode-map (kbd "C-x i v") 'yas-visit-snippet-file)
-
+;; README.mdをブラウザでチェック
+(defun mkup ()
+  "Markdown on Firefox"
+  (interactive)
+  (shell-command (concat "mkup &"))
+  (shell-command (concat "firefox localhost:8000/README.md")))
 ;; 単語展開キーバインド (ver8.0から明記しないと機能しない)
 ;; (setqだとtermなどで干渉問題ありでした)
 ;; もちろんTAB以外でもOK 例えば "C-;"とか

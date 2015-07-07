@@ -51,6 +51,7 @@ https://github.com/cute-jumper/fcitx.el
 
 # Required
 - Ricty（フォント）
+- mkup(http://mattn.kaoriya.net/software/lang/go/20150703125421.htm)
 
 # TODO
 - forward search( yatex + pdf-tools )の設定．

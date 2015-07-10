@@ -10,7 +10,7 @@
 (global-linum-mode)
 
 ;;; 列番号の表示
-;;;(column-number-mode t)
+n;;;(column-number-mode t)
 
 ;;; スクロール時のカーソル位置の維持
 (setq scroll-preserve-screen-position t)
@@ -83,7 +83,8 @@
 (setq ac-auto-show-menu 0.05) ;;;補完メニューを表示
 (setq ac-quick-help-delay 0.5) ;;;クイックヘルプを表示
 (setq ac-ignore-caes nil) ;;;大文字と小文字を区別する
-
+(ac-set-trigger-key "TAB")
+(ac-set-trigger-key "<tab>")
 
 ;;; C++ style
 (add-hook 'c++-mode-hook
@@ -369,13 +370,15 @@
 (define-key yas-minor-mode-map (kbd "C-x i n") 'yas-new-snippet)
 ;; 既存スニペットを閲覧・編集する
 (define-key yas-minor-mode-map (kbd "C-x i v") 'yas-visit-snippet-file)
+;; Shift+tabで展開(auto-completeとぶつかるため)
+(define-key yas-minor-mode-map (kbd "<tab>") nil)
+(define-key yas-minor-mode-map (kbd "TAB") nil)
+;; Set Yasnippet's key binding to shift+tab
+(define-key yas-minor-mode-map (kbd "<backtab>") 'yas-expand)
+
 ;; README.mdをブラウザでチェック
 (defun mkup ()
   "Markdown on Firefox"
   (interactive)
   (shell-command (concat "mkup &"))
   (shell-command (concat "firefox localhost:8000/README.md")))
-;; 単語展開キーバインド (ver8.0から明記しないと機能しない)
-;; (setqだとtermなどで干渉問題ありでした)
-;; もちろんTAB以外でもOK 例えば "C-;"とか
-(custom-set-variables '(yas-trigger-key "TAB"))

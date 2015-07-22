@@ -10,7 +10,7 @@
 (global-linum-mode)
 
 ;;; 列番号の表示
-n;;;(column-number-mode t)
+;;;(column-number-mode t)
 
 ;;; スクロール時のカーソル位置の維持
 (setq scroll-preserve-screen-position t)
@@ -131,6 +131,8 @@ n;;;(column-number-mode t)
 (setq YaTeX-inhibit-prefix-letter t)
 (setq YaTeX-kanji-code nil)
 (setq YaTeX-latex-message-code 'utf-8)
+;;;AMS-LaTeX を使う
+(setq YaTeX-use-AMS-LaTeX t)
 
 ;;;(setq tex-command "latexmk -pvc")  ;;保存したら自動で再コンパイル
 ;; 強制コンパイル

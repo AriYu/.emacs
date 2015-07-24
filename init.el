@@ -76,6 +76,7 @@
     ;; * ac-source-words-in-same-mode-buffers
     ;; を利用
 (setq-default ac-sources '(ac-source-filename ac-source-words-in-same-mode-buffers))
+(add-to-list 'ac-modes 'yatex-mode)
 (setq ac-auto-start 2) ;;;2文字以上で補完
 (setq ac-delay 0.05) ;;;0.05秒後に補完開始
 (setq ac-use-fuzzy t) ;;;曖昧補完
@@ -83,8 +84,9 @@
 (setq ac-auto-show-menu 0.05) ;;;補完メニューを表示
 (setq ac-quick-help-delay 0.5) ;;;クイックヘルプを表示
 (setq ac-ignore-caes nil) ;;;大文字と小文字を区別する
-(ac-set-trigger-key "TAB")
-(ac-set-trigger-key "<tab>")
+;; (define-key ac-completing-map (kbd "TAB") 'ac-next)      ; M-nで次候補選択
+;; (ac-set-trigger-key "TAB")
+;; (ac-set-trigger-key "<tab>")
 
 ;;; C++ style
 (add-hook 'c++-mode-hook
@@ -354,29 +356,29 @@
 ;; konbu13.hatenablog.com/entry/2014/01/12/113300
 ;; http://fukuyama.co/yasnippet
 ;;自分用のスニペットフォルダと，拾ってきたスニペットフォルダの2つを作っておきます．
-(add-to-list 'load-path
-             (expand-file-name "~/.emacs.d/site-lisp/yasnippet"))
-;;(一つにまとめてもいいけど)
-(require 'yasnippet)
-(setq yas-snippet-dirs
-      '("~/.emacs.d/mySnippets" 
-        "~/.emacs.d/snippets"
-		"~/.emacs.d/site-lisp/yasnippet/snippets"
-        ))
-;; yas起動
-(yas-global-mode 1)
+;; (add-to-list 'load-path
+;;              (expand-file-name "~/.emacs.d/site-lisp/yasnippet"))
+;; ;;(一つにまとめてもいいけど)
+;; (require 'yasnippet)
+;; (setq yas-snippet-dirs
+;;       '("~/.emacs.d/mySnippets" 
+;;         "~/.emacs.d/snippets"
+;; 		"~/.emacs.d/site-lisp/yasnippet/snippets"
+;;         ))
+;; ;; yas起動
+;; (yas-global-mode 1)
 
-;; 既存スニペットを挿入する
-(define-key yas-minor-mode-map (kbd "C-x i i") 'yas-insert-snippet)
-;; 新規スニペットを作成するバッファを用意する
-(define-key yas-minor-mode-map (kbd "C-x i n") 'yas-new-snippet)
-;; 既存スニペットを閲覧・編集する
-(define-key yas-minor-mode-map (kbd "C-x i v") 'yas-visit-snippet-file)
-;; Shift+tabで展開(auto-completeとぶつかるため)
-(define-key yas-minor-mode-map (kbd "<tab>") nil)
-(define-key yas-minor-mode-map (kbd "TAB") nil)
-;; Set Yasnippet's key binding to shift+tab
-(define-key yas-minor-mode-map (kbd "<backtab>") 'yas-expand)
+;; ;; 既存スニペットを挿入する
+;; (define-key yas-minor-mode-map (kbd "C-x i i") 'yas-insert-snippet)
+;; ;; 新規スニペットを作成するバッファを用意する
+;; (define-key yas-minor-mode-map (kbd "C-x i n") 'yas-new-snippet)
+;; ;; 既存スニペットを閲覧・編集する
+;; (define-key yas-minor-mode-map (kbd "C-x i v") 'yas-visit-snippet-file)
+;; ;; Shift+tabで展開(auto-completeとぶつかるため)
+;; (define-key yas-minor-mode-map (kbd "<tab>") nil)
+;; (define-key yas-minor-mode-map (kbd "TAB") nil)
+;; ;; Set Yasnippet's key binding to shift+tab
+;; (define-key yas-minor-mode-map (kbd "<backtab>") 'yas-expand)
 
 ;; README.mdをブラウザでチェック
 (defun mkup ()

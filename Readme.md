@@ -49,6 +49,15 @@ htmlのシンタックスハイライトとかインデントとかフォール�
 http://qiita.com/Ouvill/items/d21be847753eb5adf414
 https://github.com/cute-jumper/fcitx.el
 
+- `jedi`
+
+```bash
+sudo pip install virtualenv
+sudo emacs
+```
+
+`sudo emacs`で`M-x install-server`を実行．
+
 # Required
 - Ricty（フォント）
 - mkup(http://mattn.kaoriya.net/software/lang/go/20150703125421.htm)

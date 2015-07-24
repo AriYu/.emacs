@@ -386,3 +386,15 @@
   (interactive)
   (shell-command (concat "mkup &"))
   (shell-command (concat "firefox localhost:8000/README.md")))
+
+;; For Python
+(add-hook 'python-mode-hook
+                   '(lambda ()
+                        (setq indent-tabs-mode nil)
+                        (setq indent-level 4)
+                        (setq python-indent 4)
+                        (setq tab-width 4)))
+
+;;;この上にはpath設定やらsuto-completeの設定
+(require 'jedi)
+(add-hook 'python-mode-hook 'jedi:setup)

@@ -114,6 +114,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes (quote ("05c3bc4eb1219953a4f182e10de1f7466d28987f48d647c01f1f0037ff35ab9a" default)))
  '(flycheck-display-errors-function (function flycheck-pos-tip-error-messages))
  '(show-paren-mode t)
  '(tab-width 4)
@@ -124,7 +125,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
-'(default ((t (:family "Ricty for Powerline" :foundry "unknown" :slant normal :weight normal :height 128 :width normal)))))
+ '(default ((t (:family "Ricty for Powerline" :foundry "unknown" :slant normal :weight normal :height 128 :width normal)))))
 ;;;YaTexの設定
 (setq auto-mode-alist
       (cons (cons "\\.tex$" 'yatex-mode)  auto-mode-alist))
@@ -195,8 +196,6 @@
 (push '("*YaTeX-typesetting*") popwin:special-display-config)
 
 
-;;; color-theme
-(load-theme 'deeper-blue t)
 
 ;;; flycheck
 ;; (add-hook 'after-init-hook #'global-flycheck-mode)
@@ -398,3 +397,15 @@
 ;;;この上にはpath設定やらsuto-completeの設定
 (require 'jedi)
 (add-hook 'python-mode-hook 'jedi:setup)
+
+;; 画面の下の方を綺麗にする
+(require 'powerline)
+(powerline-default-theme)
+(set-face-attribute 'mode-line nil
+                    :foreground "White"
+                    :background "DarkOrange"
+                    :box nil)
+
+;;; color-theme
+;;(load-theme 'deeper-blue t)
+(load-theme 'monokai t)

@@ -134,8 +134,9 @@
 (setq YaTeX-inhibit-prefix-letter t)
 (setq YaTeX-kanji-code nil)
 (setq YaTeX-latex-message-code 'utf-8)
+
 ;;;AMS-LaTeX を使う
-(setq YaTeX-use-AMS-LaTeX t)
+;;(setq YaTeX-use-AMS-LaTeX t)
 
 ;;;(setq tex-command "latexmk -pvc")  ;;保存したら自動で再コンパイル
 ;; 強制コンパイル
@@ -152,6 +153,16 @@
 (setq ac-l-dict-directory "~/.emacs.d/ac-l-dict/")
 (add-to-list 'ac-modes 'foo-mode)
 (add-hook 'foo-mode-hook 'ac-l-setup)
+
+;; latex-math-preview
+;; (add-hook 'yatex-mode-hook
+;;          '(lambda ()
+;;          (YaTeX-define-key "p" 'latex-math-preview-expression)
+;;          (YaTeX-define-key "\C-p" 'latex-math-preview-save-image-file)
+;;          (YaTeX-define-key "j" 'latex-math-preview-insert-symbol)
+;;          (YaTeX-define-key "\C-j" 'latex-math-preview-last-symbol-again)
+;;          (YaTeX-define-key "\C-b" 'latex-math-preview-beamer-frame)))
+;; (setq latex-math-preview-in-math-mode-p-func 'YaTeX-in-math-mode-p)
 
 (when platform-linux-p ; for GNU/Linux
 ;;; inverse search
@@ -398,14 +409,39 @@
 (require 'jedi)
 (add-hook 'python-mode-hook 'jedi:setup)
 
+
+;;; color-theme
+;;(load-theme 'deeper-blue t)
+(load-theme 'monokai t)
+
 ;; 画面の下の方を綺麗にする
 (require 'powerline)
 (powerline-default-theme)
 (set-face-attribute 'mode-line nil
                     :foreground "White"
-                    :background "DarkOrange"
+                    :background "DarkCyan"
                     :box nil)
 
-;;; color-theme
-;;(load-theme 'deeper-blue t)
-(load-theme 'monokai t)
+;; (add-to-list 'load-path "~/.emacs.d/elpa/auctex-11.88.6")
+;; (require 'tex-site)
+;; (require 'auctex-latexmk)
+;; (auctex-latexmk-setup)
+
+;; (setq preview-image-type 'dvipng)
+;; (setq TeX-source-correlate-method 'synctex)
+;; (setq TeX-source-correlate-start-server t)
+;; (add-hook 'LaTeX-mode-hook 'TeX-source-correlate-mode)
+;; (add-hook 'LaTeX-mode-hook 'TeX-PDF-mode)
+;; (add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
+;; (add-hook 'LaTeX-mode-hook
+;;           (function (lambda ()
+;;                       (add-to-list 'TeX-command-list
+;;                                    '("Evince"
+;;                                      "evince %s.pdf"
+;;                                      TeX-run-discard-or-function t t :help "Run Evince"))
+;;                       (add-to-list 'TeX-command-list
+;;                                    '("fwdevince"
+;;                                      "fwdevince %s.pdf %n \"%b\""
+;;                                      TeX-run-discard-or-function t t :help "Forward search with Evince"))
+;;                       )))
+

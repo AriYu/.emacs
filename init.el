@@ -89,18 +89,21 @@
 ;; (ac-set-trigger-key "<tab>")
 
 ;;; C++ style
-(add-hook 'c++-mode-hook
-          '(lambda()
-             (c-set-style "stroustrup")
-             (setq indent-tabs-mode nil)     ;; インデントは空白文字で行う（TABコードを空白に変換）
-	     (setq tab-width 2)
-             (c-set-offset 'innamespace 0)   ;;;namespace {}の中はインデントしない
-             (c-set-offset 'arglist-close 0) ;;;関数の引数リストの閉じ括弧はインデントしない
-             )
-	  (semantic-mode 1)
-	  ;;; (setq ac-sources (append ac-sources '(ac-source-semantic)))
-	  (setq ac-sources (append ac-sources '(ac-source-semantic-raw)))
-	  )
+;; (add-hook 'c++-mode-hook
+;;           '(lambda()
+;;              (c-set-style "stroustrup")
+;;              (setq indent-tabs-mode nil)     ;; インデントは空白文字で行う（TABコードを空白に変換）
+;; 	     (setq tab-width 2)
+;;              (c-set-offset 'innamespace 0)   ;;;namespace {}の中はインデントしない
+;;              (c-set-offset 'arglist-close 0) ;;;関数の引数リストの閉じ括弧はインデントしない
+;;              )
+;; 	  (semantic-mode 1)
+;; 	  ;;; (setq ac-sources (append ac-sources '(ac-source-semantic)))
+;; 	  (setq ac-sources (append ac-sources '(ac-source-semantic-raw)))
+;; 	  )
+(autoload 'vs-set-c-style "vs-set-c-style") 
+(add-hook 'c-mode-hook 'vs-set-c-style) 
+(add-hook 'c++-mode-hook 'vs-set-c-style)
 
 
 ;;; smooth-scroll
@@ -190,7 +193,23 @@
    :session nil "/org/gnome/evince/Window/0"
    "org.gnome.evince.Window" "SyncSource"
    'evince-inverse-search)
+  (defun evince-forward-search ()
+	(interactive)
+	(let* ((ctf (buffer-name))
+		   (mtf (tex-main-file))
+		   (pf (concat (car (split-string mtf "\\.")) ".pdf"))
+		   (ln (format "%d" (line-number-at-pos)))
+		   (cmd "fwdevince")
+		   (args (concat "\"" pf "\" " ln " \"" ctf "\"")))
+	  (message (concat cmd " " args))
+	  (process-kill-without-query
+	   (start-process-shell-command "fwdevince" nil cmd args))))
+  
+  (add-hook 'latex-mode-hook
+			'(lambda ()
+			   (define-key latex-mode-map (kbd "C-c e") 'evince-forward-search)))
   )
+
 
 ;;; auto-install
 

@@ -58,6 +58,10 @@ sudo emacs
 
 `sudo emacs`で`M-x install-server`を実行．
 
+- `google-this`
+`C-f1`でGoogle検索
+
+
 # Required
 - Ricty（フォント）
 - mkup(http://mattn.kaoriya.net/software/lang/go/20150703125421.htm)

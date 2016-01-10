@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: figure
+# key: fig
+# --
+\begin{figure}[ht]
+  \centering
+  \includegraphics[${1:scale=, width=, ...}]{${2:path/file.eps}}
+  \caption{${3:caption} $0}
+\end{figure}

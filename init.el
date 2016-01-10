@@ -1,16 +1,14 @@
 (add-to-list 'load-path "~/.emacs.d/lisp")
+(add-to-list 'load-path "~/.emacs.d/elpa")
 ;;; platfrom-p(http://ongaeshi.hatenablog.com/entry/20120725/1343232098)
 (require 'platform-p)
+
 ;;; カッコのハイライト
 (show-paren-mode t)
 
 ;;; 行番号の表示
-;;;(line-number-mode t)
 (require 'linum)
 (global-linum-mode)
-
-;;; 列番号の表示
-;;;(column-number-mode t)
 
 ;;; スクロール時のカーソル位置の維持
 (setq scroll-preserve-screen-position t)
@@ -31,7 +29,6 @@
 (setq inhibit-startup-echo-area-message -1)
 
 ;;; @ backup
-
 ;;; 変更ファイルのバックアップ
 (setq make-backup-files nil)
 
@@ -62,53 +59,15 @@
 ;;; 古いバックアップファイルの削除
 (setq delete-old-versions t)
 
-(require 'cedet)
 
-
-
-;;;(add-to-list 'load-path "~/.emacs.d/")
-(require 'auto-complete)
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d//ac-dict")
-(ac-config-default)
-;; 情報源として
-    ;; * ac-source-filename
-    ;; * ac-source-words-in-same-mode-buffers
-    ;; を利用
-(setq-default ac-sources '(ac-source-filename ac-source-words-in-same-mode-buffers))
-(add-to-list 'ac-modes 'yatex-mode)
-(setq ac-auto-start 2) ;;;2文字以上で補完
-(setq ac-delay 0.05) ;;;0.05秒後に補完開始
-(setq ac-use-fuzzy t) ;;;曖昧補完
-(setq ac-use-comphist t) ;;;補完推測機能有効
-(setq ac-auto-show-menu 0.05) ;;;補完メニューを表示
-(setq ac-quick-help-delay 0.5) ;;;クイックヘルプを表示
-(setq ac-ignore-caes nil) ;;;大文字と小文字を区別する
-;; (define-key ac-completing-map (kbd "TAB") 'ac-next)      ; M-nで次候補選択
-;; (ac-set-trigger-key "TAB")
-;; (ac-set-trigger-key "<tab>")
-
-;;; C++ style
-(add-hook 'c++-mode-hook
-          '(lambda()
-             (c-set-style "stroustrup")
-             (setq indent-tabs-mode nil)     ;; インデントは空白文字で行う（TABコードを空白に変換）
-	     (setq tab-width 2)
-             (c-set-offset 'innamespace 0)   ;;;namespace {}の中はインデントしない
-             (c-set-offset 'arglist-close 0) ;;;関数の引数リストの閉じ括弧はインデントしない
-             )
-	  (semantic-mode 1)
-	  ;;; (setq ac-sources (append ac-sources '(ac-source-semantic)))
-	  (setq ac-sources (append ac-sources '(ac-source-semantic-raw)))
-	  )
-
-
-;;; smooth-scroll
+;; smooth-scroll
 (require 'smooth-scroll)
 (smooth-scroll-mode t)
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;;; one line at at time
 (setq mouse-wheel-progressive-speed nil) ;;; dont accelerate scrolling
 (setq mouse-wheel-follow-mouse 't) ;;; scroll window under mouse
+
+;; theme
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -120,12 +79,15 @@
  '(tab-width 4)
  '(tool-bar-mode nil)
  '(tool-bar-position (quote bottom)))
+
+;; font
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "Ricty for Powerline" :foundry "unknown" :slant normal :weight normal :height 128 :width normal)))))
+
 ;;;YaTexの設定
 (setq auto-mode-alist
       (cons (cons "\\.tex$" 'yatex-mode)  auto-mode-alist))
@@ -135,9 +97,6 @@
 (setq YaTeX-kanji-code nil)
 (setq YaTeX-latex-message-code 'utf-8)
 
-;;;AMS-LaTeX を使う
-;;(setq YaTeX-use-AMS-LaTeX t)
-
 ;;;(setq tex-command "latexmk -pvc")  ;;保存したら自動で再コンパイル
 ;; 強制コンパイル
 (setq tex-command "latexmk -f") 
@@ -146,23 +105,6 @@
 ;; Yatexの自動改行をなしにする．
 (add-hook 'yatex-mode-hook
 		  '(lambda () (auto-fill-mode -1)))
-
-
-;;;auto-complete latex
-(require 'auto-complete-latex)
-(setq ac-l-dict-directory "~/.emacs.d/ac-l-dict/")
-(add-to-list 'ac-modes 'foo-mode)
-(add-hook 'foo-mode-hook 'ac-l-setup)
-
-;; latex-math-preview
-;; (add-hook 'yatex-mode-hook
-;;          '(lambda ()
-;;          (YaTeX-define-key "p" 'latex-math-preview-expression)
-;;          (YaTeX-define-key "\C-p" 'latex-math-preview-save-image-file)
-;;          (YaTeX-define-key "j" 'latex-math-preview-insert-symbol)
-;;          (YaTeX-define-key "\C-j" 'latex-math-preview-last-symbol-again)
-;;          (YaTeX-define-key "\C-b" 'latex-math-preview-beamer-frame)))
-;; (setq latex-math-preview-in-math-mode-p-func 'YaTeX-in-math-mode-p)
 
 (when platform-linux-p ; for GNU/Linux
 ;;; inverse search
@@ -193,11 +135,10 @@
   )
 
 ;;; auto-install
-
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/auto-install/"))
-(require 'auto-install)
-(auto-install-update-emacswiki-package-name t)
-(auto-install-compatibility-setup)
+;; (require 'auto-install)
+;; (auto-install-update-emacswiki-package-name t)
+;; (auto-install-compatibility-setup)
 
 ;;; popwin
 (require 'popwin)
@@ -206,23 +147,13 @@
 (require 'popwin-yatex)
 (push '("*YaTeX-typesetting*") popwin:special-display-config)
 
-
-
-;;; flycheck
-;; (add-hook 'after-init-hook #'global-flycheck-mode)
-;; ;;; flycheck-pos-tip
-;; (eval-after-load 'flycheck
-;;   '(custom-set-variables
-;;    '(flycheck-display-errors-function #'flycheck-pos-tip-error-messages)))
-
-
 ;;; MELPA
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
-;; 
+;; 指定したディレクトリでM-xをやる 
 (defun in-directory (dir)
   "Runs execute-extended-command with default-directory set to the given directory."
   (interactive "DIn directory: ")
@@ -231,18 +162,18 @@
 
 (global-set-key (kbd "M-X") 'in-directory)
 
-; roslaunch highlighting
+;; roslaunch highlighting
 (add-to-list 'auto-mode-alist '("\\.launch$" . xml-mode))
 
 ;; shellに色をつける
 ;; (autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
 ;; (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
-
 (add-hook 'compilation-mode-hook 'ansi-color-for-comint-mode-on)
 (add-hook 'compilation-filter-hook
           '(lambda ()
              (let ((start-marker (make-marker))
-                   (end-marker (process-mark (get-buffer-process (current-buffer)))))
+                   (end-marker (process-mark 
+								(get-buffer-process (current-buffer)))))
                (set-marker start-marker (point-min))
                (ansi-color-apply-on-region start-marker end-marker))))
 
@@ -353,8 +284,10 @@
 (global-set-key (kbd "C-c <right>") 'windmove-right)
 (global-set-key (kbd "C-c <up>")    'windmove-up)
 (global-set-key (kbd "C-c <down>")  'windmove-down)
+
 ;; 画面の端に来たら反対側に移動する
 (setq windmove-wrap-around t)
+
 ;; 別のwindowに移動するキーバインド
 (global-set-key "\C-t" 'other-window)
 
@@ -362,33 +295,6 @@
 (require 'fcitx)
 (fcitx-aggressive-setup)
 
-;; yasnipet
-;; konbu13.hatenablog.com/entry/2014/01/12/113300
-;; http://fukuyama.co/yasnippet
-;;自分用のスニペットフォルダと，拾ってきたスニペットフォルダの2つを作っておきます．
-;; (add-to-list 'load-path
-;;              (expand-file-name "~/.emacs.d/site-lisp/yasnippet"))
-;; ;;(一つにまとめてもいいけど)
-;; (require 'yasnippet)
-;; (setq yas-snippet-dirs
-;;       '("~/.emacs.d/mySnippets" 
-;;         "~/.emacs.d/snippets"
-;; 		"~/.emacs.d/site-lisp/yasnippet/snippets"
-;;         ))
-;; ;; yas起動
-;; (yas-global-mode 1)
-
-;; ;; 既存スニペットを挿入する
-;; (define-key yas-minor-mode-map (kbd "C-x i i") 'yas-insert-snippet)
-;; ;; 新規スニペットを作成するバッファを用意する
-;; (define-key yas-minor-mode-map (kbd "C-x i n") 'yas-new-snippet)
-;; ;; 既存スニペットを閲覧・編集する
-;; (define-key yas-minor-mode-map (kbd "C-x i v") 'yas-visit-snippet-file)
-;; ;; Shift+tabで展開(auto-completeとぶつかるため)
-;; (define-key yas-minor-mode-map (kbd "<tab>") nil)
-;; (define-key yas-minor-mode-map (kbd "TAB") nil)
-;; ;; Set Yasnippet's key binding to shift+tab
-;; (define-key yas-minor-mode-map (kbd "<backtab>") 'yas-expand)
 
 ;; README.mdをブラウザでチェック
 (defun mkup ()
@@ -396,18 +302,6 @@
   (interactive)
   (shell-command (concat "mkup &"))
   (shell-command (concat "firefox localhost:8000/README.md")))
-
-;; For Python
-(add-hook 'python-mode-hook
-                   '(lambda ()
-                        (setq indent-tabs-mode nil)
-                        (setq indent-level 4)
-                        (setq python-indent 4)
-                        (setq tab-width 4)))
-
-;;;この上にはpath設定やらsuto-completeの設定
-(require 'jedi)
-(add-hook 'python-mode-hook 'jedi:setup)
 
 
 ;;; color-theme
@@ -422,26 +316,92 @@
                     :background "DarkCyan"
                     :box nil)
 
-;; (add-to-list 'load-path "~/.emacs.d/elpa/auctex-11.88.6")
-;; (require 'tex-site)
-;; (require 'auctex-latexmk)
-;; (auctex-latexmk-setup)
+;; yasnippet
+(require 'yasnippet)
+(setq yas-snippet-dirs
+      '("~/.emacs.d/yasnippet-snippets"
+        ))
+(eval-after-load "yasnippet"
+  '(progn
+     ;; companyと競合するのでyasnippetのフィールド移動は "C-i" のみにする
+     (define-key yas-keymap (kbd "<tab>") nil)
+     (yas-global-mode 1)))
 
-;; (setq preview-image-type 'dvipng)
-;; (setq TeX-source-correlate-method 'synctex)
-;; (setq TeX-source-correlate-start-server t)
-;; (add-hook 'LaTeX-mode-hook 'TeX-source-correlate-mode)
-;; (add-hook 'LaTeX-mode-hook 'TeX-PDF-mode)
-;; (add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
-;; (add-hook 'LaTeX-mode-hook
-;;           (function (lambda ()
-;;                       (add-to-list 'TeX-command-list
-;;                                    '("Evince"
-;;                                      "evince %s.pdf"
-;;                                      TeX-run-discard-or-function t t :help "Run Evince"))
-;;                       (add-to-list 'TeX-command-list
-;;                                    '("fwdevince"
-;;                                      "fwdevince %s.pdf %n \"%b\""
-;;                                      TeX-run-discard-or-function t t :help "Forward search with Evince"))
-;;                       )))
+;; company-mode 補完
+(when (locate-library "company")
+  (global-company-mode 1) ; 全バッファで有効にする
+  (setq company-idle-delay 0) ; デフォルトは0.5
+  (setq company-minimum-prefix-length 2) ; デフォルトは4
+  (setq company-selection-wrap-around t) ; 候補の一番下でさらに下に行こうとすると一番上に戻る
+  (global-set-key (kbd "C-M-i") 'company-complete)
+  ;; (setq company-idle-delay nil) ; 自動補完をしない
+  (define-key company-active-map (kbd "C-n") 'company-select-next)
+  (define-key company-active-map (kbd "C-p") 'company-select-previous)
+  (define-key company-search-map (kbd "C-n") 'company-select-next)
+  (define-key company-search-map (kbd "C-p") 'company-select-previous)
+  ;; (define-key company-active-map (kbd "<tab>") 'company-complete-selection)
+  )
+(defun company--insert-candidate2 (candidate)
+  (when (> (length candidate) 0)
+    (setq candidate (substring-no-properties candidate))
+    (if (eq (company-call-backend 'ignore-case) 'keep-prefix)
+        (insert (company-strip-prefix candidate))
+      (if (equal company-prefix candidate)
+          (company-select-next)
+          (delete-region (- (point) (length company-prefix)) (point))
+        (insert candidate))
+      )))
+(defun company-complete-common2 ()
+  (interactive)
+  (when (company-manual-begin)
+    (if (and (not (cdr company-candidates))
+             (equal company-common (car company-candidates)))
+        (company-complete-selection)
+      (company--insert-candidate2 company-common))))
 
+(define-key company-active-map [tab] 'company-complete-common2)
+;; (define-key company-active-map [backtab] 'company-select-previous) 
+
+(set-face-attribute 'company-tooltip nil
+                    :foreground "black" :background "lightgrey")
+(set-face-attribute 'company-tooltip-common nil
+                    :foreground "black" :background "lightgrey")
+(set-face-attribute 'company-tooltip-common-selection nil
+                    :foreground "white" :background "steelblue")
+(set-face-attribute 'company-tooltip-selection nil
+                    :foreground "black" :background "steelblue")
+(set-face-attribute 'company-preview-common nil
+                    :background nil :foreground "lightgrey" :underline t)
+(set-face-attribute 'company-scrollbar-fg nil
+                    :background "DarkCyan")
+(set-face-attribute 'company-scrollbar-bg nil
+                    :background "gray40")
+
+;; for c++ 
+(eval-after-load "irony"
+  '(progn
+     (custom-set-variables '(irony-additional-clang-options '("-std=c++11")))
+     (add-to-list 'company-backends 'company-irony)
+     (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
+     (add-hook 'c-mode-common-hook 'irony-mode)))
+;;; C++ style
+(load-file "~/.emacs.d/elpa/google-c-style-20140929.1118/google-c-style.el")
+(require 'google-c-style)
+(add-hook 'c-mode-common-hook 'google-set-c-style)
+
+;; for python
+(require 'jedi-core)
+(setq jedi:complete-on-dot t)
+(setq jedi:use-shortcuts t)
+(add-hook 'python-mode-hook 'jedi:setup)
+(add-to-list 'company-backends 'company-jedi) ; backendに追加
+(add-hook 'python-mode-hook
+                   '(lambda ()
+                        (setq indent-tabs-mode nil)
+                        (setq indent-level 4)
+                        (setq python-indent 4)
+                        (setq tab-width 4)))
+
+(require 'helm-config)
+(helm-mode 1)
+(define-key helm-read-file-map (kbd "<tab>") 'helm-execute-persistent-action)

@@ -42,4 +42,5 @@ ac-comphist.dat
 /semanticdb/!home!yuta!Downloads!3durg_pcl!semantic.cache
 /semanticdb/!home!yuta!Downloads!rsc-u485_sample-c_10!Sample3!semantic.cache
 *.cache
-
+.python-environments/
+semanticdb/

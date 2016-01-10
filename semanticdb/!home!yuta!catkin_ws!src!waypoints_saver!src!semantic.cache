@@ -43,103 +43,103 @@
                         :type ("InteractiveMarker" type (:type "class") nil nil))
                         (reparse-symbol arg-sub-list) [2201 2225]))                  
                 :type ("Marker" type (:type "class") nil nil))
-                nil [2185 2502])
+                nil [2185 2505])
             ("makeBoxControl" function
                (:arguments 
                   ( ("msg" variable
                        (:reference 1
                         :type ("InteractiveMarker" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [2546 2570]))                  
+                        (reparse-symbol arg-sub-list) [2549 2573]))                  
                 :type ("InteractiveMarkerControl" type (:type "class") nil nil))
-                nil [2504 2756])
-            ("frameCallback" function
-               (:arguments 
-                  ( ("" variable
-                       (:reference 1
-                        :constant-flag t
-                        :type ("ros::TimerEvent" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [2779 2802]))                  
-                :type "void")
-                nil [2760 3357])
+                nil [2507 2759])
             ("processFeedback" function
                (:arguments 
                   ( ("feedback" variable
                        (:reference 1
                         :constant-flag t
                         :type ("visualization_msgs::InteractiveMarkerFeedbackConstPtr" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [3383 3454]))                  
+                        (reparse-symbol arg-sub-list) [2783 2854]))                  
                 :type "void")
-                nil [3361 5380])
+                nil [2761 4740])
             ("saveMarker" function
                (:arguments 
-                  ( ("int_marker" variable (:type ("InteractiveMarker" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5399 5429]))                  
+                  ( ("int_marker" variable (:type ("InteractiveMarker" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4759 4789]))                  
                 :type "void")
-                nil [5382 5521])
+                nil [4742 4881])
             ("makeWayPointMarker" function
                (:arguments 
                   ( ("position" variable
                        (:reference 1
                         :constant-flag t
                         :type ("tf::Vector3" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [5548 5577])
+                        (reparse-symbol arg-sub-list) [4908 4937])
+                    ("orientation" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("tf::Quaternion" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4938 4972])
                     ("name" variable
                        (:reference 1
                         :constant-flag t
                         :type ("std::string" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [5578 5602]))                  
+                        (reparse-symbol arg-sub-list) [4973 4997]))                  
                 :type "void")
-                nil [5524 6641])
+                nil [4884 6106])
             ("GoalSaver" type
                (:members 
-                  ( ("public" label nil (reparse-symbol classsubparts) [6662 6669])
-                    ("GoalSaver" function (:type "int") (reparse-symbol classsubparts) [6672 7653])
+                  ( ("public" label nil (reparse-symbol classsubparts) [6127 6134])
+                    ("GoalSaver" function
+                       (:constructor-flag t
+                        :type ("GoalSaver" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6137 7207])
                     ("GoalSaver" function
                        (:destructor-flag t
                         :type "void")
-                        (reparse-symbol classsubparts) [7656 7790])
-                    ("readExistGoals" function (:type "void") (reparse-symbol classsubparts) [7793 8756])
+                        (reparse-symbol classsubparts) [7210 7432])
+                    ("readExistGoals" function (:type "void") (reparse-symbol classsubparts) [7435 8533])
                     ("getGoalCB" function
                        (:arguments 
                           ( ("point" variable
                                (:reference 1
                                 :constant-flag t
                                 :type ("geometry_msgs::PointStamped" type (:type "class") nil nil))
-                                (reparse-symbol arg-sub-list) [8774 8815]))                          
+                                (reparse-symbol arg-sub-list) [8551 8592]))                          
                         :type "void")
-                        (reparse-symbol classsubparts) [8759 9129])
+                        (reparse-symbol classsubparts) [8536 9000])
                     ("save" function
                        (:arguments 
-                          ( ("filename" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9142 9163]))                          
+                          ( ("filename" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9014 9035]))                          
                         :type "void")
-                        (reparse-symbol classsubparts) [9132 9535])
-                    ("run" function (:type "void") (reparse-symbol classsubparts) [9538 9567])
-                    ("private" label nil (reparse-symbol classsubparts) [9569 9577])
-                    ("stasis" variable (:type "int") (reparse-symbol classsubparts) [9580 9591])
-                    ("position" variable (:type ("tf::Vector3" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9594 9615])
-                    ("nh" variable (:type ("ros::NodeHandle" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9619 9638])
-                    ("sub" variable (:type ("ros::Subscriber" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9641 9661])
-                    ("int_marker" variable (:type ("InteractiveMarker" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9665 9694])
+                        (reparse-symbol classsubparts) [9004 9609])
+                    ("run" function (:type "void") (reparse-symbol classsubparts) [9612 9641])
+                    ("private" label nil (reparse-symbol classsubparts) [9643 9651])
+                    ("stasis" variable (:type "int") (reparse-symbol classsubparts) [9654 9665])
+                    ("position" variable (:type ("tf::Vector3" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9668 9689])
+                    ("orientation" variable (:type ("tf::Quaternion" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9692 9719])
+                    ("nh" variable (:type ("ros::NodeHandle" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9723 9742])
+                    ("sub" variable (:type ("ros::Subscriber" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9745 9765])
+                    ("int_marker" variable (:type ("InteractiveMarker" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9769 9798])
                     ("waypoints_name" variable (:type ("std::vector" type
                          (:template-specifier 
                             ( ("std::string" type nil nil nil))                            
                           :type "class")
-                          nil nil)) (reparse-symbol classsubparts) [9698 9738])
-                    ("savefilename" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9744 9769]))                  
+                          nil nil)) (reparse-symbol classsubparts) [9802 9842])
+                    ("savefilename" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9848 9873]))                  
                 :type "class")
-                nil [6644 9773])
+                nil [6109 9877])
             ("main" function
                (:arguments 
-                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [9785 9794])
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [9889 9898])
                     ("argv" variable
                        (:pointer 2
                         :type "char")
-                        (reparse-symbol arg-sub-list) [9795 9807]))                  
+                        (reparse-symbol arg-sub-list) [9899 9911]))                  
                 :type "int")
-                nil [9776 9889]))          
+                nil [9880 9993]))          
     :file "waypoints_saver.cpp"
-    :pointmax 9891
-    :fsize 9890
-    :lastmodtime '(21603 28425 651777 286000)
+    :pointmax 9995
+    :fsize 10012
+    :lastmodtime '(21750 47209 790419 681000)
     :unmatched-syntax 'nil
     )
    )

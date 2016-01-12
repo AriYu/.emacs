@@ -1,4 +1,7 @@
 (add-to-list 'load-path "~/.emacs.d/lisp")
+
+(prefer-coding-system 'utf-8)
+
 ;;; platfrom-p(http://ongaeshi.hatenablog.com/entry/20120725/1343232098)
 (require 'platform-p)
 ;;; カッコのハイライト
@@ -464,3 +467,6 @@
 ;;                                      TeX-run-discard-or-function t t :help "Forward search with Evince"))
 ;;                       )))
 
+;; for rosemacs
+(add-to-list 'load-path "/opt/ros/indigo/share/emacs/site-lisp")
+(require 'rosemacs-config)

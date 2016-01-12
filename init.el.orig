@@ -1,4 +1,7 @@
 (add-to-list 'load-path "~/.emacs.d/lisp")
+
+(prefer-coding-system 'utf-8)
+
 ;;; platfrom-p(http://ongaeshi.hatenablog.com/entry/20120725/1343232098)
 (require 'platform-p)
 ;;; カッコのハイライト
@@ -76,6 +79,7 @@
     ;; * ac-source-words-in-same-mode-buffers
     ;; を利用
 (setq-default ac-sources '(ac-source-filename ac-source-words-in-same-mode-buffers))
+(add-to-list 'ac-modes 'yatex-mode)
 (setq ac-auto-start 2) ;;;2文字以上で補完
 (setq ac-delay 0.05) ;;;0.05秒後に補完開始
 (setq ac-use-fuzzy t) ;;;曖昧補完
@@ -83,21 +87,26 @@
 (setq ac-auto-show-menu 0.05) ;;;補完メニューを表示
 (setq ac-quick-help-delay 0.5) ;;;クイックヘルプを表示
 (setq ac-ignore-caes nil) ;;;大文字と小文字を区別する
-
+;; (define-key ac-completing-map (kbd "TAB") 'ac-next)      ; M-nで次候補選択
+;; (ac-set-trigger-key "TAB")
+;; (ac-set-trigger-key "<tab>")
 
 ;;; C++ style
-(add-hook 'c++-mode-hook
-          '(lambda()
-             (c-set-style "stroustrup")
-             (setq indent-tabs-mode nil)     ;; インデントは空白文字で行う（TABコードを空白に変換）
-	     (setq tab-width 2)
-             (c-set-offset 'innamespace 0)   ;;;namespace {}の中はインデントしない
-             (c-set-offset 'arglist-close 0) ;;;関数の引数リストの閉じ括弧はインデントしない
-             )
-	  (semantic-mode 1)
-	  ;;; (setq ac-sources (append ac-sources '(ac-source-semantic)))
-	  (setq ac-sources (append ac-sources '(ac-source-semantic-raw)))
-	  )
+;; (add-hook 'c++-mode-hook
+;;           '(lambda()
+;;              (c-set-style "stroustrup")
+;;              (setq indent-tabs-mode nil)     ;; インデントは空白文字で行う（TABコードを空白に変換）
+;; 	     (setq tab-width 2)
+;;              (c-set-offset 'innamespace 0)   ;;;namespace {}の中はインデントしない
+;;              (c-set-offset 'arglist-close 0) ;;;関数の引数リストの閉じ括弧はインデントしない
+;;              )
+;; 	  (semantic-mode 1)
+;; 	  ;;; (setq ac-sources (append ac-sources '(ac-source-semantic)))
+;; 	  (setq ac-sources (append ac-sources '(ac-source-semantic-raw)))
+;; 	  )
+(autoload 'vs-set-c-style "vs-set-c-style") 
+(add-hook 'c-mode-hook 'vs-set-c-style) 
+(add-hook 'c++-mode-hook 'vs-set-c-style)
 
 
 ;;; smooth-scroll
@@ -111,6 +120,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes (quote ("05c3bc4eb1219953a4f182e10de1f7466d28987f48d647c01f1f0037ff35ab9a" default)))
  '(flycheck-display-errors-function (function flycheck-pos-tip-error-messages))
  '(show-paren-mode t)
  '(tab-width 4)
@@ -122,7 +132,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "Ricty for Powerline" :foundry "unknown" :slant normal :weight normal :height 128 :width normal)))))
-
 ;;;YaTexの設定
 (setq auto-mode-alist
       (cons (cons "\\.tex$" 'yatex-mode)  auto-mode-alist))
@@ -131,6 +140,9 @@
 (setq YaTeX-inhibit-prefix-letter t)
 (setq YaTeX-kanji-code nil)
 (setq YaTeX-latex-message-code 'utf-8)
+
+;;;AMS-LaTeX を使う
+;;(setq YaTeX-use-AMS-LaTeX t)
 
 ;;;(setq tex-command "latexmk -pvc")  ;;保存したら自動で再コンパイル
 ;; 強制コンパイル
@@ -147,6 +159,16 @@
 (setq ac-l-dict-directory "~/.emacs.d/ac-l-dict/")
 (add-to-list 'ac-modes 'foo-mode)
 (add-hook 'foo-mode-hook 'ac-l-setup)
+
+;; latex-math-preview
+;; (add-hook 'yatex-mode-hook
+;;          '(lambda ()
+;;          (YaTeX-define-key "p" 'latex-math-preview-expression)
+;;          (YaTeX-define-key "\C-p" 'latex-math-preview-save-image-file)
+;;          (YaTeX-define-key "j" 'latex-math-preview-insert-symbol)
+;;          (YaTeX-define-key "\C-j" 'latex-math-preview-last-symbol-again)
+;;          (YaTeX-define-key "\C-b" 'latex-math-preview-beamer-frame)))
+;; (setq latex-math-preview-in-math-mode-p-func 'YaTeX-in-math-mode-p)
 
 (when platform-linux-p ; for GNU/Linux
 ;;; inverse search
@@ -174,7 +196,23 @@
    :session nil "/org/gnome/evince/Window/0"
    "org.gnome.evince.Window" "SyncSource"
    'evince-inverse-search)
+  (defun evince-forward-search ()
+	(interactive)
+	(let* ((ctf (buffer-name))
+		   (mtf (tex-main-file))
+		   (pf (concat (car (split-string mtf "\\.")) ".pdf"))
+		   (ln (format "%d" (line-number-at-pos)))
+		   (cmd "fwdevince")
+		   (args (concat "\"" pf "\" " ln " \"" ctf "\"")))
+	  (message (concat cmd " " args))
+	  (process-kill-without-query
+	   (start-process-shell-command "fwdevince" nil cmd args))))
+  
+  (add-hook 'latex-mode-hook
+			'(lambda ()
+			   (define-key latex-mode-map (kbd "C-c e") 'evince-forward-search)))
   )
+
 
 ;;; auto-install
 
@@ -191,8 +229,6 @@
 (push '("*YaTeX-typesetting*") popwin:special-display-config)
 
 
-;;; color-theme
-(load-theme 'deeper-blue t)
 
 ;;; flycheck
 ;; (add-hook 'after-init-hook #'global-flycheck-mode)
@@ -348,35 +384,34 @@
 (require 'fcitx)
 (fcitx-aggressive-setup)
 
-<<<<<<< HEAD
 ;; yasnipet
 ;; konbu13.hatenablog.com/entry/2014/01/12/113300
 ;; http://fukuyama.co/yasnippet
 ;;自分用のスニペットフォルダと，拾ってきたスニペットフォルダの2つを作っておきます．
-(add-to-list 'load-path
-             (expand-file-name "~/.emacs.d/site-lisp/yasnippet"))
-;;(一つにまとめてもいいけど)
-(require 'yasnippet)
-(setq yas-snippet-dirs
-      '("~/.emacs.d/mySnippets" 
-        "~/.emacs.d/snippets"
-		"~/.emacs.d/site-lisp/yasnippet/snippets"
-        ))
-;; yas起動
-(yas-global-mode 1)
+;; (add-to-list 'load-path
+;;              (expand-file-name "~/.emacs.d/site-lisp/yasnippet"))
+;; ;;(一つにまとめてもいいけど)
+;; (require 'yasnippet)
+;; (setq yas-snippet-dirs
+;;       '("~/.emacs.d/mySnippets" 
+;;         "~/.emacs.d/snippets"
+;; 		"~/.emacs.d/site-lisp/yasnippet/snippets"
+;;         ))
+;; ;; yas起動
+;; (yas-global-mode 1)
 
-;; 既存スニペットを挿入する
-(define-key yas-minor-mode-map (kbd "C-x i i") 'yas-insert-snippet)
-;; 新規スニペットを作成するバッファを用意する
-(define-key yas-minor-mode-map (kbd "C-x i n") 'yas-new-snippet)
-;; 既存スニペットを閲覧・編集する
-(define-key yas-minor-mode-map (kbd "C-x i v") 'yas-visit-snippet-file)
+;; ;; 既存スニペットを挿入する
+;; (define-key yas-minor-mode-map (kbd "C-x i i") 'yas-insert-snippet)
+;; ;; 新規スニペットを作成するバッファを用意する
+;; (define-key yas-minor-mode-map (kbd "C-x i n") 'yas-new-snippet)
+;; ;; 既存スニペットを閲覧・編集する
+;; (define-key yas-minor-mode-map (kbd "C-x i v") 'yas-visit-snippet-file)
+;; ;; Shift+tabで展開(auto-completeとぶつかるため)
+;; (define-key yas-minor-mode-map (kbd "<tab>") nil)
+;; (define-key yas-minor-mode-map (kbd "TAB") nil)
+;; ;; Set Yasnippet's key binding to shift+tab
+;; (define-key yas-minor-mode-map (kbd "<backtab>") 'yas-expand)
 
-;; 単語展開キーバインド (ver8.0から明記しないと機能しない)
-;; (setqだとtermなどで干渉問題ありでした)
-;; もちろんTAB以外でもOK 例えば "C-;"とか
-(custom-set-variables '(yas-trigger-key "TAB"))
-=======
 ;; README.mdをブラウザでチェック
 (defun mkup ()
   "Markdown on Firefox"
@@ -384,4 +419,65 @@
   (shell-command (concat "mkup &"))
   (shell-command (concat "firefox localhost:8000/README.md")))
 
->>>>>>> 1fea9c9878bba6b9fc6d583ae7ccfaf070d9c0fb
+;; For Python
+(add-hook 'python-mode-hook
+                   '(lambda ()
+                        (setq indent-tabs-mode nil)
+                        (setq indent-level 4)
+                        (setq python-indent 4)
+                        (setq tab-width 4)))
+
+;;;この上にはpath設定やらsuto-completeの設定
+(require 'jedi)
+(add-hook 'python-mode-hook 'jedi:setup)
+
+
+;;; color-theme
+;;(load-theme 'deeper-blue t)
+(load-theme 'monokai t)
+
+;; 画面の下の方を綺麗にする
+(require 'powerline)
+(powerline-default-theme)
+(set-face-attribute 'mode-line nil
+                    :foreground "White"
+                    :background "DarkCyan"
+                    :box nil)
+
+;; (add-to-list 'load-path "~/.emacs.d/elpa/auctex-11.88.6")
+;; (require 'tex-site)
+;; (require 'auctex-latexmk)
+;; (auctex-latexmk-setup)
+
+;; (setq preview-image-type 'dvipng)
+;; (setq TeX-source-correlate-method 'synctex)
+;; (setq TeX-source-correlate-start-server t)
+;; (add-hook 'LaTeX-mode-hook 'TeX-source-correlate-mode)
+;; (add-hook 'LaTeX-mode-hook 'TeX-PDF-mode)
+;; (add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
+;; (add-hook 'LaTeX-mode-hook
+;;           (function (lambda ()
+;;                       (add-to-list 'TeX-command-list
+;;                                    '("Evince"
+;;                                      "evince %s.pdf"
+;;                                      TeX-run-discard-or-function t t :help "Run Evince"))
+;;                       (add-to-list 'TeX-command-list
+;;                                    '("fwdevince"
+;;                                      "fwdevince %s.pdf %n \"%b\""
+;;                                      TeX-run-discard-or-function t t :help "Forward search with Evince"))
+;;                       )))
+
+<<<<<<< HEAD
+;; for rosemacs
+(add-to-list 'load-path "/opt/ros/indigo/share/emacs/site-lisp")
+(require 'rosemacs-config)
+=======
+(setq google-this-keybind (kbd "C-<f1>"))
+(google-this-mode 1)
+(require 'google-this)
+(setq google-this-location-fix "co.jp")
+(defun google-this-url () "URL for google searches."
+  ;; 100件/日本語ページ/5年以内ならこのように設定する
+  (concat google-this-base-url google-this-location-suffix
+          "/search?q=%s&hl=ja&num=100&as_qdr=y5&lr=lang_ja"))
+>>>>>>> 73858efc9531d9538f61eefd3da7d43a99157ab2

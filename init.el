@@ -467,6 +467,3 @@
 ;;                                      TeX-run-discard-or-function t t :help "Forward search with Evince"))
 ;;                       )))
 
-;; for rosemacs
-(add-to-list 'load-path "/opt/ros/indigo/share/emacs/site-lisp")
-(require 'rosemacs-config)

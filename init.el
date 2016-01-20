@@ -331,7 +331,7 @@
 (when (locate-library "company")
   (global-company-mode 1) ; 全バッファで有効にする
   (setq company-idle-delay 0) ; デフォルトは0.5
-  (setq company-minimum-prefix-length 2) ; デフォルトは4
+  (setq company-minimum-prefix-length 1) ; デフォルトは4
   (setq company-selection-wrap-around t) ; 候補の一番下でさらに下に行こうとすると一番上に戻る
   (global-set-key (kbd "C-M-i") 'company-complete)
   ;; (setq company-idle-delay nil) ; 自動補完をしない
@@ -378,6 +378,7 @@
                     :background "gray40")
 
 ;; for c++ 
+(require 'irony)
 (eval-after-load "irony"
   '(progn
      (custom-set-variables '(irony-additional-clang-options '("-std=c++11")))

@@ -409,3 +409,16 @@
 (define-key global-map (kbd "M-x")     'helm-M-x)
 (define-key helm-find-files-map (kbd "TAB") 'helm-execute-persistent-action)
 (define-key helm-read-file-map (kbd "<tab>") 'helm-execute-persistent-action)
+
+;; for arduino-mode
+(require 'arduino-mode)
+(require 'company-arduino)
+(add-hook 'irony-mode-hook 'company-arduino-turn-on)
+(defun my-company-c-headers-get-system-path ()
+  "Return the system include path for the current buffer."
+  (let ((default '("/usr/include/" "/usr/local/include/")))
+    (company-arduino-append-include-dirs default t)))
+(setq company-c-headers-path-system 'my-company-c-headers-get-system-path)
+
+;; Activate irony-mode on arudino-mode
+(add-hook 'arduino-mode-hook 'irony-mode)
